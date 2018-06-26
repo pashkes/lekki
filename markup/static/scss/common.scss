@@ -1,0 +1,8 @@
+// Common styles of the project
+
+.container {
+  @include media-breakpoint-up(md) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}

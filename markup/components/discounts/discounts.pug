@@ -1,0 +1,40 @@
+include ../icon/icon
+
+mixin discounts(data)
+	.discounts
+		.container
+			h2.discounts__title Акции и скидки
+			.row.js-grid
+				.col-md-6.col-xl-4.js-col
+					a(href="#" style={'background-image': 'url(%=static=%img/content/discount-lg.jpg)'}).discounts__item-lg
+						h3.discounts__subject
+							span Скидка -30%
+							| на тонометр A&D UA-777
+						p.discounts__text Акция действительна до 25 мая 2018
+						.discounts__sticker.sticker.sticker--md
+							+icon('sticker', '70', '70')
+							span -10%
+				.col-6.col-xl-4.d-md-flex.js-col
+					a(href="#").discounts__item-md
+						img(src="%=static=%img/content/discount-1.jpg").discounts__img
+						.discounts__sticker.sticker
+							+icon('sticker', '40', '40')
+							span -10%
+				.col-6.col-xl-4.d-md-flex.js-col
+					a(href="#").discounts__item-md
+						img(src="%=static=%img/content/discount-2.jpg").discounts__img
+						.discounts__sticker.sticker
+							+icon('sticker', '40', '40')
+							span -10%
+				.col-6.col-xl-4.d-md-flex.js-col
+					a(href="#").discounts__item-md
+						img(src="%=static=%img/content/discount-3.jpg").discounts__img
+						.discounts__sticker.sticker
+							+icon('sticker', '40', '40')
+							span -10%
+				.col-6.col-xl-4.d-md-flex.js-col
+					a(href="#").discounts__item-md
+						img(src="%=static=%img/content/discount-4.jpg").discounts__img
+						.discounts__sticker.sticker
+							+icon('sticker', '40', '40')
+							span -10%

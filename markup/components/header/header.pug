@@ -1,0 +1,81 @@
+include ../icon/icon
+include ../mobile-menu/mobile-menu
+include ../menu/menu
+
+mixin header(data)
+	header.header
+		.header__user-panel.d-none.d-xl-block
+			.container
+				.row.align-items-center
+					.col-auto
+						button(type="button").header__location.btn--location.btn.btn--icon
+							+icon('location', '15', '18')
+							span Москва и МO
+					.col-auto
+						ul.header__guide-menu
+							li.header__guide-item
+								a(href="#") Самовывоз
+							li.header__guide-item
+								a(href="#") Доставка лекарств
+							li.header__guide-item
+								a(href="#") Оплата
+							li.header__guide-item
+								a(href="#") Как сделать заказ
+							li.header__guide-item
+								a(href="#") Бонусная программа
+					.col-auto.ml-auto
+						.header__user-bar
+							a(href="#").header__guid-link.btn.btn.btn--star.btn--icon
+								+icon('star', '17', '16')
+								span 1 200 бонусов
+							a(href="#").header__guid-link.header__guid-link--user.btn.btn--user.btn--icon
+								+icon('user', '15', '17')
+								span Константинопольский К.
+
+		.header__inner
+			.container
+				.row.align-items-center
+					.col-auto.d-xl-none
+						+mobile-menu()
+					.col-auto
+						a(href="index.html").header__logo
+							img(src="%=static=%img/general/logo.svg" width="120" alt="Lekki")
+					.col-md-auto.d-none.d-md-block.ml-md-auto
+						.header__download-apps.d-none.d-xl-inline-block
+							a(href="#").header__app-link
+								+icon('apple-store', '13', '16').
+								| Apple Store
+							a(href="#").header__app-link
+								+icon('play-market', '14', '15')
+								| Google Play
+							span.header__additional-text Загрузи приложение, получи CASHBACK 15%
+
+						.header__additional-info
+							.header__tel
+								a(href="tel:+74950035555") +7 495 003-55-55
+								span.header__subtitle Круглосуточно
+							a(href="#").btn.btn--heart
+								+icon('heart', '17', '15')
+								| добавить в список желаний
+					.col-auto.ml-auto.ml-md-0
+						// add class .header__cart--has-products if were added products in the cart
+						button(type="button").header__cart.btn.btn--icon
+							+icon('cart', '19', '16')
+							span 5 товаров &nbsp;
+							span.header__cost &mdash;&nbsp;4560 &#8381;
+		.header__bottom-panel
+			.container
+				.header__panel-inner
+					.row
+						.col-auto.d-none.d-xl-block
+							button(type="button").btn.btn--icon.btn--red.header__show-menu.js-show-menu
+								+icon('menu-default', '16', '14')
+								span Каталог
+						.col
+							form.header__search-inner
+								label.header__label
+									+icon('search', '16', '16').header__search-icon
+									input(type="search" placeholder="Я ищу..." required).header__field.field.field--border-white
+								button.header__search-btn.btn.btn--red Найти
+			+menu()
+

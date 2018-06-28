@@ -1,0 +1,74 @@
+mixin promo(data)
+	section.promo
+		.container
+			ul.promo__slider.js-promo-slider
+				li.promo__slide
+					.row
+						.col.d-none.d-md-block.order-xl-2
+							.row
+								.col-md-6.col-xl-12
+									.promo__md-section.promo__md-section--hand-bg
+										h2.promo__title.promo__title--md
+											| Только в мобильном приложении
+											span.promo__discount
+												| сashback до 15%
+										.promo__apps
+											a(href="#").promo__app.promo__app--google-play google-play
+											a(href="#").promo__app.promo__app--app-store app-store
+								.col-md-6.col-xl-12
+									.promo__md-section.promo__md-section--card-bg
+										h2.promo__title.promo__title--white.promo__title--md
+											| Зарегестрируйте вашу бонусную карту
+						.col-12.col-xl-8.order-xl-1
+							.promo__section
+								.row.no-gutters
+									.col-md-7.d-flex.flex-column
+										.promo__inner
+											h2.promo__title.promo__title--lg
+												span.promo__discount Скидка -30%
+												| на крутую сыворотку
+												| vichy liftactiv
+											p.promo__text Акция действительна до 25 мая 2018
+											a(href="#").promo__btn.btn.btn--red.d-none.d-md-block Заказать
+									.col-auto.ml-auto
+										.promo__img
+											img(src="%=static=%img/content/discount.png")
+											.promo__sticker.sticker.sticker--md
+												+icon('sticker', '70', '70')
+												span -10%
+				li.promo__slide
+					.row
+						.col.d-none.d-md-block.order-xl-2
+							.row
+								.col-md-6.col-xl-12
+									.promo__md-section.promo__md-section--hand-bg
+										h2.promo__title.promo__title--md
+											| Только в мобильном приложении
+											span.promo__discount
+												| сashback до 15%
+										.promo__apps
+											a(href="#").promo__app.promo__app--google-play google-play
+											a(href="#").promo__app.promo__app--app-store app-store
+								.col-md-6.col-xl-12
+									.promo__md-section.promo__md-section--card-bg
+										h2.promo__title.promo__title--white.promo__title--md
+											| Зарегестрируйте вашу бонусную карту
+						.col-12.col-xl-8.order-xl-1
+							.promo__section
+								.row.no-gutters
+									.col-md-7
+										.promo__inner
+											h2.promo__title.promo__title--lg
+												span.promo__discount Скидка -30%
+												| на крутую сыворотку
+												| vichy liftactiv
+											p.promo__text Акция действительна до 25 мая 2018
+											a(href="#").promo__btn.btn.btn--red.d-none.d-md-block Заказать
+									.col-auto.col-md-5.ml-auto.ml-md-0
+										.promo__img
+											img(src="%=static=%img/content/discount.png")
+											.promo__sticker.sticker.sticker--md
+												+icon('sticker', '70', '70')
+												span -10%
+
+

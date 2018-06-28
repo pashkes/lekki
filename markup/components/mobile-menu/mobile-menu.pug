@@ -1,0 +1,144 @@
+include ../icon/icon
+include ../social/social
+
+mixin mobile-menu(data)
+	nav.mobile-menu.js-mobile-menu
+		button(type="button").mobile-menu__btn.mobile-menu__button--base.js-menu-show-mobile
+			+icon('menu-default', '16', '14')
+			| показать меню
+		.mobile-menu__wrapper
+			.mobile-menu__inner
+				.mobile-menu__category
+					.mobile-menu__sub-header
+						button(type="button").mobile-menu__back.btn.btn--back.js-back-home
+							+icon('arrow-left', '16', '19')
+							| вернутся назад
+						span.mobile-menu__name лекарства и бады
+						button(type="button").mobile-menu__menu-close.js-close-mobile-menu
+							| закрыть меню
+							+icon('cross', '14', '14')
+					ul.mobile-menu__sub-list#sublist-1
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Алкоголизм и курение
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Аллергия
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Верхние дыхательные пути
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Витамины и БАД
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Геморрой
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Гинекология и акушерство
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Глаза
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Гомеопатия
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Гормоны
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Грипп
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Дерматология (уход за кожей)
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Желудочно-кишечный тракт
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Иммуномодуляторы и противовирусные
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Мочеполовая система
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Нервная система
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Обезболивающие и спазмолитики
+					ul.mobile-menu__sub-list#sublist-2
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Алкоголизм и курение
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Аллергия
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Верхние дыхательные пути
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Витамины и БАД
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Геморрой
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Гинекология и акушерство
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Глаза
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Гомеопатия
+					ul.mobile-menu__sub-list#sublist-3
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Алкоголизм и курение
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Аллергия
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Верхние дыхательные пути
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Витамины и БАД
+						li.mobile-menu__sub-item
+							a(href="#").mobile-menu__sub-link Геморрой
+					a(href="#").mobile-menu__show-all
+						span Показать все
+						+icon('arrow-right', '14', '11')
+
+				.mobile-menu__content
+					header.mobile-menu__header
+						ul.mobile-menu__btns
+							li
+								button(type="button").mobile-menu__user-buttons.btn.btn--location.btn--icon
+									+icon('location', '15', '18')
+									span Москва и МO
+							li
+								a(href="#").mobile-menu__user-buttons.btn.btn--star.btn--icon
+									+icon('star', '17', '16')
+									span 1 200 бонусов
+							li
+								a(href="#").mobile-menu__user-buttons.btn.btn--user.btn--icon
+									+icon('user', '15', '17')
+									span Константинопольский К.
+						button(type="button").mobile-menu__menu-close.js-close-mobile-menu
+							| закрыть меню
+							+icon('cross', '14', '14')
+					.mobile-menu__body
+						.mobile-menu__top-panel
+							.row.justify-content-between.align-items-center
+								.col
+									span.mobile-menu__title Каталог
+								.col-auto
+									a(href="#").mobile-menu__heart.btn.btn--heart.btn--icon.btn--transparent
+										+icon('heart', '17', '15')
+						ul.mobile-menu__main
+							li.mobile-menu__item
+								a(href="#sublist-1").mobile-menu__link Лекарства и бады
+							li.mobile-menu__item
+								a(href="#sublist-2").mobile-menu__link Гигиена
+							li.mobile-menu__item
+								a(href="#sublist-3").mobile-menu__link Красота и ухо
+							li.mobile-menu__item
+								a(href="#sublist-").mobile-menu__link Мама и малыш
+							li.mobile-menu__item
+								a(href="#sublist-").mobile-menu__link Диета и спорт
+							li.mobile-menu__item
+								a(href="#sublist-").mobile-menu__link Оптика
+							li.mobile-menu__item
+								a(href="#sublist-").mobile-menu__link Ортопедия
+							li.mobile-menu__item
+								a(href="#sublist-").mobile-menu__link Все по 99 рублей
+					.mobile-menu__footer
+						ul.mobile-menu__guide
+							li.mobile-menu__guide-item
+								a(href="#").mobile-menu__guide-link Самовывоз
+							li.mobile-menu__guide-item
+								a(href="#").mobile-menu__guide-link Доставка лекарств
+							li.mobile-menu__guide-item
+								a(href="#").mobile-menu__guide-link Оплата
+							li.mobile-menu__guide-item
+								a(href="#").mobile-menu__guide-link Как сделать заказ
+							li.mobile-menu__guide-item
+								a(href="#").mobile-menu__guide-link Бонусная программа
+						.mobile-menu__contacts
+							a(href="tel:+74950035555").mobile-menu__tel +7 495 003-55-55
+							span.mobile-menu__subtitle Москва, круглосуточно
+						a(href="#").mobile-menu__review.btn.btn--transparent Оставить отзыв
+						+social()

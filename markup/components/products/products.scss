@@ -1,0 +1,72 @@
+.products {
+  padding-top: 27px;
+  padding-bottom: 32px;
+  border-bottom: solid 1px $white-two;
+  @include media-breakpoint-up(md) {
+    padding-top: 42px;
+    padding-bottom: 41px;
+  }
+  &__title {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 23px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
+  &__slider {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__card {
+    margin-bottom: 16px;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
+  &__wrapper {
+    @include media-breakpoint-up(xl) {
+      padding-top: 17px;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+  }
+  &__view-all {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      max-width: 288px;
+    }
+  }
+  &__slide {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__arrow {
+    display: inline-block;
+    margin-right: 13px;
+    vertical-align: top;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .slick-list {
+    padding-top: 5px;
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 5px;
+    }
+  }
+  &__filter {
+    margin-bottom: 24px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+      padding-top: 15px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 18px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+include ../product/product
+include ../icon/icon
+mixin disease(data)
+	.disease
+		.products
+			.container
+				.row.justify-content-between
+					.col-xl-auto
+						h2.products__title По заболеваниям
+					.col-xl-auto.d-none.d-xl-block
+						button(type='button').products__arrow.btn.btn--prev.js-disease-product-prev
+							| предадущий слайдер
+							+icon('arrow-left', '15', '15')
+						button(type='button').products__arrow.btn.btn--next.js-disease-product-next
+							| следующий слайдер
+							+icon('arrow-right', '15', '15')
+				form.products__filter
+					ul.filter
+						li.filter__item
+							label.filter__label
+								input(type="radio" name="filter-1").filter__radio
+								span Насморк
+						li.filter__item
+							label.filter__label
+								input(type="radio" name="filter-1").filter__radio
+								span Аллергия
+						li.filter__item
+							label.filter__label
+								input(type="radio" name="filter-1").filter__radio
+								span Головная боль
+						li.filter__item
+							label.filter__label
+								input(type="radio" name="filter-1").filter__radio
+								span Гипертония
+						li.filter__item
+							label.filter__label
+								input(type="radio" name="filter-1").filter__radio
+								span Ангина
+						li.filter__item
+							label.filter__label
+								input(type="radio" name="filter-1").filter__radio
+								span Боль в суставах
+				.products__wrapper
+					.row.js-products-slider-disease
+						each item in data.list
+							.col-md-6.col-xl-12.d-flex.flex-column
+								.products__slide
+									+product(item).products__card
+				.products__footer.d-xl-none
+					a(href="#").products__view-all.btn Показать больше сезонных товаров

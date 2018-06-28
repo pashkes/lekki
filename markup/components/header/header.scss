@@ -1,0 +1,255 @@
+.header {
+  position: relative;
+  &__user-panel {
+    background-color: $black;
+    color: #fff;
+  }
+  &__location {
+    margin-right: 24px;
+  }
+  &__guide-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  &__guide-item {
+    color: #fff;
+    a {
+      display: block;
+      padding: 11px 13px;
+      font-size: 13px;
+      color: #fff;
+      letter-spacing: -0.1px;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__user-bar {
+    display: flex;
+  }
+  &__guid-link {
+    color: #fff;
+
+    &:first-child {
+      margin-right: 25px;
+    }
+    &--user {
+      .icon {
+
+      }
+    }
+    span {
+      line-height: 1.2;
+      border-bottom-color: $warm-grey;
+    }
+  }
+  &__inner {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    @include media-breakpoint-up(md) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+  }
+  &__logo {
+    margin-left: 15px;
+    @include media-breakpoint-up(md) {
+      margin-left: 24px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-left: 0;
+      img {
+        width: 145px;
+      }
+    }
+  }
+  &__download-apps {
+    margin-right: 28px;
+    text-align: right;
+    vertical-align: bottom;
+    padding-bottom: 3px;
+  }
+  &__app-link {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+    font-weight: 700;
+    font-size: 13px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    .icon {
+      margin-right: 6px;
+    }
+    span {
+      line-height: 1.2;
+    }
+  }
+  &__additional-text {
+    display: block;
+    margin-top: 1px;
+    color: $red;
+    font-size: 13px;
+    line-height: 1;
+  }
+  &__additional-info {
+    display: inline-flex;
+    text-align: right;
+  }
+  &__tel {
+    margin-right: 31px;
+    a {
+      @include media-breakpoint-up(xl) {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+  }
+  &__subtitle {
+    display: block;
+    font-size: 13px;
+    letter-spacing: -0.1px;
+    color: $warm-grey-two;
+  }
+  &__cart {
+    padding-left: 11px;
+    padding-right: 8px;
+    @include media-breakpoint-up(md) {
+      margin-right: 0;
+      padding-right: 29px;
+      padding-left: 12px;
+      min-width: 200px;
+    }
+    .icon {
+      margin-right: 11px;
+      fill: $black;
+      @include media-breakpoint-up(md) {
+        margin-right: 11px;
+      }
+    }
+    &--has-products {
+      span {
+        border-bottom-color: transparent;
+      }
+      .icon {
+        fill: $red;
+      }
+    }
+    span {
+      position: relative;
+      border-bottom: 1px dashed $white-two;
+      line-height: 1.1;
+    }
+  }
+  &__cost {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+  &__bottom-panel {
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: $red;
+    @include media-breakpoint-up(md) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+  &__panel-inner {
+    position: relative;
+  }
+  &__search-inner {
+    position: relative;
+  }
+  &__show-menu {
+    min-width: 168px;
+    padding: 10px 15px;
+    &::before {
+      content: '';
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: -1px;
+      width: 168px;
+      bottom: -17px;
+      background-color: #fff;
+      border-radius: 4px 4px 0 0;
+      transition: $transition-base;
+    }
+    &:focus {
+      outline: none;
+    }
+    .icon {
+      position: relative;
+      margin-right: 20px;
+      fill: #fff;
+      z-index: 1;
+    }
+    &.active {
+      background-color: #ffffff;
+      border: solid 1px #ffffff;
+      color: #000;
+      .icon {
+        fill: #000;
+      }
+      &::before {
+        visibility: visible;
+        opacity: 1;
+      }
+      span {
+        color: #000;
+      }
+    }
+
+    span {
+      position: relative;
+      color: #fff;
+      z-index: 1;
+    }
+  }
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  &__field {
+    position: relative;
+    flex-grow: 1;
+    font-size: 14px;
+    padding: 9px 94px 9px 46px;
+    width: 100%;
+
+  }
+  &__search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: $black;
+    z-index: 1;
+  }
+  &__search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    min-width: 81px;
+    @include media-breakpoint-up(md) {
+      min-width: 121px;
+    }
+    @include media-breakpoint-up(xl) {
+      min-width: 150px;
+    }
+  }
+}

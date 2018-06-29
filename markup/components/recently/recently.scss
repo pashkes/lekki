@@ -1,0 +1,37 @@
+.recently {
+  &__card {
+    min-height: 112px;
+    @include media-breakpoint-up(md) {
+      min-height: 121px;
+    }
+    @include media-breakpoint-up(xl) {
+      min-height: 288px;
+    }
+  }
+  .product__top {
+  }
+  .product__made {
+    margin-bottom: 0;
+  }
+  .products__card {
+    align-items: flex-start;
+    @include media-breakpoint-up(xl) {
+      align-items: center;
+    }
+  }
+  .product__top {
+    padding-top: 0;
+    @include media-breakpoint-up(md) {
+      margin-right: 12px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: 0;
+    }
+  }
+  .product__img {
+    margin-right: 0;
+    @include media-breakpoint-up(xl) {
+      margin-right: 0;
+    }
+  }
+}

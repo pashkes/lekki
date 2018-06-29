@@ -178,7 +178,7 @@ a {
 }
 
 .sticker {
-  position:relative;
+  position: relative;
   width: 40px;
   height: 40px;
   font-size: 11px;
@@ -216,6 +216,7 @@ a {
     }
   }
 }
+
 .slick-dots {
   display: flex;
   justify-content: center;
@@ -230,32 +231,33 @@ a {
       }
     }
   }
-   button {
-     position: relative;
-     width: 20px;
-     height: 20px;
-     padding: 0;
-     border: none;
-     font-size: 0;
-     vertical-align: top;
-     background-color: transparent;
-     &::before {
-       content: '';
-       position: absolute;
-       left: 50%;
-       top: 50%;
-       width: 8px;
-       height: 8px;
-       border: solid 1px #979797;
-       transform: translate(-50%, -50%);
-       border-radius: 50%;
-       transition: $transition-base;
-     }
-     &:focus {
-       outline: none;
-     }
-   }
+  button {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    font-size: 0;
+    vertical-align: top;
+    background-color: transparent;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border: solid 1px #979797;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      transition: $transition-base;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
 }
+
 .filter {
   display: flex;
   overflow-x: auto;
@@ -266,7 +268,7 @@ a {
     margin-right: 12px;
   }
   &__label {
-    position:relative;
+    position: relative;
     letter-spacing: 0.1px;
     font-size: 13px;
     padding: 7px 14px;
@@ -293,6 +295,32 @@ a {
     color: $red;
     &::before {
       border-color: $red;
+    }
+  }
+}
+
+.star {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    position:relative;
+    margin-right: 4px;
+    height: 12px;
+    width: 12px;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      background: #fff url(%=static=%general/star.svg) 0 0 no-repeat;
+      background-size: 12px 12px;
+    }
+    &--empty {
+      &::before {
+        background-image: url(%=static=%general/star-empty.svg);
+      }
     }
   }
 }

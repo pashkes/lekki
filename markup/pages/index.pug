@@ -9,6 +9,13 @@ html(class="no-js", lang="ru")
 	include ../components/disease/disease
 	include ../components/discounts/discounts
 	include ../components/popular/popular
+	include ../components/features/features
+	include ../components/brands/brands
+	include ../components/blog/blog
+	include ../components/reviews/reviews
+	include ../components/recently/recently
+	include ../components/subscribe/subscribe
+
 	head
 		+head(head.defaults)
 		style.
@@ -39,6 +46,12 @@ html(class="no-js", lang="ru")
 		+disease(disease)
 		+discounts()
 		+popular(disease)
+		+features()
+		+brands()
+		+blog()
+		+reviews()
+		+recently(recently)
+		+subscribe()
 			//- Include your components here
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();

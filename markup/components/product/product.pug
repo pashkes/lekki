@@ -19,14 +19,15 @@ mixin product(data)
 			h3.product__title
 				a(href="#") #{data.title}
 			p.product__made #{data.made}
-			.product__footer
-				if data.oldCostValue
-					span.product__old-cost #{data.oldCostValue} &#8381;
-				.product__buttons
-					a(href="#").product__buy.btn.btn--border-red.btn--icon
-						span.product__btn-text #{data.cost} &#8381;
-						span.product__btn-label Купить
-						span.product__cart
-							+icon('cart', '20', '17')
-					button.btn.btn--heart.d-xl-none
-						+icon('heart', '17', '15')
+			if !data.info
+				.product__footer
+					if data.oldCostValue
+						span.product__old-cost #{data.oldCostValue} &#8381;
+					.product__buttons
+						a(href="#").product__buy.btn.btn--border-red.btn--icon
+							span.product__btn-text #{data.cost} &#8381;
+							span.product__btn-label Купить
+							span.product__cart
+								+icon('cart', '20', '17')
+						button.btn.btn--heart.d-xl-none
+							+icon('heart', '17', '15')

@@ -33,7 +33,7 @@ module.exports = {
             // separate-file, separate-file-with-link, inject
             loadingType: 'separate-file-with-link',
             usePolyfillForExternalSymbols: true,
-            pathToExternalSymbolsFile: 'static/images/'
+            pathToExternalSymbolsFile: 'static/img/'
         }
     },
 

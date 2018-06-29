@@ -117,6 +117,7 @@
     letter-spacing: -0.2px;
     overflow: hidden;
     transition: none;
+    min-height: 40px;
     @include media-breakpoint-up(md) {
       flex-grow: 1;
       margin-right: 16px;
@@ -129,6 +130,7 @@
       fill: #fff;
     }
     &:hover {
+      padding-left: 0;
       .product__cart {
         right: initial;
         left: 0;
@@ -138,8 +140,7 @@
         visibility: visible;
       }
       .product__btn-text {
-        opacity: 0;
-        visibility: hidden;
+        display: none;
       }
     }
   }
@@ -164,11 +165,12 @@
   }
   &__btn-label {
     display: block;
+    flex-grow: 1;
+    text-align: center;
     opacity: 0;
     font-size: 13px;
     text-transform: uppercase;
     visibility: hidden;
-    text-align: center;
     color: #fff;
     line-height: 1;
   }

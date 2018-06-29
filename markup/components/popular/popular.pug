@@ -5,14 +5,14 @@ mixin popular(data)
 				.col-xl-auto
 					h2.products__title Пользуется спросом
 				.col-xl-auto.d-none.d-xl-block
-					button(type='button').products__arrow.btn.btn--prev.js-spring-product-prev
+					button(type='button').products__arrow.btn.btn--prev.js-popular-product-prev
 						| предадущий слайдер
 						+icon('arrow-left', '15', '15')
-					button(type='button').products__arrow.btn.btn--next.js-spring-product-next
+					button(type='button').products__arrow.btn.btn--next.js-popular-product-next
 						| следующий слайдер
 						+icon('arrow-right', '15', '15')
 			.products__wrapper
-				.row.js-products-slider
+				.row.js-popular-slider
 					each item in data.list
 						.col-md-6.col-xl-12.d-flex.flex-column
 							.products__slide

@@ -6,7 +6,6 @@ body {
   line-height: 1.43;
   color: $black;
   min-width: 320px;
-  overflow: auto;
 }
 .container {
   @include media-breakpoint-up(md) {

@@ -1,1 +1,68 @@
+.subscribe {
 
+  color: #fff;
+  &__title {
+    margin-bottom: 11px;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 10px;
+    }
+  }
+  &__inner {
+    padding: 18px 16px 24px;
+    background-color: $red;
+    @include media-breakpoint-up(md) {
+      padding-top: 26px;
+      padding-bottom: 32px;
+      padding-right: 31px;
+      background: url(../img/general/lekki_card.png) -32px 6px no-repeat, #ea2b16;
+      background-size: 270px 250px, auto auto;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 33px;
+      padding-bottom: 40px;
+      padding-right: 72px;
+      background-position: 33px -62px, 0 0;
+      background-size: 392px 346px, auto auto;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__form {
+    position:relative;
+    display: flex;
+  }
+  &__field {
+    flex-grow: 1;
+  }
+  &__submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    color: #fff;
+    text-transform: capitalize;
+    @include media-breakpoint-up(md) {
+      width: auto;
+      height: auto;
+      min-width: 154px;
+      padding: 8.5px 15px;
+      font-size: 13px;
+      line-height: 1.69;
+    }
+    @include media-breakpoint-up(xl) {
+      min-width: 223px;
+    }
+    .icon {
+      fill: #fff;
+    }
+  }
+}

@@ -15,7 +15,7 @@
         }
       },
         {
-          breakpoint: 1344,
+          breakpoint: 1343,
           settings: {
             rows: 1,
             arrows: true,

@@ -16,13 +16,13 @@ mixin promo(data)
 											a(href="#").promo__app.promo__app--google-play google-play
 											a(href="#").promo__app.promo__app--app-store app-store
 								.col-md-6.col-xl-12
-									.promo__md-section.promo__md-section--card-bg
+									a(href="#").promo__md-section.promo__md-section--card-bg
 										h2.promo__title.promo__title--white.promo__title--md
 											| Зарегестрируйте вашу бонусную карту
 						.col-12.col-xl-8.order-xl-1
 							.promo__section
-								.row.no-gutters
-									.col-md-7.d-flex.flex-column
+								.row.no-gutters.flex-grow-1
+									.col-md-7.d-flex.flex-grow-1
 										.promo__inner
 											h2.promo__title.promo__title--lg
 												span.promo__discount Скидка -30%
@@ -50,13 +50,13 @@ mixin promo(data)
 											a(href="#").promo__app.promo__app--google-play google-play
 											a(href="#").promo__app.promo__app--app-store app-store
 								.col-md-6.col-xl-12
-									.promo__md-section.promo__md-section--card-bg
+									a(href="#").promo__md-section.promo__md-section--card-bg
 										h2.promo__title.promo__title--white.promo__title--md
 											| Зарегестрируйте вашу бонусную карту
 						.col-12.col-xl-8.order-xl-1
 							.promo__section
-								.row.no-gutters
-									.col-md-7
+								.row.no-gutters.flex-grow-1
+									.col-md-7.d-flex.flex-grow-1
 										.promo__inner
 											h2.promo__title.promo__title--lg
 												span.promo__discount Скидка -30%
@@ -64,7 +64,7 @@ mixin promo(data)
 												| vichy liftactiv
 											p.promo__text Акция действительна до 25 мая 2018
 											a(href="#").promo__btn.btn.btn--red.d-none.d-md-block Заказать
-									.col-auto.col-md-5.ml-auto.ml-md-0
+									.col-auto.ml-auto
 										.promo__img
 											img(src="%=static=%img/content/discount.png")
 											.promo__sticker.sticker.sticker--md

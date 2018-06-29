@@ -1,4 +1,5 @@
 .recently {
+  border-bottom: none;
   &__card {
     min-height: 112px;
     @include media-breakpoint-up(md) {

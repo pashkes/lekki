@@ -6,6 +6,9 @@
   }
   &__location {
     margin-right: 24px;
+    span {
+      line-height: 1.2;
+    }
   }
   &__guide-menu {
     display: flex;

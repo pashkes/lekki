@@ -15,7 +15,6 @@
     list-style-type: none;
   }
   &__slide {
-    display: inline-flex !important;
   }
   &__section {
     padding: 16px 16px 0;
@@ -52,6 +51,7 @@
       max-width: 207px;
       font-size: 20px;
       line-height: 1.1;
+      text-transform: none;
     }
     &--lg {
       text-transform: uppercase;
@@ -87,9 +87,9 @@
     top: -51px;
     right: 15px;
     @include media-breakpoint-up(md) {
-      width: 279px;
-      position: relative;
-      top: -20px;
+      width: 261px;
+      position: absolute;
+      top: -21px;
       right: 4px;
     }
     @include media-breakpoint-up(xl) {
@@ -175,7 +175,7 @@
     &--google-play {
       width: 77px;
       height: 28px;
-      background-image: url(%=static=%general/play-market.svg);
+      background-image: url(%=static=%general/play-market-sm.svg);
       background-size: 77px 28px;
     }
     &--app-store {

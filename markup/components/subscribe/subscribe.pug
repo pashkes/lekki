@@ -1,2 +1,16 @@
+include ../icon/icon
 mixin subscribe(data)
-    .subscribe
+	.subscribe
+		.container
+			.subscribe__inner
+				.row
+					.col-md-8.col-xl-7.ml-auto
+						h2.subscribe__title Зарегестрируйте вашу бонусную карту
+						p.subscribe__text И учавствуйте в еженедельном розыгрыше призов!
+						form.subscribe__form
+							input(type="text" placeholder="Введите номер бонусной карты" required).subscribe__field.field
+							button.subscribe__submit.btn.btn--red
+								+icon('arrow-right', '14', '16').d-md-none
+								| Зарегестрировать
+
+

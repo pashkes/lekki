@@ -87,4 +87,12 @@
       min-width: 225px;
     }
   }
+  &__show-all {
+    @include media-breakpoint-up(xl) {
+      min-width: 242px;
+    }
+    &:hover {
+      border-color: $white-two;
+    }
+  }
 }

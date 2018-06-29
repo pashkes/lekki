@@ -1,2 +1,86 @@
+include ../social/social
+
 mixin footer(data)
-  footer.footer
+	footer.footer
+		.container
+			.footer__inner
+				.row
+					.col-md
+						.row
+							.col-6.col-xl-4
+								ul.footer__nav
+									li.footer__item
+										a(href="#").footer__link Лекарства и бады
+									li.footer__item
+										a(href="#").footer__link Гигиена
+									li.footer__item
+										a(href="#").footer__link Красота и уход
+									li.footer__item
+										a(href="#").footer__link Мама и малыш
+									li.footer__item
+										a(href="#").footer__link Диета и спорт
+									li.footer__item
+										a(href="#").footer__link Оптика
+									li.footer__item
+										a(href="#").footer__link Ортопедия
+									li.footer__item
+										a(href="#").footer__link Все по 99 рублей
+							.col-6.col-xl-4
+								ul.footer__nav
+									li.footer__item
+										a(href="#").footer__link О компании
+									li.footer__item
+										a(href="#").footer__link Акции и скидки
+									li.footer__item
+										a(href="#").footer__link Бонусная программа
+									li.footer__item
+										a(href="#").footer__link Как слелать заказ
+									li.footer__item
+										a(href="#").footer__link Адреса аптек
+									li.footer__item
+										a(href="#").footer__link Доставка лекарств
+									li.footer__item
+										a(href="#").footer__link Личный кабинет
+
+							.col-auto.d-none.d-xl-block.pl-xl-5
+								ul.footer__nav
+									li.footer__item
+										a(href="#").footer__link Оплaта
+									li.footer__item
+										a(href="#").footer__link Правила работы
+									li.footer__item
+										a(href="#").footer__link Блог
+									li.footer__item
+										a(href="#").footer__link Отзывы
+									li.footer__item
+										a(href="#").footer__link Обратная связь
+									li.footer__item
+										a(href="#").footer__link Франшиза
+									li.footer__item
+										a(href="#").footer__link Лицензия
+
+					.col-md-auto.ml-auto
+						.footer__wrap
+							.footer__apps
+								a(href="#").footer__app.footer__app--app-store.d-md-none.d-xl-block App Store
+								a(href="#").footer__app.footer__app--google-play.d-none.d-md-block Google Play
+							span.footer__desc-cashback В мобильном приложении cashback до 15%
+						a(href="tel:+74950035555").footer__tel +7 495 003-55-55
+						span.footer__subtel Москва, круглосуточно
+						.footer__bottom
+							a(href="#").footer__feedback.btn Оставить отзыв
+							+social()
+		.footer__copy
+			.container
+				.row.align-items-xl-center
+					.col-auto.d-none.d-md-block
+						a(href="#").footer__logo
+							img(src="%=static=%img/general/logo.svg")
+					.col
+						.footer__copy-text
+							p © aptekalekki.ru, 2018. ООО «АПТЕКА-ЛЕККИ», ИНН 7714844316, ОГРН 1117746529691, Юридический адрес: 123290, г. Москва, 1-ый Магистральный тупик, д. 10, корпус 1. Дистанционная продажа лекарственных средств (в том числе, с доставкой на дом) запрещена действующим законодательством Российской Федерации. Под «заказом» на сайте понимается должным образом оформленный запрос Клиента на бронирование в аптеках ЛЕККИ, а также ее партнеров по указанному на сайте адресу перечня Товаров, выбранных на сайте. Продажа товара
+								span.footer__pre-block осуществляется в организации.
+									a(href="#")
+										span Политика конфиденциальности.
+									a(href="#")
+										span Пользовательское соглашение.

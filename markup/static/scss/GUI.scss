@@ -16,6 +16,8 @@
   }
   &:focus {
     outline: none;
+    border-color: $red;
+    cursor: pointer;
   }
   &--icon {
     display: flex;
@@ -155,6 +157,25 @@
       }
     }
   }
+  &--close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    border: none;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    &:hover {
+      border-color: transparent;
+      .icon {
+        fill: $red;
+      }
+    }
+    .icon {
+      fill: $black
+    }
+  }
 }
 
 .field {
@@ -257,6 +278,7 @@ a {
       outline: none;
     }
   }
+
 }
 
 .filter {

@@ -20,7 +20,8 @@ img {
   max-width: 100%;
   height: auto;
 }
-h2 {
+h2,
+.h2 {
   margin-bottom: 19px;
   font-size: 20px;
   font-weight: 500;
@@ -41,4 +42,29 @@ button {
 }
 p {
   font-size: 14px;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  z-index: -1;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+  background-color: rgba(118, 118, 118, 0.8);
+  z-index: 1040;
+}
+.modal-dialog-centered {
+  justify-content: center;
+}
+.modal-dialog {
+  pointer-events: auto;
 }

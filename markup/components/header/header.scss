@@ -125,6 +125,9 @@
   &__cart {
     padding-left: 11px;
     padding-right: 8px;
+    &:focus {
+      border-color: $red;
+    }
     @include media-breakpoint-up(md) {
       margin-right: 0;
       padding-right: 29px;

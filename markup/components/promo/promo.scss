@@ -169,20 +169,16 @@
     font-size: 0;
     background-repeat: no-repeat;
     background-position: 0 0;
+    width: 85px;
+    height: 26px;
     &:focus {
       outline: none;
     }
     &--google-play {
-      width: 77px;
-      height: 28px;
       background-image: url(%=static=%general/play-market-sm.svg);
-      background-size: 77px 28px;
     }
     &--app-store {
-      width: 92px;
-      height: 28px;
-      background-image: url(%=static=%general/app-store.svg);
-      background-size: 92px 28px;
+      background-image: url(%=static=%general/app-store-sm.svg);
     }
   }
 }

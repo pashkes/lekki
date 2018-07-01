@@ -768,8 +768,8 @@ $badge-pill-border-radius:          10rem !default;
 // Padding applied to the modal body
 $modal-inner-padding:               1rem !default;
 
-$modal-dialog-margin:               .5rem !default;
-$modal-dialog-margin-y-sm-up:       1.75rem !default;
+$modal-dialog-margin:               16px !default;
+$modal-dialog-margin-y-sm-up:       16px !default;
 
 $modal-title-line-height:           $line-height-base !default;
 
@@ -788,8 +788,8 @@ $modal-header-border-width:         $modal-content-border-width !default;
 $modal-footer-border-width:         $modal-header-border-width !default;
 $modal-header-padding:              1rem !default;
 
-$modal-lg:                          800px !default;
-$modal-md:                          500px !default;
+$modal-lg:                          674px !default;
+$modal-md:                          640px !default;
 $modal-sm:                          300px !default;
 
 $modal-transition:                  transform .3s ease-out !default;

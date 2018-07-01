@@ -1,0 +1,84 @@
+include ../icon/icon
+
+mixin header-cart(data)
+	.header-cart.js-cart
+		.modal-backdrop.fade
+		.header-cart__wrapper
+			.header-cart__inner
+				header.header-cart__top
+					p.header-cart__title Корзина
+					button(type="button").btn.btn--close.js-close-cart
+						+icon('close', 14, 14)
+						|закрыть
+				.header-cart__body
+					ul(data-simplebar data-simplebar-auto-hide="false").header-cart__list
+						li.header-cart__item
+							.row.align-items-center
+								.col-auto
+									a(href="#").header-cart__img
+										img(src="%=static=%img/content/019.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос200мл")
+								.col
+									h4.header-cart__name
+										a(href="#") Либридерм витамин F бальзам питательный для кожи головы и волос200мл
+									.row.justify-content-between
+										.col-auto
+											span.header-cart__amount 2 x 195 &#8381;
+										.col-auto
+											span.header-cart__cost 390 &#8381;
+						li.header-cart__item
+							.row.align-items-center
+								.col-auto
+									a(href="#").header-cart__img
+										img(src="%=static=%img/content/014.jpg" alt="Генеролон спрей для наружного применения 5% 60мл")
+								.col
+									h4.header-cart__name
+										a(href="#") Генеролон спрей для наружного применения 5% 60мл
+									.row.justify-content-between
+										.col-auto
+											span.header-cart__amount 1 x 616 &#8381;
+										.col-auto
+											span.header-cart__cost 616 &#8381;
+						li.header-cart__item
+							.row.align-items-center
+								.col-auto
+									a(href="#").header-cart__img
+										img(src="%=static=%img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл")
+								.col
+									h4.header-cart__name
+										a(href="#") Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл
+									.row.justify-content-between
+										.col-auto
+											span.header-cart__amount 1 x 616 &#8381;
+										.col-auto
+											span.header-cart__cost 616 &#8381;
+						li.header-cart__item
+							.row.align-items-center
+								.col-auto
+									a(href="#").header-cart__img
+										img(src="%=static=%img/content/010.jpg" alt="Урьяж розельян крем для кожи склонной к куперозу 40мл")
+								.col
+									h4.header-cart__name
+										a(href="#") Урьяж розельян крем для кожи склонной к куперозу 40мл
+									.row.justify-content-between
+										.col-auto
+											span.header-cart__amount 2 x 616 &#8381;
+										.col-auto
+											span.header-cart__cost 616 &#8381;
+						li.header-cart__item
+							.row.align-items-center
+								.col-auto
+									a(href="#").header-cart__img
+										img(src="%=static=%img/content/006.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос200мл")
+								.col
+									h4.header-cart__name
+										a(href="#") Либридерм витамин F бальзам питательный для кожи головы и волос200мл
+									.row.justify-content-between
+										.col-auto
+											span.header-cart__amount 1 x 616 &#8381;
+										.col-auto
+											span.header-cart__cost 616 &#8381;
+
+				.header-cart__bottom
+					a(href="#").header-cart__btn.btn.btn--red Перейти в корзину
+
+

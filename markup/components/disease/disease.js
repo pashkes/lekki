@@ -12,7 +12,7 @@
 
 // включение слайдера на мобильном
   function slickMobile(slider, settings) {
-    if ($(window).width() < 1344) {
+    if ($(window).width() < 1343) {
       if (slider.hasClass('slick-initialized')) {
         slider.slick('unslick');
       }

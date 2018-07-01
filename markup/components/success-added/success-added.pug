@@ -1,0 +1,37 @@
+mixin success-added(data)
+	.modal.fade#cart-list
+		div(role="document").modal-dialog.modal-dialog-centered
+			.success-added
+				.success-added__header
+					span.success-added__title Товар добавлен в корзину
+					button(type="button" data-dismiss="modal" aria-label="Close").success-added__close.btn.btn--close
+						+icon('close', 14, 14)
+						| закрыть
+				.row.justify-content-md-between.align-items-md-center.align-items-md-start
+					.col-md-5
+						a(href="#").success-added__img
+							img(src="%=static=%img/content/006.jpg" alt="Граммидин с анестетиком неотаблетки для рассасывания №18")
+					.col-md
+						.row
+							.col
+								h3.success-added__name
+									a(href="#") Граммидин с анестетиком нео таблетки для рассасывания №18
+								p.success-added__made Валента (Россия)
+						.row
+							.col-8
+								.row.justify-content-between.align-items-end
+									.col
+										span.success-added__old-cost 3 545 &#8381;
+										span.success-added__cost 3 195 &#8381;
+									.col
+										span.success-added__amount 2 шт.
+							.col-4
+								span.success-added__label-cost Сумма
+								span.success-added__cost.success-added__cost--right 6 390 &#8381;
+
+				.success-added__footer
+					.row
+						.col-md
+							button(type="button" data-dismiss="modal").success-added__btn.btn Продолжить покупки
+						.col-md
+							a(href="#").success-added__btn.btn.btn--red Перейти в корзину

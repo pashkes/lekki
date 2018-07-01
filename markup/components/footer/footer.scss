@@ -145,6 +145,11 @@
         margin-right: 16px;
       }
     }
+    @include media-breakpoint-up(xl)  {
+      .social__item:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
   }
 
   &__copy-text {

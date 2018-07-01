@@ -16,7 +16,7 @@ html(class="no-js", lang="ru")
 	include ../components/recently/recently
 	include ../components/subscribe/subscribe
 	include ../components/demo/demo
-
+	include ../components/success-added/success-added
 	head
 		+head(head.defaults)
 	//	style.
@@ -55,6 +55,7 @@ html(class="no-js", lang="ru")
 		+subscribe()
 		+demo()
 		+footer()
+		+success-added()
 			//- Include your components here
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();

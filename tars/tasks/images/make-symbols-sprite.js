@@ -46,7 +46,7 @@ module.exports = () => {
                 ))
                 .pipe(
                     gulpif(/[.]svg$/, rename(spritePath => {
-                        spritePath.basename += tars.options.build.hash;
+                        spritePath.basename +=  ''/*tars.options.build.hash*/;
                     }))
                 )
                 .pipe(

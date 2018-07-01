@@ -198,13 +198,13 @@ module.exports = {
      * Build version is a date ot building
      * @type {Boolean}
      */
-    useBuildVersioning: true,
+    useBuildVersioning: false,
 
     /**
      * Use archiver for your build
      * @type {Boolean}
      */
-    useArchiver: true,
+    useArchiver: false,
 
     /**
      * Set ulimit. Topical for Linux-family OS and OSX.

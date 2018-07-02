@@ -50,6 +50,9 @@
     padding: 0;
     color: #fff;
     text-transform: capitalize;
+    &:hover {
+      border-color: #fff;
+    }
     @include media-breakpoint-up(md) {
       width: auto;
       height: auto;

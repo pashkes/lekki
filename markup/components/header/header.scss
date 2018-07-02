@@ -180,6 +180,9 @@
   &__show-menu {
     min-width: 168px;
     padding: 10px 15px;
+    &:hover {
+      border-color: #fff;
+    }
     &::before {
       content: '';
       opacity: 0;

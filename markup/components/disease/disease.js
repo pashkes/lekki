@@ -3,7 +3,22 @@
   const advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-disease-product-prev'),
-    prevArrow: $('.js-disease-product-next')
+    prevArrow: $('.js-disease-product-next'),
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 6
+        }
+      },
+      {
+        breakpoint: 1900,
+        settings: {
+          slidesToShow: 8
+        }
+      }
+    ]
   };
 
   $(window).on('load resize', function () {
@@ -12,7 +27,7 @@
 
 // включение слайдера на мобильном
   function slickMobile(slider, settings) {
-    if ($(window).width() < 1343) {
+    if ($(window).width() < 1200) {
       if (slider.hasClass('slick-initialized')) {
         slider.slick('unslick');
       }
@@ -22,9 +37,6 @@
       return slider.slick(settings);
     }
   };
-  var msnry = new Masonry( '.js-grid', {
-    percentPosition: true,
-    columnWidth: '.js-col'
-  });
+
 })();
 

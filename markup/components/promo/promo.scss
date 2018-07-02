@@ -140,6 +140,7 @@
     background-repeat: no-repeat;
     @include media-breakpoint-up(xl) {
       min-height: 216px;
+      width: 368px;
       padding: 40px 24px 24px 24px;
     }
     &--hand-bg {

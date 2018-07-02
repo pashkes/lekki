@@ -41,6 +41,25 @@ const data = {
         made: 'Яндран (Хорватия)',
         oldCostValue: '345',
         cost: '195'
+      },
+      {
+        sticker: true,
+        imgName: '002',
+        title: 'Аква марис спрей назальный 30мл',
+        made: 'Яндран (Хорватия)',
+        oldCostValue: '345',
+        cost: '195'
+      },
+      {
+        title: 'Orthomol Junior C plus витамины для детей №30',
+        made: 'Unifarm Inc. (США)',
+        cost: '300',
+      },
+      {
+        imgName: '004',
+        title: 'Граммидин с анестетиком нео таблетки для рассасывания №18',
+        made: 'Валента (Россия)',
+        cost: '254'
       }
     ]
   }

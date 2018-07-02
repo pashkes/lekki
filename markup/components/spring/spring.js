@@ -3,7 +3,22 @@
   const advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-spring-product-prev'),
-    prevArrow: $('.js-spring-product-next')
+    prevArrow: $('.js-spring-product-next'),
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 6
+        }
+      },
+      {
+        breakpoint: 1700,
+        settings: {
+          slidesToShow: 8
+        }
+      }
+    ]
   };
 
   $(window).on('load resize', function () {
@@ -12,7 +27,7 @@
 
 // включение слайдера на мобильном
   function slickMobile(slider, settings) {
-    if ($(window).width() < 1344) {
+    if ($(window).width() < 1200) {
       if (slider.hasClass('slick-initialized')) {
         slider.slick('unslick');
       }

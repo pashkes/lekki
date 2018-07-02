@@ -251,6 +251,9 @@
     top: 0;
     height: 40px;
     min-width: 81px;
+    &:hover {
+      border-color: #fff;
+    }
     @include media-breakpoint-up(md) {
       min-width: 121px;
     }

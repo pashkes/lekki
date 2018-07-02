@@ -1,1 +1,116 @@
 
+.discounts {
+  padding-top: 27px;
+  padding-bottom: 32px;
+  background-color: #f1f1f1;
+  @include media-breakpoint-up(md) {
+    padding-top: 42px;
+    padding-bottom: 48px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 46px;
+  }
+  &__item-lg {
+    position: relative;
+    display: block;
+    padding: 20px 16px;
+    min-height: 352px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-color: #474A6B;
+    background-size: 288px 352px;
+    margin-bottom: 16px;
+    @include media-breakpoint-up(md) {
+      min-height: 400px;
+    }
+    @include media-breakpoint-up(xl) {
+      min-height: 448px;
+      overflow: hidden;
+    }
+    .discounts__sticker {
+      @include media-breakpoint-up(xl) {
+        width: 100px;
+        height: 100px;
+        .icon {
+          width: 100px;
+          height: 100px;
+        }
+        span {
+          top: 37px;
+          left: 20px;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  &__subject {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #ffffff;
+    font-style: normal;
+    span {
+      display: block;
+    }
+  }
+  &__text {
+    max-width: 148px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 400;
+  }
+  &__sticker {
+    position: absolute;
+    right: 16px;
+    bottom: 24px;
+    @include media-breakpoint-up(xl) {
+      right: 24px;
+    }
+  }
+  &__item-md {
+    position: relative;
+    flex-grow: 1;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+    overflow: hidden;
+    @include media-breakpoint-up(md) {
+      min-width: 344px;
+      height: 192px;
+      width: 100%;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 368px;
+      height: 216px;
+    }
+    .discounts__sticker {
+      @include media-breakpoint-up(md) {
+        width: 70px;
+        height: 70px;
+        .icon {
+          width: 70px;
+          height: 70px;
+        }
+        span {
+          top: 27px;
+          left: 13px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .row {
+    @media (max-width: 767px) {
+      height: auto !important;
+    }
+  }
+  .js-col {
+    @media (max-width: 767px) {
+      position: static !important;
+    }
+  }
+
+}

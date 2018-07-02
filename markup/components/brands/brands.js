@@ -6,7 +6,7 @@
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 1343,
+        breakpoint: 1199,
         settings: {
           variableWidth: false,
           slidesToShow: 9

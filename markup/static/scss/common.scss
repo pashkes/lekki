@@ -12,6 +12,10 @@ body {
     padding-right: 32px;
     padding-left: 32px;
   }
+  @include media-breakpoint-up(xl) {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 }
 label {
   margin-bottom: 0;
@@ -67,4 +71,12 @@ p {
 }
 .modal-dialog {
   pointer-events: auto;
+}
+div.d-none-x {
+  display: none !important;
+}
+div.d-xxl-block {
+  @media (min-width: 1900px) {
+    display: block !important;
+  }
 }

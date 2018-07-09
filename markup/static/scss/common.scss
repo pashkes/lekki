@@ -80,3 +80,8 @@ div.d-xxl-block {
     display: block !important;
   }
 }
+.ml-xxl-auto {
+  @media (min-width: 1900px) {
+    margin-left: auto !important;
+  }
+}

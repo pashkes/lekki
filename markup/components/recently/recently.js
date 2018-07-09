@@ -28,6 +28,7 @@
             slidesToShow: 6,
             rows: 1,
             arrows: true,
+            dots: false
           }
         },
         {
@@ -36,6 +37,7 @@
             slidesToShow: 8,
             rows: 1,
             arrows: true,
+            dots: false
           }
         }
       ]

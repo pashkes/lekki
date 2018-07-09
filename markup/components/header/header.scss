@@ -36,7 +36,12 @@
   }
   &__guid-link {
     color: #fff;
-
+    &:hover {
+      color: $red;
+      span {
+        border-bottom-color: transparent;
+      }
+    }
     &:first-child {
       margin-right: 25px;
     }
@@ -110,9 +115,13 @@
   &__tel {
     margin-right: 31px;
     a {
+      border-bottom: 1px dashed;
       @include media-breakpoint-up(xl) {
         font-size: 18px;
         font-weight: 500;
+      }
+      &:hover {
+        border-bottom-color: transparent;
       }
     }
   }
@@ -254,6 +263,7 @@
     top: 0;
     height: 40px;
     min-width: 81px;
+    border: 1px solid #fff;
     &:hover {
       border-color: #fff;
     }

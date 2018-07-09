@@ -2,8 +2,8 @@
   const productSlider = $('.js-products-slider-disease');
   const advantageSliderSettigs = {
     slidesToShow: 5,
-    nextArrow: $('.js-disease-product-prev'),
-    prevArrow: $('.js-disease-product-next'),
+    nextArrow: $('.js-disease-product-next'),
+    prevArrow: $('.js-disease-product-prev'),
     mobileFirst: true,
     responsive: [
       {

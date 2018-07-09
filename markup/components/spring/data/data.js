@@ -10,6 +10,7 @@ const data = {
         cost: '195'
       },
       {
+        imgName: '008',
         title: 'Orthomol Junior C plus витамины для детей №30',
         made: 'Unifarm Inc. (США)',
         cost: '300',
@@ -51,6 +52,7 @@ const data = {
         cost: '195'
       },
       {
+        imgName: '007',
         title: 'Orthomol Junior C plus витамины для детей №30',
         made: 'Unifarm Inc. (США)',
         cost: '300',

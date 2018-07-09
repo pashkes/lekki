@@ -29,6 +29,12 @@
     position: relative;
     flex: none;
     padding-top: 13px;
+    &:hover {
+      .product__hover-block {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
     @include media-breakpoint-up(md) {
       margin-right: 7px;
       padding-top: 7px;
@@ -47,6 +53,7 @@
     height: 64px;
     margin-right: 16px;
     background-color: $white-two;
+
     @include media-breakpoint-up(md) {
       width: 72px;
       height: 72px;
@@ -95,6 +102,10 @@
     letter-spacing: -0.3px;
     color: $warm-grey;
     text-decoration: line-through;
+    span {
+      font-size: 11px;
+      line-height: 1.82;
+    }
   }
   &__footer {
     margin-top: auto;
@@ -111,17 +122,16 @@
   &__buy {
     min-width: 120px;
     margin-right: 8px;
-    padding: 9px 0 9px 15px;
+    padding: 9px 0 9px 0;
     font-size: 16px;
     line-height: 1.25;
+    min-height: 41px;
     letter-spacing: -0.2px;
     overflow: hidden;
     transition: none;
-    min-height: 40px;
     @include media-breakpoint-up(md) {
       flex-grow: 1;
       margin-right: 16px;
-      padding-left: 30px;
     }
     @include media-breakpoint-up(xl) {
       margin-right: 0;
@@ -139,22 +149,14 @@
         left: 0;
       }
       .product__btn-label {
-        opacity: 1;
-        visibility: visible;
+        display: block;
       }
       .product__btn-text {
         display: none;
       }
     }
   }
-  @include media-breakpoint-up(xl) {
-    &:hover {
-      .product__hover-block {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-  }
+
   &__cart {
     position: absolute;
     right: 0;
@@ -167,13 +169,11 @@
     background-color: $red;
   }
   &__btn-label {
-    display: block;
     flex-grow: 1;
     text-align: center;
-    opacity: 0;
     font-size: 13px;
     text-transform: uppercase;
-    visibility: hidden;
+    display: none;
     color: #fff;
     line-height: 1;
   }
@@ -206,6 +206,13 @@
   }
   &__btn-text {
     white-space: nowrap;
+    display: block;
+    //40px ширина иконки корзины
+    width: calc(100% - 40px);
+    span {
+      font-size: 14px;
+      line-height: 1.43;
+    }
   }
   .slick-list {
     font-size: 0;

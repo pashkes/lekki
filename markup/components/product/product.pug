@@ -22,10 +22,12 @@ mixin product(data)
 			if !data.info
 				.product__footer
 					if data.oldCostValue
-						span.product__old-cost #{data.oldCostValue} &#8381;
+						span.product__old-cost #{data.oldCostValue}
+							span  &#8381;
 					.product__buttons
 						a(href="#" data-toggle="modal" data-target="#cart-list").product__buy.btn.btn--border-red.btn--icon.js-add-cart
-							span.product__btn-text #{data.cost} &#8381;
+							span.product__btn-text #{data.cost}
+								span  &#8381;
 							span.product__btn-label Купить
 							span.product__cart
 								+icon('cart', '20', '17')

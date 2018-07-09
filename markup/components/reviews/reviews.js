@@ -12,19 +12,22 @@
     },{
       breakpoint: 1199,
       settings: {
-        slidesToShow: 3
+        slidesToShow: 3,
+        dots: false
       }
     },
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 4
+          slidesToShow: 4,
+          dots: false
         }
       },
       {
         breakpoint: 1900,
         settings: {
-          slidesToShow: 5
+          slidesToShow: 5,
+          dots: false
         }
       }]
 

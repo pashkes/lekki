@@ -2,8 +2,8 @@
   const productSlider = $('.js-products-slider');
   const advantageSliderSettigs = {
     slidesToShow: 5,
-    nextArrow: $('.js-spring-product-prev'),
-    prevArrow: $('.js-spring-product-next'),
+    nextArrow: $('.js-spring-product-next'),
+    prevArrow: $('.js-spring-product-prev'),
     mobileFirst: true,
     responsive: [
       {

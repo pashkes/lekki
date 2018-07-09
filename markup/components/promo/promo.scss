@@ -40,9 +40,10 @@
     }
   }
   &__btn {
+    min-width: 167px;
     margin-top: auto;
     margin-right: auto;
-    min-width: 167px;
+    padding: 10px 15px;
   }
   &__title {
     margin-bottom: 11px;

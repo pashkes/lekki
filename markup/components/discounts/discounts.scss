@@ -51,7 +51,10 @@
     color: #ffffff;
     font-style: normal;
     @media (min-width: 1400px) {
-      font-size: 1.8vw;
+      font-size: 1.55vw;
+    }
+    @media (min-width: 1900px) {
+      font-size: 28px;
     }
     span {
       display: block;

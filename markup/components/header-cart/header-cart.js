@@ -16,6 +16,7 @@
     if ($('.header-cart__wrapper').has(e.target).length === 0) {
       productsCart.removeClass('show');
       overlay.removeClass('show');
+
     }
   });
 

@@ -151,8 +151,8 @@
     width: 40px;
     height: 40px;
     font-size: 0;
+    border-color: $white-two;
     &:hover {
-      border-color: $white-two;
       .icon {
         fill: $red;
       }
@@ -282,7 +282,7 @@ a {
 
 }
 
-.filter {
+.filter-main {
   display: flex;
   overflow-x: auto;
   margin: 0;
@@ -315,7 +315,8 @@ a {
       border: 1px solid $white-two;
     }
   }
-  &__radio:checked + span {
+  &__radio:checked + span,
+  &__radio:hover + span {
     color: $red;
     &::before {
       border-color: $red;
@@ -329,7 +330,7 @@ a {
   margin: 0;
   padding: 0;
   &__item {
-    position:relative;
+    position: relative;
     margin-right: 4px;
     height: 12px;
     width: 12px;
@@ -346,5 +347,30 @@ a {
         background-image: url(%=static=%general/star-empty.svg);
       }
     }
+  }
+}
+
+.checkbox {
+  position: relative;
+  display: block;
+  padding-left: 32px;
+  font-size: 14px;
+  line-height: 1.57;
+  &__input {
+    display: none;
+  }
+  &__input + span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    background-color: #ffffff;
+    border: solid 1px #c0c0c0;
+  }
+  &__input:checked + span {
+    background: url(%=static=%minified-svg/mark.svg) center no-repeat;
   }
 }

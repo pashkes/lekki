@@ -1,0 +1,217 @@
+.filter {
+  position: relative;
+  .modal-backdrop {
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    overflow: auto;
+    transition: $transition-base;
+    @include media-breakpoint-up(md) {
+      padding: 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      transform: none;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+    &.show {
+      opacity: 1;
+      visibility: visible;
+      z-index: 9999;
+      @include media-breakpoint-up(xl) {
+        z-index: 0;
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    padding: 20px 16px 16px;
+    border-radius: 4px;
+    box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.12);
+    background-color: #ffffff;
+    border: solid 1px $white-two;
+    z-index: 1;
+    @include media-breakpoint-up(md) {
+      padding: 28px 32px 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      position: relative;
+      max-width: 272px;
+      padding: 0 0 0 32px;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+      transform: none;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__catagories {
+    padding: 0 0 4px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 10px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 14px;
+    padding-right: 8px;
+    text-transform: uppercase;
+    line-height: 1.54;
+    font-size: 13px;
+  }
+
+  &__collapse {
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background-color: #f6f6f6;
+  }
+
+  &__section {
+    margin-bottom: 16px;
+    padding: 0 16px 26px;
+  }
+
+  &__show-collapse {
+    width: 100%;
+    padding: 16px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.54;
+    text-transform: uppercase;
+    &.collapsed {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+    .icon {
+      margin-right: 14px;
+      transition: all .4s ease;
+    }
+    &:hover {
+      .icon {
+        fill: $red;
+      }
+    }
+  }
+
+  &__field {
+    width: 100%;
+    padding-left: 26px;
+    text-align: right;
+    border-color: $pinkish-grey;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+    color: $black;
+  }
+
+  &__fields-cost {
+    display: flex;
+    margin-bottom: 18px;
+  }
+
+  &__cost {
+    position: relative;
+    flex-grow: 1;
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
+
+  &__cost-label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: $warm-grey-two;
+  }
+
+  .ui-widget-content {
+    height: 2px;
+    background-color: #c0c0c0;
+    border: none;
+  }
+
+  .ui-slider .ui-slider-range {
+    border-radius: 0;
+    background-color: $red;
+  }
+
+  .ui-slider .ui-slider-handle {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #f6f6f6;
+    border-radius: 50%;
+    background-color: $red;
+    top: -8px;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__footer {
+    @include media-breakpoint-up(md) {
+      padding-top: 16px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 0;
+    }
+  }
+  &__btn {
+    width: 100%;
+    text-transform: capitalize;
+  }
+
+  &__show-products {
+    margin-bottom: 16px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__show-all {
+    margin-left: 32px;
+    padding: 0;
+    border: none;
+    border-bottom: dashed 1px rgba($warm-grey-two, .4);
+    font-weight: 500;
+    background-color: transparent;
+    font-size: 13px;
+    line-height: 1;
+    span {
+      padding-left: 4px;
+      color: $warm-grey-two;
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+}

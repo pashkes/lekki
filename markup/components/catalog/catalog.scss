@@ -1,0 +1,114 @@
+.catalog {
+  padding-bottom: 32px;
+  border-bottom: solid 1px $white-two;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 48px;
+  }
+  &__only-discount {
+    margin-bottom: 14px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+  &__sort-wrapper {
+    width: 132px;
+  }
+  &__sort {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 24px;
+    padding: 9px 16px;
+    border-color: transparent;
+    appearance: none;
+    border-radius: 4px;
+    background-color: #f6f6f6;
+    font-size: 14px;
+    line-height: 1.57;
+    color: $black;
+    background-image: url(%=static=%minified-svg/arrow-top-sm.svg), linear-gradient(#F6F6F6, #F6F6F6), linear-gradient(#fff, #fff);
+    background-position: right 13px bottom 50%, 100%, calc(100% - 34px) 0;
+    background-size: 8px 10px, 34px 100%, 1px 100%;
+    background-repeat: no-repeat;
+    &::-ms-expand {
+      display: none;
+    }
+    &:focus {
+      border-color: #ea2b16;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  &__filter-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 0;
+    background: #f6f6f6 url(%=static=%minified-svg/settings.svg) center no-repeat;
+    &:focus {
+      border-color: $red;
+    }
+  }
+  &__filter-wrapper {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 9.5px 16px;
+      border-radius: 4px;
+      background-color: #f6f6f6;
+    }
+  }
+  &__sort-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__sort-item {
+    display: flex;
+    align-items: center;
+    margin-right: 23px;
+    font-size: 14px;
+    line-height: 1;
+    .icon {
+      margin-left: 6px;
+      fill: $black;
+      transform: rotate(180deg);
+      transition: all .4s ease;
+    }
+
+  }
+
+  &__radio {
+    display: none;
+  }
+  &__radio:checked + span + .icon {
+    transform: rotate(0);
+    fill: $red;
+  }
+  &__radio:checked + span {
+    color: $red;
+  }
+  &__card {
+    margin-bottom: 16px;
+  }
+  &__show-more {
+    width: 100%;
+    margin-bottom: 32px;
+    @include media-breakpoint-up(md) {
+      width: 240px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 40px;
+    }
+  }
+  &__list {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 16px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 24px;
+    }
+  }
+}

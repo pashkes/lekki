@@ -1,0 +1,126 @@
+include ../icon/icon
+
+mixin filter(data)
+	.filter
+		.modal-backdrop.fade
+		form.filter__wrapper.js-filter
+			.filter__inner
+				button(type="button").filter__close.btn.btn--close.d-xl-none.js-close-filter
+					+icon('close', 14, 14)
+					| close
+				.filter__categories
+					.row
+						.col-md-6.col-xl-12
+							a(href="#").filter__link Антисептики для рук
+							a(href="#").filter__link Гигиенические расходные материалы
+							a(href="#").filter__link Дезинфицирующие средства и бытовая химия
+							a(href="#").filter__link Женская гигиена
+						.col-md-6.col-xl-12
+							a(href="#").filter__link Защита от насекомых
+							a(href="#").filter__link Контроль за потоотделением
+							a(href="#").filter__link Уход за зубами и полостью рта
+							a(href="#").filter__link Уход за лежачими больными
+				.row
+					.col-md-6.col-xl-12
+						.filter__collapse
+							button(type="button" data-toggle="collapse" data-target="#filter-collapse-1" aria-expanded="false" aria-controls="filter-collapse-1").filter__show-collapse
+								+icon('arrow-top', 13, 7)
+								|  Цена
+							#filter-collapse-1.show.filter__section
+								.filter__fields-cost
+									label.filter__cost
+										span.filter__cost-label от
+										input(type="text").field.filter__field.js-from-cost
+									label.filter__cost
+										span.filter__cost-label до
+										input(type="text").field.filter__field.js-to-cost
+								#slider-range
+						.filter__collapse
+							button(type="button" data-toggle="collapse" data-target="#filter-collapse-2" aria-expanded="false" aria-controls="filter-collapse-2").filter__show-collapse
+								+icon('arrow-top', 13, 7)
+								|  Действующее вещество
+							#filter-collapse-2.show.filter__section
+								label.filter__item.checkbox Цетиризин
+									input(type="checkbox" checked).checkbox__input
+									span
+								label.filter__item.checkbox Лоратадин
+									input(type="checkbox").checkbox__input
+									span
+								label.filter__item.checkbox Дезлортадин
+									input(type="checkbox").checkbox__input
+									span
+								label.filter__item.checkbox Левоцетиризин
+									input(type="checkbox" checked).checkbox__input
+									span
+								label.filter__item.checkbox Фексофенадин
+									input(type="checkbox" checked).checkbox__input
+									span
+								.filter__all-item.collapse#all-filter-1
+									label.filter__item.checkbox Дезлортадин
+										input(type="checkbox").checkbox__input
+										span
+									label.filter__item.checkbox Левоцетиризин
+										input(type="checkbox").checkbox__input
+										span
+									label.filter__item.checkbox Фексофенадин
+										input(type="checkbox").checkbox__input
+										span
+								button(type="button" data-toggle="collapse" data-target="#all-filter-1" aria-expanded="false" aria-controls="all-filter-1").filter__show-all
+									| Показать все
+									span 32
+					.col-md-6.col-xl-12
+						.filter__collapse
+							button(type="button" data-toggle="collapse" data-target="#filter-collapse-3" aria-expanded="false" aria-controls="filter-collapse-3").filter__show-collapse
+								+icon('arrow-top', 13, 7)
+								|  Производитель
+							#filter-collapse-3.show.filter__section
+								label.filter__item.checkbox Алвоген (Испания)
+									input(type="checkbox" checked).checkbox__input
+									span
+								label.filter__item.checkbox Байер (Бельгия)
+									input(type="checkbox").checkbox__input
+									span
+								label.filter__item.checkbox Zambon Group (Великобритания)
+									input(type="checkbox").checkbox__input
+									span
+								label.filter__item.checkbox Ксантер Фарма (Чехия)
+									input(type="checkbox" checked).checkbox__input
+									span
+								label.filter__item.checkbox Фармаклон (Россия)
+									input(type="checkbox" checked).checkbox__input
+									span
+								label.filter__item.checkbox Алвоген (Испания)
+									input(type="checkbox" checked).checkbox__input
+									span
+								label.filter__item.checkbox Байер (Бельгия)
+									input(type="checkbox").checkbox__input
+									span
+								label.filter__item.checkbox Zambon Group (Великобритания)
+									input(type="checkbox").checkbox__input
+									span
+								label.filter__item.checkbox Ксантер Фарма (Чехия)
+									input(type="checkbox" checked).checkbox__input
+									span
+								label.filter__item.checkbox Фармаклон (Россия)
+									input(type="checkbox" checked).checkbox__input
+									span
+								.filter__all-item.collapse#all-filter-2
+									label.filter__item.checkbox Дезлортадин
+										input(type="checkbox").checkbox__input
+										span
+									label.filter__item.checkbox Левоцетиризин
+										input(type="checkbox").checkbox__input
+										span
+									label.filter__item.checkbox Фексофенадин
+										input(type="checkbox").checkbox__input
+										span
+								button(type="button" data-toggle="collapse" data-target="#all-filter-2" aria-expanded="false" aria-controls="all-filter-2").filter__show-all
+									| Показать все
+									span 49
+
+				footer.filter__footer
+					.row
+						.col-md.d-xl-none
+							button.filter__show-products.filter__btn.btn.btn--red Показать
+						.col-md
+							button(type="button").filter__btn.btn Сбросить фильтр

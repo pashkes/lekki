@@ -68,12 +68,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-    @include media-breakpoint-up(md) {
-      flex-grow: 1;
-    }
-    @include media-breakpoint-up(xl) {
-      flex-grow: 1;
-    }
+    flex-grow: 1;
   }
   &__title {
     margin-bottom: 4px;
@@ -120,6 +115,7 @@
     }
   }
   &__buy {
+    flex-grow: 1;
     min-width: 120px;
     margin-right: 8px;
     padding: 9px 0 9px 0;
@@ -202,6 +198,11 @@
     margin-right: 8px;
     &:last-child {
       margin-right: 0;
+    }
+    &:first-child {
+      .icon {
+        margin-left: 1px;
+      }
     }
   }
   &__btn-text {

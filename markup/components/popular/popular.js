@@ -3,8 +3,8 @@
   const productSlider = $('.js-popular-slider');
   const advantageSliderSettigs = {
     slidesToShow: 5,
-    nextArrow: $('.js-popular-product-prev'),
-    prevArrow: $('.js-popular-product-next'),
+    nextArrow: $('.js-popular-product-next'),
+    prevArrow: $('.js-popular-product-prev'),
     mobileFirst: true,
     responsive: [
       {
@@ -14,7 +14,7 @@
         }
       },
       {
-        breakpoint: 1900,
+        breakpoint: 1600,
         settings: {
           slidesToShow: 8
         }

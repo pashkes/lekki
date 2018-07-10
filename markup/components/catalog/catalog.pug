@@ -1,0 +1,52 @@
+include ../pagination/pagination
+include ../filter/filter
+include ../icon/icon
+
+mixin  catalog(data)
+	.catalog
+		.container
+			.row
+				.col-xl
+					form.catalog__header
+						.row
+							.col-md
+								.catalog__filter-wrapper
+									.catalog__sort-list.d-none.d-md-flex
+										label.catalog__sort-item
+											input(type="radio" name="sort" checked).catalog__radio
+											span По цене
+											+icon('arrow-top-default', 8, 10)
+										label.catalog__sort-item
+											input(type="radio" name="sort").catalog__radio
+											span По популярности
+											+icon('arrow-top-default', 8, 10)
+										label.catalog__sort-item
+											input(type="radio" name="sort").catalog__radio
+											span По новизне
+											+icon('arrow-top-default', 8, 10)
+									.catalog__only-discount
+										label.checkbox Только товары со скидкой
+											input(type="checkbox").checkbox__input
+											span
+							.col.d-md-none
+								.catolog__sort-wrapper
+									select.catalog__sort
+										option По цене
+										option По популярности
+										option По новизне
+							.col-auto.d-xl-none
+								button(type="button").catalog__filter-btn.js-show-filter-mobile открыть
+					.catalog__list
+						.row
+							each item in data.list
+								.col-md-6.col-xl-3.col-xxl-2.col-xxxl-1
+									+product(item).catalog__card
+					.row.justify-content-center
+						.col-12.col-md-auto
+							a(href="#").catalog__show-more.btn Показать еще
+						.col-12
+							+pagination()
+				.col-xl-auto.ml-xl-auto
+					+filter()
+
+

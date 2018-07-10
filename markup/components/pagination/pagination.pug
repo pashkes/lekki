@@ -1,0 +1,19 @@
+mixin pagination(data)
+	.pagination
+		a(href="#").pagination__prev.disabled
+			+icon('page-prev', 10, 9)
+			| Назад
+		ul.pagination__list
+			li.pagination__item
+				a(href="#").pagination__page.active 1
+			li.pagination__item
+				a(href="#").pagination__page 2
+			li.pagination__item
+				a(href="#").pagination__page 3
+			li.pagination__item
+				a(href="#").pagination__page ...
+			li.pagination__item
+				a(href="#").pagination__page 10
+		a(href="").pagination__next
+			+icon('page-next', 10, 9)
+			|Вперед

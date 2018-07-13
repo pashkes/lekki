@@ -14,6 +14,7 @@ html(class="no-js", lang="ru")
 	include ../components/product-info/product-info
 	include ../components/instruction/instruction
 	include ../components/analog-products/analog-products
+	include ../components/buy-with-product/buy-with-product
 	head
 		+head(head.defaults)
 	//script(src='%=static=%js/separate-js/script.js')
@@ -27,6 +28,7 @@ html(class="no-js", lang="ru")
 				+product-info()
 			+instruction(instructions)
 		+analog-products(spring)
+		+buy-with-product(spring)
 		+recently(recently)
 		+subscribe()
 		+demo()

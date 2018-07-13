@@ -3,6 +3,7 @@
     $(event.target).closest('.instruction__header').toggleClass('active');
   })
 })();
+
 (function () {
   // Cache selectors
   var lastId,
@@ -32,8 +33,7 @@
 // Bind to scroll
   $(window).scroll(function () {
     // Get container scroll position
-    var fromTop = $(this).scrollTop();
-
+    var fromTop = $(this).scrollTop() + 50;
     // Get id of current scroll item
     var cur = scrollItems.map(function () {
       if ($(this).offset().top < fromTop)

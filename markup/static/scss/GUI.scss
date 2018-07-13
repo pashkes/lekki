@@ -10,9 +10,9 @@
   font-size: 13px;
   border-radius: 4px;
   transition: $transition-base;
+  cursor: pointer;
   &:hover {
-    border-color: $red;
-    cursor: pointer;
+    color: $red;
   }
   &:focus {
     outline: none;
@@ -143,8 +143,8 @@
     border-color: $red;
     background-color: #fff;
     &:hover {
-      background-color: $red;
-      color: #fff;
+      color: $red;
+      border-color: $white-two;
     }
   }
   &--prev,

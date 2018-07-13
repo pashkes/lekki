@@ -136,3 +136,9 @@ div.d-xxl-block {
     border-bottom: solid 1px $white-two;
   }
 }
+.page-cart {
+  border-bottom: solid 1px $white-two;
+  @include media-breakpoint-up(xl) {
+    border-bottom: none;
+  }
+}

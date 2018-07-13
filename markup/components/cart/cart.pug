@@ -1,0 +1,90 @@
+mixin cart(data)
+	include ../counter/counter
+	include ../icon/icon
+	.cart
+		h2.cart__title Корзина
+		.row
+			.col-xl
+				.cart__attention
+					p Для&nbsp;
+						b бесплатной доставки
+						| , вам осталось заказать товар еще на сумму —&nbsp;
+						b 245 рублей
+				.ul.cart__list
+					each item in data
+						li.cart__item
+							button(type="button").cart__delete
+								+icon('delete', 16, 18)
+								| удалить
+							.row
+								.col-md
+									.cart__head
+										a(href="#").cart__img
+											img(src="%=static=%img/content/" + item.src alt=item.title)
+										.cart__info
+											h3.cart__model
+												a(href="#") #{item.title}
+											p.cart__made #{item.made}
+								.col-md.ml-md-auto
+									.row.justify-content-between.align-items-center.justify-content-md-start
+										.col-auto.col-md-auto
+											.cart__cost-wrapper
+												span.cart__cost #{item.cost}
+												span.cart__symbol-md &nbsp;&#8381;
+
+										.col-auto.col-md.d-md-flex.justify-content-md-center
+											+counter(item.amount).cart__counter
+										.col-auto.col-md-auto
+											.cart__cost-wrapper.cart__cost-wrapper--pr-md
+												span.cart__cost #{item.totalCost}
+												span.cart__symbol-md &nbsp;&#8381;
+
+			.col-xl-auto
+				.cart__sidebar
+					.cart__order
+						.row.justify-content-md-between.justify-content-xl-start
+							.col-md-auto.col-xl-12
+								table.cart__table
+									thead
+										tr.cart__row
+											th(colspan="2")
+												span.cart__title-order ваш заказ
+									tbody
+										tr
+											td Москва и область
+											td
+												button(type="button").cart__change-location Изменить
+										tr
+											td Промокод: скидка 10%
+											td
+												.cart__bold-text
+													span.cart__val 9 700
+													span.cart__symbol-sm &nbsp;&#8381;
+										tr
+											td Стоимость
+											td
+												.cart__bold-text
+													span.cart__val  -970
+													span.cart__symbol-sm &nbsp;&#8381;
+									tfoot
+										tr
+											td
+												span.cart__total-buy Итого к оплате
+											td
+												.cart__cost
+													span.cart__cost-value 8730&nbsp;
+													span.cart__symbol &#8381;
+												a(href="#").cart__total-bonuse +873 бонусов
+							.col-md-auto.col-xl-12
+								.cart__buttons
+									button.cart__btn.cart__btn--order.btn.btn--red оформить заказ
+									button.cart__btn.btn.btn--border-red оформить заказ
+					.cart__bonus
+						.row.justify-content-md-between.justify-content-xl-start
+							.col-md-auto.col-xl-12
+								p.cart__you-use Вы можете использовать
+								span.cart__total-bonusies 160 из 1500 бонусов
+							.col-md-auto.col-xl-12
+								a(href="#").cart__btn.btn Использовать бонусы
+
+

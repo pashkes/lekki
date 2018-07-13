@@ -1,0 +1,9 @@
+
+.useful {
+  &.products {
+    border-bottom: none;
+    @include media-breakpoint-up(xl) {
+      border-top: none;
+    }
+  }
+}

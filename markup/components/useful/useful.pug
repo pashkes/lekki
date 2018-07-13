@@ -1,0 +1,21 @@
+mixin useful(data)
+	include ../product/product
+	include ../icon/icon
+	.useful.products
+		.container
+			.row.justify-content-between
+				.col-xl-auto
+					h2.products__title Вам пригодится
+				.col-xl-auto.d-none.d-xl-block
+					button(type='button').products__arrow.btn.btn--prev.js-useful-product-prev
+						| предадущий слайдер
+						+icon('arrow-left', '15', '15')
+					button(type='button').products__arrow.btn.btn--next.js-useful-product-next
+						| следующий слайдер
+						+icon('arrow-right', '15', '15')
+			.products__wrapper
+				.row.js-products-slider-useful
+					each item in data.list
+						.col.d-flex.flex-column
+							.products__slide
+								+product(item).products__card

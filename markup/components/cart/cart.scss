@@ -1,0 +1,319 @@
+.cart {
+  padding-bottom: 32px;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 55px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 8px;
+  }
+  &__title {
+    margin-bottom: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.2px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 24px;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+  }
+  &__counter {
+    max-width: 112px;
+  }
+  .counter__field {
+    padding: 8px 36px;
+  }
+
+  &__attention {
+    margin-bottom: 28px;
+    padding: 12px 16px 12px 16px;
+    border: dashed 1px $red;
+    border-radius: 4px;
+    background-color: #ffffff;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    b {
+      font-weight: 500;
+    }
+  }
+  &__list {
+    margin: 0 0 26px;
+    padding: 0;
+    border-top: solid 1px $white-two;
+    list-style-type: none;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $white-two;
+    @include media-breakpoint-up(md) {
+      padding-top: 30px;
+      padding-bottom: 24px;
+    }
+  }
+  &__head {
+    display: flex;
+  }
+  &__img {
+    display: block;
+    max-width: 67px;
+    margin-right: 18px;
+    flex: none;
+    @include media-breakpoint-up(md) {
+      max-width: 90px;
+      margin-right: 34px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 120px;
+      margin-right: 32px;
+    }
+  }
+  &__model {
+    padding-right: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    margin-bottom: 8px;
+    @include media-breakpoint-up(md) {
+      padding-right: 0;
+    }
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.29;
+    }
+  }
+  &__made {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: $warm-grey-two;
+  }
+  &__cost-wrapper {
+    min-width: 65px;
+    text-align: right;
+    &--pr-md {
+      @include media-breakpoint-up(md) {
+        padding-right: 40px;
+      }
+    }
+  }
+  &__cost {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.11;
+    text-align: right;
+  }
+  &__symbol-md {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.11;
+  }
+  &__delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 18px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-size: 0;
+    cursor: pointer;
+    z-index: 1;
+    @include media-breakpoint-up(md) {
+      top: 40px;
+    }
+    @include media-breakpoint-up(xl) {
+      top: 32px;
+    }
+    &:hover {
+      .icon {
+        fill: $red;
+      }
+    }
+    .icon {
+      fill: $warm-grey-two;
+      transition: $transition-base;
+    }
+  }
+  &__sidebar {
+    @include media-breakpoint-up(xl) {
+      position: sticky;
+      top: 16px;
+      max-width: 320px;
+      margin-left: 32px;
+    }
+  }
+  &__order {
+    padding: 16px 16px 24px 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background-color: #f6f6f6;
+    @include media-breakpoint-up(md) {
+      padding: 24px 24px 32px;
+    }
+  }
+  &__title-order {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.88;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  &__table {
+    width: 100%;
+    margin-bottom: 9px;
+    @include media-breakpoint-up(md) {
+      max-width: 274px;
+    }
+    td:last-child {
+      text-align: right;
+    }
+    thead {
+      td {
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+      tr {
+        &:last-child {
+          td {
+            padding-bottom: 17px;
+          }
+        }
+      }
+    }
+    tfoot {
+      td {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        border-top: 1px solid $white-two;
+        vertical-align: top;
+      }
+    }
+  }
+  &__bold-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.43;
+  }
+  &__symbol-sm {
+    font-size: 11px;
+  }
+  &__buttons {
+    @include media-breakpoint-up(md) {
+      padding-top: 37px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 0;
+    }
+  }
+  &__change-location {
+    display: inline-block;
+    vertical-align: top;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-bottom: 1px dashed rgba($warm-grey-two, .4);
+    font-weight: 500;
+    line-height: 1;
+    transition: $transition-base;
+    &:hover {
+      color: $red;
+      border-bottom: transparent;
+    }
+  }
+  &__cost-value {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.11;
+    color: $red;
+  }
+  &__symbol {
+    font-weight: 500;
+    line-height: 1.11;
+    color: $red;
+    font-size: 14px;
+  }
+  &__total-buy {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+  }
+  &__total-bonuse {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.54;
+    border-bottom: 1px dashed rgba($warm-grey-two, .4);
+    &:hover {
+      color: $red;
+      border-bottom: transparent;
+    }
+  }
+  &__btn {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    @include media-breakpoint-up(md) {
+      min-width: 272px;
+      width: auto;
+    }
+    &--order {
+      margin-bottom: 16px;
+    }
+  }
+  &__bonus {
+    border-radius: 4px;
+    background-color: #f6f6f6;
+    padding: 16px 16px 24px;
+    @include media-breakpoint-up(md) {
+      padding: 24px 24px 28px;
+    }
+  }
+  &__you-use {
+    margin-bottom: 0;
+    line-height: 1.57;
+    font-size: 14px;
+  }
+  &__total-bonusies {
+    position:relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: top;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.67;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+      left: 0;
+      border-bottom: 1px dashed rgba($warm-grey-two, .4);
+      transition: $transition-base;
+    }
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 20px;
+    }
+  }
+}

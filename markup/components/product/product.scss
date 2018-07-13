@@ -17,6 +17,46 @@
     flex-direction: column;
     min-height: 360px;
   }
+  &--vertical-rows-md {
+    @include media-breakpoint-up(md) {
+      padding-top: 32px;
+      padding-bottom: 23px;
+      flex-direction: column;
+      min-height: 360px;
+    }
+    .product {
+      &__top {
+        @include media-breakpoint-up(md) {
+          padding-top: 0;
+          margin-bottom: 23px;
+          margin-right: 0;
+        }
+      }
+      &__img {
+        @include media-breakpoint-up(md) {
+          width: 120px;
+          height: 120px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      &__title {
+        @include media-breakpoint-up(md) {
+          margin-bottom: 7px;
+        }
+      }
+      &__buttons {
+        @include media-breakpoint-up(md) {
+          padding-bottom: 0;
+        }
+      }
+      &__buy {
+        @include media-breakpoint-up(md) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
   &:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   }

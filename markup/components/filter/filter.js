@@ -14,23 +14,23 @@ $(function () {
 
 });
 (function () {
-  const btnCart = $('.js-show-filter-mobile');
-  const overlay = $('.filter .modal-backdrop');
-  const productsCart = $('.js-filter');
-  const closeBtn = $('.js-close-filter');
+  const btnFilter = $('.js-show-filter-mobile');
+  const overlayFilter = $('.filter .modal-backdrop');
+  const filter = $('.js-filter');
+  const closeFilter = $('.js-close-filter');
 
-  btnCart.on('click', function () {
-    overlay.toggleClass('show');
-    productsCart.toggleClass('show');
+  btnFilter.on('click', function () {
+    overlayFilter.addClass('show');
+    filter.addClass('show');
   });
-  closeBtn.on('click', function () {
-    overlay.removeClass('show');
-    productsCart.removeClass('show');
+  closeFilter.on('click', function () {
+    overlayFilter.removeClass('show');
+    filter.removeClass('show');
   });
   $(document).mouseup(function (e) {
-    if ($('.filter__inner').has(e.target).length === 0) {
-      productsCart.removeClass('show');
-      overlay.removeClass('show');
+    if ($(e.target).closest(".filter__inner").length == 0) {
+      filter.removeClass('show');
+      overlayFilter.removeClass('show');
     }
   });
 

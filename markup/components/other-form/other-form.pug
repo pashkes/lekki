@@ -1,0 +1,22 @@
+include ../product/product
+include ../icon/icon
+mixin other-form(data)
+	.other-form
+		.other-form__header
+			.row.justify-content-between
+				.col-xl-auto.d-none.d-xl-block
+					.row
+						.col
+							button(type='button').other-form__arrow.btn.btn--prev.js-other-form-prev
+								| предадущий слайдер
+								+icon('arrow-left', '15', '15')
+						.col
+							button(type='button').other-form__arrow.btn.btn--next.js-other-form-next
+								| следующий слайдер
+								+icon('arrow-right', '15', '15')
+		.other-form__slider
+			row.js-other-form-slider
+				each item in data.list
+					.col
+						+product(item).other-form__card.product--vertical-rows-md
+

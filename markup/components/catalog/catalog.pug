@@ -26,8 +26,15 @@ mixin  catalog(data)
 											+icon('arrow-top-default', 8, 10)
 									.catalog__only-discount
 										label.checkbox Только товары со скидкой
-											input(type="checkbox").checkbox__input
+											input(type="checkbox" checked).checkbox__input
 											span
+									.catalog__amount-row.d-none.d-xl-flex
+										a(href="#").catalog__view.current
+											+icon('card-view-two', 15, 15)
+											| показать много строк
+										a(href="#").catalog__view
+											+icon('card-view-one', 17, 16)
+											| показать один ряд
 							.col.d-md-none
 								.catolog__sort-wrapper
 									select.catalog__sort

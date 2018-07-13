@@ -1,0 +1,9 @@
+mixin counter(data)
+	.counter.js-counter&attributes(attributes)
+		button(type="button").counter__btn.counter__btn--down.js-counter-up
+			+icon('minus', 16, 2)
+			| минус 1
+		input(type="number" value="1" requiered).field.counter__field.js-counter-field
+		button(type="button").counter__btn.counter__btn--up.js-counter-down
+			+icon('plus', 16, 16)
+			| плюс 1

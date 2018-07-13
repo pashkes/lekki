@@ -1,0 +1,57 @@
+mixin instruction(data)
+	include ../certificates/certificates
+	include ../other-form/other-form
+	.instruction
+		.container
+			.instruction__row
+				.instruction__sidebar.d-none.d-xl-block
+					nav.instruction__nav
+						ul.instruction__list#navigation-page
+							each item in data.navList
+								if item.active
+									li.instruction__item.active
+										a(href="#"+item.id).instruction__link #{item.textLink}
+								else
+									li.instruction__item
+										a(href="#" + item.id).instruction__link #{item.textLink}
+							li.instruction__item
+								a(href="#list-item-12").instruction__link Отзывы
+									span 34
+				.instruction__col
+					ul.instruction__contents#instruction-accordion
+						- var counter = 0
+						each item in data.contents
+							- counter++
+							- var id = item.id;
+							li(class="instruction__block" id="list-item-"+counter)
+								if item.visibility
+									h3
+										button(data-toggle="collapse" data-target="#" + id aria-expanded="true" aria-controls=id).instruction__header.active
+											span #{item.title}
+									div(id=id aria-labelledby=id data-parent="#accordion").instruction__content.collapse.show
+										p #{item.text}
+								else
+									h3
+										button(data-toggle="collapse" data-target="#" + id aria-expanded="true" aria-controls=id).instruction__header
+											span #{item.title}
+									div(id=id aria-labelledby=id data-parent="#accordion").instruction__content.collapse
+										p #{item.text}
+						li.instruction__block(class="instruction__block" id="list-item-10")
+							h3
+								button(data-toggle="collapse" data-target="#section-10" aria-expanded="true" aria-controls="section-10").instruction__header.active
+									span Сертификаты
+							div(id="section-10" aria-labelledby="section-10" data-parent="#accordion").collapse.show
+								+certificates()
+						li.instruction__block(class="instruction__block" id="list-item-11")
+							h3
+								button(data-toggle="collapse" data-target="#section-11" aria-expanded="true" aria-controls="section-11").instruction__header.active
+									span Другие формы выпуска
+							div(id="section-11" aria-labelledby="section-11" data-parent="#accordion").collapse.show
+								+other-form(otherForm)
+						li.instruction__block(class="instruction__block" id="list-item-12")
+							h3
+								button(data-toggle="collapse" data-target="#section-12" aria-expanded="true" aria-controls="section-12").instruction__header.active
+									span Отзывы
+							div(id="section-12" aria-labelledby="section-11" data-parent="#accordion").collapse.show
+								+product-reviews(productReviews)
+

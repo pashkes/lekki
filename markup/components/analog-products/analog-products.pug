@@ -1,0 +1,24 @@
+include ../product/product
+include ../icon/icon
+
+mixin analog-products(data)
+	.analog-products.products
+		.container
+			.row.justify-content-between
+				.col-xl-auto
+					h2.products__title Аналогичные товары
+				.col-xl-auto.d-none.d-xl-block
+					button(type='button').products__arrow.btn.btn--prev.js-analog-products-prev
+						| предадущий слайдер
+						+icon('arrow-left', '15', '15')
+					button(type='button').products__arrow.btn.btn--next.js-analog-products-next
+						| следующий слайдер
+						+icon('arrow-right', '15', '15')
+			.products__wrapper
+				.row.js-analog-products
+					each item in data.list
+						.col-md-6.col-xl-12.d-flex.flex-column
+							.products__slide
+								+product(item).products__card
+			.products__footer.d-xl-none
+				a(href="#").products__view-all.btn Показать все аналоги

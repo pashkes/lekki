@@ -1,10 +1,18 @@
 .breadcrumbs {
-  margin: 0;
-  padding: 10px 0 10px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0;
+  padding: 6px 0;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 10px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 16px;
+    padding-top: 20px;
+
+  }
   &__item {
     position: relative;
     padding-right: 17px;

@@ -1,0 +1,44 @@
+.counter {
+  position:relative;
+  display: flex;
+  &__field {
+    width: 100%;
+    border: solid 1px $white-two;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 8px 55px;
+  }
+  &__btn {
+    position: absolute;
+    top: 0;
+    width: 48px;
+    height: 40px;
+    background-color: transparent;
+    font-size: 0;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    &:hover {
+      .icon {
+        fill: $red;
+      }
+    }
+    .icon {
+      position:relative;
+      fill: $black;
+      z-index: -1;
+      transition: $transition-base;
+    }
+    &--down {
+      left: 0;
+    }
+    &--up {
+      right: 0;
+    }
+  }
+}

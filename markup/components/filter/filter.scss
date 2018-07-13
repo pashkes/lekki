@@ -25,8 +25,8 @@
       opacity: 1;
       position: static;
       transform: none;
-      padding-right: 16px;
-      padding-left: 16px;
+      padding: 0;
+      overflow: initial;
     }
     &.show {
       opacity: 1;
@@ -62,6 +62,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
   }
   &__catagories {
     padding: 0 0 4px;
@@ -83,19 +84,16 @@
   }
 
   &__collapse {
-    margin-bottom: 16px;
+    margin-bottom: 26px;
+    padding: 0 14px 0 16px;
     border-radius: 4px;
     background-color: #f6f6f6;
   }
 
-  &__section {
-    margin-bottom: 16px;
-    padding: 0 16px 26px;
-  }
 
   &__show-collapse {
     width: 100%;
-    padding: 16px;
+    padding: 16px 0 16px 0;
     text-align: left;
     border: none;
     background-color: transparent;
@@ -153,14 +151,35 @@
   }
 
   .ui-widget-content {
-    height: 2px;
-    background-color: #c0c0c0;
+    height: 8px;
+    background-color: transparent;
     border: none;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      background-color: #c0c0c0;
+      height: 2px;
+    }
   }
 
   .ui-slider .ui-slider-range {
+    position:relative;
     border-radius: 0;
-    background-color: $red;
+    background-color: transparent;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      background-color: $red;
+      height: 2px;
+    }
   }
 
   .ui-slider .ui-slider-handle {
@@ -169,10 +188,13 @@
     border: 1px solid #f6f6f6;
     border-radius: 50%;
     background-color: $red;
-    top: -8px;
+    top: -5px;
     &:focus {
       outline: none;
     }
+  }
+  &__slider {
+    padding-bottom: 44px;
   }
   &__footer {
     @include media-breakpoint-up(md) {
@@ -200,6 +222,7 @@
 
   &__show-all {
     margin-left: 32px;
+    margin-bottom: 28px;
     padding: 0;
     border: none;
     border-bottom: dashed 1px rgba($warm-grey-two, .4);

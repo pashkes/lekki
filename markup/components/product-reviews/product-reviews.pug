@@ -1,0 +1,15 @@
+include ../review/review
+mixin product-reviews(data)
+	.product-reviews
+		ul.product-reviews__list
+			each item in data
+				li.product-reviews__item
+					+review(item)
+		.product-reviews__footer
+			.row.justify-content-md-between
+				.col-md-auto
+					a(href="#").product-reviews__show-more.btn
+						| Показать еще отзывы
+						span 30
+				.col-md-auto
+					a(href="#").btn.btn--border-red.product-reviews__add-review Написать отзыв

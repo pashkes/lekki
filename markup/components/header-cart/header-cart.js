@@ -1,6 +1,6 @@
 (function () {
   const btnCart = $('.js-cart-list');
-  const overlay = $('.modal-backdrop');
+  const overlay = $('.cart .modal-backdrop');
   const productsCart = $('.js-cart');
   const closeBtn = $('.js-close-cart');
 

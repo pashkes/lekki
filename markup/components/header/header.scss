@@ -200,7 +200,8 @@
     min-width: 168px;
     padding: 10px 15px;
     border-color: #fff;
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: #fff;
     }
     &::before {

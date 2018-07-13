@@ -1,12 +1,12 @@
 include ../product/product
 include ../icon/icon
 
-mixin spring(data)
+mixin spring(data, title, btnText)
 	.spring-product.products
 		.container
 			.row.justify-content-between
 				.col-xl-auto
-					h2.products__title Весенние товары
+					h2.products__title #{title}
 				.col-xl-auto.d-none.d-xl-block
 					button(type='button').products__arrow.btn.btn--prev.js-spring-product-prev
 						| предадущий слайдер
@@ -21,4 +21,4 @@ mixin spring(data)
 							.products__slide
 								+product(item).products__card
 			.products__footer.d-xl-none
-				a(href="#").products__view-all.btn Показать больше сезонных товаров
+				a(href="#").products__view-all.btn #{btnText}

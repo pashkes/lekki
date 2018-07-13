@@ -6,8 +6,12 @@
   }
   &__only-discount {
     margin-bottom: 14px;
+    .checkbox {
+      padding-left: 28px;
+    }
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
+      margin-left: auto;
     }
   }
   &__sort-wrapper {
@@ -53,12 +57,14 @@
   &__filter-wrapper {
     @include media-breakpoint-up(md) {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       margin-bottom: 24px;
       padding: 9.5px 16px;
       border-radius: 4px;
       background-color: #f6f6f6;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 13.5px 24px;
     }
   }
   &__sort-list {
@@ -68,7 +74,7 @@
   &__sort-item {
     display: flex;
     align-items: center;
-    margin-right: 23px;
+    margin-right: 24px;
     font-size: 14px;
     line-height: 1;
     .icon {
@@ -109,6 +115,32 @@
     }
     @include media-breakpoint-up(xl) {
       margin-bottom: 24px;
+    }
+  }
+  &__amount-row {
+    display: flex;
+    margin-left: 24px;
+  }
+  &__view {
+    display: block;
+    font-size: 0;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+      &.current .icon {
+        stroke: $red;
+      }
+      .icon {
+        stroke: $black
+      }
+    }
+    &.current {
+      .icon {
+        fill: $red;
+      }
+    }
+    .icon {
+      fill: $black;
     }
   }
 }

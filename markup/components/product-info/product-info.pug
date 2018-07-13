@@ -1,0 +1,132 @@
+include ../icon/icon
+include ../stars/stars
+include ../social/social
+include ../counter/counter
+mixin product-info(data)
+	form.product-info
+		.row
+			.col-md
+				h1.page-catalog__title Нурофен для детей 100мг/5мл 150мл суспензия для приема внутрь, апельсин
+			.col-md-auto.ml-md-auto.d-none.d-md-block
+				button.btn.btn--heart.active
+					+icon('heart', 17, 15)
+					| добавить товар в список желания
+			.col-md-auto.d-md-none
+				.product-info__header
+					.row.no-gutters
+						.col-auto
+							.product-info__top-info
+								.product-info__articul
+									span.product-info__label Артикул:
+									span.product-info__code 732478
+								.product-info__stars
+									+stars()
+							button(type="button").product-info__read-reviews
+								| Читать отзывы
+								span.product-info__label 34
+						.col-auto.d-md-none.ml-auto
+							button.btn.btn--heart.active
+								+icon('heart', 17, 15)
+								| добавить товар в список желания
+			.row
+				.col-md-auto
+					.product-info__photo-wrapper
+						.product-info__photo
+							img(src="%=static=%img/content/016_big.jpg" alt="Нурофен для детей 100мг/5мл 150мл суспензия для приема внутрь, апельсин")
+						span.product-info__prescription
+							+icon('attention', 18, 16)
+							| Рецептурный препарат
+				.col-md.col-xl.flex-xl-grow-1
+					.row
+						.col-12.d-none.d-md-block
+							.product-info__header
+								.product-info__articul
+									span.product-info__label Артикул: &#160;
+									span.product-info__code 732478
+								.product-info__label.product-info__title-stars.d-none.d-xl-block Рейтинг товара:
+								+stars().product-info__stars
+								button(type="button").product-info__read-reviews
+									| Читать отзывы
+									span.product-info__label 34
+								button.btn.btn--heart.active.d-md-none
+									+icon('heart', 17, 15)
+									| добавить товар в список желания
+						.col-12
+							.row
+								.col-md-6.col-xl-auto
+									.row.flex-md-column
+										.col-6.col-md-auto
+											.product-info__costs
+												.product-info__old-cost
+													| 215
+													span &#8381;
+												.product-info__cost
+													| 195
+													span &#8381;
+										.col-6.col-md-auto
+											+counter().product-info__counter
+								.col-md-6.col-xl-auto
+										.product-info__economy
+											span.product-info__economy-title Экономия &#160;
+											| 45
+											span.product-info__symbol &#8381;
+										button.product-info__buy.btn.btn--red
+											+icon('cart', 20, 17)
+											span Купить
+										a(href="#").product-info__buy-one-click.btn.btn--border-red Купить в один клик
+								.col-xl
+									ul.product-info__list-desc
+										li.product-info__item-dec
+											span.product-info__label Действующие вещество:
+											span.product-info__value-desc.product-info__value-desc--red Ибупрофен
+										li.product-info__item-dec
+											span.product-info__label Производитель:
+											span.product-info__value-desc.product-info__value-desc--red Reckitt Benckiser&#160;
+											span.product-info__made (Великобритания)
+										li.product-info__item-dec
+											span.product-info__label Бренд:
+											span.product-info__value-desc Нурофен
+										li.product-info__item-dec
+											span.product-info__label Форма выпуска:
+											span.product-info__value-desc Суспензия для приема внутрь
+									button(type="button").product-info__certificaties.btn.d-xl-none Сертификаты
+				.d-none.d-xl-block.w-100
+				.col-xl-auto.d-none.d-xl-block
+					.product-info__fill-space
+				.col-xl.ml-xl-auto.negative--space-xl
+					.product-info__additionals
+						.row.justify-content-md-between
+							.col-md-auto
+								span.product-info__section.product-info__section--has-product Товар в наличии
+							.col-md-auto
+								.product-info__section.product-info__section--delivery
+									.product-info__col
+										span.product-info__label Доставка: &#160;
+										span.product-info__sub-title сегодня
+									.product-info__col
+										span.product-info__label Самовывоз: &#160;
+										span.product-info__sub-title сегодня
+							.col-md-6.col-lg-auto
+								.product-info__section.product-info__section--buy
+									.product-info__col.product-info__col--inline
+										span.product-info__label Оплата: &#160;
+										span.product-info__sub-title Наличными &#160;
+									.product-info__col.product-info__col--inline
+										span.product-info__label или &#160;
+										span.product-info__sub-title банковской картой
+									.product-info__col
+										span.product-info__sub-title + 95 бонусов
+										span.product-info__label &#160; за эту покупку
+					.row.justify-content-center.justify-content-md-start.align-items-xl-end
+						.col-auto
+							.product-info__social
+								span.product-info__social-title.d-none.d-xl-block Поделиться:
+								+social(productSingle)
+						.col-md-auto.col-xl.ml-md-auto.ml-xl-0
+							.row.align-items-xl-end
+								.col.col-md-auto
+									a(href="#").product-info__btn.product-info__btn--sm-padding.product-info__btn--save-pdf.btn Сохранить в PDF
+								.col.col-md-auto
+									a(href="#").product-info__btn.product-info__btn--print.btn Распечатать
+								.col-auto.d-none.d-xl-flex.ml-xl-auto
+									button(type="button").product-info__certificaties.btn Сертификаты

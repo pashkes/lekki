@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-bottom: 32px;
   &__prev,
   &__next {
     display: flex;
@@ -16,6 +15,12 @@
     font-size: 0;
     font-weight: 500;
     color: $black;
+    @include media-breakpoint-up(md) {
+      width: auto;
+      font-size: 13px;
+      padding-right: 24px;
+      padding-left: 24px;
+    }
     .icon {
       fill: $black;
     }
@@ -27,9 +32,22 @@
   }
   &__prev {
     border-radius: 4px 0 0 4px;
+    @include media-breakpoint-up(md) {
+      border-radius: 4px;
+      .icon {
+        margin-right: 12px;
+      }
+    }
+
   }
   &__next {
     border-radius: 0 4px 4px 0;
+    @include media-breakpoint-up(md) {
+      border-radius: 4px;
+      .icon {
+        margin-left: 12px;
+      }
+    }
   }
   &__list {
     margin: 0 auto;

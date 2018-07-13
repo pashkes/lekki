@@ -1,0 +1,11 @@
+include ../stars/stars
+
+mixin review(data)
+	.review&attributes(attributes)
+		cite.review__person #{data.author}
+		.review__info
+			span.review__post-info Москва, 27 февраля 2018
+			+stars()
+		.review__content
+			p.review__text #{data.text}
+			a(href="#").review__read-almost Читать полностью

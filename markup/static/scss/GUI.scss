@@ -84,6 +84,11 @@
         fill: $red;
       }
     }
+    &.active {
+      .icon {
+        fill: $red;
+      }
+    }
     .icon {
       fill: $black;
     }
@@ -320,32 +325,6 @@ a {
     color: $red;
     &::before {
       border-color: $red;
-    }
-  }
-}
-
-.star {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  &__item {
-    position: relative;
-    margin-right: 4px;
-    height: 12px;
-    width: 12px;
-    &::before {
-      content: '';
-      position: absolute;
-      height: 12px;
-      width: 12px;
-      background: #fff url(%=static=%general/star.svg) 0 0 no-repeat;
-      background-size: 12px 12px;
-    }
-    &--empty {
-      &::before {
-        background-image: url(%=static=%general/star-empty.svg);
-      }
     }
   }
 }

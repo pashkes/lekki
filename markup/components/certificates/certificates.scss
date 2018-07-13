@@ -1,0 +1,23 @@
+.certificates {
+  margin-top: 16px;
+  margin-bottom: 3px;
+  font-size: 0;
+  @include media-breakpoint-up(md) {
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+  &__slide {
+    background-color: #CCCCCC;
+    min-height: 193px;
+  }
+  .slick-list {
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+  .slick-track {
+    @include media-breakpoint-up(md) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}

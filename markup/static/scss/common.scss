@@ -7,6 +7,7 @@ body {
   color: $black;
   min-width: 320px;
 }
+
 .container {
   @include media-breakpoint-up(md) {
     padding-right: 32px;
@@ -17,13 +18,16 @@ body {
     padding-left: 24px;
   }
 }
+
 label {
   margin-bottom: 0;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 h2,
 .h2 {
   margin-bottom: 19px;
@@ -36,6 +40,7 @@ h2,
     font-size: 24px;
   }
 }
+
 button {
   &:hover {
     cursor: pointer;
@@ -44,9 +49,11 @@ button {
     outline: none;
   }
 }
+
 p {
   font-size: 14px;
 }
+
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -66,38 +73,45 @@ p {
   background-color: rgba(118, 118, 118, 0.8);
   z-index: 1040;
 }
+
 .modal-dialog-centered {
   justify-content: center;
 }
+
 .modal-dialog {
   pointer-events: auto;
 }
+
 div.d-none-x {
   display: none !important;
 }
+
 div.d-xxl-block {
   @media (min-width: 1900px) {
     display: block !important;
   }
 }
+
 .ml-xxl-auto {
   @media (min-width: 1900px) {
     margin-left: auto !important;
+
   }
 }
+
 @media (min-width: 1600px) {
   .col-xxl-2 {
     flex: 0 0 20%;
     max-width: 20%;
   }
 }
+
 @media (min-width: 1900px) {
   .col-xxxl-1 {
     flex: 0 0 16.6666%;
     max-width: 16.6666%;
   }
 }
-
 
 .page-catalog {
   &__title {
@@ -106,10 +120,19 @@ div.d-xxl-block {
     font-weight: 500;
     line-height: 1.3;
     letter-spacing: 0.2px;
+    text-transform: uppercase;
     @include media-breakpoint-up(md) {
       margin-bottom: 24px;
       font-size: 24px;
       line-height: 1.25;
     }
+    @include media-breakpoint-up(xl) {
+      line-height: 1.25;
+    }
+  }
+}
+.page-single-card {
+  @include media-breakpoint-up(md) {
+    border-bottom: solid 1px $white-two;
   }
 }

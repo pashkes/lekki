@@ -1,0 +1,346 @@
+.negative--space-xl{
+  @include media-breakpoint-up(xl) {
+    margin-top: -161px;
+  }
+}
+.product-info {
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 54px;
+  }
+  &__top-info {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 1px;
+  }
+  &__articul {
+    margin-right: 8px;
+    @include media-breakpoint-up(xl) {
+      margin-right: 20px;
+    }
+  }
+  &__title-stars {
+    margin-right: 6px;
+  }
+  &__stars.stars {
+    @include media-breakpoint-up(md) {
+      margin-right: 40px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: 20px;
+    }
+  }
+  &__read-reviews {
+    position: relative;
+    font-size: 14px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    line-height: 1.43;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+      left: 0;
+      border-bottom: 1px dashed rgba(#979797, .5);
+    }
+    .product-info__label {
+      padding-left: 6px;
+    }
+  }
+  &__label {
+    font-size: 14px;
+    color: $warm-grey-two;
+  }
+  &__header {
+    margin-bottom: 24px;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+  &__photo {
+    margin-bottom: 16px;
+    text-align: center;
+    background-color: #ffffff;
+    border: solid 1px $white-two;
+  }
+  &__fill-space {
+    min-width: 336px;
+    margin-right: 16px;
+  }
+  &__photo-wrapper {
+    @include media-breakpoint-up(md) {
+      max-width: 256px;
+      margin-right: 16px;
+      width: 100%;
+    }
+    @include media-breakpoint-up(xl) {
+      min-width: 336px;
+    }
+  }
+  &__prescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 6px 16px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: dashed 1px $red;
+    color: $red;
+    font-size: 13px;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+    .icon {
+      margin-right: 9px;
+    }
+  }
+  &__costs {
+    margin-bottom: 10px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 20px;
+    }
+  }
+  &__old-cost {
+    display: block;
+    margin-bottom: 12px;
+    color: $warm-grey;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: line-through;
+    @include media-breakpoint-up(md) {
+      font-size: 18px;
+      line-height: 1.11;
+    }
+    span {
+      font-size: 10px;
+      line-height: 2;
+      @include media-breakpoint-up(md) {
+        font-size: 13px;
+      }
+    }
+  }
+  &__cost {
+    display: block;
+    margin-bottom: 11px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 0.63;
+
+    @include media-breakpoint-up(md) {
+      font-size: 44px;
+    }
+    span {
+      padding-left: 4px;
+      font-size: 24px;
+    }
+  }
+  &__economy {
+    margin-bottom: 10px;
+    padding-left: 2px;
+    font-size: 13px;
+    color: $black;
+    font-weight: 500;
+  }
+  &__symbol {
+    font-size: 11px;
+  }
+  &__economy-title {
+    color: $warm-grey-two;
+  }
+  &__symbol {
+    padding-left: 2px;
+    font-size: 11px;
+  }
+  &__counter {
+    margin-top: 15px;
+    min-width: 144px;
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 168px;
+      width: 100%;
+    }
+  }
+
+  &__buy,
+  &__buy-one-click {
+    display: block;
+    margin-bottom: 16px;
+    padding: 10px 15px;
+    width: 100%;
+    @include media-breakpoint-up(xl) {
+      min-width: 190px;
+    }
+  }
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .icon {
+      fill: #fff;
+    }
+    span {
+      position: relative;
+      left: -10px;
+      margin: 0 auto;
+    }
+  }
+  &__buy-one-click {
+    text-transform: uppercase;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+  &__list-desc {
+    margin: 0 0 16px;
+    padding: 0;
+    list-style-type: none;
+    @include media-breakpoint-up(md) {
+      padding-top: 36px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: 25px;
+      padding-left: 24px;
+    }
+  }
+  &__item-dec {
+    margin-bottom: 8px;
+  }
+  &__value-desc {
+    padding-left: 3px;
+    &--red {
+      color: $red;
+    }
+  }
+  &__certificaties {
+    width: 100%;
+    margin-bottom: 32px;
+    background: url(%=static=%general/award.svg) 16px center no-repeat;
+    background-size: 24px 24px;
+    @include media-breakpoint-up(md) {
+      max-width: 200px;
+      background-size: 18px 18px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 140px;
+      margin-bottom: 0;
+      padding-left: 37px;
+      background-position: 12px center;
+    }
+  }
+  &__col {
+    font-weight: 400;
+    &:nth-child(3) {
+      @include media-breakpoint-up(xl) {
+        margin-left: -28px;
+      }
+    }
+
+    &--inline {
+      @include media-breakpoint-up(md) {
+        display: inline-block;
+      }
+    }
+  }
+  &__sub-title {
+    font-weight: 500;
+  }
+  &__social {
+    .social {
+      margin-bottom: 16px;
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+    }
+    .social__item {
+      margin-right: 16px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__social-title {
+    margin-bottom: 2px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: $warm-grey-two;
+  }
+  &__additionals {
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #f6f6f6;
+    @include media-breakpoint-up(md) {
+      padding-right: 15px;
+      padding-left: 24px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 26px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    margin-bottom: 32px;
+    font-weight: 500;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 40px;
+    }
+    &--sm-padding {
+      padding-left: 13px;
+      padding-right: 12px;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+      padding-left: 43px;
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      &--save-pdf {
+        min-width: 170px;
+        background-image: url(%=static=%general/doc.svg);
+        background-position: 14px center;
+      }
+      &--print {
+        min-width: 140px;
+        background-image: url(%=static=%general/print.svg);
+        background-position: 16px center;
+      }
+    }
+
+  }
+
+  &__section {
+    display: block;
+    position: relative;
+    margin-bottom: 8px;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: 0 2px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.54;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: 25px;
+    }
+    &--has-product {
+      background-image: url(%=static=%general/circle-mark.svg);
+    }
+    &--delivery {
+      background-image: url(%=static=%general/delivery.svg);
+    }
+    &--buy {
+      background-image: url(%=static=%general/wallet.svg);
+    }
+  }
+}

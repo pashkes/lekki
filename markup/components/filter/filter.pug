@@ -27,14 +27,15 @@ mixin filter(data)
 								+icon('arrow-top', 13, 7)
 								|  Цена
 							#filter-collapse-1.show.filter__section
-								.filter__fields-cost
-									label.filter__cost
-										span.filter__cost-label от
-										input(type="text").field.filter__field.js-from-cost
-									label.filter__cost
-										span.filter__cost-label до
-										input(type="text").field.filter__field.js-to-cost
-								#slider-range
+								.filter__slider
+									.filter__fields-cost
+										label.filter__cost
+											span.filter__cost-label от
+											input(type="text").field.filter__field.js-from-cost
+										label.filter__cost
+											span.filter__cost-label до
+											input(type="text").field.filter__field.js-to-cost
+									#slider-range.filter__line
 						.filter__collapse
 							button(type="button" data-toggle="collapse" data-target="#filter-collapse-2" aria-expanded="false" aria-controls="filter-collapse-2").filter__show-collapse
 								+icon('arrow-top', 13, 7)

@@ -113,24 +113,6 @@ div.d-xxl-block {
   }
 }
 
-.page-catalog {
-  &__title {
-    margin-bottom: 14px;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.3;
-    letter-spacing: 0.2px;
-    text-transform: uppercase;
-    @include media-breakpoint-up(md) {
-      margin-bottom: 24px;
-      font-size: 24px;
-      line-height: 1.25;
-    }
-    @include media-breakpoint-up(xl) {
-      line-height: 1.25;
-    }
-  }
-}
 .page-single-card {
   @include media-breakpoint-up(md) {
     border-bottom: solid 1px $white-two;

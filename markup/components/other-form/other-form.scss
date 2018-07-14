@@ -1,9 +1,11 @@
 .other-form {
   position:relative;
-  margin-top: 12px;
+  padding-top: 12px;
   font-size: 0;
   @include media-breakpoint-up(xl) {
     margin-top: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
     .slick-list {
       margin-right: -8px;
@@ -24,5 +26,10 @@
     position: absolute;
     top: -56px;
     right: 0;
+  }
+  &__btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 15px;
   }
 }

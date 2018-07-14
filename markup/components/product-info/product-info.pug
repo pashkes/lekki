@@ -4,13 +4,14 @@ include ../social/social
 include ../counter/counter
 mixin product-info(data)
 	form.product-info
-		.row
-			.col-md
-				h1.page-catalog__title Нурофен для детей 100мг/5мл 150мл суспензия для приема внутрь, апельсин
-			.col-md-auto.ml-md-auto.d-none.d-md-block
-				button.btn.btn--heart.active
-					+icon('heart', 17, 15)
-					| добавить товар в список желания
+		.product-info__header-title
+			.row.align-items-xl-center
+				.col-md
+					h1.product-info__title Нурофен для детей 100мг/5мл 150мл суспензия для приема внутрь, апельсин
+				.col-md-auto.ml-md-auto.d-none.d-md-block
+					button.btn.btn--heart.active
+						+icon('heart', 17, 15)
+						| добавить товар в список желания
 			.col-md-auto.d-md-none
 				.product-info__header
 					.row.no-gutters
@@ -64,7 +65,7 @@ mixin product-info(data)
 												| 195
 												span &#8381;
 									.col-6.col-md-auto
-										+counter().product-info__counter
+										+counter(1).product-info__counter
 							.col-md-6.col-xl-auto
 									.product-info__economy
 										span.product-info__economy-title Экономия &#160;
@@ -101,22 +102,22 @@ mixin product-info(data)
 						.col-md-auto
 							.product-info__section.product-info__section--delivery
 								.product-info__col
-									span.product-info__label Доставка: &#160;
+									span.product-info__label Доставка:&#160;
 									span.product-info__sub-title сегодня
 								.product-info__col
-									span.product-info__label Самовывоз: &#160;
+									span.product-info__label Самовывоз:&#160;
 									span.product-info__sub-title сегодня
 						.col-md-6.col-lg-auto
 							.product-info__section.product-info__section--buy
 								.product-info__col.product-info__col--inline
-									span.product-info__label Оплата: &#160;
+									span.product-info__label Оплата:&#160;
 									span.product-info__sub-title Наличными &#160;
 								.product-info__col.product-info__col--inline
-									span.product-info__label или &#160;
+									span.product-info__label или&#160;
 									span.product-info__sub-title банковской картой
 								.product-info__col
 									span.product-info__sub-title + 95 бонусов
-									span.product-info__label &#160; за эту покупку
+									span.product-info__label &#160;за эту покупку
 				.row.justify-content-center.justify-content-md-start.align-items-xl-end
 					.col-auto
 						.product-info__social

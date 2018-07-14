@@ -23,7 +23,7 @@
     max-width: 112px;
   }
   .counter__field {
-    padding: 8px 36px;
+    padding: 8px 30px;
   }
 
   &__attention {
@@ -34,6 +34,9 @@
     background-color: #ffffff;
     @include media-breakpoint-up(md) {
       margin-bottom: 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 9px 16px 9px 16px;
     }
     p {
       margin-bottom: 0;
@@ -71,7 +74,7 @@
   &__img {
     display: block;
     max-width: 67px;
-    margin-right: 18px;
+    margin-right: 21px;
     flex: none;
     @include media-breakpoint-up(md) {
       max-width: 90px;
@@ -90,6 +93,10 @@
     margin-bottom: 8px;
     @include media-breakpoint-up(md) {
       padding-right: 0;
+      max-width: 200px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 100%;
     }
     a {
       font-size: 14px;
@@ -106,6 +113,9 @@
   &__cost-wrapper {
     min-width: 65px;
     text-align: right;
+    @include media-breakpoint-up(xl) {
+      min-width: 110px;
+    }
     &--pr-md {
       @include media-breakpoint-up(md) {
         padding-right: 40px;
@@ -125,7 +135,7 @@
   }
   &__delete {
     position: absolute;
-    top: 0;
+    top: 18px;
     right: 0;
     width: 16px;
     height: 18px;
@@ -168,7 +178,11 @@
     border-radius: 4px;
     background-color: #f6f6f6;
     @include media-breakpoint-up(md) {
-      padding: 24px 24px 32px;
+      padding: 24px 32px 16px 24px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: 24px;
+      padding-bottom: 32px;
     }
   }
   &__title-order {
@@ -177,12 +191,18 @@
     line-height: 1.88;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    display: block;
+    margin-bottom: 2px;
   }
   &__table {
     width: 100%;
     margin-bottom: 9px;
     @include media-breakpoint-up(md) {
       max-width: 274px;
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 8px;
     }
     td:last-child {
       text-align: right;
@@ -284,7 +304,11 @@
     background-color: #f6f6f6;
     padding: 16px 16px 24px;
     @include media-breakpoint-up(md) {
-      padding: 24px 24px 28px;
+      padding: 24px 32px 16px 24px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: 24px;
+      padding-bottom: 32px;
     }
   }
   &__you-use {

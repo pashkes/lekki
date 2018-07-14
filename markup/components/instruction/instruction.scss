@@ -108,6 +108,9 @@
       padding-bottom: 30px;
       border-bottom: none;
     }
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 36px;
+    }
     h3 {
       margin-bottom: 0;
 

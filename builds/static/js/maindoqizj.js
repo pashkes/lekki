@@ -4855,6 +4855,7 @@ object-assign
 
 
 
+
 (function () {
   $('.js-slider-certificate').slick({
     arrows: false,
@@ -4890,7 +4891,6 @@ object-assign
     }
   });
 })();
-
 
 (function () {
   const productSlider = $('.js-products-slider-disease');

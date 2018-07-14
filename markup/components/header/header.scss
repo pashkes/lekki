@@ -168,14 +168,25 @@
         fill: $red;
       }
     }
-    span {
-      position: relative;
-      border-bottom: 1px dashed $white-two;
-      line-height: 1.1;
-    }
+  }
+  &__cart-inner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px dashed $white-two;
+    line-height: 1.1;
   }
   &__cost {
     display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+  &__symbol {
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.1;
     @include media-breakpoint-up(md) {
       display: block;
     }

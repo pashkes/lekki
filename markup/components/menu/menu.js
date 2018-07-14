@@ -11,4 +11,8 @@
     menu.find('.menu__item').removeClass('active');
     $(this).parent().addClass('active')
   });
+  menu.on('mouseleave', function () {
+    btnToggleMenuShow.removeClass('active');
+    menu.removeClass('active');
+  });
 })();

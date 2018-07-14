@@ -123,7 +123,7 @@
         bottom: 3px;
         right: 0;
         left: 0;
-        border-bottom: 1px dashed #767676;
+        border-bottom: 1px dashed $white-two;
         transition: $transition-base;
       }
       @include media-breakpoint-up(xl) {

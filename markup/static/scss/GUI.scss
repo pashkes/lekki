@@ -321,10 +321,17 @@ a {
     }
   }
   &__radio:checked + span,
-  &__radio:hover + span {
+  &__radio:checked:hover + span{
     color: $red;
     &::before {
       border-color: $red;
+    }
+  }
+
+  &__radio:hover + span {
+    color: $red;
+    &::before {
+      border-color: $white-two;
     }
   }
 }

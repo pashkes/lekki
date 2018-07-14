@@ -178,6 +178,7 @@
     &:hover {
       padding-left: 20px;
       background-color: $red;
+      border-color: transparent;
       @include media-breakpoint-up(md) {
         padding-left: 0;
       }

@@ -39,6 +39,7 @@
   &__link {
     display: block;
     padding: 9px 17px;
+    padding-right: 14px;
     text-transform: uppercase;
     font-size: 13px;
     white-space: nowrap;
@@ -47,11 +48,14 @@
     position: absolute;
     left: 100%;
     top: 0;
-    width: calc(100vw - 230px);
-    padding: 0 14px 0 18px;
+    width: calc(100vw - 231px);
+    padding: 0 0 0 18px;
     opacity: 0;
     visibility: hidden;
     transition: $transition-base;
+    @media (min-width: 1900px) {
+      width: calc(100vw - 240px);
+    }
   }
   &__sub-list {
     margin: 0;
@@ -61,9 +65,9 @@
   &__sub-link,
   &__show-all {
     display: block;
-    padding: 8px 17px;
     font-size: 14px;
     font-weight: 400;
+    padding: 8px 0 8px 17px;
   }
   &__show-all {
     display: inline-flex;

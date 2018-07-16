@@ -113,11 +113,6 @@ div.d-xxl-block {
   }
 }
 
-.page-single-card {
-  @include media-breakpoint-up(md) {
-    border-bottom: solid 1px $white-two;
-  }
-}
 .page-cart {
   border-bottom: solid 1px $white-two;
   @include media-breakpoint-up(xl) {

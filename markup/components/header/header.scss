@@ -209,7 +209,6 @@
   }
   &__show-menu {
     min-width: 168px;
-    padding: 10px 15px;
     border-color: #fff;
     &:hover,
     &:focus {
@@ -268,6 +267,7 @@
     position: relative;
     flex-grow: 1;
     font-size: 14px;
+    border-color: #fff;
     padding: 9px 94px 9px 46px;
     width: 100%;
 

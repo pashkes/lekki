@@ -5,16 +5,8 @@ html(class="no-js", lang="ru")
 	include ../components/footer/footer.pug
 	include ../components/header/header
 	include ../components/breadcrumbs/breadcrumbs
-	include ../components/recently/recently
-	include ../components/subscribe/subscribe
-	include ../components/demo/demo
-	include ../components/success-added/success-added
-	include ../components/spring/spring
-	include ../components/product-reviews/product-reviews
-	include ../components/product-info/product-info
-	include ../components/instruction/instruction
-	include ../components/analog-products/analog-products
-	include ../components/buy-with-product/buy-with-product
+	include ../components/order/order
+
 	head
 		+head(head.defaults)
 	//script(src='%=static=%js/separate-js/script.js')
@@ -23,15 +15,8 @@ html(class="no-js", lang="ru")
 		+header()
 		.container
 			+breadcrumbs()
-		+product-info()
-		+instruction(instructions)
-		+analog-products(spring)
-		+buy-with-product(spring)
-		+recently(recently)
-		+subscribe()
-		+demo()
+		+order()
 		+footer()
-		+success-added()
 			//- Include your components here
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();

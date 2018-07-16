@@ -4,6 +4,9 @@
   }
 }
 .product-info {
+  @include media-breakpoint-up(md) {
+    border-bottom: solid 1px $white-two;
+  }
   @include media-breakpoint-up(xl) {
     padding-bottom: 54px;
   }
@@ -196,7 +199,6 @@
   &__buy-one-click {
     display: block;
     margin-bottom: 16px;
-    padding: 10px 15px;
     width: 100%;
     @include media-breakpoint-up(xl) {
       min-width: 190px;
@@ -319,7 +321,6 @@
     width: 100%;
     margin-bottom: 32px;
     font-weight: 500;
-    padding: 10px 15px;
     @include media-breakpoint-up(md) {
       margin-bottom: 40px;
     }

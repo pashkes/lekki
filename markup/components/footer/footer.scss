@@ -54,6 +54,13 @@
     font-size: 13px;
     font-weight: 500;
     line-height: 1.08;
+    b {
+      font-weight: 500;
+      display: block;
+      @include media-breakpoint-up(md) {
+        display: inline;
+      }
+    }
     @include media-breakpoint-up(md) {
       order: -1;
       margin-bottom: 6px;
@@ -116,7 +123,6 @@
   &__feedback {
     width: 100%;
     margin-bottom: 24px;
-    padding: 10px 15px;
     background-color: #f1f1f1;
     text-transform: uppercase;
     &:hover {

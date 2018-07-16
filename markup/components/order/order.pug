@@ -1,0 +1,308 @@
+mixin order(data)
+	include ../icon/icon
+	form.order#order
+		.container
+			h2.order__title Оформление заказа
+			.row
+				.col-xl
+					fieldset.order__contacts-data
+						legent.order__title-group.title.title--md Контактные данные
+						.order__field-box.error
+							label(for="order-firs-name").order__label.label ФИО получателя
+							input(type="text" id="order-firs-name" placeholder="" required).order__contact-field.field
+							.order__error-message
+								span Заполните поле!
+						.order__field-box
+							label(for="order-email").order__label.label Электронная почта
+							input(type="email" id="order-email" placeholder="ivanov@mail.ru" required).order__contact-field.field
+							.order__error-message
+								span Заполите поле!
+						.order__field-box
+							label(for="order-tel").order__label.label Мобильный телефон
+							input(type="tel" id="order-tel" placeholder="+7 123 456-78-90" required).order__contact-field.field
+							.order__error-message
+								span Проверте правильность номера телефона
+						label.order__send-sms.checkbox.checkbox--md Отправлять SMS уведомления
+							input(type="checkbox" checked).checkbox__input
+							span
+					.order__type-delivery#select-delivery
+						.order__title-group.title.title--md Способ доставки
+						.row
+							.col-md-6
+								label.order__tab.order__tab--pickup
+									input(type="radio" name="order-type-delivery" checked).order__radio.js-pickup-delivery
+									span.order__tab-name Самовывоз из аптеки
+									span.order__date 27 апреля 2018
+							.col-md-6
+								label.order__tab.order__tab--courier
+									input(type="radio" name="order-type-delivery").order__radio.js-delivery-courier
+									span.order__tab-name Доставка курьером
+									span.order__date 27 апреля 2018
+						fieldset.order__pickup.js-delivery-pickup-section
+							.order__header-pickup
+								legent.order__title-pickup.title.title--sm Бесплатный самовывоз товара из аптеки
+								p.order__desc Введите удобный для вас адрес получения и мы подберем ближайший пункт выдачи
+								.row
+									.col-md-auto
+										.order__select-wrapper
+											select.order__select.select
+												option Москва
+												option Санкт-Петербург
+												option Ростов
+									.col-md
+										label(for="order-search").invisible.d-none Введите названия улицы или метро
+										input(type="search" id="order-search" placeholder="Введите названия улицы или метро").order__search.field
+									.col-md-auto
+										button(type="button").order__select-pharmacy.btn.btn--red.js-show-map Выбрать аптеку
+							.order__issue-point.js-map
+								span.order__sub-title.title Ближайший пункт выдачи:
+								.row
+									.col-md-5
+										span.order__pharmacy-name.title горздрав аптека №1392
+										span.order__pharmacy-address Климентовский переулок 12, строение 1
+									.col-md-5
+										span.order__time-work 09:00—21:00
+										.order__phone-pharmacy
+											a(href="tel:+74957976336") +7 (495) 797-63-36,
+											a(href="tel:+74957976337") +7 (495) 797-63-37
+									.col-12.col-md-auto.ml-md-auto
+										.row.justify-content-between.flex-md-column
+											.col-auto.col-md-12.d-md-flex.order-md-2
+												button(type="button" data-toggle="collapse" href="#map-collapse" role="button" aria-expanded="false" aria-controls="map-collapse").order__underline-btn.underline.js-toggle-map Скрыть карту
+											.col-auto.col-md-12.d-md-flex.order-md-1
+												a(href="#").order__save-pdf.order__underline-btn.underline Сохранить PDF
+								.order__collapse-map.collapse.show#map-collapse
+									.order__map
+										| <iframe src="https://yandex.com/map-widget/v1/-/CBunbFBUdA" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+									.row.justify-content-between
+										.col-md-auto
+											.order__delivery-wrapper
+												+icon('car-order', 18, 16)
+												.order__type-transport
+													span.title На автомобиле
+													span Расстояние: 13 км
+													span Время в пути: 24 мин
+										.col-md-auto
+											.order__delivery-wrapper
+												+icon('bus-order', 18, 18)
+												.order__type-transport
+													span.title На общественном транспорте
+													span Расстояние: 17 км, 230 м
+													span Время в пути: 38 мин
+
+										.col-md-auto
+											.order__delivery-wrapper
+												+icon('person', 15, 18)
+												.order__type-transport
+													span.title Пешком
+													span Расстояние: 10 км, 450 м
+													span Время в пути: 2 ч, 25 мин
+								p.order__attention Получите ваш заказ в этом пункте выдачи или&#160;
+									a(href="#" data-scroll-to="#select-delivery" data-scroll-speed="1000").order__to-courier.js-go-to-courier закажите доставку курьером
+						fieldset.order__courier
+							.row
+								.col-md-auto
+									label(for="order-address").order__address-title.title Адрес доставки
+								.col-md
+									select.order__select-address.select#order-address
+										option Москва и Мо
+										option Санкт-Петербург
+										option Ростов
+									input(type="text" placeholder="Начните вводить свой адрес").order__address.field
+									.row
+										.col-6.col-md
+											input(type="number" placeholder="Квартира").order__field-sm.field
+										.col-6.col-md
+											input(type="number" placeholder="Офис").order__field-sm.field
+										.col-6.col-md
+											input(type="number" placeholder="Подъезд").order__field-sm.field
+										.col-6.col-md
+											input(type="number" placeholder="Этаж").order__field-sm.field
+										.col-6.col-md
+											input(type="number" placeholder="Домофон").order__field-sm.field
+
+
+						.order__pay-order
+							span.order__title-pay-order.title.title--md Оплата заказа
+							p.order__pay-text-order Оплата совершается при получении заказа наличными или картой
+						.order__comment
+							label(for="order-comment").order__label-comment.title.title--md Комментарий к заказу
+							textarea#order-comment.order__comment-field.field
+						.order__pay-courier.js-pay-courier
+							.order__courier-section
+								.order__cost-delivery
+									| Расчетная стоимость доставки:
+									.order__cost
+										| 300
+										span &#160;&#8381;
+								.order__checkboxies
+									.row
+										.col-xl-8
+											label.order__accept-item.checkbox.checkbox--md Я являюсь льготной категорией граждан или заказываю для родственников, являющихся льготной категорией граждан*
+												input(type="checkbox" checked).checkbox__input
+												span
+										.col-xl-8
+											label.order__accept-item.checkbox.checkbox--md Я хочу воспользоваться услугой
+												b &#160;Служба поручений&#160;
+												| от ООО «Экспресс-Курьер Москва» для доставки моего заказа**
+												input(type="checkbox" checked).checkbox__input
+												span
+							.order__pay-type
+								span.order__title-pay-order.title.title--md Оплата заказа
+								.order__pay-tabs
+									.row
+										.col-md-6
+											label.order__tab.order__tab--cash
+												input(type="radio" name="order-type-pay" checked).order__radio
+												span.order__tab-name Оплата наличными
+												span.order__date Российский рубль
+										.col-md-6
+											label.order__tab.order__tab--card
+												input(type="radio" name="order-type-pay").order__radio
+												span.order__tab-name Оплата картой
+												span.order__date Visa, MasterCard
+								.row.justify-content-between.align-items-center.justify-content-md-start
+									.col-12.col-md-auto
+										label(for="order").order__need-surrender.title Нужна сдача с
+									.col-auto
+										input(type="number" value="10000").order__surrender.field
+									.col-auto
+										.order__cost.order__cost--black
+											| 1 130
+											span &#160;&#8381;
+						.order__bonus.d-xl-none
+							.row.justify-content-md-between.align-items-md-center
+								.col-md-auto
+									p.order__pay-use Вы использовали для оплаты
+									span.order__bonusies-amount 160 из 1500 бонусов
+								.col-md-auto
+									a(href="#").order__cancel-pay.btn отменить оплату бонусами
+						footer.order__footer
+							.row.justify-content-md-between
+								.col-md-auto.d-none.d-md-block
+									a(href="cart.html").order__back-cart.btn
+										+icon('arrow-left', 19, 19)
+										| Вернуться в корзину
+								.col-auto.ml-md-auto
+									span.order__cost-title Сумма к оплате
+								.col-auto.ml-auto.ml-md-0
+									.order__cost
+										| 8 570
+										span &#160;&#8381;
+									span.order__bonus-amount + 857 бонусов
+								.col-md-auto
+									button.order__submit.btn.btn--red оформить заказ
+						a(href="cart.html").order__back-cart.btn.d-md-none
+							+icon('arrow-left', 19, 19)
+							| Вернуться в корзину
+				.col-auto.d-none.d-xl-block
+					.order__sidebar
+						.order__your
+							span.title.title--md ваш заказ
+							ul.order__products
+								li.order__product
+									.row
+										.col-auto
+											a(href="#").order__img
+												img(src="%=static=%img/content/019.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос 200мл")
+										.col
+											h3.order__name
+												a(href="#") Либридерм витамин F бальзам питательный для кожи головы и волос 200мл
+											.row.justify-content-between
+												.col-auto
+													.order__amount-product 2 х 195
+														span &#160;&#8381;
+												.col-auto
+													.order__cost-product 390
+														span &#160;&#8381;
+
+								li.order__product
+									.row
+										.col-auto
+											a(href="#").order__img
+												img(src="%=static=%img/content/014.jpg" alt="Генеролон спрей для наружного применения 5% 60мл")
+										.col
+											h3.order__name
+												a(href="#") Генеролон спрей для наружного применения 5% 60мл
+											.row.justify-content-between
+												.col-auto
+													.order__amount-product 1 х 616
+														span &#160;&#8381;
+												.col-auto
+													.order__cost-product 616
+														span &#160;&#8381;
+
+								li.order__product
+									.row
+										.col-auto
+											a(href="#").order__img
+												img(src="%=static=%img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл")
+										.col
+											h3.order__name
+												a(href="#") Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл
+											.row.justify-content-between
+												.col-auto
+													.order__amount-product 1 х 616
+														span &#160;&#8381;
+												.col-auto
+													.order__cost-product 616
+														span &#160;&#8381;
+								li.order__product
+									.row
+										.col-auto
+											a(href="#").order__img
+												img(src="%=static=%img/content/019.jpg" alt="Урьяж розельян крем для кожи склонной к куперозу 40мл")
+										.col
+											h3.order__name
+												a(href="#") Урьяж розельян крем для кожи склонной к куперозу 40мл
+											.row.justify-content-between
+												.col-auto
+													.order__amount-product 1 х 616
+														span &#160;&#8381;
+												.col-auto
+													.order__cost-product 616
+														span &#160;&#8381;
+							table.order__total-info
+								tbody
+									tr
+										td Стоимость
+										td
+											.order__cost-col
+												| 9 700
+												span &#160;&#8381;
+									tr
+										td Доставка
+										td
+											.order__cost-col
+												| 0
+												span &#160;&#8381;
+									tr
+										td Промокод: скидка 10%
+										td
+											.order__cost-col
+												| -970
+												span &#160;&#8381;
+									tr
+										td Оплата бонусами
+										td
+											.order__cost-col -160
+								tfoot
+									tr
+										td
+											span.order__cost-title Итого к оплате
+										td
+											.order__cost
+												| 8 570
+												span &#160;&#8381;
+											span.order__bonus-amount + 857 бонусов
+
+						.order__bonus
+							.row
+								.col-12
+									p.order__pay-use Вы использовали для оплаты
+									span.order__bonusies-amount 160 из 1500 бонусов
+								.col-12
+									a(href="#").order__cancel-pay.btn отменить оплату бонусами
+
+
+

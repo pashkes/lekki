@@ -1,7 +1,7 @@
 .btn {
   position: relative;
   display: inline-block;
-  padding: 11px 15px;
+  padding: 10px 15px;
   vertical-align: top;
   text-align: center;
   border: solid 1px $white-two;
@@ -185,12 +185,55 @@
 }
 
 .field {
-  box-sizing: border-box;
-  border: solid 1px #ffffff;
-  border-radius: 4px;
   padding: 9px 15px;
+  border: solid 1px $white-two;
+  background-color: #ffffff;
+  border-radius: 4px;
   &:focus {
     outline: none;
+  }
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  @include placeholder{
+    font-family: Rubik;
+    font-size: 14px;
+    color: $warm-grey-two;
+  }
+}
+.underline {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  border-bottom: dashed 1px rgba($warm-grey-two, .7);
+  transition: $transition-base;
+  &:hover {
+    color: $red;
+    border-bottom-color: transparent;
+  }
+}
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.57;
+  color: $black;
+}
+
+.title {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 3px;
+  line-height: 1.57;
+  &--md {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
 }
 
@@ -321,7 +364,7 @@ a {
     }
   }
   &__radio:checked + span,
-  &__radio:checked:hover + span{
+  &__radio:checked:hover + span {
     color: $red;
     &::before {
       border-color: $red;
@@ -342,6 +385,12 @@ a {
   padding-left: 32px;
   font-size: 14px;
   line-height: 1.57;
+  &--md {
+    .checkbox__input + span {
+      width: 20px;
+      height: 20px;
+    }
+  }
   &__input {
     display: none;
   }
@@ -358,5 +407,28 @@ a {
   }
   &__input:checked + span {
     background: url(%=static=%minified-svg/mark.svg) center no-repeat;
+    background-size: 12px 11px;
+  }
+}
+
+.select {
+  width: 100%;
+  padding: 9px 16px;
+  appearance: none;
+  border-radius: 4px;
+  border: solid 1px $white-two;
+  background-color: #fff;
+  font-size: 14px;
+  background-image: url(%=static=%minified-svg/arrow-bottom.svg);
+  background-position: right 13px bottom 50%;
+  background-size: 13px 7px;
+  background-repeat: no-repeat;
+  &::-ms-expand {
+    display: none;
+  }
+  &:focus {
+    border-color: $red;
+    outline: none;
+    box-shadow: none;
   }
 }

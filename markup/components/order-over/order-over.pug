@@ -1,0 +1,177 @@
+mixin order-over(data)
+	include ../icon/icon
+
+	.order-over
+		.container
+			.row
+				.col-xl
+					.order-over__header
+						.row.align-items-md-center
+							.col-md-auto
+								h2.order-over__title Информация о заказе
+							.col-md-auto.d-md-flex.ml-md-auto
+								.order-over__item-info
+									span  Статус:&#160;
+									| Новый
+								.order-over__item-info
+									span Дата обновления:&#160;
+									| 22.03.2018
+					.order-over__buttons.d-xl-none
+						.row
+							.col-md-6.col-xl-12
+								a(href="#").order-over__print.btn.btn--red Распечатать
+							.col-md-6.col-xl-12
+								a(href="#").order-over__save-pdf.btn Сохранить в PDF
+					.row.justify-content-md-between
+						.col-md-6.order-md-3
+							.order-over__bar-code
+								img(src="%=static=%img/content/bar-code.png")
+						.col-md-12.order-md-2
+							.order-over__products
+								span.order-over__info-table №123456 от 22.03.2018
+								ol.order-over__list
+									li.order-over__item
+										.row.justify-content-md-between
+											.col-md-6
+												p.order-over__name Либридерм витамин F бальзам питательный для кожи головы и волос 200мл
+											.col-md-5
+												.row.justify-content-between
+													.col-auto.col-md
+														.order-over__cost
+															| 195
+															span &#160;&#8381;
+													.col-auto.col-md
+														span.order-over__amount 2 шт.
+													.col-auto.col-md
+														.order-over__cost.order-over__cost--black
+															| 390
+															span &#160;&#8381;
+									li.order-over__item
+										.row.justify-content-md-between
+											.col-md-6
+												p.order-over__name Генеролон спрей для наружного применения 5% 60мл
+											.col-md-5
+												.row.justify-content-between
+													.col-auto.col-md
+														.order-over__cost
+															| 616
+															span &#160;&#8381;
+													.col-auto.col-md
+														span.order-over__amount 1 шт.
+													.col-auto.col-md
+														.order-over__cost.order-over__cost--black
+															| 616
+															span &#160;&#8381;
+									li.order-over__item
+										.row.justify-content-md-between
+											.col-md-6
+												p.order-over__name Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл
+											.col-md-5
+												.row.justify-content-between
+													.col-auto.col-md
+														.order-over__cost
+															| 616
+															span &#160;&#8381;
+													.col-auto.col-md
+														span.order-over__amount 1 шт.
+													.col-auto.col-md
+														.order-over__cost.order-over__cost--black
+															| 800
+															span &#160;&#8381;
+									li.order-over__item
+										.row.justify-content-md-between
+											.col-md-6
+												p.order-over__name Урьяж розельян крем для кожи склонной к куперозу 40мл
+											.col-md-5
+												.row.justify-content-between
+													.col-auto.col-md
+														.order-over__cost
+															| 476
+															span &#160;&#8381;
+													.col-auto.col-md
+														span.order-over__amount 1 шт.
+													.col-auto.col-md
+														.order-over__cost.order-over__cost--black
+															| 476
+															span &#160;&#8381;
+						.col-md-5.order-md-3
+							table.order__total-info
+								tbody
+									tr
+										td Стоимость
+										td
+											.order__cost-col
+												| 9 700
+												span &#160;&#8381;
+									tr
+										td Доставка
+										td
+											.order__cost-col
+												| 0
+												span &#160;&#8381;
+									tr
+										td Промокод: скидка 10%
+										td
+											.order__cost-col
+												| -970
+												span &#160;&#8381;
+									tr
+										td Оплата бонусами
+										td
+											.order__cost-col -160
+								tfoot
+									tr
+										td
+											span.order__cost-title Итого
+										td
+											.order__cost
+												| 8 570
+												span &#160;&#8381;
+											span.order__bonus-amount + 857 бонусов
+
+					.order-over__contacts-data
+						.row.justify-content-md-between
+							.col-md-6
+								span.order-over__subject.title.title--md Контактные данные
+								p Константин Константинопольский Константинов
+									br
+									| konstantin@mail.ru
+									br
+									| +7 905 123-45-67
+							.col-md-5
+								.order-over__inner-some-block
+									span.order-over__comments.title.title--md Комментарий к заказу
+									p Запаковать в двойной пакет
+					.order-over__receive
+						.row
+							.col-md-6
+								span.order-over__receive-title.title.title--md Получение заказа
+								p.order-over__pickup
+									| Самовызоз из аптеки&#160;
+									span 27 апреля 2018
+								span.order-over__pharmacy-name.title ГОРЗДРАВ Аптека №1392
+								.order-over__info-pharmacy
+									span Климентовский переулок 12, строение 1
+									span 09:00—21:00
+									span +7 (495) 797-63-36, +7 (495) 797-63-37
+
+							.col-md-5.d-none.d-md-flex.ml-auto
+								.order-over__map.flex-grow-1
+									| <iframe src="https://yandex.com/map-widget/v1/-/CBunbFBUdA" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+						p.order-over__attention Товар храниться в пункте выдачи не более 48 часов с момента указанной даты самовывоза.
+					.order-over__footer
+						.row.justify-content-md-between
+							.col-md-auto
+								a(href="#").order-over__come-back.btn.btn--red
+									+icon('arrow-left', 14, 11)
+									| Вернуться в магазин
+							.col-md-auto
+								a(href="#").order-over__cancel.btn Отменить заказ
+
+				.col-xl-auto.d-none.d-xl-block
+					.order-over__buttons
+						.row
+							.col-md-6.col-xl-12
+								a(href="#").order-over__print.btn.btn--red Распечатать
+							.col-md-6.col-xl-12
+								a(href="#").order-over__save-pdf.btn Сохранить в PDF

@@ -102,11 +102,15 @@
   &__app {
     width: 160px;
     height: 48px;
-    margin-right: 16px;
     font-size: 0;
     background-repeat: no-repeat;
+    @include media-breakpoint-up(xl) {
+      margin-right: 16px;
+    }
     &:last-child {
-      margin-right: 0;
+      @include media-breakpoint-up(xl) {
+        margin-right: 0;
+      }
     }
     &--app-store {
       background-image: url(%=static=%general/app-store.svg);

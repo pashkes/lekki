@@ -1,0 +1,191 @@
+mixin delivery(data)
+	section.delivery
+		.container
+			h2.delivery__title Доставка лекарст
+			.row
+				.col-xl
+					section.delivery__credits
+						h3.delivery__subtitle.title.title--md Условия доставки
+						ul.delivery__credit-list
+							li.delivery__credit Доставка осуществляется при сумме заказа от 500 рублей.
+							li.delivery__credit Дата доставки заказа зависит от времени его оформления.
+							li.delivery__credit Доставка заказов по Москве осуществляется круглосуточно без выходных дней.
+							li.delivery__credit Заказы весом свыше 10 кг оплачиваются отдельно.
+							li.delivery__credit Осуществить возврат заказа можно только в момент доставки при соблюдения правил и порядка обмена/возврата товара.
+					section.delivery__cost
+						h3.delivery__subtitle.title.title--md Стоимость доставки
+						.delivery__costs
+							.row
+								.col-md-auto
+									select.delivery__select-city.select
+										option Москва и МО
+										option Санкт-Петербург
+										option Казань
+								.col-md
+									ul(role="tablist").delivery__tabs.nav
+										li
+											a(data-toggle="tab" href="#within" role="tab" aria-controls="within" aria-selected="true").delivery__tab.delivery__tab--left.active
+												span.d-none.d-md-inline-flex В&#160;
+												span.d-md-none До&#160;
+												span.d-none.d-md-inline-flex пределах&#160;
+												| МКАД
+										li
+											a(data-toggle="tab" href="#beyond" role="tab" aria-controls="beyond" aria-selected="false").delivery__tab.delivery__tab--right
+												span За&#160;
+												span.d-none.d-md-inline-flex пределами&#160;
+												| МКАД
+							.delivery__tab-content.tab-content
+								.delivery__panel.fade.show.active#within(role="tabpanel" aria-labelledby="within-tab")
+									.delivery__title-within.title.d-md-none Сумма заказа до 1 500
+										span &#160;&#8381;
+									table.delivery__cost-list
+										thead
+											tr
+												th Время суток
+												th Сумма заказа до 1 500
+													span &#160;&#8381;
+												th Сумма заказа от 1 500
+													span &#160;&#8381;
+										tbody
+											tr
+												td Утром и днем (7:00 до 20:00)
+												td
+													| 300
+													span &#160;&#8381;
+												td Бесплатно
+											tr
+												td Вечером (20:00 до 00:00)
+												td
+													| 300
+													span &#160;&#8381;
+												td Бесплатно
+											tr
+												td Ночью (00:00 до 7:00)
+												td
+													| 400
+													span &#160;&#8381;
+												td
+													span.delivery__free-text Бесплатно
+											tr
+												td Самовывоз
+												td Бесплатно
+												td Бесплатно
+									.delivery__title-beyong.title.d-md-none Сумма заказа от 1 500
+										span &#160;&#8381;
+										span Бесплатно
+								.delivery__panel.fade#beyond(role="tabpanel" aria-labelledby="beyond-tab")
+									.delivery__title-within.title.d-md-none Сумма заказа до 1 500
+										span &#160;&#8381;
+									table.delivery__cost-list
+										thead
+											tr
+												th Время суток
+												th Сумма заказа до 1 500
+													span &#160;&#8381;
+												th Сумма заказа от 1 500
+													span &#160;&#8381;
+										tbody
+											tr
+												td Утром и днем (7:00 до 20:00)
+												td
+													| 400
+													span &#160;&#8381;
+												td Бесплатно
+											tr
+												td Вечером (20:00 до 00:00)
+												td
+													| 500
+													span &#160;&#8381;
+												td Бесплатно
+											tr
+												td Ночью (00:00 до 7:00)
+												td
+													| 600
+													span &#160;&#8381;
+												td
+													span.delivery__free-text Бесплатно
+											tr
+												td Самовывоз
+												td Бесплатно
+												td.d-none.d-md-block Бесплатно
+									.delivery__title-beyong.title.d-md-none Сумма заказа от 1 500
+										span &#160;&#8381;
+										span Бесплатно
+
+						h3.delivery__subtitle.delivery__weight-title.title.title--md Доплата за вес
+						.row
+							.col-6.col-md-12
+								.delivery__row
+									.row.align-items-md-center
+										.col-md-auto.d-none.d-md-block
+											span.delivery__text-grey Вес заказа
+										.col-md-2
+											span.delivery__cell от 10 до 30 кг
+										.col-md
+											span.delivery__cell от 30 до 50 кг
+										.col-md
+											span.delivery__cell от 50 кг
+							.col-6.col-md-12
+								.row.align-items-md-center
+									.col-md-auto.d-none.d-md-block
+										span.delivery__text-grey Сумма доплаты
+									.col-md-2
+										.delivery__cost-val
+											| 300
+											span &#160;&#8381;
+									.col-md
+										.delivery__cost-val
+											| 500
+											span &#160;&#8381;
+									.col-md
+										.delivery__cost-val
+											| 900
+											span &#160;&#8381;
+						.delivery__decription
+							p Доставка лекарств может осуществляться только для граждан, относящихся к льготным категориям на основании ст. 2 Федерального закона РФ от 09.01.1997 N 5-ФЗ «О предоставлении социальных гарантий героям социалистического труда и полным кавалерам ордена трудовой славы» (в ред. от 02.07.2013) и ст 1.1 Закона РФ от 15.01.1993 N 4301-1 «О статусе Героев Советского Союза, Героев Российской Федерации и полных кавалеров Ордена Славы». Все заказы формируются в аптеке (лицензия) и собираются квалифицированными фармацевтами.
+							p Интернет-аптека Пилюли.ру осуществляет бесплатную доставку лекарственных препаратов по Москве в удобное для вас время. Наша курьерская служба работает круглосуточно, поэтому все заказанные медикаменты будут привезены к порогу вашего дома в максимально короткие сроки. Если лекарства нужно купить срочно, вы можете воспользоваться услугой экспресс-доставки, и уже через 2-3 часа они будут у вас.
+							p Во избежание ошибок и недоразумений наш оператор свяжется с вами сразу после получения заказа и уточнит правильность указанных медицинских препаратов, их количество и общую стоимость покупки.
+							p Покупая лекарства в нашем интернет-магазине, вы освобождаете себя от утомительного хождения по московским городским аптекам. Особенно актуальна доставка на дом в сезон простуд и вирусных инфекций, когда врачи рекомендуют воздержаться от посещения общественных мест.
+							p Тем клиентам, которые предпочитают забирать свои таблетки, лекарственные травы и медицинские препараты самостоятельно, мы предлагаем воспользоваться возможностью самовывоза. Для этого при оформлении заказа нужно указать самовывоз как способ доставки. Как только препараты будут укомплектованы, фармацевт сообщит вам, где и когда их можно получить.
+				.col-xl-auto.d-none.d-md-block
+					.delivery__features
+						.row
+							.col-md-6.col-xl-12
+								.delivery__feature
+									.delivery__img
+										img(src="%=static=%img/general/calendar.svg" alt="Мы работаем для васбез выходных!")
+									p.delivery__desc-feature Мы работаем для вас
+										br
+										| без выходных!
+							.col-md-6.col-xl-12
+								.delivery__feature
+									.delivery__img
+										img(src="%=static=%img/general/free-delivery.svg" alt="Бесплатная доставка от 1500 рублей")
+									p.delivery__desc-feature
+										| Бесплатная доставка
+										br
+										| от 1500 рублей
+							.col-md-6.col-xl-12
+								.delivery__feature
+									.delivery__img
+										img(src="%=static=%img/general/delivery-home.svg" alt="Доставка заказа прямо до дома или офиса")
+									p.delivery__desc-feature Доставка заказа прямо
+										br
+										| до дома или офиса
+							.col-md-6.col-xl-12
+								.delivery__feature
+									.delivery__img
+										img(src="%=static=%img/general/condition.svg" alt="Транспортировка в надлежащих условиях")
+									p.delivery__desc-feature Транспортировка
+										br
+										| в надлежащих условиях
+							.col-md-6.col-xl-12
+								.delivery__feature
+									.delivery__img
+										img(src="%=static=%img/general/phone.svg" alt="Обязательный звонок курьера перед доставкой")
+									p.delivery__desc-feature Обязательный звонок
+										br
+										| курьера перед доставкой
+
+
+

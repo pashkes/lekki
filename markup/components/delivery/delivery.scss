@@ -8,7 +8,7 @@
   }
   &__title {
     @include media-breakpoint-up(xl) {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
   }
   &__subtitle {
@@ -56,6 +56,11 @@
           margin-bottom: 6px;
         }
       }
+    }
+  }
+  &__select-wrapper {
+    @include media-breakpoint-up(xl) {
+      padding-right: 16px;
     }
   }
   &__select-city {
@@ -230,7 +235,7 @@
     text-align: left;
     @include media-breakpoint-up(md) {
       display: block;
-      min-width: 238px;
+      min-width: 186px;
       font-weight: 500;
       color: $warm-grey-two;
       padding-top: 14px;

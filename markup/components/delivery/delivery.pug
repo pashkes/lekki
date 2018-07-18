@@ -17,10 +17,11 @@ mixin delivery(data)
 						.delivery__costs
 							.row
 								.col-md-auto
-									select.delivery__select-city.select
-										option Москва и МО
-										option Санкт-Петербург
-										option Казань
+									.delivery__select-wrapper
+										select.delivery__select-city.select
+											option Москва и МО
+											option Санкт-Петербург
+											option Казань
 								.col-md
 									ul(role="tablist").delivery__tabs.nav
 										li

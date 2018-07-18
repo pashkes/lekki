@@ -120,6 +120,7 @@
   &__field {
     width: 100%;
     padding-left: 26px;
+    padding-right: 22px;
     text-align: right;
     border-color: $pinkish-grey;
     font-size: 14px;
@@ -192,6 +193,14 @@
     &:focus {
       outline: none;
     }
+  }
+  &__symbol {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 500;
+    font-size: 11px;
   }
   &__slider {
     padding-bottom: 44px;

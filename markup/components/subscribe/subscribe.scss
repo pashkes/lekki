@@ -37,6 +37,13 @@
   &__field {
     flex-grow: 1;
     border-color: #fff;
+    padding-right: 56px;
+    @include media-breakpoint-up(md) {
+      padding-right: 160px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-right: 240px;
+    }
   }
   &__submit {
     position: absolute;

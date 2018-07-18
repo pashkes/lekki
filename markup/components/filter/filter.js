@@ -5,12 +5,12 @@ $(function () {
     max: 4000,
     values: [195, 3000],
     slide: function (event, ui) {
-      $('.js-from-cost').val(ui.values[0] + ' \u20BD');
-      $('.js-to-cost').val(ui.values[1] + ' \u20BD')
+      $('.js-from-cost').val(ui.values[0]);
+      $('.js-to-cost').val(ui.values[1])
     }
   });
-  $('.js-from-cost').val($('#slider-range').slider('values', 0) + ' \u20BD');
-  $('.js-to-cost').val($('#slider-range').slider('values', 1) + ' \u20BD');
+  $('.js-from-cost').val($('#slider-range').slider('values', 0));
+  $('.js-to-cost').val($('#slider-range').slider('values', 1));
 
 });
 (function () {

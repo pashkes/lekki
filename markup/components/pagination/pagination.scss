@@ -32,8 +32,10 @@
   }
   &__prev {
     border-radius: 4px 0 0 4px;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       border-radius: 4px;
+    }
+    @include media-breakpoint-up(md) {
       .icon {
         margin-right: 12px;
       }
@@ -42,8 +44,10 @@
   }
   &__next {
     border-radius: 0 4px 4px 0;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(sm) {
       border-radius: 4px;
+    }
+    @include media-breakpoint-up(md) {
       .icon {
         margin-left: 12px;
       }
@@ -56,6 +60,9 @@
     list-style-type: none;
   }
   &__item {
+    &:first-child{
+
+    }
     .pagination__page {
       border-right: solid 1px $white-two;
       border-top: solid 1px $white-two;
@@ -64,6 +71,16 @@
     &:first-child {
       .pagination__page {
         border-left: solid 1px $white-two;
+        @include media-breakpoint-up(sm) {
+          border-radius: 4px 0 0 4px;
+        }
+      }
+    }
+    &:last-child {
+      .pagination__page {
+        @include media-breakpoint-up(sm) {
+          border-radius: 0 4px 4px 0;
+        }
       }
     }
   }

@@ -38,9 +38,6 @@
     color: #fff;
     &:hover {
       color: $red;
-      span {
-        border-bottom-color: transparent;
-      }
     }
     &:first-child {
       margin-right: 25px;
@@ -144,6 +141,9 @@
   &__cart {
     padding-left: 11px;
     padding-right: 8px;
+    &:hover .header__cart-inner{
+      border-bottom-color: transparent;
+    }
     &:focus {
       border-color: $red;
     }

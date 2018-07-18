@@ -99,7 +99,8 @@ mixin product-info(data)
 					.product-info__additionals
 						.row.justify-content-md-between
 							.col-md-auto
-								span.product-info__section.product-info__section--has-product Товар в наличии
+								// если нет в наличии заменить класс have-products на not-have-products
+								span.product-info__section.have-products Товар в наличии
 							.col-md-auto
 								.product-info__section.product-info__section--delivery
 									.product-info__col

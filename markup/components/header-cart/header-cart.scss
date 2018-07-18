@@ -5,8 +5,15 @@
   &.show {
     opacity: 1;
     visibility: visible;
+    .modal-backdrop {
+      opacity: 1;
+      z-index: 2;
+      @include media-breakpoint-up(md) {
+        opacity: 0;
+      }
+    }
     .header-cart__wrapper {
-      z-index: 9999;
+      z-index: 3;
       @include media-breakpoint-up(md) {
         transform: translateY(0);
       }
@@ -20,8 +27,6 @@
     height: 100%;
     max-width: 368px;
     width: 100%;
-    padding-right: 16px;
-    padding-left: 16px;
     transition: $transition-base;
 
     @include media-breakpoint-up(md) {
@@ -30,8 +35,6 @@
       left: initial;
       right: 0;
       width: 368px;
-      padding-right: 0;
-      padding-left: 0;
       transform: translateY(-10px);
     }
   }
@@ -45,8 +48,8 @@
   &__inner {
     position: absolute;
     padding-bottom: 16px;
-    left: 16px;
-    right: 16px;
+    margin-right: 16px;
+    margin-left: 16px;
     top: 50%;
     border: solid 1px $white-two;
     border-radius: 4px;
@@ -56,8 +59,8 @@
     z-index: 9999;
     @include media-breakpoint-up(md) {
       position: static;
-      left: initial;
-      right: initial;
+      margin-right: 0;
+      margin-left: 0;
       top: initial;
       padding-top: 18px;
       transform: translateY(0);

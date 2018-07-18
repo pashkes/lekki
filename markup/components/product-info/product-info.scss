@@ -61,6 +61,13 @@
     background-color: transparent;
     border: none;
     line-height: 1.43;
+    transition: $transition-base;
+    &:hover {
+      color: $red;
+      &::before {
+        border-bottom-color: transparent;
+      }
+    }
     &::before {
       content: '';
       position: absolute;
@@ -363,7 +370,11 @@
     @include media-breakpoint-up(xl) {
       padding-right: 25px;
     }
-    &--has-product {
+    &.not-have-products {
+      color: $red;
+    }
+    &.have-products {
+      color: $black;
       background-image: url(%=static=%general/circle-mark.svg);
     }
     &--delivery {

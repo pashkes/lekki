@@ -1,8 +1,8 @@
 (function () {
-  const btnCart = $('.js-cart-list');
-  const overlay = $('.cart .modal-backdrop');
-  const productsCart = $('.js-cart');
-  const closeBtn = $('.js-close-cart');
+  var btnCart = $('.js-cart-list');
+  var overlay = $('.cart .modal-backdrop');
+  var productsCart = $('.js-cart');
+  var closeBtn = $('.js-close-cart');
 
   btnCart.on('click', function () {
     overlay.toggleClass('show');

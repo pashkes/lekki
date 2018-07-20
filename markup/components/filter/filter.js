@@ -14,10 +14,10 @@ $(function () {
 
 });
 (function () {
-  const btnFilter = $('.js-show-filter-mobile');
-  const overlayFilter = $('.filter .modal-backdrop');
-  const filter = $('.js-filter');
-  const closeFilter = $('.js-close-filter');
+  var btnFilter = $('.js-show-filter-mobile');
+  var overlayFilter = $('.filter .modal-backdrop');
+  var filter = $('.js-filter');
+  var closeFilter = $('.js-close-filter');
 
   btnFilter.on('click', function () {
     overlayFilter.addClass('show');
@@ -34,7 +34,7 @@ $(function () {
     }
   });
 
-  const toggleTextButton = function () {
+  var toggleTextButton = function () {
     $('.js-toggle-filter-btn').on('click', function () {
       $(this).toggleClass('active');
       var text = $(this).find('i').text();

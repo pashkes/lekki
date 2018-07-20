@@ -1,4 +1,4 @@
-const data = {
+var data = {
   productReviews: [
     {
       author: 'Константин Константинопольский',

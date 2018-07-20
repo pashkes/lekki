@@ -1,7 +1,7 @@
 
 (function () {
-  const productSlider = $('.js-features-slider');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-features-slider');
+  var advantageSliderSettigs = {
     arrows: false,
     dots: true
   };

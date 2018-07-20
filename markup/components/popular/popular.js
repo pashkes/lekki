@@ -1,7 +1,7 @@
 
 (function () {
-  const productSlider = $('.js-popular-slider');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-popular-slider');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-popular-product-next'),
     prevArrow: $('.js-popular-product-prev'),

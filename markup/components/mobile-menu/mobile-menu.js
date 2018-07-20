@@ -1,10 +1,10 @@
 (function () {
-  const mobileMenu = $('.js-mobile-menu');
-  const closeMenu = mobileMenu.find('.js-close-mobile-menu');
-  const showMenu = mobileMenu.find('.js-menu-show-mobile');
-  const backHome = mobileMenu.find('.js-back-home');
-  const itemsMenu = mobileMenu.find('.mobile-menu__link');
-  const category = mobileMenu.find('.mobile-menu__category');
+  var mobileMenu = $('.js-mobile-menu');
+  var closeMenu = mobileMenu.find('.js-close-mobile-menu');
+  var showMenu = mobileMenu.find('.js-menu-show-mobile');
+  var backHome = mobileMenu.find('.js-back-home');
+  var itemsMenu = mobileMenu.find('.mobile-menu__link');
+  var category = mobileMenu.find('.mobile-menu__category');
 
   showMenu.on('click', function () {
     mobileMenu.addClass('active');
@@ -24,8 +24,8 @@
 
   itemsMenu.on('click', function (evt) {
     evt.preventDefault();
-    const href = $(this).attr('href');
-    const sliceHref = href.slice(1);
+    var href = $(this).attr('href');
+    var sliceHref = href.slice(1);
     mobileMenu.find('.mobile-menu__sub-list').hide();
     mobileMenu.find('#' + sliceHref).show();
     category.addClass('active');

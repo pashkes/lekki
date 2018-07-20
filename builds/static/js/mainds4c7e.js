@@ -5274,8 +5274,8 @@ object-assign
 }));
 
 (function () {
-  const productSlider = $('.js-analog-products');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-analog-products');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-analog-products-next'),
     prevArrow: $('.js-analog-products-prev'),
@@ -5318,6 +5318,27 @@ object-assign
 
 
 (function () {
+  $('.js-brands-slider').slick({
+    arrows: false,
+    dots: true,
+    variableWidth: true,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 9
+        }
+      }
+    ]
+  });
+})();
+
+
+
+
+(function () {
   $('.js-blog-slider').slick({
     arrows: false,
     dots: true,
@@ -5354,31 +5375,10 @@ object-assign
   });
 })();
 
-(function () {
-  $('.js-brands-slider').slick({
-    arrows: false,
-    dots: true,
-    variableWidth: true,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          variableWidth: false,
-          slidesToShow: 9
-        }
-      }
-    ]
-  });
-})();
-
-
-
-
 
 (function () {
-  const productSlider = $('.js-buy-with-product');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-buy-with-product');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-buy-with-product-next'),
     prevArrow: $('.js-buy-with-product-prev'),
@@ -5420,8 +5420,6 @@ object-assign
 
 
 
-
-
 (function () {
   if ($('.js-toggle-sort').length) {
     $('.js-toggle-sort').on('click', function () {
@@ -5431,12 +5429,12 @@ object-assign
       } else {
         $(this).removeClass('active');
       }
-      const index = $(this).parent().index();
+      var index = $(this).parent().index();
       $('.catalog__sort-element').eq(index).find('input').prop('checked', true);
     });
     $('.catalog__radio').on('change', function () {
       $('.js-toggle-sort').removeClass('active');
-      const index = $(this).parents('li').index();
+      var index = $(this).parents('li').index();
       $('.catalog__sort-element').eq(index).find('.js-toggle-sort').addClass('active');
     });
   }
@@ -5464,6 +5462,8 @@ object-assign
   });
 })();
 
+
+
 (function () {
   $('.js-counter').on('click', function(event){
     var $target = $(event.target);
@@ -5481,8 +5481,8 @@ object-assign
 
 
 (function () {
-  const productSlider = $('.js-products-slider-disease');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-products-slider-disease');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-disease-product-next'),
     prevArrow: $('.js-disease-product-prev'),
@@ -5525,8 +5525,8 @@ object-assign
 
 
 (function () {
-  const productSlider = $('.js-features-slider');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-features-slider');
+  var advantageSliderSettigs = {
     arrows: false,
     dots: true
   };
@@ -5568,10 +5568,10 @@ $(function () {
 
 });
 (function () {
-  const btnFilter = $('.js-show-filter-mobile');
-  const overlayFilter = $('.filter .modal-backdrop');
-  const filter = $('.js-filter');
-  const closeFilter = $('.js-close-filter');
+  var btnFilter = $('.js-show-filter-mobile');
+  var overlayFilter = $('.filter .modal-backdrop');
+  var filter = $('.js-filter');
+  var closeFilter = $('.js-close-filter');
 
   btnFilter.on('click', function () {
     overlayFilter.addClass('show');
@@ -5588,7 +5588,7 @@ $(function () {
     }
   });
 
-  const toggleTextButton = function () {
+  var toggleTextButton = function () {
     $('.js-toggle-filter-btn').on('click', function () {
       $(this).toggleClass('active');
       var text = $(this).find('i').text();
@@ -5602,10 +5602,10 @@ $(function () {
 
 
 (function () {
-  const btnCart = $('.js-cart-list');
-  const overlay = $('.cart .modal-backdrop');
-  const productsCart = $('.js-cart');
-  const closeBtn = $('.js-close-cart');
+  var btnCart = $('.js-cart-list');
+  var overlay = $('.cart .modal-backdrop');
+  var productsCart = $('.js-cart');
+  var closeBtn = $('.js-close-cart');
 
   btnCart.on('click', function () {
     overlay.toggleClass('show');
@@ -5682,8 +5682,8 @@ $(function () {
 })();
 
 (function () {
-  const btnToggleMenuShow = $('.js-show-menu');
-  const menu = $('.js-menu');
+  var btnToggleMenuShow = $('.js-show-menu');
+  var menu = $('.js-menu');
 
   btnToggleMenuShow.on('click', function () {
     $(this).toggleClass('active');
@@ -5694,30 +5694,30 @@ $(function () {
     menu.find('.menu__item').removeClass('active');
     $(this).parent().addClass('active')
   });
-  // menu.on('mouseleave', function () {
-  //   btnToggleMenuShow.removeClass('active');
-  //   menu.removeClass('active');
-  //   menu.find('.menu__sub-lists').hide();
-  //   menu.find('.menu__sub-lists').eq(0).show();
-  // });
-  const item = $('.menu__item');
+  menu.on('mouseleave', function () {
+    btnToggleMenuShow.removeClass('active');
+    menu.removeClass('active');
+    menu.find('.menu__sub-lists').hide();
+    menu.find('.menu__sub-lists').eq(0).show();
+  });
+  var item = $('.menu__item');
   item.on('mouseover', function () {
     if (!$(this).data('id')) {
       return false;
     }
-    const idList = $(this).data('id');
+    var idList = $(this).data('id');
     menu.find('.menu__sub-lists').hide();
     menu.find('#' + idList).show();
   });
 })();
 
 (function () {
-  const mobileMenu = $('.js-mobile-menu');
-  const closeMenu = mobileMenu.find('.js-close-mobile-menu');
-  const showMenu = mobileMenu.find('.js-menu-show-mobile');
-  const backHome = mobileMenu.find('.js-back-home');
-  const itemsMenu = mobileMenu.find('.mobile-menu__link');
-  const category = mobileMenu.find('.mobile-menu__category');
+  var mobileMenu = $('.js-mobile-menu');
+  var closeMenu = mobileMenu.find('.js-close-mobile-menu');
+  var showMenu = mobileMenu.find('.js-menu-show-mobile');
+  var backHome = mobileMenu.find('.js-back-home');
+  var itemsMenu = mobileMenu.find('.mobile-menu__link');
+  var category = mobileMenu.find('.mobile-menu__category');
 
   showMenu.on('click', function () {
     mobileMenu.addClass('active');
@@ -5737,8 +5737,8 @@ $(function () {
 
   itemsMenu.on('click', function (evt) {
     evt.preventDefault();
-    const href = $(this).attr('href');
-    const sliceHref = href.slice(1);
+    var href = $(this).attr('href');
+    var sliceHref = href.slice(1);
     mobileMenu.find('.mobile-menu__sub-list').hide();
     mobileMenu.find('#' + sliceHref).show();
     category.addClass('active');
@@ -5746,9 +5746,11 @@ $(function () {
   });
 })();
 
+
+
 (function () {
   //Переключение текста внутри кнопки которая показывает карту на странице оформление заказа
-  const toggleTextButton = function () {
+  var toggleTextButton = function () {
     let click = 1;
     $('.js-toggle-map').on('click', function () {
       if (click % 2 == 0) {
@@ -5766,14 +5768,14 @@ $(function () {
   }
 
   // Показать блок с картой
-  const showMapOnButtonClick = function() {
+  var showMapOnButtonClick = function() {
     $('.js-show-map').on('click', function () {
       $('.js-map').slideDown();
     });
   };
 
   // Скрыть текущий блок и перейти к доставке курьером
-  const hiddenCurrentAndShowCourier = function () {
+  var hiddenCurrentAndShowCourier = function () {
     $('.js-go-to-courier').on('click', function (evt) {
       evt.preventDefault();
       $('.js-delivery-courier').prop('checked', true);
@@ -5781,23 +5783,23 @@ $(function () {
       showBlocksCourier();
     });
   };
-  const showBlocksCourier = function () {
+  var showBlocksCourier = function () {
     $('.order__courier').slideDown();
     $('.js-pay-courier').slideDown();
   };
-  const hideBlocksCourier = function () {
+  var hideBlocksCourier = function () {
     $('.order__courier').slideUp();
     $('.js-pay-courier').slideUp();
   };
-  const hideBlocksPickupDelivery = function () {
+  var hideBlocksPickupDelivery = function () {
     $('.js-delivery-pickup-section').slideUp();
     $('.js-map').slideUp();
     $('.order__pay-order').slideUp();
   };
   // Отслеживание измениния радио баттонов и показывать нужный блок доставки в зависимости от выбранного
-  const changeRadioOrder = function () {
-    const deliveryRadio = $('.js-pickup-delivery');
-    const deliveryRadioCourier = $('.js-delivery-courier');
+  var changeRadioOrder = function () {
+    var deliveryRadio = $('.js-pickup-delivery');
+    var deliveryRadioCourier = $('.js-delivery-courier');
 
     deliveryRadio.on('change', function () {
       if ($(this).prop('checked')) {
@@ -5813,7 +5815,7 @@ $(function () {
       }
     });
   };
-  const showSurrended = function () {
+  var showSurrended = function () {
     $('.js-pay-cash').on('change', function () {
         $('.js-surrended').slideDown();
     });
@@ -5829,8 +5831,6 @@ $(function () {
   }
 
 })();
-
-
 
 
 
@@ -5899,8 +5899,8 @@ $(function () {
 
 
 (function () {
-  const productSlider = $('.js-popular-slider');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-popular-slider');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-popular-product-next'),
     prevArrow: $('.js-popular-product-prev'),
@@ -6054,8 +6054,8 @@ $(function () {
 })();
 
 (function () {
-  const productSlider = $('.js-products-slider');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-products-slider');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-spring-product-next'),
     prevArrow: $('.js-spring-product-prev'),

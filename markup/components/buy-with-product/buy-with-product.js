@@ -1,7 +1,7 @@
 
 (function () {
-  const productSlider = $('.js-buy-with-product');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-buy-with-product');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-buy-with-product-next'),
     prevArrow: $('.js-buy-with-product-prev'),

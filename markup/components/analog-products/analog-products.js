@@ -1,6 +1,6 @@
 (function () {
-  const productSlider = $('.js-analog-products');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-analog-products');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-analog-products-next'),
     prevArrow: $('.js-analog-products-prev'),

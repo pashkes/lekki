@@ -106,7 +106,6 @@
   }
   &__photo-wrapper {
     @include media-breakpoint-up(md) {
-      min-width: 100%;
       width: 256px;
       margin-right: 16px;
     }

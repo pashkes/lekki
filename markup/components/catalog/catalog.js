@@ -7,12 +7,12 @@
       } else {
         $(this).removeClass('active');
       }
-      const index = $(this).parent().index();
+      var index = $(this).parent().index();
       $('.catalog__sort-element').eq(index).find('input').prop('checked', true);
     });
     $('.catalog__radio').on('change', function () {
       $('.js-toggle-sort').removeClass('active');
-      const index = $(this).parents('li').index();
+      var index = $(this).parents('li').index();
       $('.catalog__sort-element').eq(index).find('.js-toggle-sort').addClass('active');
     });
   }

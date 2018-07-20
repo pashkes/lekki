@@ -1,6 +1,6 @@
 (function () {
-  const productSlider = $('.js-products-slider');
-  const advantageSliderSettigs = {
+  var productSlider = $('.js-products-slider');
+  var advantageSliderSettigs = {
     slidesToShow: 5,
     nextArrow: $('.js-spring-product-next'),
     prevArrow: $('.js-spring-product-prev'),

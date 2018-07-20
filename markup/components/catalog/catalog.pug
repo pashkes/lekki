@@ -14,22 +14,16 @@ mixin  catalog(data)
 								.catalog__filter-wrapper
 									ul.catalog__sort-list.d-none.d-md-flex
 										li.catalog__sort-element
-											label.catalog__sort-item
-												input(type="radio" name="sort" checked).catalog__radio
+											button(type="button").catalog__sort-item.active.js-sort
 												span По цене
-											button(type="button").catalog__sort-btn.active.js-toggle-sort по возростанию/по убыванию
 												+icon('arrow-top-default', 10, 10)
 										li.catalog__sort-element
-											label.catalog__sort-item
-												input(type="radio" name="sort").catalog__radio
+											button(type="button").catalog__sort-item.js-sort
 												span По популярности
-											button(type="button").catalog__sort-btn.js-toggle-sort по возростанию/по убыванию
 												+icon('arrow-top-default', 10, 10)
 										li.catalog__sort-element
-											label.catalog__sort-item
-												input(type="radio" name="sort").catalog__radio
+											button(type="button").catalog__sort-item.js-sort
 												span По новизне
-											button(type="button").catalog__sort-btn.js-toggle-sort по возростанию/по убыванию
 												+icon('arrow-top-default', 10, 10)
 									.catalog__only-discount
 										label.checkbox Только товары со скидкой

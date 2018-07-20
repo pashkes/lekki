@@ -67,7 +67,7 @@
   &__sort-element {
     display: flex;
     align-items: center;
-    margin-right: 19px;
+    margin-right: 23px;
   }
   &__filter-btn {
     width: 40px;
@@ -102,6 +102,25 @@
     font-size: 14px;
     line-height: 1;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    &.active{
+      color: $red;
+      .icon {
+        fill: $red;
+        transform: rotate(0);
+      }
+      &.down .icon {
+        transform: rotate(180deg);
+      }
+    }
+    .icon {
+      fill: $black;
+      margin-left: 3px;
+      transform: rotate(180deg);
+      transition: $transition-base;
+    }
   }
 
   &__radio {

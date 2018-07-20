@@ -5274,6 +5274,43 @@ object-assign
 }));
 
 (function () {
+  $('.js-blog-slider').slick({
+    arrows: false,
+    dots: true,
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 4,
+          dots: false
+
+        }
+      },
+      {
+        breakpoint: 1899,
+        settings: {
+          slidesToShow: 5,
+          dots: false
+
+        }
+      }]
+  });
+})();
+
+(function () {
   var productSlider = $('.js-analog-products');
   var advantageSliderSettigs = {
     slidesToShow: 5,
@@ -5338,43 +5375,6 @@ object-assign
 
 
 
-(function () {
-  $('.js-blog-slider').slick({
-    arrows: false,
-    dots: true,
-    mobileFirst: true,
-    responsive: [{
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 3,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 4,
-          dots: false
-
-        }
-      },
-      {
-        breakpoint: 1899,
-        settings: {
-          slidesToShow: 5,
-          dots: false
-
-        }
-      }]
-  });
-})();
-
 
 (function () {
   var productSlider = $('.js-buy-with-product');
@@ -5424,20 +5424,12 @@ object-assign
 
 (function () {
   if ($('.js-toggle-sort').length) {
-    $('.js-toggle-sort').on('click', function () {
-      if (!$(this).hasClass('active')) {
-        $('.js-toggle-sort').removeClass('active');
-        $(this).addClass('active');
-      } else {
-        $(this).removeClass('active');
-      }
-      var index = $(this).parent().index();
-      $('.catalog__sort-element').eq(index).find('input').prop('checked', true);
-    });
-    $('.catalog__radio').on('change', function () {
-      $('.js-toggle-sort').removeClass('active');
-      var index = $(this).parents('li').index();
-      $('.catalog__sort-element').eq(index).find('.js-toggle-sort').addClass('active');
+    $('.js-sort').on('click', function () {
+     if ($(this).hasClass('active')) {
+       $(this).toggleClass('down');
+     }
+      $('.js-sort').removeClass('active');
+      $(this).addClass('active');
     });
   }
 })();
@@ -5478,6 +5470,49 @@ object-assign
   });
 })();
 
+
+
+(function () {
+  var productSlider = $('.js-products-slider-disease');
+  var advantageSliderSettigs = {
+    slidesToShow: 5,
+    nextArrow: $('.js-disease-product-next'),
+    prevArrow: $('.js-disease-product-prev'),
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 6
+        }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 8
+        }
+      }
+    ]
+  };
+
+  $(window).on('load resize', function () {
+    slickMobile(productSlider, advantageSliderSettigs);
+  });
+
+// включение слайдера на мобильном
+  function slickMobile(slider, settings) {
+    if ($(window).width() < 1200) {
+      if (slider.hasClass('slick-initialized')) {
+        slider.slick('unslick');
+      }
+      return
+    }
+    if (!slider.hasClass('slick-initialized')) {
+      return slider.slick(settings);
+    }
+  };
+
+})();
 
 
 
@@ -5584,79 +5619,6 @@ $(function () {
 
 
 (function () {
-  var productSlider = $('.js-products-slider-disease');
-  var advantageSliderSettigs = {
-    slidesToShow: 5,
-    nextArrow: $('.js-disease-product-next'),
-    prevArrow: $('.js-disease-product-prev'),
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 6
-        }
-      },
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 8
-        }
-      }
-    ]
-  };
-
-  $(window).on('load resize', function () {
-    slickMobile(productSlider, advantageSliderSettigs);
-  });
-
-// включение слайдера на мобильном
-  function slickMobile(slider, settings) {
-    if ($(window).width() < 1200) {
-      if (slider.hasClass('slick-initialized')) {
-        slider.slick('unslick');
-      }
-      return
-    }
-    if (!slider.hasClass('slick-initialized')) {
-      return slider.slick(settings);
-    }
-  };
-
-})();
-
-
-(function () {
-  var btnToggleMenuShow = $('.js-show-menu');
-  var menu = $('.js-menu');
-
-  btnToggleMenuShow.on('click', function () {
-    $(this).toggleClass('active');
-    menu.toggleClass('active');
-  });
-
-  menu.find('.menu__link').hover(function () {
-    menu.find('.menu__item').removeClass('active');
-    $(this).parent().addClass('active')
-  });
-  menu.on('mouseleave', function () {
-    btnToggleMenuShow.removeClass('active');
-    menu.removeClass('active');
-    menu.find('.menu__sub-lists').hide();
-    menu.find('.menu__sub-lists').eq(0).show();
-  });
-  var item = $('.menu__item');
-  item.on('mouseover', function () {
-    if (!$(this).data('id')) {
-      return false;
-    }
-    var idList = $(this).data('id');
-    menu.find('.menu__sub-lists').hide();
-    menu.find('#' + idList).show();
-  });
-})();
-
-(function () {
   $('.instruction__header').on('click',function (evt) {
     $(event.target).closest('.instruction__header').toggleClass('active');
   })
@@ -5708,6 +5670,36 @@ $(function () {
         .parent().removeClass("active")
         .end().filter("[href='#" + id + "']").parent().addClass("active");
     }
+  });
+})();
+
+(function () {
+  var btnToggleMenuShow = $('.js-show-menu');
+  var menu = $('.js-menu');
+
+  btnToggleMenuShow.on('click', function () {
+    $(this).toggleClass('active');
+    menu.toggleClass('active');
+  });
+
+  menu.find('.menu__link').hover(function () {
+    menu.find('.menu__item').removeClass('active');
+    $(this).parent().addClass('active')
+  });
+  menu.on('mouseleave', function () {
+    btnToggleMenuShow.removeClass('active');
+    menu.removeClass('active');
+    menu.find('.menu__sub-lists').hide();
+    menu.find('.menu__sub-lists').eq(0).show();
+  });
+  var item = $('.menu__item');
+  item.on('mouseover', function () {
+    if (!$(this).data('id')) {
+      return false;
+    }
+    var idList = $(this).data('id');
+    menu.find('.menu__sub-lists').hide();
+    menu.find('#' + idList).show();
   });
 })();
 
@@ -6053,6 +6045,8 @@ $(function () {
   });
 })();
 
+
+
 (function () {
   var productSlider = $('.js-products-slider');
   var advantageSliderSettigs = {
@@ -6094,8 +6088,6 @@ $(function () {
   };
 
 })();
-
-
 
 
 

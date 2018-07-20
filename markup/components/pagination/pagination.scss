@@ -21,10 +21,15 @@
       padding-right: 24px;
       padding-left: 24px;
     }
+    &:hover .icon {
+      fill: $red;
+    }
     .icon {
       fill: $black;
+      transition: $transition-base;
     }
     &.disabled {
+      color: #c0c0c0;
       .icon {
         fill: #c0c0c0;
       }

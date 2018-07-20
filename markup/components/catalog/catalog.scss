@@ -54,12 +54,11 @@
     }
     &.active {
       .icon {
-        fill: $red;
         transform: rotate(0);
       }
     }
     .icon {
-      fill: $black;
+      fill: $red;
       transform: rotate(180deg);
       transition: .2s ease-out;
     }

@@ -5274,43 +5274,6 @@ object-assign
 }));
 
 (function () {
-  $('.js-blog-slider').slick({
-    arrows: false,
-    dots: true,
-    mobileFirst: true,
-    responsive: [{
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 3,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 4,
-          dots: false
-
-        }
-      },
-      {
-        breakpoint: 1899,
-        settings: {
-          slidesToShow: 5,
-          dots: false
-
-        }
-      }]
-  });
-})();
-
-(function () {
   var productSlider = $('.js-analog-products');
   var advantageSliderSettigs = {
     slidesToShow: 5,
@@ -5350,6 +5313,45 @@ object-assign
     }
   };
 
+})();
+
+
+
+(function () {
+  $('.js-blog-slider').slick({
+    arrows: false,
+    dots: true,
+    mobileFirst: true,
+    responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 4,
+          dots: false
+
+        }
+      },
+      {
+        breakpoint: 1899,
+        settings: {
+          slidesToShow: 5,
+          dots: false
+
+        }
+      }]
+  });
 })();
 
 
@@ -5420,20 +5422,6 @@ object-assign
 
 
 
-
-
-(function () {
-  if ($('.js-toggle-sort').length) {
-    $('.js-sort').on('click', function () {
-     if ($(this).hasClass('active')) {
-       $(this).toggleClass('down');
-     }
-      $('.js-sort').removeClass('active');
-      $(this).addClass('active');
-    });
-  }
-})();
-
 (function () {
   $('.js-slider-certificate').slick({
     arrows: false,
@@ -5468,6 +5456,28 @@ object-assign
       $(this).find('.js-counter-field').val(start);
     }
   });
+})();
+
+(function () {
+  if ($('.js-sort').length) {
+
+    $('.js-toggle-sort-mobile').on('click', function () {
+
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+      } else {
+        $(this).addClass('active');
+      }
+    });
+
+    $('.js-sort').on('click', function () {
+     if ($(this).hasClass('active')) {
+       $(this).toggleClass('down');
+     }
+      $('.js-sort').removeClass('active');
+      $(this).addClass('active');
+    });
+  }
 })();
 
 
@@ -5513,35 +5523,6 @@ object-assign
   };
 
 })();
-
-
-
-(function () {
-  var productSlider = $('.js-features-slider');
-  var advantageSliderSettigs = {
-    arrows: false,
-    dots: true
-  };
-
-  $(window).on('load resize', function () {
-    slickMobile(productSlider, advantageSliderSettigs);
-  });
-
-// включение слайдера на мобильном
-  function slickMobile(slider, settings) {
-    if ($(window).width() > 767) {
-      if (slider.hasClass('slick-initialized')) {
-        slider.slick('unslick');
-      }
-      return
-    }
-    if (!slider.hasClass('slick-initialized')) {
-      return slider.slick(settings);
-    }
-  };
-
-})();
-
 
 
 $(function () {
@@ -5591,6 +5572,35 @@ $(function () {
   };
   toggleTextButton();
 })();
+
+
+
+(function () {
+  var productSlider = $('.js-features-slider');
+  var advantageSliderSettigs = {
+    arrows: false,
+    dots: true
+  };
+
+  $(window).on('load resize', function () {
+    slickMobile(productSlider, advantageSliderSettigs);
+  });
+
+// включение слайдера на мобильном
+  function slickMobile(slider, settings) {
+    if ($(window).width() > 767) {
+      if (slider.hasClass('slick-initialized')) {
+        slider.slick('unslick');
+      }
+      return
+    }
+    if (!slider.hasClass('slick-initialized')) {
+      return slider.slick(settings);
+    }
+  };
+
+})();
+
 
 
 (function () {
@@ -5824,8 +5834,6 @@ $(function () {
 
 
 
-
-
 (function () {
   $('.js-other-form-slider').slick(
     {
@@ -5931,6 +5939,8 @@ $(function () {
   };
 
 })();
+
+
 
 
 
@@ -6045,8 +6055,6 @@ $(function () {
   });
 })();
 
-
-
 (function () {
   var productSlider = $('.js-products-slider');
   var advantageSliderSettigs = {
@@ -6088,6 +6096,8 @@ $(function () {
   };
 
 })();
+
+
 
 
 

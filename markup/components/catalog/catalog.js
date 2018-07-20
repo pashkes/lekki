@@ -1,5 +1,15 @@
 (function () {
-  if ($('.js-toggle-sort').length) {
+  if ($('.js-sort').length) {
+
+    $('.js-toggle-sort-mobile').on('click', function () {
+
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+      } else {
+        $(this).addClass('active');
+      }
+    });
+
     $('.js-sort').on('click', function () {
      if ($(this).hasClass('active')) {
        $(this).toggleClass('down');

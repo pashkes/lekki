@@ -1,0 +1,9 @@
+include ../personal-info/personal-info
+mixin order-history(data)
+	.order-history
+		.container
+			h2.order-history__title Личный кабинет
+			.row
+				.col-xl-auto
+					+personal-info()
+				.col-xl

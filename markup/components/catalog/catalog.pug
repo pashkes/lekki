@@ -5,25 +5,32 @@ include ../icon/icon
 mixin  catalog(data)
 	.catalog
 		.container
+			h2 Гигиена
 			.row
 				.col-xl
 					form.catalog__header
 						.row
 							.col-md
 								.catalog__filter-wrapper
-									.catalog__sort-list.d-none.d-md-flex
-										label.catalog__sort-item
-											input(type="radio" name="sort" checked).catalog__radio
-											span По цене
-											+icon('arrow-top-default', 8, 10)
-										label.catalog__sort-item
-											input(type="radio" name="sort").catalog__radio
-											span По популярности
-											+icon('arrow-top-default', 8, 10)
-										label.catalog__sort-item
-											input(type="radio" name="sort").catalog__radio
-											span По новизне
-											+icon('arrow-top-default', 8, 10)
+									ul.catalog__sort-list.d-none.d-md-flex
+										li.catalog__sort-element
+											label.catalog__sort-item
+												input(type="radio" name="sort" checked).catalog__radio
+												span По цене
+											button(type="button").catalog__sort-btn.active.js-toggle-sort по возростанию/по убыванию
+												+icon('arrow-top-default', 10, 10)
+										li.catalog__sort-element
+											label.catalog__sort-item
+												input(type="radio" name="sort").catalog__radio
+												span По популярности
+											button(type="button").catalog__sort-btn.js-toggle-sort по возростанию/по убыванию
+												+icon('arrow-top-default', 10, 10)
+										li.catalog__sort-element
+											label.catalog__sort-item
+												input(type="radio" name="sort").catalog__radio
+												span По новизне
+											button(type="button").catalog__sort-btn.js-toggle-sort по возростанию/по убыванию
+												+icon('arrow-top-default', 10, 10)
 									.catalog__only-discount
 										label.checkbox Только товары со скидкой
 											input(type="checkbox" checked).checkbox__input
@@ -36,11 +43,13 @@ mixin  catalog(data)
 											+icon('card-view-one', 17, 16)
 											| показать один ряд
 							.col.d-md-none
-								.catolog__sort-wrapper
+								.catalog__sort-wrapper
 									select.catalog__sort
 										option По цене
 										option По популярности
 										option По новизне
+									button(type="button").catalog__sort-btn.active.js-toggle-sort по возростанию/по убыванию
+										+icon('arrow-top-default', 10, 10)
 							.col-auto.d-xl-none
 								button(type="button").catalog__filter-btn.js-show-filter-mobile открыть
 					.catalog__list

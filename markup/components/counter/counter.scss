@@ -38,6 +38,7 @@
       fill: $black;
       z-index: -1;
       transition: $transition-base;
+      pointer-events: none;
     }
     &--down {
       left: 0;

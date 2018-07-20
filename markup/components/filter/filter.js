@@ -34,5 +34,15 @@ $(function () {
     }
   });
 
+  const toggleTextButton = function () {
+    $('.js-toggle-filter-btn').on('click', function () {
+      $(this).toggleClass('active');
+      var text = $(this).find('i').text();
+      $(this).find('i').text(function(i, text){
+        return text === "Показать все" ? "Скрыть" : "Показать все";
+      })
+    });
+  };
+  toggleTextButton();
 })();
 

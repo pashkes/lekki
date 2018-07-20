@@ -6,7 +6,6 @@
       rows: 2,
       nextArrow: $('.js-other-form-prev'),
       prevArrow: $('.js-other-form-next'),
-      infinite: false,
       adaptiveHeight: true,
       dots: true,
       responsive: [{

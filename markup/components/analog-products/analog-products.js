@@ -2,8 +2,8 @@
   const productSlider = $('.js-analog-products');
   const advantageSliderSettigs = {
     slidesToShow: 5,
-    nextArrow: $('.js-analog-products-prev'),
-    prevArrow: $('.js-analog-products-next'),
+    nextArrow: $('.js-analog-products-next'),
+    prevArrow: $('.js-analog-products-prev'),
     mobileFirst: true,
     responsive: [
       {

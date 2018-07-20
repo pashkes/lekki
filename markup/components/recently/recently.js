@@ -4,8 +4,8 @@
       mobileFirst: true,
       arrows: false,
       rows: 2,
-      nextArrow: $('.js-recently-product-prev'),
-      prevArrow: $('.js-recently-product-next'),
+      nextArrow: $('.js-recently-product-next'),
+      prevArrow: $('.js-recently-product-prev'),
       dots: true,
       responsive: [{
         breakpoint: 767,

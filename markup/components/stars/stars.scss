@@ -13,12 +13,12 @@
       position: absolute;
       height: 12px;
       width: 12px;
-      background: #fff url(%=static=%general/star.svg) 0 0 no-repeat;
+      background: #fff url(%=static=%minified-svg/star.svg) 0 0 no-repeat;
       background-size: 12px 12px;
     }
     &--empty {
       &::before {
-        background-image: url(%=static=%general/star-empty.svg);
+        background-image: url(%=static=%minified-svg/star-empty.svg);
       }
     }
   }

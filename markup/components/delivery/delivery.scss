@@ -142,6 +142,11 @@
         display: table-row;
       }
     }
+    tbody tr:last-child td {
+      @include media-breakpoint-up(md) {
+        padding-bottom: 30px;
+      }
+    }
     th {
       padding-top: 11px;
       padding-bottom: 11px;

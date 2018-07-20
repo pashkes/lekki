@@ -55,12 +55,6 @@ mixin cart(data)
 											td
 												button(type="button").cart__change-location Изменить
 										tr
-											td Промокод: скидка 10%
-											td
-												.cart__bold-text
-													span.cart__val 9 700
-													span.cart__symbol-sm &nbsp;&#8381;
-										tr
 											td Стоимость
 											td
 												.cart__bold-text
@@ -72,19 +66,19 @@ mixin cart(data)
 												span.cart__total-buy Итого к оплате
 											td
 												.cart__cost
-													span.cart__cost-value 8730&nbsp;
+													span.cart__cost-value 8 730&nbsp;
 													span.cart__symbol &#8381;
 												a(href="#").cart__total-bonuse +873 бонусов
 							.col-md-auto.col-xl-12
 								.cart__buttons
 									button.cart__btn.cart__btn--order.btn.btn--red оформить заказ
-									button.cart__btn.btn.btn--border-red оформить в один клик
+									button.cart__btn.cart__btn--fast-order.btn.btn--border-red Быстрый заказ
 					.cart__bonus
 						.row.justify-content-md-between.justify-content-xl-start
 							.col-md-auto.col-xl-12
 								p.cart__you-use Вы можете использовать
 								span.cart__total-bonusies 160 из 1500 бонусов
 							.col-md-auto.col-xl-12
-								a(href="#").cart__btn.btn Использовать бонусы
+								a(href="#").cart__btn.btn.btn--grey Использовать бонусы
 
 

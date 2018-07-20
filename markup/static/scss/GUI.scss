@@ -61,6 +61,7 @@
   &--star {
     .icon {
       margin-right: 10px;
+      fill: $warm-grey;
     }
   }
   &--red {
@@ -74,6 +75,9 @@
       color: #ffffff;
       background-color: $rusty-red;
     }
+  }
+  &--grey {
+    background-color: #f6f6f6;
   }
   &--heart {
     display: flex;
@@ -194,6 +198,9 @@
   border: solid 1px $white-two;
   background-color: #ffffff;
   border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   &:focus {
     outline: none;
   }
@@ -298,6 +305,7 @@ a {
   justify-content: center;
   margin: 0;
   padding: 10px 0 0;
+  padding-top: 7px;
   list-style-type: none;
   .slick-active {
     button {
@@ -390,10 +398,17 @@ a {
   padding-left: 32px;
   font-size: 14px;
   line-height: 1.57;
+  &__input:checked + span {
+    background: url(%=static=%minified-svg/mark.svg) center no-repeat;
+    background-size: 9px 9px;
+  }
   &--md {
     .checkbox__input + span {
       width: 20px;
       height: 20px;
+    }
+    .checkbox__input:checked + span {
+      background-size: 12px 11px;
     }
   }
   &__input {
@@ -410,10 +425,7 @@ a {
     background-color: #ffffff;
     border: solid 1px #c0c0c0;
   }
-  &__input:checked + span {
-    background: url(%=static=%minified-svg/mark.svg) center no-repeat;
-    background-size: 12px 11px;
-  }
+
 }
 
 .select {

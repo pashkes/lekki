@@ -3,15 +3,19 @@
   padding-top: 12px;
   font-size: 0;
   @include media-breakpoint-up(xl) {
-    margin-top: 24px;
+    margin-top: 20px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 12px;
   }
     .slick-list {
       margin-right: -8px;
       margin-left: -8px;
       padding-top: 4px;
       padding-bottom: 1px;
+      @include media-breakpoint-up(xl) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
     }
   &__card {
     margin-bottom: 4px;
@@ -26,9 +30,11 @@
     position: absolute;
     top: -56px;
     right: 0;
+    width: 97px;
   }
   &__btn {
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 }

@@ -21,7 +21,7 @@ mixin order-over(data)
 							.col-md-6.col-xl-12
 								a(href="#").order-over__print.btn.btn--red Распечатать
 							.col-md-6.col-xl-12
-								a(href="#").order-over__save-pdf.btn Сохранить в PDF
+								a(href="#").order-over__save-pdf.btn.btn--grey Сохранить в PDF
 					.row.justify-content-md-between
 						.col-md-6.order-md-3
 							.order-over__bar-code
@@ -110,12 +110,6 @@ mixin order-over(data)
 												| 0
 												span &#160;&#8381;
 									tr
-										td Промокод: скидка 10%
-										td
-											.order__cost-col
-												| -970
-												span &#160;&#8381;
-									tr
 										td Оплата бонусами
 										td
 											.order__cost-col -160
@@ -174,4 +168,4 @@ mixin order-over(data)
 							.col-md-6.col-xl-12
 								a(href="#").order-over__print.btn.btn--red Распечатать
 							.col-md-6.col-xl-12
-								a(href="#").order-over__save-pdf.btn Сохранить в PDF
+								a(href="#").order-over__save-pdf.btn.btn Сохранить в PDF

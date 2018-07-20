@@ -124,10 +124,7 @@
       }
     }
     &--card {
-      margin-bottom: 8px;
-      @include media-breakpoint-up(md) {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
       &::before {
         background-image: url(%=static=%minified-svg/card.svg);
         background-size: 18px 18px;
@@ -244,6 +241,11 @@
       padding-bottom: 16px;
     }
   }
+  &__bonus {
+    @include media-breakpoint-up(xl) {
+      padding: 24px 24px 32px;
+    }
+  }
   &__footer {
     padding-top: 24px;
     @include media-breakpoint-up(md) {
@@ -317,7 +319,6 @@
     }
   }
   &__cancel-pay {
-    background-color: #f6f6f6;
     @include media-breakpoint-up(md) {
       min-width: 240px;
     }
@@ -593,6 +594,9 @@
     @include media-breakpoint-up(md) {
       padding-top: 26px;
     }
+    .order__pay-tabs {
+      margin-bottom: 0;
+    }
   }
   &__pay-tabs {
     margin-bottom: 16px;
@@ -617,6 +621,12 @@
     .checkbox__input + span {
       top: 2px;
       transform: translateY(0);
+    }
+  }
+  &__surended {
+    padding-top: 8px;
+    @include media-breakpoint-up(md) {
+      padding-top: 16px;
     }
   }
   &__need-surrender {

@@ -38,6 +38,12 @@
     flex-grow: 1;
     border-color: #fff;
     padding-right: 56px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:focus {
+      box-shadow: none;
+    }
     @include media-breakpoint-up(md) {
       padding-right: 160px;
     }

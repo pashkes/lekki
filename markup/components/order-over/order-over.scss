@@ -62,7 +62,13 @@
   }
   &__bar-code {
     padding-bottom: 22px;
-    max-width: 326px;
+    text-align: center;
+    img {
+      max-width: 326px;
+    }
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
   }
   &__products {
     margin-bottom: 20px;

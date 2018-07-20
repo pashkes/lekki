@@ -73,6 +73,15 @@ const data = {
         cost: '190',
         info: true
       },
+      {
+        imgName: '004',
+        sticker: true,
+        title: 'Колдрекс таблетки №12',
+        made: 'ГлаксоСмитКляйн (Ирландия)',
+        cost: '170',
+        oldCostValue: '190',
+        info: true
+      }
     ]
   }
 

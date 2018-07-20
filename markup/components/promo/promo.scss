@@ -10,19 +10,36 @@
     padding-top: 40px;
   }
   &__slider {
+    position: relative;
     margin: 0;
     padding: 0;
     list-style-type: none;
+    @include media-breakpoint-up(xl) {
+      &::before {
+        content: '';
+        position: absolute;
+        right: -16px;
+        top: 0;
+        bottom: 0;
+        width: 16px;
+        background-color: #F1F1F1;
+        z-index: 2;
+      }
+
+    }
   }
   .promo__cont {
     @include media-breakpoint-up(xl) {
       max-width:calc(100% - 386px)
     }
   }
-  &__slider {
-
+ .slick-list {
+   margin-right: -16px;
+ }
+  .slick-slide {
+    margin-right: 16px;
   }
-  &__section {
+ &__section {
     padding: 16px 16px 0;
     background-color: #fff;
     height: 384px;
@@ -58,6 +75,7 @@
       font-size: 20px;
       line-height: 1.1;
       text-transform: none;
+
     }
     &--lg {
       text-transform: uppercase;
@@ -145,6 +163,7 @@
     padding: 22px 24px 24px 24px;
     background-repeat: no-repeat;
     @include media-breakpoint-up(xl) {
+      margin-left: 16px;
       min-height: 216px;
       width: 368px;
       padding: 40px 24px 24px 24px;

@@ -38,7 +38,7 @@ mixin product-info(data)
 						span.product-info__prescription
 							+icon('attention', 18, 16)
 							| Рецептурный препарат
-				.col-md.col-xl.flex-xl-grow-1
+				.col-md
 					.row
 						.col-12.d-none.d-md-block
 							.product-info__header
@@ -75,7 +75,7 @@ mixin product-info(data)
 										button(type="button" data-toggle="modal" data-target="#cart-list").product-info__buy.btn.btn--red.js-add-cart
 											+icon('cart', 20, 17)
 											span Купить
-										a(href="#").product-info__buy-one-click.btn.btn--border-red Купить в один клик
+										a(href="#").product-info__buy-one-click.btn.btn--border-red Быстрый заказ
 								.col-xl
 									ul.product-info__list-desc
 										li.product-info__item-dec
@@ -105,17 +105,17 @@ mixin product-info(data)
 								.product-info__section.product-info__section--delivery
 									.product-info__col
 										span.product-info__label Доставка:&#160;
-										span.product-info__sub-title сегодня
+										span.product-info__sub-title сегодня&#160;
 									.product-info__col
 										span.product-info__label Самовывоз:&#160;
-										span.product-info__sub-title сегодня
+										span.product-info__sub-title сегодня&#160;
 							.col-md-6.col-lg-auto
 								.product-info__section.product-info__section--buy
 									.product-info__col.product-info__col--inline
 										span.product-info__label Оплата:&#160;
-										span.product-info__sub-title Наличными &#160;
+										span.product-info__sub-title Наличными
 									.product-info__col.product-info__col--inline
-										span.product-info__label или&#160;
+										span.product-info__label &#160;или&#160;
 										span.product-info__sub-title банковской картой
 									.product-info__col
 										span.product-info__sub-title + 95 бонусов

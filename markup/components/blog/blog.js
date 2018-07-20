@@ -4,7 +4,7 @@
     dots: true,
     mobileFirst: true,
     responsive: [{
-      breakpoint: 768,
+      breakpoint: 767,
       settings: {
         slidesToShow: 2,
       }
@@ -25,7 +25,7 @@
         }
       },
       {
-        breakpoint: 1900,
+        breakpoint: 1899,
         settings: {
           slidesToShow: 5,
           dots: false

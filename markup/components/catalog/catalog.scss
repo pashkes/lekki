@@ -15,32 +15,59 @@
     }
   }
   &__sort-wrapper {
-    width: 132px;
+    display: flex;
   }
   &__sort {
-    width: 100%;
-    max-width: 100%;
+    flex-grow: 1;
     margin-bottom: 24px;
-    padding: 9px 16px;
+    padding: 8px 16px 9px;
     border-color: transparent;
     appearance: none;
-    border-radius: 4px;
+    border-radius: 4px 0 0 4px;
     background-color: #f6f6f6;
     font-size: 14px;
     line-height: 1.57;
     color: $black;
-    background-image: url(%=static=%minified-svg/arrow-top-sm.svg), linear-gradient(#F6F6F6, #F6F6F6), linear-gradient(#fff, #fff);
-    background-position: right 13px bottom 50%, 100%, calc(100% - 34px) 0;
-    background-size: 8px 10px, 34px 100%, 1px 100%;
-    background-repeat: no-repeat;
     &::-ms-expand {
       display: none;
     }
     &:focus {
-      border-color: #ea2b16;
       outline: none;
       box-shadow: none;
     }
+  }
+  &__sort-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    margin-left: 1px;
+    background-color: #f6f6f6;
+    font-size: 0;
+    border: none;
+    @include media-breakpoint-up(md) {
+      width: 20px;
+      height: 20px;
+      margin-left: 0;
+    }
+    &.active {
+      .icon {
+        fill: $red;
+        transform: rotate(0);
+      }
+    }
+    .icon {
+      fill: $black;
+      transform: rotate(180deg);
+      transition: .2s ease-out;
+    }
+  }
+  &__sort-element {
+    display: flex;
+    align-items: center;
+    margin-right: 19px;
   }
   &__filter-btn {
     width: 40px;
@@ -50,9 +77,6 @@
     border-radius: 4px;
     font-size: 0;
     background: #f6f6f6 url(%=static=%minified-svg/settings.svg) center no-repeat;
-    &:focus {
-      border-color: $red;
-    }
   }
   &__filter-wrapper {
     @include media-breakpoint-up(md) {
@@ -70,20 +94,14 @@
   &__sort-list {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
   }
   &__sort-item {
-    display: flex;
-    align-items: center;
-    margin-right: 24px;
     font-size: 14px;
     line-height: 1;
-    .icon {
-      margin-left: 6px;
-      fill: $black;
-      transform: rotate(180deg);
-      transition: all .4s ease;
-    }
-
+    cursor: pointer;
   }
 
   &__radio {

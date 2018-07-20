@@ -10,7 +10,7 @@ mixin instruction(data)
 							each item in data.navList
 								if item.active
 									li.instruction__item.active
-										a(href="#"+item.id).instruction__link #{item.textLink}
+										a(href="#"+item.id ).instruction__link #{item.textLink}
 								else
 									li.instruction__item
 										a(href="#" + item.id).instruction__link #{item.textLink}

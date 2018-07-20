@@ -5,8 +5,8 @@
       mobileFirst: true,
       arrows: false,
       rows: 2,
-      nextArrow: $('.js-useful-product-prev'),
-      prevArrow: $('.js-useful-product-next'),
+      nextArrow: $('.js-useful-product-next'),
+      prevArrow: $('.js-useful-product-prev'),
       dots: true,
       responsive: [{
         breakpoint: 767,

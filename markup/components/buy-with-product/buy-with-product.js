@@ -3,8 +3,8 @@
   const productSlider = $('.js-buy-with-product');
   const advantageSliderSettigs = {
     slidesToShow: 5,
-    nextArrow: $('.js-buy-with-product-prev'),
-    prevArrow: $('.js-buy-with-product-next'),
+    nextArrow: $('.js-buy-with-product-next'),
+    prevArrow: $('.js-buy-with-product-prev'),
     mobileFirst: true,
     responsive: [
       {

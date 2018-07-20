@@ -26,7 +26,6 @@
     evt.preventDefault();
     const href = $(this).attr('href');
     const sliceHref = href.slice(1);
-    console.log( );
     mobileMenu.find('.mobile-menu__sub-list').hide();
     mobileMenu.find('#' + sliceHref).show();
     category.addClass('active');

@@ -6,190 +6,81 @@ mixin menu(data)
 			.row
 				.col-auto
 					ul.menu__nav
-						li.menu__item.active
+						li(data-id="sub-list-1").menu__item.active
 							a(href="#").menu__link Лекарства и бады
-							.menu__sub-lists
-								.row
-									.col-auto.pr-4
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Алкоголизм и курение
-											li.menu__sub-item
-												a(href="#").menu__sub-link Аллергия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Верхние дыхательные пути
-											li.menu__sub-item
-												a(href="#").menu__sub-link Витамины и БАД
-											li.menu__sub-item
-												a(href="#").menu__sub-link Геморрой
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гинекология и акушерство
-											li.menu__sub-item
-												a(href="#").menu__sub-link Глаза
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гомеопатия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Онкология
-											li.menu__sub-item
-												a(href="#").menu__sub-link Опорно-двигательный аппарат
-											li.menu__sub-item
-												a(href="#").menu__sub-link Простуда
-											li.menu__sub-item
-												a(href="#").menu__sub-link Против паразитов
-									.col-auto.pr-3
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гормоны
-											li.menu__sub-item
-												a(href="#").menu__sub-link Грипп
-											li.menu__sub-item
-												a(href="#").menu__sub-link Дерматология (уход за кожей)
-											li.menu__sub-item
-												a(href="#").menu__sub-link Желудочно-кишечный тракт
-											li.menu__sub-item
-												a(href="#").menu__sub-link Иммуномодуляторы и противовирусные
-											li.menu__sub-item
-												a(href="#").menu__sub-link Мочеполовая система
-											li.menu__sub-item
-												a(href="#").menu__sub-link Нервная система
-											li.menu__sub-item
-												a(href="#").menu__sub-link Обезболивающие и спазмолитики
-											li.menu__sub-item
-												a(href="#").menu__sub-link Против паразитов
-											li.menu__sub-item
-												a(href="#").menu__sub-link Сердечно-сосудистая система
-											li.menu__sub-item
-												a(href="#").menu__sub-link Сердечно-сосудистая система
-										a(href="#").menu__show-all
-											| Показать все
-											+icon('arrow-right', '16', '16')
-									.col-auto.ml-xl-auto
-										.row
-											.col.col-xxl-6
-												ul.menu__products
-													li.menu__product
-														a(href="#").menu__img
-														.menu__product-info
-															h3.menu__title
-																a(href="#") Граммидин с анестетиком нео
-																	| таблетки для рассасывания №18
-															.menu__prices
-																span.menu__cost 254 &#8381
-														.menu__sticker.sticker
-															+icon('sticker', '40', '40')
-															span Хит!
-													li.menu__product
-														a(href="#").menu__img
-															img(src="%=static=%img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл")
-														.menu__product-info
-															h3.menu__title
-																a(href="#") Либридерм витамин F бальзам питательный
-																	| для кожи головы и волос 200мл
-															.menu__prices
-																span.menu__cost.span.menu__cost--old 445 &#8381
-																span.menu__cost 390 &#8381
-														.menu__sticker.sticker
-															+icon('sticker', '40', '40')
-															span Хит!
-													li.menu__product
-														a(href="#").menu__img
-															img(src="%=static=%img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл")
-														.menu__product-info
-															h3.menu__title
-																a(href="#") Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий  30мл
-																	| лосьон мицеллярный 200мл
-															.menu__prices
-																span.menu__cost 800 &#8381
-														.menu__sticker.sticker
-															+icon('sticker', '40', '40')
-															span Хит!
-											.col.col-xxl-6.d-none.d-xxl-block
-												ul.menu__products
-													li.menu__product
-														a(href="#").menu__img
-														.menu__product-info
-															h3.menu__title
-																a(href="#") Граммидин с анестетиком нео
-																	| таблетки для рассасывания №18
-															.menu__prices
-																span.menu__cost 254 &#8381
-														.menu__sticker.sticker
-															+icon('sticker', '40', '40')
-															span Хит!
-													li.menu__product
-														a(href="#").menu__img
-															img(src="%=static=%img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл")
-														.menu__product-info
-															h3.menu__title
-																a(href="#") Либридерм витамин F бальзам питательный
-																	| для кожи головы и волос 200мл
-															.menu__prices
-																span.menu__cost.span.menu__cost--old 445 &#8381
-																span.menu__cost 390 &#8381
-														.menu__sticker.sticker
-															+icon('sticker', '40', '40')
-															span Хит!
-													li.menu__product
-														a(href="#").menu__img
-															img(src="%=static=%img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл")
-														.menu__product-info
-															h3.menu__title
-																a(href="#") Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий  30мл
-																	| лосьон мицеллярный 200мл
-															.menu__prices
-																span.menu__cost 800 &#8381
-														.menu__sticker.sticker
-															+icon('sticker', '40', '40')
-															span Хит!
-
-						li.menu__item
+						li(data-id="sub-list-2").menu__item
 							a(href="#").menu__link Гигиена
-							.menu__sub-lists
-								.row
-									.col-auto.pr-4
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Алкоголизм и курение
-											li.menu__sub-item
-												a(href="#").menu__sub-link Аллергия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Верхние дыхательные пути
-											li.menu__sub-item
-												a(href="#").menu__sub-link Витамины и БАД
-											li.menu__sub-item
-												a(href="#").menu__sub-link Геморрой
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гинекология и акушерство
-											li.menu__sub-item
-												a(href="#").menu__sub-link Онкология
-											li.menu__sub-item
-												a(href="#").menu__sub-link Опорно-двигательный аппарат
-											li.menu__sub-item
-												a(href="#").menu__sub-link Простуда
-											li.menu__sub-item
-												a(href="#").menu__sub-link Против паразитов
-									.col-auto.pr-3
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гормоны
-											li.menu__sub-item
-												a(href="#").menu__sub-link Грипп
-											li.menu__sub-item
-												a(href="#").menu__sub-link Дерматология (уход за кожей)
-											li.menu__sub-item
-												a(href="#").menu__sub-link Желудочно-кишечный тракт
-											li.menu__sub-item
-												a(href="#").menu__sub-link Иммуномодуляторы и противовирусные
-											li.menu__sub-item
-												a(href="#").menu__sub-link Мочеполовая система
-											li.menu__sub-item
-												a(href="#").menu__sub-link Нервная система
-											li.menu__sub-item
-												a(href="#").menu__sub-link Сердечно-сосудистая система
-										a(href="#").menu__show-all
-											| Показать все
-											+icon('arrow-right', '16', '16')
-									.col-auto.ml-xl-auto
+						li(data-id="").menu__item
+							a(href="#").menu__link Красота и уход
+						li(data-id="").menu__item
+							a(href="#").menu__link Мама и малыш
+						li(data-id="").menu__item
+							a(href="#").menu__link Диета и спорт
+						li(data-id="").menu__item
+							a(href="#").menu__link Оптика
+						li(data-id="").menu__item
+							a(href="#").menu__link Ортопедия
+						li(data-id="").menu__item
+							a(href="#").menu__link Все по 99 рублей
+				.col
+					.menu__sub-lists#sub-list-1
+						.row
+							.col-auto.pr-4
+								ul.menu__sub-list
+									li.menu__sub-item
+										a(href="#").menu__sub-link Алкоголизм и курение
+									li.menu__sub-item
+										a(href="#").menu__sub-link Аллергия
+									li.menu__sub-item
+										a(href="#").menu__sub-link Верхние дыхательные пути
+									li.menu__sub-item
+										a(href="#").menu__sub-link Витамины и БАД
+									li.menu__sub-item
+										a(href="#").menu__sub-link Геморрой
+									li.menu__sub-item
+										a(href="#").menu__sub-link Гинекология и акушерство
+									li.menu__sub-item
+										a(href="#").menu__sub-link Глаза
+									li.menu__sub-item
+										a(href="#").menu__sub-link Гомеопатия
+									li.menu__sub-item
+										a(href="#").menu__sub-link Онкология
+									li.menu__sub-item
+										a(href="#").menu__sub-link Опорно-двигательный аппарат
+									li.menu__sub-item
+										a(href="#").menu__sub-link Простуда
+									li.menu__sub-item
+										a(href="#").menu__sub-link Против паразитов
+							.col-auto.pr-3
+								ul.menu__sub-list
+									li.menu__sub-item
+										a(href="#").menu__sub-link Гормоны
+									li.menu__sub-item
+										a(href="#").menu__sub-link Грипп
+									li.menu__sub-item
+										a(href="#").menu__sub-link Дерматология (уход за кожей)
+									li.menu__sub-item
+										a(href="#").menu__sub-link Желудочно-кишечный тракт
+									li.menu__sub-item
+										a(href="#").menu__sub-link Иммуномодуляторы и противовирусные
+									li.menu__sub-item
+										a(href="#").menu__sub-link Мочеполовая система
+									li.menu__sub-item
+										a(href="#").menu__sub-link Нервная система
+									li.menu__sub-item
+										a(href="#").menu__sub-link Обезболивающие и спазмолитики
+									li.menu__sub-item
+										a(href="#").menu__sub-link Против паразитов
+									li.menu__sub-item
+										a(href="#").menu__sub-link Сердечно-сосудистая система
+									li.menu__sub-item
+										a(href="#").menu__sub-link Сердечно-сосудистая система
+								a(href="#").menu__show-all
+									| Показать все
+									+icon('arrow-right', '16', '16')
+							.col
+								.row.justify-content-end
+									.col-auto
 										ul.menu__products
 											li.menu__product
 												a(href="#").menu__img
@@ -215,135 +106,113 @@ mixin menu(data)
 												.menu__sticker.sticker
 													+icon('sticker', '40', '40')
 													span Хит!
-						li.menu__item
-							a(href="#").menu__link Красота и уход
-							.menu__sub-lists
-								.row
-									.col-auto.pr-4
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Алкоголизм и курение
-											li.menu__sub-item
-												a(href="#").menu__sub-link Аллергия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Верхние дыхательные пути
-											li.menu__sub-item
-												a(href="#").menu__sub-link Витамины и БАД
-											li.menu__sub-item
-												a(href="#").menu__sub-link Геморрой
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гинекология и акушерство
-											li.menu__sub-item
-												a(href="#").menu__sub-link Онкология
-											li.menu__sub-item
-												a(href="#").menu__sub-link Опорно-двигательный аппарат
-						li.menu__item
-							a(href="#").menu__link Мама и малыш
-							.menu__sub-lists
-								.row
-									.col-auto.pr-4
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Алкоголизм и курение
-											li.menu__sub-item
-												a(href="#").menu__sub-link Аллергия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Верхние дыхательные пути
-											li.menu__sub-item
-												a(href="#").menu__sub-link Витамины и БАД
-											li.menu__sub-item
-												a(href="#").menu__sub-link Геморрой
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гинекология и акушерство
-											li.menu__sub-item
-												a(href="#").menu__sub-link Онкология
-											li.menu__sub-item
-												a(href="#").menu__sub-link Опорно-двигательный аппарат
-						li.menu__item
-							a(href="#").menu__link Диета и спорт
-							.menu__sub-lists
-								.row
-									.col-auto.pr-4
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Алкоголизм и курение
-											li.menu__sub-item
-												a(href="#").menu__sub-link Аллергия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Верхние дыхательные пути
-											li.menu__sub-item
-												a(href="#").menu__sub-link Витамины и БАД
-											li.menu__sub-item
-												a(href="#").menu__sub-link Геморрой
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гинекология и акушерство
-											li.menu__sub-item
-												a(href="#").menu__sub-link Онкология
-											li.menu__sub-item
-												a(href="#").menu__sub-link Опорно-двигательный аппарат
-						li.menu__item
-							a(href="#").menu__link Оптика
-							.menu__sub-lists
-								.row
-									.col-auto.pr-4
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Алкоголизм и курение
-											li.menu__sub-item
-												a(href="#").menu__sub-link Аллергия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Верхние дыхательные пути
-											li.menu__sub-item
-												a(href="#").menu__sub-link Витамины и БАД
-											li.menu__sub-item
-												a(href="#").menu__sub-link Геморрой
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гинекология и акушерство
-											li.menu__sub-item
-												a(href="#").menu__sub-link Онкология
-											li.menu__sub-item
-												a(href="#").menu__sub-link Опорно-двигательный аппарат
-						li.menu__item
-							a(href="#").menu__link Ортопедия
-							.menu__sub-lists
-								.row
-									.col-auto.pr-4
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Алкоголизм и курение
-											li.menu__sub-item
-												a(href="#").menu__sub-link Аллергия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Верхние дыхательные пути
-											li.menu__sub-item
-												a(href="#").menu__sub-link Витамины и БАД
-											li.menu__sub-item
-												a(href="#").menu__sub-link Геморрой
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гинекология и акушерство
-											li.menu__sub-item
-												a(href="#").menu__sub-link Онкология
-											li.menu__sub-item
-												a(href="#").menu__sub-link Опорно-двигательный аппарат
-						li.menu__item
-							a(href="#").menu__link Все по 99 рублей
-							.menu__sub-lists
-								.row
-									.col-auto.pr-4
-										ul.menu__sub-list
-											li.menu__sub-item
-												a(href="#").menu__sub-link Алкоголизм и курение
-											li.menu__sub-item
-												a(href="#").menu__sub-link Аллергия
-											li.menu__sub-item
-												a(href="#").menu__sub-link Верхние дыхательные пути
-											li.menu__sub-item
-												a(href="#").menu__sub-link Витамины и БАД
-											li.menu__sub-item
-												a(href="#").menu__sub-link Геморрой
-											li.menu__sub-item
-												a(href="#").menu__sub-link Гинекология и акушерство
-											li.menu__sub-item
-												a(href="#").menu__sub-link Онкология
-											li.menu__sub-item
-												a(href="#").menu__sub-link Опорно-двигательный аппарат
+											li.menu__product
+												a(href="#").menu__img
+													img(src="%=static=%img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл")
+												.menu__product-info
+													h3.menu__title
+														a(href="#") Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий  30мл
+															| лосьон мицеллярный 200мл
+													.menu__prices
+														span.menu__cost 800 &#8381
+												.menu__sticker.sticker
+													+icon('sticker', '40', '40')
+													span Хит!
+									.col-auto.d-none.d-xxl-block
+										ul.menu__products
+											li.menu__product
+												a(href="#").menu__img
+													img(src="%=static=%img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл")
+												.menu__product-info
+													h3.menu__title
+														a(href="#") Граммидин с анестетиком нео
+															| таблетки для рассасывания №18
+													.menu__prices
+														span.menu__cost 254 &#8381
+												.menu__sticker.sticker
+													+icon('sticker', '40', '40')
+													span Хит!
+											li.menu__product
+												a(href="#").menu__img
+													img(src="%=static=%img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл")
+												.menu__product-info
+													h3.menu__title
+														a(href="#") Либридерм витамин F бальзам питательный
+															| для кожи головы и волос 200мл
+													.menu__prices
+														span.menu__cost.span.menu__cost--old 445 &#8381
+														span.menu__cost 390 &#8381
+												.menu__sticker.sticker
+													+icon('sticker', '40', '40')
+													span Хит!
+											li.menu__product
+												a(href="#").menu__img
+													img(src="%=static=%img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл")
+												.menu__product-info
+													h3.menu__title
+														a(href="#") Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий  30мл
+															| лосьон мицеллярный 200мл
+													.menu__prices
+														span.menu__cost 800 &#8381
+												.menu__sticker.sticker
+													+icon('sticker', '40', '40')
+													span Хит!
+					.menu__sub-lists#sub-list-2
+						.row
+							.col-auto.pr-4
+								ul.menu__sub-list
+									li.menu__sub-item
+										a(href="#").menu__sub-link Алкоголизм и курение
+									li.menu__sub-item
+										a(href="#").menu__sub-link Аллергия
+									li.menu__sub-item
+										a(href="#").menu__sub-link Верхние дыхательные пути
+									li.menu__sub-item
+										a(href="#").menu__sub-link Витамины и БАД
+									li.menu__sub-item
+										a(href="#").menu__sub-link Геморрой
+									li.menu__sub-item
+										a(href="#").menu__sub-link Гинекология и акушерство
+									li.menu__sub-item
+										a(href="#").menu__sub-link Глаза
+									li.menu__sub-item
+										a(href="#").menu__sub-link Гомеопатия
+									li.menu__sub-item
+										a(href="#").menu__sub-link Онкология
+									li.menu__sub-item
+										a(href="#").menu__sub-link Опорно-двигательный аппарат
+									li.menu__sub-item
+										a(href="#").menu__sub-link Простуда
+									li.menu__sub-item
+										a(href="#").menu__sub-link Против паразитов
+
+							.col
+								.row.justify-content-end
+									.col-auto
+										ul.menu__products
+											li.menu__product
+												a(href="#").menu__img
+													img(src="%=static=%img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл")
+												.menu__product-info
+													h3.menu__title
+														a(href="#") Граммидин с анестетиком нео
+															| таблетки для рассасывания №18
+													.menu__prices
+														span.menu__cost 254 &#8381
+												.menu__sticker.sticker
+													+icon('sticker', '40', '40')
+													span Хит!
+											li.menu__product
+												a(href="#").menu__img
+													img(src="%=static=%img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл")
+												.menu__product-info
+													h3.menu__title
+														a(href="#") Либридерм витамин F бальзам питательный
+															| для кожи головы и волос 200мл
+													.menu__prices
+														span.menu__cost.span.menu__cost--old 445 &#8381
+														span.menu__cost 390 &#8381
+												.menu__sticker.sticker
+													+icon('sticker', '40', '40')
+													span Хит!
+

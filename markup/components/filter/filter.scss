@@ -234,11 +234,19 @@
     margin-bottom: 28px;
     padding: 0;
     border: none;
-    border-bottom: dashed 1px rgba($warm-grey-two, .4);
     font-weight: 500;
     background-color: transparent;
     font-size: 13px;
     line-height: 1;
+    i {
+      font-style: normal;
+      border-bottom: dashed 1px rgba($warm-grey-two, .4);
+    }
+    &.active {
+      span {
+        opacity: 0;
+      }
+    }
     span {
       padding-left: 4px;
       color: $warm-grey-two;

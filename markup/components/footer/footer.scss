@@ -164,9 +164,18 @@
         @include media-breakpoint-up(md) {
           margin-left: 5px;
         }
+        @include media-breakpoint-up(xl) {
+          margin-left: 1px;
+        }
       }
     }
 
+  }
+  &__social {
+    justify-content: space-between;
+    @include media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
   }
   .social {
     @include media-breakpoint-up(md)  {

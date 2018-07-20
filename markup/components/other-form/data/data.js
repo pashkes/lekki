@@ -20,8 +20,8 @@ const data = {
         imgName: '006',
         title: 'Террафлекс капсулы №200',
         made: 'Яндран (Хорватия)',
-        oldCostValue: '3545',
-        cost: '3195'
+        oldCostValue: '3 545',
+        cost: '3 195'
       },
       {
         imgName: '004',

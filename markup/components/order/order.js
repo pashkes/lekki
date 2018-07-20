@@ -65,10 +65,19 @@
       }
     });
   };
+  const showSurrended = function () {
+    $('.js-pay-cash').on('change', function () {
+        $('.js-surrended').slideDown();
+    });
+    $('.js-pay-card').on('change', function () {
+      $('.js-surrended').slideUp();
+    })
+  };
   if ($('.js-pickup-delivery')) {
     changeRadioOrder();
     showMapOnButtonClick();
     hiddenCurrentAndShowCourier();
+    showSurrended();
   }
 
 })();

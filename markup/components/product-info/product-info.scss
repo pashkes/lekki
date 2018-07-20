@@ -1,8 +1,9 @@
-.negative--space-xl{
+.negative--space-xl {
   @include media-breakpoint-up(xl) {
     margin-top: -161px;
   }
 }
+
 .product-info {
   @include media-breakpoint-up(xl) {
     border-bottom: solid 1px $white-two;
@@ -105,12 +106,12 @@
   }
   &__photo-wrapper {
     @include media-breakpoint-up(md) {
-      max-width: 256px;
+      min-width: 100%;
+      width: 256px;
       margin-right: 16px;
-      width: 100%;
     }
     @include media-breakpoint-up(xl) {
-      min-width: 336px;
+      width: 336px;
     }
   }
   &__prescription {

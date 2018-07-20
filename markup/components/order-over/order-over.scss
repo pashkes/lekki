@@ -152,6 +152,14 @@
     }
   }
   .order__total-info {
+    tfoot td {
+      @include media-breakpoint-up(md) {
+        padding-top: 32px;
+      }
+    }
+    tbody tr:last-child td {
+      padding-bottom: 2px;
+    }
     margin-bottom: 18px;
     td {
       &:first-child {

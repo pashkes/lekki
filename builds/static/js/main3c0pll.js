@@ -5376,6 +5376,8 @@ object-assign
 
 
 
+
+
 (function () {
   var productSlider = $('.js-buy-with-product');
   var advantageSliderSettigs = {
@@ -5417,8 +5419,6 @@ object-assign
   };
 
 })();
-
-
 
 
 
@@ -5838,6 +5838,8 @@ $(function () {
 
 
 
+
+
 (function () {
   $('.js-other-form-slider').slick(
     {
@@ -5898,8 +5900,6 @@ $(function () {
   );
 
 })();
-
-
 
 
 

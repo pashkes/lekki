@@ -4,8 +4,8 @@
       mobileFirst: true,
       arrows: false,
       rows: 2,
-      nextArrow: $('.js-other-form-prev'),
-      prevArrow: $('.js-other-form-next'),
+      nextArrow: $('.js-other-form-next'),
+      prevArrow: $('.js-other-form-prev'),
       adaptiveHeight: true,
       dots: true,
       responsive: [{

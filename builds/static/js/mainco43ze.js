@@ -5318,6 +5318,27 @@ object-assign
 
 
 (function () {
+  $('.js-brands-slider').slick({
+    arrows: false,
+    dots: true,
+    variableWidth: true,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          variableWidth: false,
+          slidesToShow: 9
+        }
+      }
+    ]
+  });
+})();
+
+
+
+
+(function () {
   $('.js-blog-slider').slick({
     arrows: false,
     dots: true,
@@ -5353,27 +5374,6 @@ object-assign
       }]
   });
 })();
-
-(function () {
-  $('.js-brands-slider').slick({
-    arrows: false,
-    dots: true,
-    variableWidth: true,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1199,
-        settings: {
-          variableWidth: false,
-          slidesToShow: 9
-        }
-      }
-    ]
-  });
-})();
-
-
-
 
 
 (function () {
@@ -5420,6 +5420,8 @@ object-assign
 
 
 
+
+
 (function () {
   if ($('.js-toggle-sort').length) {
     $('.js-toggle-sort').on('click', function () {
@@ -5439,22 +5441,6 @@ object-assign
     });
   }
 })();
-
-(function () {
-  $('.js-counter').on('click', function(event){
-    var $target = $(event.target);
-    var start =Number($(this).find('.js-counter-field').val());
-    if($target.hasClass('js-counter-up') && start >= 1) {
-      start--;
-      $(this).find('.js-counter-field').val(start);
-    } else if ($target.hasClass('js-counter-down')) {
-      start++;
-      $(this).find('.js-counter-field').val(start);
-    }
-  });
-})();
-
-
 
 (function () {
   $('.js-slider-certificate').slick({
@@ -5478,49 +5464,20 @@ object-assign
   });
 })();
 
-
-
 (function () {
-  var productSlider = $('.js-products-slider-disease');
-  var advantageSliderSettigs = {
-    slidesToShow: 5,
-    nextArrow: $('.js-disease-product-next'),
-    prevArrow: $('.js-disease-product-prev'),
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 6
-        }
-      },
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 8
-        }
-      }
-    ]
-  };
-
-  $(window).on('load resize', function () {
-    slickMobile(productSlider, advantageSliderSettigs);
+  $('.js-counter').on('click', function(event){
+    var $target = $(event.target);
+    var start =Number($(this).find('.js-counter-field').val());
+    if($target.hasClass('js-counter-up') && start >= 1) {
+      start--;
+      $(this).find('.js-counter-field').val(start);
+    } else if ($target.hasClass('js-counter-down')) {
+      start++;
+      $(this).find('.js-counter-field').val(start);
+    }
   });
-
-// включение слайдера на мобильном
-  function slickMobile(slider, settings) {
-    if ($(window).width() < 1200) {
-      if (slider.hasClass('slick-initialized')) {
-        slider.slick('unslick');
-      }
-      return
-    }
-    if (!slider.hasClass('slick-initialized')) {
-      return slider.slick(settings);
-    }
-  };
-
 })();
+
 
 
 
@@ -5622,6 +5579,49 @@ $(function () {
 
     }
   });
+
+})();
+
+
+(function () {
+  var productSlider = $('.js-products-slider-disease');
+  var advantageSliderSettigs = {
+    slidesToShow: 5,
+    nextArrow: $('.js-disease-product-next'),
+    prevArrow: $('.js-disease-product-prev'),
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 6
+        }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 8
+        }
+      }
+    ]
+  };
+
+  $(window).on('load resize', function () {
+    slickMobile(productSlider, advantageSliderSettigs);
+  });
+
+// включение слайдера на мобильном
+  function slickMobile(slider, settings) {
+    if ($(window).width() < 1200) {
+      if (slider.hasClass('slick-initialized')) {
+        slider.slick('unslick');
+      }
+      return
+    }
+    if (!slider.hasClass('slick-initialized')) {
+      return slider.slick(settings);
+    }
+  };
 
 })();
 
@@ -5746,8 +5746,6 @@ $(function () {
   });
 })();
 
-
-
 (function () {
   //Переключение текста внутри кнопки которая показывает карту на странице оформление заказа
   var toggleTextButton = function () {
@@ -5831,6 +5829,8 @@ $(function () {
   }
 
 })();
+
+
 
 
 
@@ -5942,8 +5942,6 @@ $(function () {
 
 
 
-
-
 (function () {
   $("[data-scroll-to]").click(function() {
     var $this = $(this),
@@ -5959,6 +5957,8 @@ $(function () {
     if ($focusElement) $($focusElement).focus();
   });
 })();
+
+
 
 (function () {
   $('.js-promo-slider').slick({
@@ -6053,8 +6053,6 @@ $(function () {
   });
 })();
 
-
-
 (function () {
   var productSlider = $('.js-products-slider');
   var advantageSliderSettigs = {
@@ -6096,6 +6094,8 @@ $(function () {
   };
 
 })();
+
+
 
 
 

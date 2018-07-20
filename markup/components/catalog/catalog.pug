@@ -45,7 +45,9 @@ mixin  catalog(data)
 									button(type="button").catalog__sort-btn.active.js-toggle-sort-mobile по возростанию/по убыванию
 										+icon('arrow-top-default', 10, 10)
 							.col-auto.d-xl-none
-								button(type="button").catalog__filter-btn.js-show-filter-mobile открыть
+								button(type="button").catalog__filter-btn.js-show-filter-mobile
+									+icon('settings', 18, 18)
+									| открыть
 					.catalog__list
 						.row
 							each item in data.list

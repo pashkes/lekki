@@ -75,7 +75,13 @@
     border: 1px solid transparent;
     border-radius: 4px;
     font-size: 0;
-    background: #f6f6f6 url(%=static=%minified-svg/settings.svg) center no-repeat;
+    background-color: #f6f6f6;
+    &.active .icon {
+      fill: $red;
+    }
+    .icon {
+      fill: $black;
+    }
   }
   &__filter-wrapper {
     @include media-breakpoint-up(md) {

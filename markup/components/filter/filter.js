@@ -18,7 +18,9 @@ $(function () {
   var overlayFilter = $('.filter .modal-backdrop');
   var filter = $('.js-filter');
   var closeFilter = $('.js-close-filter');
-
+  $('.js-show-filter-mobile').on('click', function () {
+    $(this).addClass('active');
+  });
   btnFilter.on('click', function () {
     overlayFilter.addClass('show');
     filter.addClass('show');
@@ -26,11 +28,14 @@ $(function () {
   closeFilter.on('click', function () {
     overlayFilter.removeClass('show');
     filter.removeClass('show');
+    $('.js-show-filter-mobile').removeClass('active');
+
   });
   $(document).mouseup(function (e) {
     if ($(e.target).closest(".filter__inner").length == 0) {
       filter.removeClass('show');
       overlayFilter.removeClass('show');
+      $('.js-show-filter-mobile').removeClass('active');
     }
   });
 

@@ -334,13 +334,11 @@
     }
     @include media-breakpoint-up(xl) {
       display: inline-flex;
-      max-width: 784px;
       width: 100%;
       margin-bottom: 26px;
     }
     @media (min-width: 1500px) {
-      max-width: 100%;
-      width: auto;
+      margin-bottom: 47px;
     }
   }
   &__btn {

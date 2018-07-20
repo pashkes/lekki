@@ -2,7 +2,6 @@
   if ($('.js-sort').length) {
 
     $('.js-toggle-sort-mobile').on('click', function () {
-
       if ($(this).hasClass('active')) {
         $(this).removeClass('active');
       } else {

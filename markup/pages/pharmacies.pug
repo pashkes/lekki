@@ -1,0 +1,24 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../components/head/head.pug
+	include ../components/footer/footer.pug
+	include ../components/header/header
+	include ../components/breadcrumbs/breadcrumbs
+	include ../components/pharmacies/pharmacies
+	head
+		+head(head.defaults)
+	//script(src='%=static=%js/separate-js/script.js')
+	link(href="%=static=%css/separate-css/styles.css" rel="stylesheet" type="text/css")
+	body
+		+header()
+		.container
+			+breadcrumbs()
+		+pharmacies(pharmacies)
+		+footer()
+			//- Include your components here
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+		script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%.js')

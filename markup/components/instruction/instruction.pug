@@ -28,30 +28,30 @@ mixin instruction(data)
 									h3
 										button(data-toggle="collapse" data-target="#" + id aria-expanded="true" aria-controls=id).instruction__header.active
 											span #{item.title}
-									div(id=id aria-labelledby=id data-parent="#accordion").instruction__content.collapse.show
+									div(id=id data-parent="#accordion").instruction__content.collapse.show
 										p #{item.text}
 								else
 									h3
 										button(data-toggle="collapse" data-target="#" + id aria-expanded="true" aria-controls=id).instruction__header
 											span #{item.title}
-									div(id=id aria-labelledby=id data-parent="#accordion").instruction__content.collapse
+									div(id=id  data-parent="#accordion").instruction__content.collapse
 										p #{item.text}
 						li.instruction__block(class="instruction__block" id="list-item-10")
 							h3
 								button(data-toggle="collapse" data-target="#section-10" aria-expanded="true" aria-controls="section-10").instruction__header.active
 									span Сертификаты
-							div(id="section-10" aria-labelledby="section-10" data-parent="#accordion").collapse.show
+							div(id="section-10" data-parent="#accordion").collapse.show
 								+certificates()
 						li.instruction__block(class="instruction__block" id="list-item-11")
 							h3
 								button(data-toggle="collapse" data-target="#section-11" aria-expanded="true" aria-controls="section-11").instruction__header.active
 									span Другие формы выпуска
-							div(id="section-11" aria-labelledby="section-11" data-parent="#accordion").collapse.show
+							div(id="section-11" data-parent="#accordion").collapse.show
 								+other-form(otherForm)
 						li.instruction__block(class="instruction__block" id="list-item-12")
 							h3
 								button(data-toggle="collapse" data-target="#section-12" aria-expanded="true" aria-controls="section-12").instruction__header.active
 									span Отзывы
-							div(id="section-12" aria-labelledby="section-11" data-parent="#accordion").collapse.show
+							div(id="section-12" data-parent="#accordion").collapse.show
 								+product-reviews(productReviews)
 

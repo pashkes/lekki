@@ -1,0 +1,45 @@
+mixin pharmacies(data)
+	include ../icon/icon
+
+	section.pharmacies
+		.container
+			h2.pharmacies__title Адреса аптек
+			form.pharmacies__header
+				.row
+					.col-md-auto
+						select.pharmacies__select.select
+							option Москва и МО
+							option Санкт Петербург
+					.col-md
+						input(type="search" placeholder="Введите названия улицы или станции метро").pharmacies__search.field
+					.col-md-auto
+						ul(role="tablist").pharmacies__tabs.nav
+							li
+								a(data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="true").pharmacies__tab.pharmacies__tab--list.active
+									span.d-md-none.d-xl-block Списком
+							li
+								a(data-toggle="tab" href="#on-map" role="tab" aria-controls="on-map" aria-selected="true").pharmacies__tab.d-flex.align-items-center
+									+icon('location', 18, 20)
+									span.d-md-none.d-xl-block На карте
+			.pharmacies__content.tab-content
+				.pharmacies__panel.show.active#list(role="tabpanel")
+					each item in data
+						.pharmacies__item
+							.row
+								.col-md-5
+									span.pharmacies__name #{item.name}
+									span.pharmacies__address #{item.address}
+								.col-md-3.offset-md-1.offset-xl-0
+									span(class="pharmacies__metro " + item.metroType) #{item.metroName}
+								.col-md-3.col-xl-4.ml-md-auto.d-flex.justify-content-md-end
+									.pharmacies__row
+										.pharmacies__col
+											span.pharmacies__work #{item.timeWork}
+										.pharmacies__col
+											ul.pharmacies__telephones
+												each tel in item.tel
+													li #{tel}
+				.pharmacies__panel.show#on-map(role="tabpanel")
+					.pharmacies__inner
+						#map-list.pharmacies__map
+

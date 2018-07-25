@@ -1,0 +1,12 @@
+mixin not-found()
+	.not-found
+		.container
+			.row.justify-content-center
+				.col-xl-auto.d-flex.justify-content-center
+					.not-found__img
+						img(src="%=static=%img/general/not-found.svg" alt="страница не найдена")
+				.col-xl-auto.d-flex.justify-content-center
+					.not-found__main
+						h2.not-found__title страница не найдена
+						p.not-found__subtitle Очень жаль, но такой страницы больше не существует!
+						a(href="index.html").not-found__back-home.btn.btn--red Перейти на главную

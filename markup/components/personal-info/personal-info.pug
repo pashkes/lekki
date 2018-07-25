@@ -5,18 +5,30 @@ mixin personal-info(data)
 				.personal-info__box
 					h3.personal-info__subject.title.title--md Личная информация
 					.personal-info__inner
-						cite.personal-info__item.personal-info__item--name Константинопольский Константин Константинович
+						cite.personal-info__item.personal-info__item--name
+							| Константинопольский
+							br
+							| Константин
+							br
+							| Константинович
 						span.personal-info__item 07.03.1966
 						span.personal-info__item.personal-info__item--email konstantin@mail.ru
 						span.personal-info__item.personal-info__item--tel +7 902 987-65-43
 					a(href="#").personal-info__edit.btn.btn--grey Редактировать информацию
 					a(href="#").personal-info__change-pass Изменить пароль
 			.col-md-6.col-xl-12
-				.personal-info__box
-					h3.personal-info__subject.title.title--md
-					span.personal-info__item.personal-info__item--bonuses бонусная карта
-					p.personal-info__card
-						| Номер карты:
-						span 7867834099879204
-					a(href="#").personal-info__change-card.btn.btn--grey Изменить бонусную карту
-				.personal-info__
+				.row
+					.col-12.order-md-1.order-xl-0
+						a(href="#").personal-info__special
+							img(src="%=static=%img/general/megaphone.svg" alt="персональное спецпредложение")
+							h3.personal-info__title-spec персональное спецпредложение
+					.col-12.order-xl-1
+						.personal-info__box.personal-info__box--sm
+							h3.personal-info__subject.personal-info__subject--sm.title.title--md бонусная карта
+							.personal-info__item.personal-info__item--star
+								b 1 186
+								span &#160;бонусов на счету
+							p.personal-info__card
+								| Номер карты:&#160;
+								span 7867834099879204
+							a(href="#").personal-info__change-card.btn.btn--grey Изменить бонусную карту

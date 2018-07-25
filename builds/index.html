@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
 
     <!--[if (gt IE 9)|!(IE)]><!-->
-    <link href="static/css/main4d5g54.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/mainris96h.min.css" rel="stylesheet" type="text/css">
     <!--<![endif]-->
     <meta property="og:title" content="#{data.title}">
     <meta property="og:title" content="">
@@ -32,27 +32,6 @@
         })(document.documentElement)
     </script>
   </head>
-  <!--	style.-->
-  <!--		HTML {-->
-  <!--			background-repeat: no-repeat;-->
-  <!--			background-position: 50% 0;-->
-  <!--			background-image: url("static/img/general/screenshots/main/320/mobile_001_mainpage.png");-->
-  <!---->
-  <!--		}-->
-  <!--		@media ( min-width: 768px ) {-->
-  <!--			HTML {-->
-  <!--				background-image: url("static/img/general/screenshots/main/768/tablet_001_mainpage.png");-->
-  <!---->
-  <!--			}-->
-  <!--		}-->
-  <!--		@media ( min-width: 1344px ) {-->
-  <!--			HTML {-->
-  <!--				background-image: url("static/img/general/screenshots/main/1344/001_mainpage.png");-->
-  <!---->
-  <!--			}-->
-  <!--		}-->
-  <!--script(src='static/js/separate-js/script.js')-->
-  <link href="static/css/separate-css/styles.css" rel="stylesheet" type="text/css">
 
   <body>
     <header class="header">
@@ -191,7 +170,7 @@
                               </svg></a>
                     </div>
                     <div class="mobile-menu__content">
-                      <header class="mobile-menu__header">
+                      <div class="mobile-menu__header">
                         <ul class="mobile-menu__btns">
                           <li>
                             <button class="mobile-menu__user-buttons btn btn--location btn--icon" type="button">
@@ -220,7 +199,7 @@
                             <use xlink:href="static/img/svg-symbols.svg#cross"></use>
                           </svg>
                         </button>
-                      </header>
+                      </div>
                       <div class="mobile-menu__body">
                         <div class="mobile-menu__top-panel">
                           <div class="row justify-content-between align-items-center">
@@ -314,7 +293,7 @@
             </div>
             <div class="col-auto">
               <a class="header__logo" href="index.html">
-                <img src="static/img/general/logo.svg" width="120" alt="Lekki">
+                <img src="static/img/general/logo.svg" width="120" alt="Lekki - интернет аптека">
               </a>
             </div>
             <div class="col-md-auto d-none d-md-block ml-md-auto">
@@ -342,25 +321,23 @@
               <button class="header__cart header__cart--has-products btn btn--icon js-cart-list" type="button">
                 <svg class="icon" width="19" height="16" aria-hidden="true">
                   <use xlink:href="static/img/svg-symbols.svg#cart"></use>
-                </svg>
-                <div class="header__cart-inner"><span>5 товаров</span><span class="header__cost">&nbsp;&#8211;&nbsp;4 560</span><span class="header__symbol">&nbsp;&#8381;</span>
-                </div>
+                </svg><span class="header__cart-inner"><span>5 товаров</span><span class="header__cost">&nbsp;&#8211;&nbsp;4 560</span><span class="header__symbol">&nbsp;&#8381;</span></span>
               </button>
               <div class="header-cart js-cart">
                 <div class="modal-backdrop fade"></div>
                 <div class="header-cart__wrapper">
                   <div class="header-cart__inner">
-                    <header class="header-cart__top">
+                    <div class="header-cart__top">
                       <p class="header-cart__title">Корзина</p>
                       <button class="btn btn--close js-close-cart" type="button">
                         <svg class="icon" width="14" height="14" aria-hidden="true">
                           <use xlink:href="static/img/svg-symbols.svg#close"></use>
                         </svg>закрыть
                       </button>
-                    </header>
+                    </div>
                     <div class="header-cart__body">
-                      <ul class="header-cart__list" data-simplebar data-simplebar-auto-hide="false">
-                        <li class="header-cart__item">
+                      <div class="header-cart__list" data-simplebar data-simplebar-auto-hide="false">
+                        <div class="header-cart__item">
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
@@ -377,8 +354,8 @@
                               </div>
                             </div>
                           </div>
-                        </li>
-                        <li class="header-cart__item">
+                        </div>
+                        <div class="header-cart__item">
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
@@ -395,8 +372,8 @@
                               </div>
                             </div>
                           </div>
-                        </li>
-                        <li class="header-cart__item">
+                        </div>
+                        <div class="header-cart__item">
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
@@ -413,8 +390,8 @@
                               </div>
                             </div>
                           </div>
-                        </li>
-                        <li class="header-cart__item">
+                        </div>
+                        <div class="header-cart__item">
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
@@ -431,8 +408,8 @@
                               </div>
                             </div>
                           </div>
-                        </li>
-                        <li class="header-cart__item">
+                        </div>
+                        <div class="header-cart__item">
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
@@ -449,8 +426,8 @@
                               </div>
                             </div>
                           </div>
-                        </li>
-                      </ul>
+                        </div>
+                      </div>
                     </div>
                     <div class="header-cart__bottom"><a class="header-cart__btn btn btn--red" href="#">Перейти в корзину</a>
                     </div>
@@ -578,7 +555,7 @@
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
                                         Граммидин с анестетиком неотаблетки для рассасывания №18</a></h3>
-                                <div class="menu__prices"><span class="menu__cost">254 &#8381</span>
+                                <div class="menu__prices"><span class="menu__cost">254 &#8381;</span>
                                 </div>
                               </div>
                               <div class="menu__sticker sticker">
@@ -594,7 +571,7 @@
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
                                         Либридерм витамин F бальзам питательныйдля кожи головы и волос 200мл</a></h3>
-                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381</span><span class="menu__cost">390 &#8381</span>
+                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381;</span><span class="menu__cost">390 &#8381;</span>
                                 </div>
                               </div>
                               <div class="menu__sticker sticker">
@@ -610,7 +587,7 @@
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
                                         Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий  30мллосьон мицеллярный 200мл</a></h3>
-                                <div class="menu__prices"><span class="menu__cost">800 &#8381</span>
+                                <div class="menu__prices"><span class="menu__cost">800 &#8381;</span>
                                 </div>
                               </div>
                               <div class="menu__sticker sticker">
@@ -630,7 +607,7 @@
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
                                         Граммидин с анестетиком неотаблетки для рассасывания №18</a></h3>
-                                <div class="menu__prices"><span class="menu__cost">254 &#8381</span>
+                                <div class="menu__prices"><span class="menu__cost">254 &#8381;</span>
                                 </div>
                               </div>
                               <div class="menu__sticker sticker">
@@ -646,7 +623,7 @@
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
                                         Либридерм витамин F бальзам питательныйдля кожи головы и волос 200мл</a></h3>
-                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381</span><span class="menu__cost">390 &#8381</span>
+                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381;</span><span class="menu__cost">390 &#8381;</span>
                                 </div>
                               </div>
                               <div class="menu__sticker sticker">
@@ -662,7 +639,7 @@
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
                                         Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий  30мллосьон мицеллярный 200мл</a></h3>
-                                <div class="menu__prices"><span class="menu__cost">800 &#8381</span>
+                                <div class="menu__prices"><span class="menu__cost">800 &#8381;</span>
                                 </div>
                               </div>
                               <div class="menu__sticker sticker">
@@ -718,7 +695,7 @@
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
                                         Граммидин с анестетиком неотаблетки для рассасывания №18</a></h3>
-                                <div class="menu__prices"><span class="menu__cost">254 &#8381</span>
+                                <div class="menu__prices"><span class="menu__cost">254 &#8381;</span>
                                 </div>
                               </div>
                               <div class="menu__sticker sticker">
@@ -734,7 +711,7 @@
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
                                         Либридерм витамин F бальзам питательныйдля кожи головы и волос 200мл</a></h3>
-                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381</span><span class="menu__cost">390 &#8381</span>
+                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381;</span><span class="menu__cost">390 &#8381;</span>
                                 </div>
                               </div>
                               <div class="menu__sticker sticker">
@@ -788,7 +765,7 @@
                   </div>
                   <div class="col-auto ml-auto">
                     <div class="promo__img">
-                      <img src="static/img/content/discount.png">
+                      <img src="static/img/content/discount.png" alt="banner">
                       <div class="promo__sticker sticker sticker--md">
                         <svg class="icon" width="70" height="70" aria-hidden="true">
                           <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
@@ -810,7 +787,7 @@
                   </div>
                   <div class="col-auto ml-auto">
                     <div class="promo__img">
-                      <img src="static/img/content/discount.png">
+                      <img src="static/img/content/discount.png" alt="banner">
                       <div class="promo__sticker sticker sticker--md">
                         <svg class="icon" width="70" height="70" aria-hidden="true">
                           <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
@@ -1764,7 +1741,7 @@
             <div class="row">
               <div class="col-6 col-md-12 col-xl-12">
                 <a class="discounts__item-md" href="#">
-                  <img class="discounts__img" src="static/img/content/discount-1.jpg">
+                  <img class="discounts__img" src="static/img/content/discount-1.jpg" alt="banner-1">
                   <div class="discounts__sticker sticker">
                     <svg class="icon" width="40" height="40" aria-hidden="true">
                       <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
@@ -1774,7 +1751,7 @@
               </div>
               <div class="col-6 col-md-12 col-xl-12">
                 <a class="discounts__item-md" href="#">
-                  <img class="discounts__img" src="static/img/content/discount-2.jpg">
+                  <img class="discounts__img" src="static/img/content/discount-2.jpg" alt="banner-2">
                   <div class="discounts__sticker sticker">
                     <svg class="icon" width="40" height="40" aria-hidden="true">
                       <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
@@ -1788,7 +1765,7 @@
             <div class="row">
               <div class="col-6 col-md-6 col-xl-12">
                 <a class="discounts__item-md" href="#">
-                  <img class="discounts__img" src="static/img/content/discount-3.jpg">
+                  <img class="discounts__img" src="static/img/content/discount-3.jpg" alt="banner-3">
                   <div class="discounts__sticker sticker">
                     <svg class="icon" width="40" height="40" aria-hidden="true">
                       <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
@@ -1798,7 +1775,7 @@
               </div>
               <div class="col-6 col-md-6 col-xl-12">
                 <a class="discounts__item-md" href="#">
-                  <img class="discounts__img" src="static/img/content/discount-4.jpg">
+                  <img class="discounts__img" src="static/img/content/discount-4.jpg" alt="banner-4">
                   <div class="discounts__sticker sticker">
                     <svg class="icon" width="40" height="40" aria-hidden="true">
                       <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
@@ -1812,7 +1789,7 @@
             <div class="row">
               <div class="col-xl-12">
                 <a class="discounts__item-md" href="#">
-                  <img class="discounts__img" src="static/img/content/discount-1.jpg">
+                  <img class="discounts__img" src="static/img/content/discount-1.jpg" alt="banner-5">
                   <div class="discounts__sticker sticker">
                     <svg class="icon" width="40" height="40" aria-hidden="true">
                       <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
@@ -1822,7 +1799,7 @@
               </div>
               <div class="col-xl-12">
                 <a class="discounts__item-md" href="#">
-                  <img class="discounts__img" src="static/img/content/discount-2.jpg">
+                  <img class="discounts__img" src="static/img/content/discount-2.jpg" alt="banner-6">
                   <div class="discounts__sticker sticker">
                     <svg class="icon" width="40" height="40" aria-hidden="true">
                       <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
@@ -2403,7 +2380,7 @@
           <div class="col">
             <div class="blog__item">
               <a class="blog__img-link" href="#">
-                <img class="blog__img" src="static/img/content/post-1.jpg" srcset="static/img/content/post-1@2x.jpg 2x, static/img/content/post-1@3x.jpg 3x">
+                <img class="blog__img" src="static/img/content/post-1.jpg" alt="Как ухаживать за кожей зимой. 5 шагов к сияющей коже">
               </a>
               <h3 class="blog__subject"><a href="#">Как ухаживать за кожей зимой. 5 шагов к сияющей коже</a></h3><span class="blog__time">27 февраля 2018</span>
               <p class="blog__text">Отопительный сезон – это время для самозабвенного увлажнения, начиная с базового ежедневного ухода. Попробуйте умываться средством на основе мягких масел. Затем нанесите богатую антиоксидантами ...</p>
@@ -2412,7 +2389,7 @@
           <div class="col">
             <div class="blog__item">
               <a class="blog__img-link" href="#">
-                <img class="blog__img" src="static/img/content/post-2.jpg" srcset="static/img/content/post-2@2x.jpg 2x, static/img/content/post-2@3x.jpg 3x">
+                <img class="blog__img" src="static/img/content/post-2.jpg" alt="Как выбрать крем от усталости ног?">
               </a>
               <h3 class="blog__subject"><a href="#">Как выбрать крем от усталости ног?</a></h3><span class="blog__time">27 февраля 2018</span>
               <p class="blog__text">Усталость, тяжесть и жжение чаще всего беспокоят людей, которые большую часть дня проводят на ногах или заняты исключительно сидячей работой. Любительницам обуви на каблуках также знакомо чувство, когда ноги …</p>
@@ -2421,7 +2398,7 @@
           <div class="col">
             <div class="blog__item">
               <a class="blog__img-link" href="#">
-                <img class="blog__img" src="static/img/content/post-3.jpg" srcset="static/img/content/post-3@2x.jpg 2x, static/img/content/post-3@3x.jpg 3x">
+                <img class="blog__img" src="static/img/content/post-3.jpg" alt="Профилактика гриппа! Как поддержать иммунитет">
               </a>
               <h3 class="blog__subject"><a href="#">Профилактика гриппа! Как поддержать иммунитет</a></h3><span class="blog__time">27 февраля 2018</span>
               <p class="blog__text">Резкий перепад температур и переохлаждение делают нас более беззащитными перед возбудителями заболеваний. В первую очередь — перед гриппом, заболеваемость которым приобретает в этот период характер вспышек.</p>
@@ -2430,7 +2407,7 @@
           <div class="col">
             <div class="blog__item">
               <a class="blog__img-link" href="#">
-                <img class="blog__img" src="static/img/content/post-1.jpg" srcset="static/img/content/post-1@2x.jpg 2x, static/img/content/post-1@3x.jpg 3x">
+                <img class="blog__img" src="static/img/content/post-1.jpg" alt="Как ухаживать за кожей зимой. 5 шагов к сияющей коже">
               </a>
               <h3 class="blog__subject"><a href="#">Как ухаживать за кожей зимой. 5 шагов к сияющей коже</a></h3><span class="blog__time">27 февраля 2018</span>
               <p class="blog__text">Отопительный сезон – это время для самозабвенного увлажнения, начиная с базового ежедневного ухода. Попробуйте умываться средством на основе мягких масел. Затем нанесите богатую антиоксидантами ...</p>
@@ -2439,7 +2416,7 @@
           <div class="col">
             <div class="blog__item">
               <a class="blog__img-link" href="#">
-                <img class="blog__img" src="static/img/content/post-2.jpg" srcset="static/img/content/post-2@2x.jpg 2x, static/img/content/post-2@3x.jpg 3x">
+                <img class="blog__img" src="static/img/content/post-2.jpg" alt="Как выбрать крем от усталости ног?">
               </a>
               <h3 class="blog__subject"><a href="#">Как выбрать крем от усталости ног?</a></h3><span class="blog__time">27 февраля 2018</span>
               <p class="blog__text">Усталость, тяжесть и жжение чаще всего беспокоят людей, которые большую часть дня проводят на ногах или заняты исключительно сидячей работой. Любительницам обуви на каблуках также знакомо чувство, когда ноги …</p>
@@ -2448,7 +2425,7 @@
           <div class="col">
             <div class="blog__item">
               <a class="blog__img-link" href="#">
-                <img class="blog__img" src="static/img/content/post-3.jpg" srcset="static/img/content/post-3@2x.jpg 2x, static/img/content/post-3@3x.jpg 3x">
+                <img class="blog__img" src="static/img/content/post-3.jpg" alt="Профилактика гриппа! Как поддержать иммунитет">
               </a>
               <h3 class="blog__subject"><a href="#">Профилактика гриппа! Как поддержать иммунитет</a></h3><span class="blog__time">27 февраля 2018</span>
               <p class="blog__text">Резкий перепад температур и переохлаждение делают нас более беззащитными перед возбудителями заболеваний. В первую очередь — перед гриппом, заболеваемость которым приобретает в этот период характер вспышек.</p>
@@ -2949,7 +2926,7 @@
           </div>
           <div class="col-xl-7">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/3M8VXh1vuSo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/3M8VXh1vuSo"></iframe>
             </div>
           </div>
         </div>
@@ -3072,7 +3049,7 @@
           <div class="row align-items-xl-center">
             <div class="col-auto d-none d-md-block">
               <a class="footer__logo" href="#">
-                <img src="static/img/general/logo.svg">
+                <img src="static/img/general/logo.svg" alt="Lekki - интернет аптека">
               </a>
             </div>
             <div class="col">
@@ -3142,7 +3119,7 @@
     <script>
       svg4everybody();
     </script>
-    <script src="static/js/main4d5g54.js"></script>
+    <script src="static/js/mainris96h.js"></script>
   </body>
 
 </html>

@@ -138,9 +138,17 @@
     letter-spacing: -0.1px;
     color: $warm-grey-two;
   }
+  &__cart-inner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px dashed $white-two;
+    line-height: 1.1;
+  }
   &__cart {
     padding-left: 11px;
     padding-right: 8px;
+
     &:hover .header__cart-inner{
       border-bottom-color: transparent;
     }
@@ -161,21 +169,12 @@
       }
     }
     &--has-products {
-      span {
-        border-bottom-color: transparent;
-      }
       .icon {
         fill: $red;
       }
     }
   }
-  &__cart-inner {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    border-bottom: 1px dashed $white-two;
-    line-height: 1.1;
-  }
+
   &__cost {
     display: none;
     @include media-breakpoint-up(md) {

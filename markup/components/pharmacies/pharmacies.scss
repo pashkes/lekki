@@ -1,0 +1,261 @@
+.pharmacies {
+  padding-bottom: 32px;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 48px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 74px;
+  }
+  &__title {
+    margin-bottom: 26px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 24px;
+    }
+  }
+  &__header {
+    padding-bottom: 32px;
+  }
+  &__select {
+    @include media-breakpoint-up(md) {
+      min-width: 184px;
+    }
+    @include media-breakpoint-up(xl) {
+      min-width: 248px;
+    }
+  }
+  &__select,
+  &__search {
+    margin-bottom: 16px;
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+  &__tabs {
+    li {
+      flex-grow: 1;
+    }
+    li:first-child .pharmacies__tab {
+      border-radius: 4px 0 0 4px;
+    }
+    li:last-child .pharmacies__tab {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  &__tab {
+    display: block;
+    width: 100%;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 9px 16px;
+    border: solid 1px $red;
+    background-color: $red;
+    font-size: 13px;
+    line-height: 1.54;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+    @include media-breakpoint-up(md) {
+      padding: 0;
+      justify-content: center;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 9px 16px;
+      justify-content: flex-start;
+      min-width: 148px;
+    }
+    .icon {
+      margin-right: 16px;
+      fill: #fff;
+      @include media-breakpoint-up(md) {
+        margin-right: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-right: 16px;
+      }
+    }
+    &.active {
+      background-color: #ffffff;
+      color: $black;
+      &:hover {
+        color: $black;
+      }
+      .icon {
+        fill: $black;
+      }
+    }
+    &--list {
+      padding-left: 46px;
+      background: url(%=static=%general/burger-white.svg) 16px center no-repeat, $red;
+      @include media-breakpoint-up(md) {
+        background-position: center;
+      }
+      @include media-breakpoint-up(xl) {
+        background-position: 16px center;
+      }
+      &.active {
+        background-image: url(%=static=%general/burger.svg);
+      }
+    }
+  }
+  &__panel {
+    display: none;
+  }
+  &__item {
+    padding: 16px 0;
+    border-bottom: solid 1px $white-two;
+    @include media-breakpoint-up(md) {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-bottom: 18px;
+    }
+    &:first-child {
+      border-top: solid 1px $white-two;
+    }
+  }
+  &__name {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.54;
+    text-transform: uppercase;
+    @include media-breakpoint-up(md) {
+
+    }
+  }
+  &__address {
+    display: block;
+    margin-bottom: 7px;
+    color: $warm-grey-two;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+  &__metro {
+    position: relative;
+    display: block;
+    margin-bottom: 16px;
+    padding-left: 24px;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    &::before {
+      content: 'м';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: 500;
+      color: #ffffff;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 1px;
+    }
+    &.orange::before {
+      background-color: #e28129;
+    }
+    &.green::before {
+      background-color: #478400;
+    }
+    &.grey::before {
+      background-color: $warm-grey-two;
+    }
+  }
+  &__work {
+    display: block;
+    margin-bottom: 7px;
+  }
+  &__telephones {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    white-space: nowrap;
+    li:nth-child(2) {
+      margin-top: 7px;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+    }
+    @include media-breakpoint-up(xl) {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  &__col {
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      max-width: 126px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: auto;
+      max-width: initial;
+    }
+  }
+  &__map {
+    width: 100%;
+    height: 384px;
+    @include media-breakpoint-up(md) {
+      height: 544px;
+    }
+  }
+  &__inner {
+    margin-right: -16px;
+    margin-left: -16px;
+    @include media-breakpoint-up(sm) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.map-name {
+  display: block;
+  margin-bottom: 6px;
+  font-family: Rubik;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.54;
+  color: $black;
+}
+
+.map-address {
+  display: block;
+  margin-bottom: 5px;
+  font-family: Rubik;
+  font-size: 13px;
+  color: $warm-grey-two;
+}
+
+.map-phone {
+  font-family: Rubik;
+  font-size: 13px;
+  color: $black;
+}
+
+.map-time {
+  display: block;
+  font-family: Rubik;
+  font-size: 13px;
+  color: $black;
+  margin-bottom: 4px;
+}
+

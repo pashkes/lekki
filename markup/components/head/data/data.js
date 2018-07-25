@@ -1,8 +1,8 @@
-head: {
-  defaults: {
-    title: 'default title',
-      useSocialMetaTags
-  :
-    true
+const head = {
+  head: {
+    defaults: {
+      title: 'default title',
+      useSocialMetaTags: true
+    }
   }
-}
+};

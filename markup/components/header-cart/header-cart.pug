@@ -5,14 +5,14 @@ mixin header-cart(data)
 		.modal-backdrop.fade
 		.header-cart__wrapper
 			.header-cart__inner
-				header.header-cart__top
+				.header-cart__top
 					p.header-cart__title Корзина
 					button(type="button").btn.btn--close.js-close-cart
 						+icon('close', 14, 14)
 						|закрыть
 				.header-cart__body
-					ul(data-simplebar data-simplebar-auto-hide="false").header-cart__list
-						li.header-cart__item
+					div(data-simplebar data-simplebar-auto-hide="false").header-cart__list
+						.header-cart__item
 							.row.align-items-center
 								.col-auto
 									a(href="#").header-cart__img
@@ -25,7 +25,7 @@ mixin header-cart(data)
 											span.header-cart__amount 2 x 195 &#8381;
 										.col-auto
 											span.header-cart__cost 390 &#8381;
-						li.header-cart__item
+						.header-cart__item
 							.row.align-items-center
 								.col-auto
 									a(href="#").header-cart__img
@@ -38,7 +38,7 @@ mixin header-cart(data)
 											span.header-cart__amount 1 x 616 &#8381;
 										.col-auto
 											span.header-cart__cost 616 &#8381;
-						li.header-cart__item
+						.header-cart__item
 							.row.align-items-center
 								.col-auto
 									a(href="#").header-cart__img
@@ -51,7 +51,7 @@ mixin header-cart(data)
 											span.header-cart__amount 1 x 616 &#8381;
 										.col-auto
 											span.header-cart__cost 616 &#8381;
-						li.header-cart__item
+						.header-cart__item
 							.row.align-items-center
 								.col-auto
 									a(href="#").header-cart__img
@@ -64,7 +64,7 @@ mixin header-cart(data)
 											span.header-cart__amount 2 x 616 &#8381;
 										.col-auto
 											span.header-cart__cost 616 &#8381;
-						li.header-cart__item
+						.header-cart__item
 							.row.align-items-center
 								.col-auto
 									a(href="#").header-cart__img

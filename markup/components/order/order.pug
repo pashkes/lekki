@@ -6,7 +6,7 @@ mixin order(data)
 			.row
 				.col-xl
 					fieldset.order__contacts-data
-						legent.order__title-group.title.title--md Контактные данные
+						span.order__title-group.title.title--md Контактные данные
 						.order__field-box.error
 							label(for="order-firs-name").order__label.label ФИО получателя
 							input(type="text" id="order-firs-name" placeholder="" required).order__contact-field.field
@@ -26,7 +26,7 @@ mixin order(data)
 							input(type="checkbox" checked).checkbox__input
 							span
 					.order__type-delivery#select-delivery
-						.order__title-group.title.title--md Способ доставки
+						span.order__title-group.title.title--md Способ доставки
 						.row
 							.col-md-6
 								label.order__tab.order__tab--pickup
@@ -40,7 +40,7 @@ mixin order(data)
 									span.order__date 27 апреля 2018
 						fieldset.order__pickup.js-delivery-pickup-section
 							.order__header-pickup
-								legent.order__title-pickup.title.title--sm Бесплатный самовывоз товара из аптеки
+								span.title.title--sm Бесплатный самовывоз товара из аптеки
 								p.order__desc Введите удобный для вас адрес получения и мы подберем ближайший пункт выдачи
 								.row
 									.col-md-auto
@@ -68,12 +68,12 @@ mixin order(data)
 									.col-12.col-md-auto.ml-md-auto
 										.row.justify-content-between.flex-md-column
 											.col-auto.col-md-12.d-md-flex.order-md-2
-												button(type="button" data-toggle="collapse" href="#map-collapse" role="button" aria-expanded="false" aria-controls="map-collapse").order__underline-btn.underline.js-toggle-map Скрыть карту
+												a(data-toggle="collapse" href="#map-collapse" role="button" aria-expanded="false" aria-controls="map-collapse").order__underline-btn.underline.js-toggle-map Скрыть карту
 											.col-auto.col-md-12.d-md-flex.order-md-1
 												a(href="#").order__save-pdf.order__underline-btn.underline Сохранить PDF
 								.order__collapse-map.collapse.show#map-collapse
 									.order__map
-										| <iframe src="https://yandex.com/map-widget/v1/-/CBunbFBUdA" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+										| <iframe src="https://yandex.com/map-widget/v1/-/CBunbFBUdA" width="560" height="400"></iframe>
 									.row.justify-content-between
 										.col-md-auto
 											.order__delivery-wrapper
@@ -164,9 +164,9 @@ mixin order(data)
 								.order__surended.js-surrended
 									.row.justify-content-between.align-items-center.justify-content-md-start
 										.col-12.col-md-auto
-											label(for="order").order__need-surrender.title Нужна сдача с
+											label(for="order-surrender").order__need-surrender.title Нужна сдача с
 										.col-auto
-											input(type="number" value="10000").order__surrender.field
+											input(type="number" value="10000" id="order-surrender").order__surrender.field
 										.col-auto
 											.order__cost.order__cost--black
 												| 1 130

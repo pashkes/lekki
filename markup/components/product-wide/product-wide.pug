@@ -1,0 +1,35 @@
+mixin product-wide(data)
+	.product&attributes(attributes)
+		.row
+			.col-auto
+				if data.sticker
+					.product__sticker.sticker
+						+icon('sticker', '40', '40')
+						span -10%
+				.product__top
+					a(href="#").product__img
+						img(data-src="%=static=%img/content/" + data.imgName + ".jpg" width="120" height="120" alt="" + data.title).lazyload.blur-up
+			.col
+				.product__info
+					h3.product__title
+						a(href="#") #{data.title}
+					p.product__made #{data.made}
+					if !data.info
+			.w-100
+			.col
+				.product__footer
+					.row.align-items-end
+						.col
+							if data.oldCostValue
+								span.product__old-cost #{data.oldCostValue}
+									span  &#8381;
+							.product__buttons
+								a(href="#" data-toggle="modal" data-target="#cart-list").product__buy.btn.btn--border-red.btn--icon.js-add-cart
+									span.product__btn-text #{data.cost}
+										span  &#8381;
+									span.product__btn-label Купить
+									span.product__cart
+										+icon('cart', '20', '17')
+						.col-auto
+							button.btn.btn--heart
+								+icon('heart', '17', '15')

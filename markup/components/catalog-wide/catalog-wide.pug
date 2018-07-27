@@ -1,0 +1,65 @@
+mixin catalog-wide(data)
+	include ../product-wide/product-wide
+	include ../pagination/pagination
+	include ../filter/filter
+	include ../icon/icon
+	.catalog
+		.container
+			h2 Гигиена
+			.row
+				.col-xl
+					form.catalog__header
+						.row
+							.col-md
+								.catalog__filter-wrapper
+									ul.catalog__sort-list.d-none.d-md-flex
+										li.catalog__sort-element
+											button(type="button").catalog__sort-item.active.js-sort
+												span По цене
+												+icon('arrow-top-default', 10, 10)
+										li.catalog__sort-element
+											button(type="button").catalog__sort-item.js-sort
+												span По популярности
+												+icon('arrow-top-default', 10, 10)
+										li.catalog__sort-element
+											button(type="button").catalog__sort-item.js-sort
+												span По новизне
+												+icon('arrow-top-default', 10, 10)
+									.catalog__only-discount
+										label.checkbox Только товары со скидкой
+											input(type="checkbox" checked).checkbox__input
+											span
+									.catalog__amount-row.d-none.d-xl-flex
+										a(href="#").catalog__view.current
+											+icon('card-view-two', 15, 15)
+											| показать много строк
+										a(href="#").catalog__view
+											+icon('card-view-one', 17, 16)
+											| показать один ряд
+							.col.d-md-none
+								.catalog__sort-wrapper
+									select.catalog__sort
+										option По цене
+										option По популярности
+										option По новизне
+									button(type="button").catalog__sort-btn.active.js-toggle-sort-mobile по возростанию/по убыванию
+										+icon('arrow-top-default', 10, 10)
+							.col-auto.d-xl-none
+								button(type="button").catalog__filter-btn.js-show-filter-mobile
+									+icon('settings', 18, 18)
+									| открыть
+					.catalog__list
+						.row
+							each item in data.list
+								.col-md-6.col-xl-3.col-xxl-2.col-xxxl-1
+									+product-wide(item).catalog__card
+					.row.justify-content-center
+						.col-12.col-md-auto
+							a(href="#").catalog__show-more.btn Показать еще
+						.col-12
+							+pagination()
+				.col-xl-auto.ml-xl-auto
+					+filter()
+
+
+

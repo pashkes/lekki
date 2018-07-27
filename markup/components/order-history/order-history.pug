@@ -3,44 +3,37 @@ include ../pagination/pagination
 
 mixin order-history(data)
 	.order-history
-		.container
-			h2.order-history__title Личный кабинет
-			.row
-				.col-xl-auto
-					+personal-info()
-				.col-xl.d-flex.flex-column.flex-grow-1
-					h3.order-history__title-list.title.title--md История заказов
-					.order-history__list
-						each item in data
-							.order-history__item
-								.row
-									.col-6.col-md-auto.order-md-0
-										.order-history__number Заказ № 123456
-									.col-6.col-md-auto.order-md-6.ml-md-auto
-										if item.status === 'Отменен'
-											.order-history__status.cancel #{item.status}
-										else if item.status === 'Новый'
-											.order-history__status.new #{item.status}
-										else
-											.order-history__status #{item.status}
+		.order-history__list
+			each item in data
+				.order-history__item
+					.row
+						.col-6.col-md-auto.order-md-0
+							.order-history__number Заказ № 123456
+						.col-6.col-md-auto.order-md-6.ml-md-auto
+							if item.status === 'Отменен'
+								.order-history__status.cancel #{item.status}
+							else if item.status === 'Новый'
+								.order-history__status.new #{item.status}
+							else
+								.order-history__status #{item.status}
 
-									.col-6.col-md-2.order-md-4
-										if item.bonusFirst
-											.order-history__bonus #{item.bonusFirst} бонусов
-										else
-											.order-history__bonus.empty —
-									.col-6.col-md-2.order-md-1
-										.order-history__date 23.04.2018
-									.col-6.col-md-2.order-md-5
-										if item.bonusSecond
-											.order-history__bonus #{item.bonusSecond} бонусов
-										else
-											.order-history__bonus.empty —
-									.col-6.col-md-2.order-md-3
-										.order-history__cost
-											| 3 500
-											span &#160;&#8381;
+						.col-6.col-md-2.order-md-4
+							if item.bonusFirst
+								.order-history__bonus #{item.bonusFirst} бонусов
+							else
+								.order-history__bonus.empty —
+						.col-6.col-md-2.order-md-1
+							.order-history__date 23.04.2018
+						.col-6.col-md-2.order-md-5
+							if item.bonusSecond
+								.order-history__bonus #{item.bonusSecond} бонусов
+							else
+								.order-history__bonus.empty —
+						.col-6.col-md-2.order-md-3
+							.order-history__cost
+								| 3 500
+								span &#160;&#8381;
 
-					footer.order-history__footer
-						a(href="#").order-history__show-more.btn Показать еще
-						+pagination()
+	footer.order-history__footer
+		a(href="#").order-history__show-more.btn Показать еще
+		+pagination()

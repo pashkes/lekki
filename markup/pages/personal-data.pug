@@ -1,0 +1,84 @@
+doctype html
+html(class="no-js", lang="ru")
+
+	include ../components/head/head.pug
+	include ../components/footer/footer.pug
+	include ../components/header/header
+	include ../components/breadcrumbs/breadcrumbs
+	include ../components/order-history/order-history
+	head
+		+head(head.defaults)
+	//script(src='%=static=%js/separate-js/script.js')
+	link(href="%=static=%css/separate-css/styles.css" rel="stylesheet" type="text/css")
+	body
+		+header()
+		.container
+			+breadcrumbs()
+		section.cabinet
+			.container
+				h2.cabinet__title Личный кабинет
+				.row
+					.col-xl-auto
+						+personal-info()
+					.col-xl-auto
+						h3.cabinet__title-list.title.title--md Редактирование личных данных
+						form.cabinet__body#personal-data
+							.cabinet__field-row
+								.row.align-items-md-center
+									.col-md-4.col-lg-3.col-xl-auto
+										label(for="personal-data-full-name").cabinet__label.label ФИО получателя
+									.col.col-xl-auto.ml-xl-auto
+										input(placeholder="Фамилия Имя Отчество" required).cabinet__field.cabinet__field--xl.field#personal-data-full-name
+							.cabinet__field-row.custom-scroll-bar
+								.row.align-items-md-center
+									.col-md-4.col-lg-3.col-xl-auto
+										label(for="personal-data-date").cabinet__label.label Дата рождения
+									.col.col-xl-auto.ml-xl-auto
+										.row
+											.col.cabinet__select
+												select.js-custom-select.js-custom-select-date#personal-data-date
+													option(selected)
+													- var day = 1;
+														while day <= 31
+															option= day++
+											.col.cabinet__select
+												label(for="#personal-data-month").hidden Выбрать месяц рождения
+												select.js-custom-select.js-custom-select-month#personal-data-month
+													option(selected)
+													- var month = 1;
+														while month <= 12
+															option= month++
+											.col-sm-auto.cabinet__select.cabinet__select--year
+												label(for="personal-data-year").hidden Выбрать год рождения
+												select.js-custom-select.js-custom-select-year#personal-data-year
+													option(selected)
+													- var year = 2018;
+														while year >= 1930
+															option= year--
+							.cabinet__field-row
+								.row.align-items-md-center
+									.col-md-4.col-lg-3.col-xl-auto
+										label(for="personal-data-email").cabinet__label.label Электронная почта
+									.col.col-xl-auto.ml-xl-auto
+										input(type="email" placeholder="ivanov@mail.ru" required).cabinet__field.cabinet__field--xl.field#personal-data-email
+							.cabinet__field-row
+								.row.align-items-md-center
+									.col-md-4.col-lg-3.col-xl-auto
+										label(for="personal-data-tel").cabinet__label.label Мобильный телефон
+									.col.col-xl-auto.ml-xl-auto
+										input(type="tel" placeholder="+7 123 456-78-90" required).cabinet__field.cabinet__field--xl.field#personal-data-tel
+							.cabinet__footer-fields.cabinet__footer-fields--wide
+								.row
+									.col.offset-md-4.offset-lg-3.offset-xl-0
+										.row.justify-content-between.align-items-center
+											.col-auto
+												a(href="#").cabinet__cancel Отменить
+											.col-auto
+												button.cabinet__save.btn.btn--red Сохранить
+		+footer()
+			//- Include your components here
+		script(src='%=static=%js/separate-js/svg4everybody.min.js')
+		script svg4everybody();
+
+		//- Main scripts. You can replace it, but I recommend you to leave it here
+		script(src='%=static=%js/main%=hash=%.js')

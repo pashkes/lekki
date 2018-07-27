@@ -1,17 +1,4 @@
 .order-history {
-  padding-bottom: 32px;
-  @include media-breakpoint-up(md) {
-    padding-bottom: 48px;
-  }
-  @include media-breakpoint-up(xl) {
-    padding-bottom: 74px;
-  }
-  &__title {
-    margin-bottom: 26px;
-    @include media-breakpoint-up(md) {
-      margin-bottom: 24px;
-    }
-  }
   &__title-list {
     margin-bottom: 20px;
     line-height: 1.25;

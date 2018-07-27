@@ -743,391 +743,76 @@
         <li class="breadcrumbs__item active">Гигиена</li>
       </ul>
     </div>
-    <form class="order" id="order">
+    <section class="cabinet">
       <div class="container">
-        <h2 class="order__title">Оформление заказа</h2>
+        <h2 class="cabinet__title">Личный кабинет</h2>
         <div class="row">
-          <div class="col-xl">
-            <fieldset class="order__contacts-data"><span class="order__title-group title title--md">Контактные данные</span>
-              <div class="order__field-box error">
-                <label class="order__label label" for="order-firs-name">ФИО получателя</label>
-                <input class="order__contact-field field" type="text" id="order-firs-name" placeholder="" required>
-                <div class="order__error-message"><span>Заполните поле!</span>
-                </div>
-              </div>
-              <div class="order__field-box">
-                <label class="order__label label" for="order-email">Электронная почта</label>
-                <input class="order__contact-field field" type="email" id="order-email" placeholder="ivanov@mail.ru" required>
-                <div class="order__error-message"><span>Заполите поле!</span>
-                </div>
-              </div>
-              <div class="order__field-box">
-                <label class="order__label label" for="order-tel">Мобильный телефон</label>
-                <input class="order__contact-field field" type="tel" id="order-tel" placeholder="+7 123 456-78-90" required>
-                <div class="order__error-message"><span>Проверте правильность номера телефона</span>
-                </div>
-              </div>
-              <label class="order__send-sms checkbox checkbox--md">Отправлять SMS уведомления
-                <input class="checkbox__input" type="checkbox" checked><span></span>
-              </label>
-            </fieldset>
-            <div class="order__type-delivery" id="select-delivery"><span class="order__title-group title title--md">Способ доставки</span>
+          <div class="col-xl-auto">
+            <aside class="personal-info">
               <div class="row">
-                <div class="col-md-6">
-                  <label class="order__tab order__tab--pickup">
-                    <input class="order__radio js-pickup-delivery" type="radio" name="order-type-delivery" checked><span class="order__tab-name">Самовывоз из аптеки</span><span class="order__date">27 апреля 2018</span>
-                  </label>
+                <div class="col-md-6 col-xl-12">
+                  <div class="personal-info__box">
+                    <h3 class="personal-info__subject title title--md">Личная информация</h3>
+                    <div class="personal-info__inner">
+                      <cite class="personal-info__item personal-info__item--name">Константинопольский<br>Константин<br>Константинович</cite><span class="personal-info__item">07.03.1966</span><span class="personal-info__item personal-info__item--email">konstantin@mail.ru</span>
+                      <span
+                      class="personal-info__item personal-info__item--tel">+7 902 987-65-43</span>
+                    </div><a class="personal-info__edit btn btn--grey" href="#">Редактировать информацию</a><a class="personal-info__change-pass" href="#">Изменить пароль</a>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <label class="order__tab order__tab--courier">
-                    <input class="order__radio js-delivery-courier" type="radio" name="order-type-delivery"><span class="order__tab-name">Доставка курьером</span><span class="order__date">27 апреля 2018</span>
-                  </label>
-                </div>
-              </div>
-              <fieldset class="order__pickup js-delivery-pickup-section">
-                <div class="order__header-pickup"><span class="title title--sm">Бесплатный самовывоз товара из аптеки</span>
-                  <p class="order__desc">Введите удобный для вас адрес получения и мы подберем ближайший пункт выдачи</p>
+                <div class="col-md-6 col-xl-12">
                   <div class="row">
-                    <div class="col-md-auto">
-                      <div class="order__select-wrapper">
-                        <select class="order__select select">
-                          <option>Москва</option>
-                          <option>Санкт-Петербург</option>
-                          <option>Ростов</option>
-                        </select>
-                      </div>
+                    <div class="col-12 order-md-1 order-xl-0">
+                      <a class="personal-info__special" href="#">
+                        <img src="static/img/general/megaphone.svg" alt="персональное спецпредложение">
+                        <h3 class="personal-info__title-spec">персональное спецпредложение</h3>
+                      </a>
                     </div>
-                    <div class="col-md">
-                      <label class="invisible d-none" for="order-search">Введите названия улицы или метро</label>
-                      <input class="order__search field" type="search" id="order-search" placeholder="Введите названия улицы или метро">
-                    </div>
-                    <div class="col-md-auto">
-                      <button class="order__select-pharmacy btn btn--red js-show-map" type="button">Выбрать аптеку</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="order__issue-point js-map"><span class="order__sub-title title">Ближайший пункт выдачи:</span>
-                  <div class="row">
-                    <div class="col-md-5"><span class="order__pharmacy-name title">горздрав аптека №1392</span><span class="order__pharmacy-address">Климентовский переулок 12, строение 1</span>
-                    </div>
-                    <div class="col-md-5"><span class="order__time-work">09:00—21:00</span>
-                      <div class="order__phone-pharmacy"><a href="tel:+74957976336">+7 (495) 797-63-36,</a><a href="tel:+74957976337">+7 (495) 797-63-37</a>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-auto ml-md-auto">
-                      <div class="row justify-content-between flex-md-column">
-                        <div class="col-auto col-md-12 d-md-flex order-md-2"><a class="order__underline-btn underline js-toggle-map" data-toggle="collapse" href="#map-collapse" role="button" aria-expanded="false" aria-controls="map-collapse">Скрыть карту</a>
+                    <div class="col-12 order-xl-1">
+                      <div class="personal-info__box personal-info__box--sm">
+                        <h3 class="personal-info__subject personal-info__subject--sm title title--md">бонусная карта</h3>
+                        <div class="personal-info__item personal-info__item--star"><b>1 186</b><span>&#160;бонусов на счету</span>
                         </div>
-                        <div class="col-auto col-md-12 d-md-flex order-md-1"><a class="order__save-pdf order__underline-btn underline" href="#">Сохранить PDF</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="order__collapse-map collapse show" id="map-collapse">
-                    <div class="order__map">
-                      <iframe src="https://yandex.com/map-widget/v1/-/CBunbFBUdA" width="560" height="400"></iframe>
-                    </div>
-                    <div class="row justify-content-between">
-                      <div class="col-md-auto">
-                        <div class="order__delivery-wrapper">
-                          <svg class="icon" width="18" height="16" aria-hidden="true">
-                            <use xlink:href="static/img/svg-symbols.svg#car-order"></use>
-                          </svg>
-                          <div class="order__type-transport"><span class="title">На автомобиле</span><span>Расстояние: 13 км</span><span>Время в пути: 24 мин</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-auto">
-                        <div class="order__delivery-wrapper">
-                          <svg class="icon" width="18" height="18" aria-hidden="true">
-                            <use xlink:href="static/img/svg-symbols.svg#bus-order"></use>
-                          </svg>
-                          <div class="order__type-transport"><span class="title">На общественном транспорте</span><span>Расстояние: 17 км, 230 м</span><span>Время в пути: 38 мин</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-auto">
-                        <div class="order__delivery-wrapper">
-                          <svg class="icon" width="15" height="18" aria-hidden="true">
-                            <use xlink:href="static/img/svg-symbols.svg#person"></use>
-                          </svg>
-                          <div class="order__type-transport"><span class="title">Пешком</span><span>Расстояние: 10 км, 450 м</span><span>Время в пути: 2 ч, 25 мин</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="order__attention">Получите ваш заказ в этом пункте выдачи или&#160;<a class="order__to-courier js-go-to-courier" href="#" data-scroll-to="#select-delivery" data-scroll-speed="1000">закажите доставку курьером</a>
-                  </p>
-                </div>
-              </fieldset>
-              <fieldset class="order__courier">
-                <div class="row">
-                  <div class="col-md-auto">
-                    <label class="order__address-title title" for="order-address">Адрес доставки</label>
-                  </div>
-                  <div class="col-md">
-                    <select class="order__select-address select" id="order-address">
-                      <option>Москва и Мо</option>
-                      <option>Санкт-Петербург</option>
-                      <option>Ростов</option>
-                    </select>
-                    <input class="order__address field" type="text" placeholder="Начните вводить свой адрес">
-                    <div class="row">
-                      <div class="col-6 col-md">
-                        <input class="order__field-sm field" type="number" placeholder="Квартира">
-                      </div>
-                      <div class="col-6 col-md">
-                        <input class="order__field-sm field" type="number" placeholder="Офис">
-                      </div>
-                      <div class="col-6 col-md">
-                        <input class="order__field-sm field" type="number" placeholder="Подъезд">
-                      </div>
-                      <div class="col-6 col-md">
-                        <input class="order__field-sm field" type="number" placeholder="Этаж">
-                      </div>
-                      <div class="col-6 col-md">
-                        <input class="order__field-sm field" type="number" placeholder="Домофон">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <div class="order__pay-order"><span class="order__title-pay-order title title--md">Оплата заказа</span>
-                <p class="order__pay-text-order">Оплата совершается при получении заказа наличными или картой</p>
-              </div>
-              <div class="order__comment">
-                <label class="order__label-comment title title--md" for="order-comment">Комментарий к заказу</label>
-                <textarea class="order__comment-field field" id="order-comment"></textarea>
-              </div>
-              <div class="order__pay-courier js-pay-courier">
-                <div class="order__courier-section">
-                  <div class="order__cost-delivery">Расчетная стоимость доставки:
-                    <div class="order__cost">300<span>&#160;&#8381;</span>
-                    </div>
-                  </div>
-                  <div class="order__checkboxies">
-                    <div class="row">
-                      <div class="col-xl-8">
-                        <label class="order__accept-item checkbox checkbox--md">Я являюсь льготной категорией граждан или заказываю для родственников, являющихся льготной категорией граждан*
-                          <input class="checkbox__input" type="checkbox" checked><span></span>
-                        </label>
-                      </div>
-                      <div class="col-xl-8">
-                        <label class="order__accept-item checkbox checkbox--md">Я хочу воспользоваться услугой<b>&#160;Служба поручений&#160;</b>от ООО «Экспресс-Курьер Москва» для доставки моего заказа**
-                          <input class="checkbox__input" type="checkbox" checked><span></span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order__pay-type"><span class="order__title-pay-order title title--md">Оплата заказа</span>
-                  <div class="order__pay-tabs">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="order__tab order__tab--cash">
-                          <input class="order__radio js-pay-cash" type="radio" name="order-type-pay" checked><span class="order__tab-name">Оплата наличными</span><span class="order__date">Российский рубль</span>
-                        </label>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="order__tab order__tab--card">
-                          <input class="order__radio js-pay-card" type="radio" name="order-type-pay"><span class="order__tab-name">Оплата картой</span><span class="order__date">Visa, MasterCard</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="order__surended js-surrended">
-                    <div class="row justify-content-between align-items-center justify-content-md-start">
-                      <div class="col-12 col-md-auto">
-                        <label class="order__need-surrender title" for="order-surrender">Нужна сдача с</label>
-                      </div>
-                      <div class="col-auto">
-                        <input class="order__surrender field" type="number" value="10000" id="order-surrender">
-                      </div>
-                      <div class="col-auto">
-                        <div class="order__cost order__cost--black">1 130<span>&#160;&#8381;</span>
-                        </div>
+                        <p class="personal-info__card">Номер карты:&#160;<span>7867834099879204</span>
+                        </p><a class="personal-info__change-card btn btn--grey" href="#">Изменить бонусную карту</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="order__bonus d-xl-none">
-                <div class="row justify-content-md-between align-items-md-center">
-                  <div class="col-md-auto">
-                    <p class="order__pay-use">Вы использовали для оплаты</p><span class="order__bonusies-amount">160 из 1500 бонусов</span>
-                  </div>
-                  <div class="col-md-auto"><a class="order__cancel-pay btn btn--grey" href="#">отменить оплату бонусами</a>
-                  </div>
-                </div>
-              </div>
-              <footer class="order__footer">
-                <div class="row justify-content-md-between">
-                  <div class="col-md-auto d-none d-md-block">
-                    <a class="order__back-cart btn btn--grey" href="cart.html">
-                      <svg class="icon" width="19" height="19" aria-hidden="true">
-                        <use xlink:href="static/img/svg-symbols.svg#arrow-left"></use>
-                      </svg>Вернуться в корзину</a>
-                  </div>
-                  <div class="col-auto ml-md-auto"><span class="order__cost-title">Сумма к оплате</span>
-                  </div>
-                  <div class="col-auto ml-auto ml-md-0">
-                    <div class="order__cost">8 570<span>&#160;&#8381;</span>
-                    </div><span class="order__bonus-amount">+ 857 бонусов</span>
-                  </div>
-                  <div class="col-md-auto">
-                    <button class="order__submit btn btn--red">оформить заказ</button>
-                  </div>
-                </div>
-              </footer>
-              <a class="order__back-cart btn d-md-none" href="cart.html">
-                <svg class="icon" width="19" height="19" aria-hidden="true">
-                  <use xlink:href="static/img/svg-symbols.svg#arrow-left"></use>
-                </svg>Вернуться в корзину</a>
-            </div>
+            </aside>
           </div>
-          <div class="col-auto d-none d-xl-block">
-            <div class="order__sidebar">
-              <div class="order__your"><span class="title title--md">ваш заказ</span>
-                <ul class="order__products">
-                  <li class="order__product">
-                    <div class="row">
-                      <div class="col-auto">
-                        <a class="order__img" href="#">
-                          <img src="static/img/content/019.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос 200мл">
-                        </a>
-                      </div>
-                      <div class="col">
-                        <h3 class="order__name"><a href="#">Либридерм витамин F бальзам питательный для кожи головы и волос 200мл</a></h3>
-                        <div class="row justify-content-between">
-                          <div class="col-auto">
-                            <div class="order__amount-product">2 х 195<span>&#160;&#8381;</span>
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <div class="order__cost-product">390<span>&#160;&#8381;</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="order__product">
-                    <div class="row">
-                      <div class="col-auto">
-                        <a class="order__img" href="#">
-                          <img src="static/img/content/014.jpg" alt="Генеролон спрей для наружного применения 5% 60мл">
-                        </a>
-                      </div>
-                      <div class="col">
-                        <h3 class="order__name"><a href="#">Генеролон спрей для наружного применения 5% 60мл</a></h3>
-                        <div class="row justify-content-between">
-                          <div class="col-auto">
-                            <div class="order__amount-product">1 х 616<span>&#160;&#8381;</span>
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <div class="order__cost-product">616<span>&#160;&#8381;</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="order__product">
-                    <div class="row">
-                      <div class="col-auto">
-                        <a class="order__img" href="#">
-                          <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл">
-                        </a>
-                      </div>
-                      <div class="col">
-                        <h3 class="order__name"><a href="#">Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл</a></h3>
-                        <div class="row justify-content-between">
-                          <div class="col-auto">
-                            <div class="order__amount-product">1 х 616<span>&#160;&#8381;</span>
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <div class="order__cost-product">616<span>&#160;&#8381;</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="order__product">
-                    <div class="row">
-                      <div class="col-auto">
-                        <a class="order__img" href="#">
-                          <img src="static/img/content/019.jpg" alt="Урьяж розельян крем для кожи склонной к куперозу 40мл">
-                        </a>
-                      </div>
-                      <div class="col">
-                        <h3 class="order__name"><a href="#">Урьяж розельян крем для кожи склонной к куперозу 40мл</a></h3>
-                        <div class="row justify-content-between">
-                          <div class="col-auto">
-                            <div class="order__amount-product">1 х 616<span>&#160;&#8381;</span>
-                            </div>
-                          </div>
-                          <div class="col-auto">
-                            <div class="order__cost-product">616<span>&#160;&#8381;</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <table class="order__total-info">
-                  <tbody>
-                    <tr>
-                      <td>Стоимость</td>
-                      <td>
-                        <div class="order__cost-col">9 700<span>&#160;&#8381;</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Доставка</td>
-                      <td>
-                        <div class="order__cost-col">0<span>&#160;&#8381;</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Оплата бонусами</td>
-                      <td>
-                        <div class="order__cost-col">-160</div>
-                      </td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td><span class="order__cost-title">Итого к оплате</span>
-                      </td>
-                      <td>
-                        <div class="order__cost">8 570<span>&#160;&#8381;</span>
-                        </div><span class="order__bonus-amount">+ 857 бонусов</span>
-                      </td>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <div class="order__bonus">
-                <div class="row">
-                  <div class="col-12">
-                    <p class="order__pay-use">Вы использовали для оплаты</p><span class="order__bonusies-amount">160 из 1500 бонусов</span>
+          <div class="col-xl-auto">
+            <h3 class="cabinet__title-list title title--md">Редактирование номера бонусной карты</h3>
+            <form class="cabinet__body" id="change-password">
+              <div class="cabinet__field-row">
+                <div class="row align-items-md-center">
+                  <div class="col-md-4 col-lg-3 col-xl-auto">
+                    <label class="cabinet__label label" for="change-password-pass">Введите номер карты</label>
                   </div>
-                  <div class="col-12"><a class="order__cancel-pay btn btn--grey" href="#">отменить оплату бонусами</a>
+                  <div class="col col-xl-auto ml-xl-auto">
+                    <input class="cabinet__field cabinet__field--xl field" type="number" value="57849849893409094390" required id="change-password-pass">
                   </div>
                 </div>
               </div>
-            </div>
+              <div class="cabinet__footer-fields cabinet__footer-fields--wide">
+                <div class="row">
+                  <div class="col offset-md-4 offset-lg-3 offset-xl-0">
+                    <div class="row justify-content-between align-items-center">
+                      <div class="col-auto"><a class="cabinet__cancel" href="#">Отменить</a>
+                      </div>
+                      <div class="col-auto">
+                        <button class="cabinet__save btn btn--red">Сохранить</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </form>
+    </section>
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">

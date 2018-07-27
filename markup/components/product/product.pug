@@ -9,7 +9,7 @@ mixin product(data)
 		.product__top
 			a(href="#").product__img
 				if data.imgName
-					img(data-src="%=static=%img/content/"+data.imgName+".jpg" alt=""+data.title).lazyload.blur-up
+					img(data-src="%=static=%img/content/"+data.imgName+".jpg" width="120" height="120" alt=""+data.title).lazyload.blur-up
 			.product__hover-block
 				button.product__btn.btn.btn--heart
 					+icon('heart', '17', '15')

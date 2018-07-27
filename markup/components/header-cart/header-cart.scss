@@ -86,6 +86,7 @@
   &__list {
     margin: 0;
     padding: 0;
+    min-height: 200px;
     max-height: 408px;
     overflow-y: auto;
     list-style-type: none;
@@ -144,32 +145,10 @@
   &__btn {
     width: 100%;
   }
-  .simplebar-track.vertical {
-    width: 7px;
-    background-color: $white-two;
-    border-radius: 3px;
-  }
   .simplebar-track {
     right: 8px;
     @include media-breakpoint-up(md) {
       right: 24px;
     }
-  }
-  .simplebar-scrollbar {
-    width: 6px;
-    right: 0;
-  }
-  .simplebar-track.horizontal .simplebar-scrollbar:before {
-    background-color: $warm-grey-two;
-    border-radius: 3px;
-  }
-  .simplebar-track.horizontal {
-    display: none;
-  }
-  .simplebar-track.vertical .simplebar-scrollbar:before {
-    top: 0;
-  }
-  .simplebar-track.vertical .simplebar-scrollbar:before {
-    bottom: 0;
   }
 }

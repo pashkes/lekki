@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
 
     <!--[if (gt IE 9)|!(IE)]><!-->
-    <link href="static/css/maindp8pue.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/mainm7gck.min.css" rel="stylesheet" type="text/css">
     <!--<![endif]-->
     <meta property="og:title" content="#{data.title}">
     <meta property="og:title" content="">
@@ -32,8 +32,6 @@
         })(document.documentElement)
     </script>
   </head>
-  <!--script(src='static/js/separate-js/script.js')-->
-  <link href="static/css/separate-css/styles.css" rel="stylesheet" type="text/css">
 
   <body>
     <header class="header">
@@ -338,7 +336,7 @@
                       </button>
                     </div>
                     <div class="header-cart__body">
-                      <div class="header-cart__list" data-simplebar data-simplebar-auto-hide="false">
+                      <div class="header-cart__list custom-scroll-bar" data-simplebar data-simplebar-auto-hide="false">
                         <div class="header-cart__item">
                           <div class="row align-items-center">
                             <div class="col-auto">
@@ -743,9 +741,9 @@
         <li class="breadcrumbs__item active">Гигиена</li>
       </ul>
     </div>
-    <div class="order-history">
+    <section class="cabinet">
       <div class="container">
-        <h2 class="order-history__title">Личный кабинет</h2>
+        <h2 class="cabinet__title">Личный кабинет</h2>
         <div class="row">
           <div class="col-xl-auto">
             <aside class="personal-info">
@@ -783,326 +781,328 @@
             </aside>
           </div>
           <div class="col-xl d-flex flex-column flex-grow-1">
-            <h3 class="order-history__title-list title title--md">История заказов</h3>
-            <div class="order-history__list">
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status new">Новый</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+178 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+            <h3 class="cabinet__title-list title title--md">История заказов</h3>
+            <div class="order-history">
+              <div class="order-history__list">
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status new">Новый</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+178 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status new">Новый</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus">-100 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+15 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status new">Новый</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-100 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+15 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus">-300 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+173 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-300 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+173 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+67 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+67 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus">-75 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+75 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-75 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+75 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus">-36 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+175 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-36 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+175 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+17 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+17 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+200 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+200 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus">-176 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+100 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-176 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+100 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status cancel">Отменен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status cancel">Отменен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+673 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+673 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status cancel">Отменен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus empty">—</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status cancel">Отменен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus">-138 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+345 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-138 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+345 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="order-history__item">
-                <div class="row">
-                  <div class="col-6 col-md-auto order-md-0">
-                    <div class="order-history__number">Заказ № 123456</div>
-                  </div>
-                  <div class="col-6 col-md-auto order-md-6 ml-md-auto">
-                    <div class="order-history__status">Получен</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-4">
-                    <div class="order-history__bonus">-239 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-1">
-                    <div class="order-history__date">23.04.2018</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-5">
-                    <div class="order-history__bonus">+175 бонусов</div>
-                  </div>
-                  <div class="col-6 col-md-2 order-md-3">
-                    <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-239 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+175 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1146,7 +1146,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -1264,7 +1264,7 @@
           <div class="row align-items-xl-center">
             <div class="col-auto d-none d-md-block">
               <a class="footer__logo" href="#">
-                <img class="lazyload blur-up" data-src="static/img/general/logo.svg" alt="Lekki - интернет аптека">
+                <img src="static/img/general/logo.svg" alt="Lekki - интернет аптека">
               </a>
             </div>
             <div class="col">
@@ -1285,6 +1285,7 @@
     <script>
       svg4everybody();
     </script>
+    <script src="static/js/mainm7gck.js"></script>
   </body>
 
 </html>

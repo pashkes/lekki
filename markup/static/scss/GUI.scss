@@ -209,12 +209,13 @@
     -webkit-appearance: none;
     margin: 0;
   }
-  @include placeholder{
+  @include placeholder {
     font-family: Rubik;
     font-size: 14px;
     color: $warm-grey-two;
   }
 }
+
 .underline {
   background-color: transparent;
   padding: 0;
@@ -226,6 +227,7 @@
     border-bottom-color: transparent;
   }
 }
+
 .label {
   display: block;
   margin-bottom: 6px;
@@ -447,5 +449,142 @@ a {
     border-color: $red;
     outline: none;
     box-shadow: none;
+  }
+}
+
+//custom select style
+div.SumoSelect {
+  width: 100%;
+  cursor: pointer;
+  &:hover > .CaptionCont,
+  &:focus > .CaptionCont,
+  &.open > .CaptionCont, .SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont {
+    box-shadow: none;
+    border-color: $white-two;
+  }
+  &.open > .CaptionCont, .SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont {
+    border-bottom-color: transparent;
+    border-radius: 4px 4px 0 0;
+  }
+  > .CaptionCont {
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+    min-height: 40px;
+    border: solid 1px $white-two;
+    border-radius: 4px;
+    font-family: Rubik;
+    font-size: 14px;
+    color: $black;
+    cursor: pointer;
+  }
+  > .CaptionCont > label > i {
+    background-image: url(%=static=%minified-svg/arrow-bottom.svg);
+    background-size: 16px 7px;
+    transition: $transition-base;
+  }
+  &.open > .CaptionCont > label > i {
+    transform: rotate(-180deg);
+  }
+  > .optWrapper > .options li.opt {
+    padding: 5px 24px 4px 16px;
+    border-bottom: none;
+    line-height: 1;
+    color: $black;
+    &:first-child {
+      padding: 0;
+    }
+    &:nth-child(2) {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  &.open > .optWrapper {
+    top: 39px;
+  }
+  > .CaptionCont > label {
+    width: 40px;
+    pointer-events: none;
+  }
+  > .optWrapper > .options {
+    min-height: 200px;
+    max-height: 200px;
+    overflow-x: hidden;
+  }
+  > .optWrapper {
+    padding-top: 0;
+    padding-bottom: 16px;
+    border: solid 1px $white-two;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  > .optWrapper > .options li.opt:hover {
+    background-color: transparent;
+    color: $red;
+  }
+  .simplebar-content {
+    overflow-x: hidden;
+    padding-bottom: 0 !important;
+  }
+  .CaptionCont > span {
+    position: absolute;
+    pointer-events: none;
+  }
+  > .CaptionCont > span.placeholder {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1;
+    color: $warm-grey-two;
+  }
+}
+
+
+//Custom scrloll bar
+
+.custom-scroll-bar {
+  .simplebar-track.vertical {
+    width: 6px;
+    background-color: $white-two;
+    border-radius: 3px;
+  }
+  .simplebar-scrollbar {
+    width: 6px;
+    right: 0;
+  }
+
+  .simplebar-track.vertical .simplebar-scrollbar:before {
+    background-color: $warm-grey-two;
+    border-radius: 3px;
+  }
+
+  .simplebar-track.horizontal {
+    display: none;
+  }
+
+  .simplebar-track.vertical .simplebar-scrollbar:before {
+    top: 0;
+  }
+
+  .simplebar-track.vertical .simplebar-scrollbar:before {
+    bottom: 0;
+  }
+
+}
+.show-pass {
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  padding: 0;
+  right: 16px;
+  border: none;
+  background: transparent url(%=static=%general/eye-off.svg) center no-repeat;
+  z-index: 1;
+  &.active {
+    background-image: url(%=static=%general/mask.svg);
   }
 }

@@ -1,7 +1,7 @@
 (function () {
   //Переключение текста внутри кнопки которая показывает карту на странице оформление заказа
   var toggleTextButton = function () {
-    let click = 1;
+    var click = 1;
     $('.js-toggle-map').on('click', function () {
       if (click % 2 == 0) {
         $(this).text('Скрыть карту');

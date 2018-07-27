@@ -122,13 +122,21 @@ div.d-xxl-block {
     border-bottom: none;
   }
 }
+
 .blur-up {
-  -webkit-filter: blur(5px);
   filter: blur(5px);
   transition: filter 400ms, -webkit-filter 400ms;
 }
 
 .blur-up.lazyloaded {
-  -webkit-filter: blur(0);
   filter: blur(0);
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

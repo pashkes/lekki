@@ -8,17 +8,23 @@ html(class="no-js", lang="ru")
 	include ../components/order-history/order-history
 	head
 		+head(head.defaults)
-	//script(src='%=static=%js/separate-js/script.js')
-	link(href="%=static=%css/separate-css/styles.css" rel="stylesheet" type="text/css")
 	body
 		+header()
 		.container
 			+breadcrumbs()
-		+order-history(orderHistory)
+		section.cabinet
+			.container
+				h2.cabinet__title Личный кабинет
+				.row
+					.col-xl-auto
+						+personal-info()
+					.col-xl.d-flex.flex-column.flex-grow-1
+						h3.cabinet__title-list.title.title--md История заказов
+						+order-history(orderHistory)
 		+footer()
 			//- Include your components here
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();
 
-	//- Main scripts. You can replace it, but I recommend you to leave it here
+		//- Main scripts. You can replace it, but I recommend you to leave it here
 		script(src='%=static=%js/main%=hash=%.js')

@@ -7,7 +7,8 @@ var data = {
         title: 'Аква марис спрей назальный 30мл',
         made: 'Яндран (Хорватия)',
         oldCostValue: '345',
-        cost: '195'
+        cost: '195',
+        favorite: true
       },
       {
         imgName: '008',
@@ -33,7 +34,8 @@ var data = {
         imgName: '004',
         title: 'Синекод сироп таблетки для рассасывания №18',
         made: 'ГлаксоСмитКляйн (Швейцария)',
-        cost: '230'
+        cost: '230',
+        favorite: true
       },
       {
         sticker: true,
@@ -49,7 +51,8 @@ var data = {
         title: 'Аква марис спрей назальный 30мл',
         made: 'Яндран (Хорватия)',
         oldCostValue: '345',
-        cost: '195'
+        cost: '195',
+        favorite: true
       },
       {
         imgName: '007',
@@ -89,7 +92,8 @@ var data = {
         imgName: '004',
         title: 'Граммидин с анестетиком нео таблетки для рассасывания №18',
         made: 'Валента (Россия)',
-        cost: '254'
+        cost: '254',
+        favorite: true
       },
       {
         imgName: '004',

@@ -93,6 +93,9 @@
         fill: $red;
       }
     }
+    &:focus {
+      border-color: transparent;
+    }
     &.active {
       .icon {
         fill: $red;

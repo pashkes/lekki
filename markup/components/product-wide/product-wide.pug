@@ -1,35 +1,64 @@
 mixin product-wide(data)
-	.product&attributes(attributes)
-		.row
-			.col-auto
-				if data.sticker
-					.product__sticker.sticker
-						+icon('sticker', '40', '40')
-						span -10%
-				.product__top
-					a(href="#").product__img
-						img(data-src="%=static=%img/content/" + data.imgName + ".jpg" width="120" height="120" alt="" + data.title).lazyload.blur-up
-			.col
-				.product__info
-					h3.product__title
+	include ../stars/stars
+		
+	.product-wide&attributes(attributes)
+		if data.sticker
+			.product-wide__sticker.sticker
+				+icon('sticker', '40', '40')
+				span -10%
+		.product-wide__top
+			a(href="#").product-wide__img
+				if data.imgName
+					img(data-src="%=static=%img/content/" + data.imgName + ".jpg" width="120" height="120" alt="" + data.title).lazyload.blur-up
+		.product-wide__info
+			.row
+				.col
+					h3.product-wide__title
 						a(href="#") #{data.title}
-					p.product__made #{data.made}
-					if !data.info
-			.w-100
-			.col
-				.product__footer
-					.row.align-items-end
-						.col
+					p.product-wide__made #{data.made}
+						if !data.info
+				.col-auto.d-none.d-md-block
+					if data.favorite
+						button.btn.btn--heart.active
+							+icon('heart', '17', '15')
+					else
+						button.btn.btn--heart
+							+icon('heart', '17', '15')
+				.col-12
+					.row.align-items-md-end.mt-auto
+						.col-12.col-md-auto.col-xl.d-md-flex.align-content-md-between.flex-md-column
+							.product-wide__articul
+								span.product-wide__label Артикул: &#160;
+								span.product-wide__code 732478
+							.product-wide__rating
+								span.product-wide__title-stars Рейтинг товара:
+								+stars().product-wide__stars
+							ul.product-wide__info-list
+								li.product-wide__status.li.product-wide__status--in-stock
+									span.product-wide__have-products В наличии
+								li.product-wide__status.li.product-wide__status--delivery
+									span.product-wide__title-info Доставка:&#160;
+									span.product-wide__sub-title сегодня&#160;
+								li.product-wide__status
+									span.product-wide__title-info Самовывоз:&#160;
+									span.product-wide__sub-title сегодня&#160;
+
+						.col-12.col-md-auto.ml-md-auto
 							if data.oldCostValue
-								span.product__old-cost #{data.oldCostValue}
+								span.product-wide__old-cost #{data.oldCostValue}
 									span  &#8381;
-							.product__buttons
-								a(href="#" data-toggle="modal" data-target="#cart-list").product__buy.btn.btn--border-red.btn--icon.js-add-cart
-									span.product__btn-text #{data.cost}
+							.product-wide__buttons
+								a(href="#" data-toggle="modal" data-target="#cart-list").product-wide__buy.btn.btn--border-red.btn--icon.js-add-cart
+									span.product-wide__btn-text #{data.cost}
 										span  &#8381;
-									span.product__btn-label Купить
-									span.product__cart
+									span.product-wide__btn-label Купить
+									span.product-wide__cart
 										+icon('cart', '20', '17')
-						.col-auto
-							button.btn.btn--heart
-								+icon('heart', '17', '15')
+								if data.favorite
+									button.btn.btn--heart.d-md-none.active
+										| добавить товар в избранное
+										+icon('heart', '17', '15')
+								else
+									button.btn.btn--heart.d-md-none
+										| добавить товар в избранное
+										+icon('heart', '17', '15')

@@ -11,8 +11,14 @@ mixin product(data)
 				if data.imgName
 					img(data-src="%=static=%img/content/"+data.imgName+".jpg" width="120" height="120" alt=""+data.title).lazyload.blur-up
 			.product__hover-block
-				button.product__btn.btn.btn--heart
-					+icon('heart', '17', '15')
+				if data.favorite
+					button(class="product__btn btn btn--heart active")
+						| добавить товар в избранное
+						+icon('heart', '17', '15')
+				else
+					button(class="product__btn btn btn--heart")
+						| добавить товар в избранное
+						+icon('heart', '17', '15')
 				a(href="#").product__btn.btn.btn--heart
 					+icon('eye', '18', '15')
 		.product__info
@@ -31,5 +37,11 @@ mixin product(data)
 							span.product__btn-label Купить
 							span.product__cart
 								+icon('cart', '20', '17')
-						button.btn.btn--heart
-							+icon('heart', '17', '15')
+						if data.favorite
+							button.btn.btn--heart.active
+								| добавить товар в избранное
+								+icon('heart', '17', '15')
+						else
+							button.btn.btn--heart
+								| добавить товар в избранное
+								+icon('heart', '17', '15')

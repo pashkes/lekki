@@ -1,0 +1,25 @@
+.sign-in {
+  &__remember-password {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 18px;
+    border-bottom: dashed 1px rgba(151, 151, 151, 0.3);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    transition: $transition-base;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 24px;
+    }
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+  .registration__question {
+    font-weight: 400;
+  }
+  &__wrap-text {
+    text-align: center;
+  }
+
+}

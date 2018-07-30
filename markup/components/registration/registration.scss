@@ -1,0 +1,51 @@
+.registration {
+  &__field-inner {
+    position: relative;
+  }
+  .modal-dialog {
+    padding-right: 0;
+    padding-left: 0;
+    @include media-breakpoint-up(sm) {
+      max-width: 288px;
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 384px;
+    }
+  }
+  .show-pass {
+    right: 0;
+  }
+  &__password {
+    padding-right: 66px;
+  }
+  &__desc {
+    margin-bottom: 12px;
+    padding-top: 2px;
+    font-size: 13px;
+    line-height: 1.23;
+    a {
+      font-size: 13px;
+      line-height: 1.23;
+      font-weight: 400;
+      color: $red;
+    }
+  }
+  &__footer {
+    border-top: solid 1px $white-two;
+    @include media-breakpoint-up(md) {
+      padding-top: 24px;
+    }
+  }
+  &__submit {
+    margin-bottom: 24px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+    }
+  }
+  &__question {
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 500;
+  }
+}

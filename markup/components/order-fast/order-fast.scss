@@ -1,0 +1,18 @@
+.order-fast {
+  .modal-dialog {
+    @include media-breakpoint-up(md) {
+      max-width: 384px;
+    }
+  }
+  &__title {
+    font-size: 20px;
+  }
+  &__desc {
+    max-width: 287px;
+    margin-bottom: 18px;
+    line-height: 1.43;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 36px;
+    }
+  }
+}

@@ -7,23 +7,24 @@ mixin product(data)
 				+icon('sticker', '40', '40')
 				span -10%
 		.product__top
-			a(href="#").product__img
+			a(href="single-product.html").product__img
 				if data.imgName
 					img(data-src="%=static=%img/content/"+data.imgName+".jpg" width="120" height="120" alt=""+data.title).lazyload.blur-up
 			.product__hover-block
 				if data.favorite
-					button(class="product__btn btn btn--heart active")
+					button(type="button" class="product__btn btn btn--heart active").product__btn-icon.btn.btn--heart.js-add-favorite
 						| добавить товар в избранное
 						+icon('heart', '17', '15')
 				else
-					button(class="product__btn btn btn--heart")
+					button(type="button" class="product__btn btn btn--heart").product__btn-icon.btn.btn--heart.js-add-favorite
 						| добавить товар в избранное
 						+icon('heart', '17', '15')
-				a(href="#").product__btn.btn.btn--heart
+				a(href="single-product.html").product__btn-icon.product__btn
+					| Посмотреть товар
 					+icon('eye', '18', '15')
 		.product__info
 			h3.product__title
-				a(href="#") #{data.title}
+				a(href="single-product.html") #{data.title}
 			p.product__made #{data.made}
 			if !data.info
 				.product__footer
@@ -38,10 +39,10 @@ mixin product(data)
 							span.product__cart
 								+icon('cart', '20', '17')
 						if data.favorite
-							button.btn.btn--heart.active
+							button(type="button").product__btn-icon.btn.btn--heart.active.js-add-favorite
 								| добавить товар в избранное
 								+icon('heart', '17', '15')
 						else
-							button.btn.btn--heart
+							a(href="#").product__btn-icon.btn.btn--heart
 								| добавить товар в избранное
 								+icon('heart', '17', '15')

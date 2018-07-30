@@ -10,7 +10,7 @@ mixin product-info(data)
 					.col-md
 						h1.product-info__title Нурофен для детей 100мг/5мл 150мл суспензия для приема внутрь, апельсин
 					.col-md-auto.ml-md-auto.d-none.d-md-block
-						button.btn.btn--heart.active
+						button(type="button").btn.btn--heart.active.js-add-favorite
 							+icon('heart', 17, 15)
 							| добавить товар в список желания
 				.col-md-auto.d-md-none
@@ -27,7 +27,7 @@ mixin product-info(data)
 									| Читать отзывы
 									span.product-info__label 34
 							.col-auto.d-md-none.ml-auto
-								button.btn.btn--heart.active
+								button(type="button").btn.btn--heart.active.js-add-favorite
 									+icon('heart', 17, 15)
 									| добавить товар в список желания
 			.row
@@ -50,7 +50,7 @@ mixin product-info(data)
 								button(type="button" data-scroll-to="#reviews" data-scroll-speed="700" data-scroll-offset="-40").product-info__read-reviews
 									| Читать отзывы
 									span.product-info__label 34
-								button.btn.btn--heart.active.d-md-none
+								button.btn.btn--heart.active.d-md-none.js-add-favorite
 									+icon('heart', 17, 15)
 									| добавить товар в список желания
 						.col-12
@@ -68,14 +68,14 @@ mixin product-info(data)
 										.col-6.col-md-auto
 											+counter(1).product-info__counter
 								.col-md-6.col-xl-auto
-										.product-info__economy
-											span.product-info__economy-title Экономия &#160;
-											| 45
-											span.product-info__symbol &#8381;
-										button(type="button" data-toggle="modal" data-target="#cart-list").product-info__buy.btn.btn--red.js-add-cart
-											+icon('cart', 20, 17)
-											span Купить
-										a(href="#").product-info__buy-one-click.btn.btn--border-red Быстрый заказ
+									.product-info__economy
+										span.product-info__economy-title Экономия &#160;
+										| 45
+										span.product-info__symbol &#8381;
+									button(type="button" data-toggle="modal" data-target="#cart-list").product-info__buy.btn.btn--red.js-add-cart
+										+icon('cart', 20, 17)
+										span Купить
+									button(type="button" data-toggle="modal" data-target="#fast-order-modal").product-info__buy-one-click.btn.btn--border-red Быстрый заказ
 								.col-xl
 									ul.product-info__list-desc
 										li.product-info__item-dec
@@ -91,7 +91,9 @@ mixin product-info(data)
 										li.product-info__item-dec
 											span.product-info__label Форма выпуска:
 											span.product-info__value-desc Суспензия для приема внутрь
-									button(type="button" data-scroll-to="#certificate" data-scroll-speed="700" data-scroll-offset="-45").product-info__certificaties.btn.d-xl-none Сертификаты
+									button(type="button" data-scroll-to="#certificate" data-scroll-speed="700" data-scroll-offset="-45").product-info__certificaties.btn.d-xl-none
+										+icon('award', 18, 18)
+										| Сертификаты
 				.d-none.d-xl-block.w-100
 				.col-xl-auto.d-none.d-xl-block
 					.product-info__fill-space
@@ -100,9 +102,12 @@ mixin product-info(data)
 						.row.justify-content-md-between
 							.col-md-auto
 								// если нет в наличии заменить класс have-products на not-have-products
-								span.product-info__section.have-products Товар в наличии
+								.product-info__section.have-products
+									+icon('circle-mark', 18, 18)
+									| Товар в наличии
 							.col-md-auto
-								.product-info__section.product-info__section--delivery
+								.product-info__section
+									+icon('car', 18, 18)
 									.product-info__col
 										span.product-info__label Доставка:&#160;
 										span.product-info__sub-title сегодня&#160;
@@ -110,7 +115,8 @@ mixin product-info(data)
 										span.product-info__label Самовывоз:&#160;
 										span.product-info__sub-title сегодня&#160;
 							.col-md-6.col-lg-auto
-								.product-info__section.product-info__section--buy
+								.product-info__section
+									+icon('wallet', 18, 18)
 									.product-info__col.product-info__col--inline
 										span.product-info__label Оплата:&#160;
 										span.product-info__sub-title Наличными
@@ -128,8 +134,15 @@ mixin product-info(data)
 						.col-md-auto.col-xl.ml-md-auto.ml-xl-0
 							.row.align-items-xl-end
 								.col.col-md-auto
-									a(href="#").product-info__btn.product-info__btn--sm-padding.product-info__btn--save-pdf.btn Сохранить в PDF
+									a(href="#").product-info__btn.product-info__btn--save-pdf.btn
+										+icon('doc', 18, 18).d-none.d-md-flex
+										| Сохранить в PDF
+
 								.col.col-md-auto
-									a(href="#").product-info__btn.product-info__btn--print.btn Распечатать
+									a(href="#").product-info__btn.product-info__btn--print.btn
+										+icon('print', 18, 18).d-none.d-md-block
+										| Распечатать
 								.col-auto.d-none.d-xl-flex.ml-xl-auto
-									button(type="button" data-scroll-to="#certificate" data-scroll-speed="700" data-scroll-offset="-45").product-info__certificaties.btn Сертификаты
+									button(type="button" data-scroll-to="#certificate" data-scroll-speed="700" data-scroll-offset="-45").product-info__certificaties.btn
+										+icon('award', 18, 18).d-none.d-md-block
+										| Сертификаты

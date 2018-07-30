@@ -1,0 +1,20 @@
+mixin order-fast(data)
+	.order-fast
+		.modal.fade#fast-order-modal
+			div(role="document").modal-dialog.modal-dialog-centered
+				form.custom-modal#order-fast
+					header.custom-modal__header
+						span.order-fast__title.custom-modal__title Быстрый заказ
+						button(type="button" data-dismiss="modal" aria-label="Close").custom-modal__close.btn.btn--close
+							+icon('close', 14, 14)
+							| закрыть
+					.custom-modal__content
+						p.order-fast__desc
+							| Оставьте нам свой номер телефона,&nbsp;
+							| и&nbsp;наш менеджер свяжется с вами
+							| в ближайшее время
+						label(for="order-fast-tel").label Номер телефона
+						input(type="tel" placeholder="+7 123 456-78-90" required).custom-modal__field.field#order-fast-tel
+
+					footer.custom-modal__footer
+						button.custom-modal__btn.btn.btn--red.js-done-request Заказать

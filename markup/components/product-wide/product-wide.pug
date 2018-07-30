@@ -19,10 +19,12 @@ mixin product-wide(data)
 						if !data.info
 				.col-auto.d-none.d-md-block
 					if data.favorite
-						button.btn.btn--heart.active
+						button(type="button").product-wide__btn-icon.btn.btn--heart.active.js-add-favorite
+							| Добавить в избранное
 							+icon('heart', '17', '15')
 					else
-						button.btn.btn--heart
+						button(type="button").product-wide__btn-icon.btn.btn--heart.js-add-favorite
+							| Добавить в избранное
 							+icon('heart', '17', '15')
 				.col-12
 					.row.align-items-md-end.mt-auto
@@ -55,10 +57,10 @@ mixin product-wide(data)
 									span.product-wide__cart
 										+icon('cart', '20', '17')
 								if data.favorite
-									button.btn.btn--heart.d-md-none.active
+									button(type="button").product-wide__btn-icon.btn.btn--heart.d-md-none.active.js-add-favorite
 										| добавить товар в избранное
 										+icon('heart', '17', '15')
 								else
-									button.btn.btn--heart.d-md-none
-										| добавить товар в избранное
+									button.product-wide__btn-icon.btn.d-md-none.js-add-favorite
+										| Посмотреть товар
 										+icon('heart', '17', '15')

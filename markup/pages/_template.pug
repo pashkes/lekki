@@ -11,8 +11,6 @@ html(class="no-js", lang="ru")
 	include ../components/success-added/success-added
 	head
 		+head(head.defaults)
-	//script(src='%=static=%js/separate-js/script.js')
-	link(href="%=static=%css/separate-css/styles.css" rel="stylesheet" type="text/css")
 	body
 		+header()
 
@@ -26,4 +24,4 @@ html(class="no-js", lang="ru")
 		script svg4everybody();
 
 		//- Main scripts. You can replace it, but I recommend you to leave it here
-		script(src='%=static=%js/main%=hash=%.js')
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

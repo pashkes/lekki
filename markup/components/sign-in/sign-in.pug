@@ -1,0 +1,28 @@
+mixin sign-in(data)
+	.sign-in.registration
+		.modal.fade#sign-in-modal
+			div(role="document").modal-dialog.modal-dialog-centered
+				form.custom-modal#sign-in
+					header.custom-modal__header
+						span.custom-modal__title Вход на сайт
+						button(type="button" data-dismiss="modal" aria-label="Close").custom-modal__close.btn.btn--close
+							+icon('close', 14, 14)
+							| закрыть
+					.custom-modal__content
+						.custom-modal__row
+							label(for="sign-in-email").label Электронная почта
+							input(type="email" placeholder="Ivanov@mail.ru" required).custom-modal__field.field#sign-in-email
+							p.custom-modal__error.error Заполите поле!
+						.custom-modal__row
+							label(for="sign-in-password").label Пароль
+							.registration__field-inner
+								input(type="password" value="AptekaApteka123" required).registration__password.custom-modal__field.field#sign-in-password
+								button(type="button").show-pass.js-show-hide-password показать пароль/скрыть
+							p.custom-modal__error.error Неверный пароль!
+						// Add attribute disabled for it status
+						button().registration__submit.custom-modal__btn.btn.btn--red Войти на сайт
+						.sign-in__wrap-text
+							a(href="#").sign-in__remember-password Помогите вспомнить пароль
+					.registration__footer.custom-modal__footer
+						span.registration__question Я еще не зарегестрирован.
+						button(type="button" data-toggle="modal" data-target="#registration-modal" data-dismiss="modal" aria-label="Close").custom-modal__btn.btn.btn--border-red.js-registration Пройти регистрацию

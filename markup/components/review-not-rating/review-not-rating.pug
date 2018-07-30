@@ -1,0 +1,23 @@
+mixin review-not-rating(data)
+	.review-not-rating.write-review
+		.modal.fade#write-review-not-rating-modal
+			div(role="document").modal-dialog.modal-dialog-centered.order-fast
+				form.custom-modal#write-review-not-rating
+					header.custom-modal__header
+						span.write-review__title.custom-modal__title Написать отзыв
+						button(type="button" data-dismiss="modal" aria-label="Close").custom-modal__close.btn.btn--close
+							+icon('close', 14, 14)
+							| закрыть
+					.custom-modal__content
+						p.custom-modal__desc
+							| Добавьте отзыв, заполнив личные данные, или сначала войдите
+							| на сайт, тогда информация будет автоматически взята из профиля.
+						.custom-modal__row
+							.write-review__inner-field
+								label(for="write-review-not-rating-name").label Ваше имя
+								input(type="text" placeholder="Иван Иванов" id="write-review-not-rating-name" required).custom-modal__field.field
+						label(for="write-review-not-rating-message").label Напишите отзыв
+						textarea(placeholder="Поделитесь своим мнением о приобритенном вами товаре.").custom-modal__field.field.field--textarea#write-review-not-rating-message
+
+					footer.custom-modal__footer
+						button.custom-modal__btn.btn.btn--red.js-done-review-not-rating Отправить отзыв

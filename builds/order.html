@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
 
     <!--[if (gt IE 9)|!(IE)]><!-->
-    <link href="static/css/mainvi11xb.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/mainr300lk.min.css" rel="stylesheet" type="text/css">
     <!--<![endif]-->
     <meta property="og:title" content="#{data.title}">
     <meta property="og:title" content="">
@@ -32,8 +32,6 @@
         })(document.documentElement)
     </script>
   </head>
-  <!--script(src='static/js/separate-js/script.js')-->
-  <link href="static/css/separate-css/styles.css" rel="stylesheet" type="text/css">
 
   <body>
     <header class="header">
@@ -68,11 +66,11 @@
                     <use xlink:href="static/img/svg-symbols.svg#star-stroke"></use>
                   </svg><span>1 200 бонусов</span>
                 </a>
-                <a class="header__guid-link header__guid-link--user btn btn--user btn--icon" href="#">
+                <button class="header__guid-link header__guid-link--user btn btn--user btn--icon" type="button" data-toggle="modal" data-target="#registration-modal">
                   <svg class="icon" width="15" height="17" aria-hidden="true">
                     <use xlink:href="static/img/svg-symbols.svg#user"></use>
-                  </svg><span>Константинопольский К.</span>
-                </a>
+                  </svg><span>Войти в личный кабинет</span>
+                </button>
               </div>
             </div>
           </div>
@@ -189,11 +187,11 @@
                             </a>
                           </li>
                           <li>
-                            <a class="mobile-menu__user-buttons btn btn--user btn--icon" href="#">
+                            <button class="mobile-menu__user-buttons btn btn--user btn--icon" type="button" data-toggle="modal" data-target="#registration-modal">
                               <svg class="icon" width="15" height="17" aria-hidden="true">
                                 <use xlink:href="static/img/svg-symbols.svg#user"></use>
-                              </svg><span>Константинопольский К.</span>
-                            </a>
+                              </svg><span> Войти в личный кабинет</span>
+                            </button>
                           </li>
                         </ul>
                         <button class="mobile-menu__menu-close js-close-mobile-menu" type="button">закрыть меню
@@ -249,7 +247,8 @@
                           </li>
                         </ul>
                         <div class="mobile-menu__contacts"><a class="mobile-menu__tel" href="tel:+74950035555">+7 495 003-55-55</a><span class="mobile-menu__subtitle">Москва, круглосуточно</span>
-                        </div><a class="mobile-menu__review btn btn--transparent" href="#">Оставить отзыв</a>
+                        </div>
+                        <button class="mobile-menu__review btn btn--transparent" type="button" data-toggle="modal" data-target="#write-review-not-rating-modal">Оставить отзыв</button>
                         <ul class="social">
                           <li class="social__item">
                             <a class="social__link" href="#">
@@ -431,7 +430,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="header-cart__bottom"><a class="header-cart__btn btn btn--red" href="#">Перейти в корзину</a>
+                    <div class="header-cart__bottom"><a class="header-cart__btn btn btn--red" href="cart.html">Перейти в корзину</a>
                     </div>
                   </div>
                 </div>
@@ -1197,7 +1196,8 @@
                 <div class="footer__apps"><a class="footer__app footer__app--app-store d-md-none d-xl-block" href="#">App Store</a><a class="footer__app footer__app--google-play d-none d-md-block" href="#">Google Play</a>
                 </div><span class="footer__desc-cashback">В мобильном приложении&#160;<b>cashback до 15%</b></span>
               </div><a class="footer__tel" href="tel:+74950035555">+7 495 003-55-55</a><span class="footer__subtel">Москва, круглосуточно</span>
-              <div class="footer__bottom"><a class="footer__feedback btn" href="#">Оставить отзыв</a>
+              <div class="footer__bottom">
+                <button class="footer__feedback btn" type="button" data-toggle="modal" data-target="#write-review-not-rating-modal">Оставить отзыв</button>
                 <ul class="social footer__social">
                   <li class="social__item">
                     <a class="social__link" href="#">
@@ -1262,11 +1262,121 @@
         </div>
       </div>
     </footer>
+    <div class="registration">
+      <div class="modal fade" id="registration-modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <form class="custom-modal" id="registration">
+            <header class="custom-modal__header"><span class="custom-modal__title">Вход на сайт</span>
+              <button class="custom-modal__close btn btn--close" type="button" data-dismiss="modal" aria-label="Close">
+                <svg class="icon" width="14" height="14" aria-hidden="true">
+                  <use xlink:href="static/img/svg-symbols.svg#close"></use>
+                </svg>закрыть
+              </button>
+            </header>
+            <div class="custom-modal__content">
+              <div class="custom-modal__row">
+                <label class="label" for="registration-first-name">Ваше имя</label>
+                <input class="custom-modal__field field" type="text" placeholder="Иван Иванов" required id="registration-first-name">
+                <p class="custom-modal__error error">Заполите поле!</p>
+              </div>
+              <div class="custom-modal__row">
+                <label class="label" for="registration-email">Электронная почта</label>
+                <input class="custom-modal__field field" type="email" placeholder="Ivanov@mail.ru" required id="registration-email">
+                <p class="custom-modal__error error">Заполите поле!</p>
+              </div>
+              <div class="custom-modal__row">
+                <label class="label" for="registration-password">Пароль</label>
+                <div class="registration__field-inner">
+                  <input class="registration__password custom-modal__field field" type="password" value="AptekaApteka123" required id="registration-password">
+                  <button class="show-pass js-show-hide-password" type="button">показать пароль/скрыть</button>
+                  <p class="custom-modal__error error">Неверный пароль!</p>
+                </div>
+              </div>
+              <p class="registration__desc">
+                Нажимая кнопку «Зарегестрироваться», я соглашаюсь с&#160;<a href="#">правилами сайта</a>
+              </p>
+              <button class="registration__submit custom-modal__btn btn btn--red">Зарегистрироваться</button>
+            </div>
+            <div class="registration__footer custom-modal__footer"><span class="registration__question">У вас уже есть аккаунт?</span>
+              <button class="custom-modal__btn btn btn--border-red js-sign-in" type="button" data-toggle="modal" data-target="#sign-in-modal" data-dismiss="modal" aria-label="Close">войти</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="sign-in registration">
+      <div class="modal fade" id="sign-in-modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <form class="custom-modal" id="sign-in">
+            <header class="custom-modal__header"><span class="custom-modal__title">Вход на сайт</span>
+              <button class="custom-modal__close btn btn--close" type="button" data-dismiss="modal" aria-label="Close">
+                <svg class="icon" width="14" height="14" aria-hidden="true">
+                  <use xlink:href="static/img/svg-symbols.svg#close"></use>
+                </svg>закрыть
+              </button>
+            </header>
+            <div class="custom-modal__content">
+              <div class="custom-modal__row">
+                <label class="label" for="sign-in-email">Электронная почта</label>
+                <input class="custom-modal__field field" type="email" placeholder="Ivanov@mail.ru" required id="sign-in-email">
+                <p class="custom-modal__error error">Заполите поле!</p>
+              </div>
+              <div class="custom-modal__row">
+                <label class="label" for="sign-in-password">Пароль</label>
+                <div class="registration__field-inner">
+                  <input class="registration__password custom-modal__field field" type="password" value="AptekaApteka123" required id="sign-in-password">
+                  <button class="show-pass js-show-hide-password" type="button">показать пароль/скрыть</button>
+                </div>
+                <p class="custom-modal__error error">Неверный пароль!</p>
+              </div>
+              <!-- Add attribute disabled for it status-->
+              <button class="registration__submit custom-modal__btn btn btn--red">Войти на сайт</button>
+              <div class="sign-in__wrap-text"><a class="sign-in__remember-password" href="#">Помогите вспомнить пароль</a>
+              </div>
+            </div>
+            <div class="registration__footer custom-modal__footer"><span class="registration__question">Я еще не зарегестрирован.</span>
+              <button class="custom-modal__btn btn btn--border-red js-registration" type="button" data-toggle="modal" data-target="#registration-modal" data-dismiss="modal" aria-label="Close">Пройти регистрацию</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="review-not-rating write-review">
+      <div class="modal fade" id="write-review-not-rating-modal">
+        <div class="modal-dialog modal-dialog-centered order-fast" role="document">
+          <form class="custom-modal" id="write-review-not-rating">
+            <header class="custom-modal__header"><span class="write-review__title custom-modal__title">Написать отзыв</span>
+              <button class="custom-modal__close btn btn--close" type="button" data-dismiss="modal" aria-label="Close">
+                <svg class="icon" width="14" height="14" aria-hidden="true">
+                  <use xlink:href="static/img/svg-symbols.svg#close"></use>
+                </svg>закрыть
+              </button>
+            </header>
+            <div class="custom-modal__content">
+              <p class="custom-modal__desc">
+                Добавьте отзыв, заполнив личные данные, или сначала войдите на сайт, тогда информация будет автоматически взята из профиля.
+              </p>
+              <div class="custom-modal__row">
+                <div class="write-review__inner-field">
+                  <label class="label" for="write-review-not-rating-name">Ваше имя</label>
+                  <input class="custom-modal__field field" type="text" placeholder="Иван Иванов" id="write-review-not-rating-name" required>
+                </div>
+              </div>
+              <label class="label" for="write-review-not-rating-message">Напишите отзыв</label>
+              <textarea class="custom-modal__field field field--textarea" placeholder="Поделитесь своим мнением о приобритенном вами товаре." id="write-review-not-rating-message"></textarea>
+            </div>
+            <footer class="custom-modal__footer">
+              <button class="custom-modal__btn btn btn--red js-done-review-not-rating">Отправить отзыв</button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="static/js/separate-js/svg4everybody.min.js"></script>
     <script>
       svg4everybody();
     </script>
-    <script src="static/js/mainvi11xb.js"></script>
+    <script src="static/js/mainr300lk.min.js"></script>
   </body>
 
 </html>

@@ -69,7 +69,7 @@ mixin footer(data)
 						a(href="tel:+74950035555").footer__tel +7 495 003-55-55
 						span.footer__subtel Москва, круглосуточно
 						.footer__bottom
-							a(href="#").footer__feedback.btn Оставить отзыв
+							button(type="button" data-toggle="modal" data-target="#write-review-not-rating-modal").footer__feedback.btn Оставить отзыв
 							+social(socialFooter).footer__social
 		.footer__copy
 			.container

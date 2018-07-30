@@ -1,10 +1,5 @@
 .success-added {
-  position:relative;
-  padding: 16px;
-  border: solid 1px $white-two;
-  border-radius: 4px;
-  box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.12);
-  background-color: #ffffff;
+  position: relative;
   @include media-breakpoint-up(md) {
     padding: 26px 32px;
   }
@@ -16,27 +11,13 @@
     max-width: 673px;
   }
   &__title {
-    display: block;
     max-width: 152px;
-    line-height: 1.25;
-    letter-spacing: 0.1px;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
     @include media-breakpoint-up(md) {
       max-width: 100%;
-      font-size: 24px;
-      line-height: 1.25;
-      letter-spacing: 0.2px;
     }
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xl) {
       margin-bottom: 40px;
     }
-  }
-  &__close {
-    position: absolute;
-    top: 0;
-    right: 0;
   }
   &__img {
     display: block;
@@ -103,12 +84,8 @@
     text-align: right;
     color: $warm-grey;
   }
-  &__footer {
-    padding-top: 20px;
-  }
+
   &__btn {
-    width: 100%;
-    text-transform: uppercase;
     &:first-child {
       margin-bottom: 16px;
       @include media-breakpoint-up(md) {

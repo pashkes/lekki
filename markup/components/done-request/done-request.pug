@@ -1,0 +1,16 @@
+mixin done-request(data)
+	.done-request
+		.modal.fade#done-request
+			div(role="document").modal-dialog.modal-dialog-centered.order-fast
+				.custom-modal
+					header.custom-modal__header
+						span.order-fast__title.custom-modal__title Спасибо за заказ
+						button(type="button" data-dismiss="modal" aria-label="Close").custom-modal__close.btn.btn--close
+							+icon('close', 14, 14)
+							| закрыть
+					.custom-modal__content
+						p.done-request__desc.custom-modal__desc
+							| Ваша заявка принята.
+							| В течение 1 часа наш менеджер свяжется с вами, для уточнения деталей заказа
+					footer.custom-modal__footer
+						button(type="button" data-dismiss="modal" aria-label="Close").custom-modal__btn.btn.btn--red Закрыть

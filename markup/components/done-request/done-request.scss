@@ -1,0 +1,8 @@
+.done-request {
+  &__desc {
+    margin-bottom: 14px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 22px;
+    }
+  }
+}

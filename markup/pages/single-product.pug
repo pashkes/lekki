@@ -15,10 +15,16 @@ html(class="no-js", lang="ru")
 	include ../components/instruction/instruction
 	include ../components/analog-products/analog-products
 	include ../components/buy-with-product/buy-with-product
+	include ../components/order-fast/order-fast
+	include ../components/done-request/done-request
+	include ../components/write-review/write-review
+	include ../components/success-add-review/success-add-review
+	include ../components/registration/registration
+	include ../components/sign-in/sign-in
+	include ../components/review-not-rating/review-not-rating
+
 	head
 		+head(head.defaults)
-	//script(src='%=static=%js/separate-js/script.js')
-	link(href="%=static=%css/separate-css/styles.css" rel="stylesheet" type="text/css")
 	body
 		+header()
 		.container
@@ -32,9 +38,17 @@ html(class="no-js", lang="ru")
 		+demo()
 		+footer()
 		+success-added()
+		+order-fast()
+		+done-request()
+		+write-review()
+		+success-add-review()
+		+registration()
+		+sign-in()
+		+review-not-rating()
+
 			//- Include your components here
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();
 
 		//- Main scripts. You can replace it, but I recommend you to leave it here
-		script(src='%=static=%js/main%=hash=%.js')
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -29,9 +29,9 @@ mixin header(data)
 							a(href="#").header__guid-link.btn.btn.btn--star.btn--icon
 								+icon('star-stroke', '17', '16')
 								span 1 200 бонусов
-							a(href="#").header__guid-link.header__guid-link--user.btn.btn--user.btn--icon
+							button(type="button" data-toggle="modal" data-target="#registration-modal").header__guid-link.header__guid-link--user.btn.btn--user.btn--icon
 								+icon('user', '15', '17')
-								span Константинопольский К.
+								span Войти в личный кабинет
 
 		.header__inner
 			.container

@@ -31,4 +31,13 @@
     category.addClass('active');
     mobileMenu.find('.mobile-menu__content').hide();
   });
+
+  $(document).mouseup(function (e) {
+    if ($(e.target).closest(".mobile-menu__inner").length == 0) {
+      mobileMenu.removeClass('active');
+      category.addClass('active');
+      mobileMenu.find('.mobile-menu__sub-list').hide();
+    }
+  });
+
 })();

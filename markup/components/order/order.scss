@@ -107,11 +107,11 @@
       transform: translateY(-50%);
     }
     &--pickup::before {
-      background-image: url(%=static=%general/box.svg);
+      background-image: url(%=static=%minified-svg/box.svg);
       background-size: 19px 19px;
     }
     &--courier::before {
-      background-image: url(%=static=%general/car.svg);
+      background-image: url(%=static=%minified-svg/car.svg);
       background-size: 17px 15px;
     }
     &--cash {

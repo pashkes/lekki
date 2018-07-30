@@ -4,8 +4,8 @@ mixin filter(data)
 	.filter
 		.modal-backdrop.fade
 		form.filter__wrapper.js-filter
-			.filter__inner
-				button(type="button").filter__close.btn.btn--close.d-xl-none.js-close-filter
+			.custom-modal.filter__inner
+				button(type="button").custom-modal__close.btn.btn--close.d-xl-none.js-close-filter
 					+icon('close', 14, 14)
 					| close
 				.filter__categories
@@ -121,7 +121,7 @@ mixin filter(data)
 									i Показать все
 									span 49
 
-				footer.filter__footer
+				footer.custom-modal__footer.filter__footer
 					.row
 						.col-md.d-xl-none
 							button.filter__show-products.filter__btn.btn.btn--red Показать

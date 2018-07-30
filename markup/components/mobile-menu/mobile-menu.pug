@@ -94,9 +94,9 @@ mixin mobile-menu(data)
 									+icon('star-stroke', '17', '16')
 									span 1 200 бонусов
 							li
-								a(href="#").mobile-menu__user-buttons.btn.btn--user.btn--icon
+								button(type="button" data-toggle="modal" data-target="#registration-modal").mobile-menu__user-buttons.btn.btn--user.btn--icon
 									+icon('user', '15', '17')
-									span Константинопольский К.
+									span  Войти в личный кабинет
 						button(type="button").mobile-menu__menu-close.js-close-mobile-menu
 							| закрыть меню
 							+icon('cross', '14', '14')
@@ -140,5 +140,5 @@ mixin mobile-menu(data)
 						.mobile-menu__contacts
 							a(href="tel:+74950035555").mobile-menu__tel +7 495 003-55-55
 							span.mobile-menu__subtitle Москва, круглосуточно
-						a(href="#").mobile-menu__review.btn.btn--transparent Оставить отзыв
+						button(type="button" data-toggle="modal" data-target="#write-review-not-rating-modal").mobile-menu__review.btn.btn--transparent Оставить отзыв
 						+social(socialFooter)

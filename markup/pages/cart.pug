@@ -11,10 +11,14 @@ html(class="no-js", lang="ru")
 	include ../components/success-added/success-added
 	include ../components/spring/spring
 	include ../components/useful/useful
+	include ../components/order-fast/order-fast
+	include ../components/done-request/done-request
+	include ../components/registration/registration
+	include ../components/sign-in/sign-in
+	include ../components/review-not-rating/review-not-rating
+
 	head
 		+head(head.defaults)
-	//script(src='%=static=%js/separate-js/script.js')
-	link(href="%=static=%css/separate-css/styles.css" rel="stylesheet" type="text/css")
 	body
 		+header()
 		.container
@@ -27,8 +31,13 @@ html(class="no-js", lang="ru")
 		+demo()
 		+footer()
 		+success-added()
+		+order-fast()
+		+registration()
+		+sign-in()
+		+done-request()
+		+review-not-rating()
 			//- Include your components here
 		script(src='%=static=%js/separate-js/svg4everybody.min.js')
 		script svg4everybody();
 		//- Main scripts. You can replace it, but I recommend you to leave it here
-		script(src='%=static=%js/main%=hash=%.js')
+		script(src='%=static=%js/main%=hash=%%=min=%.js')

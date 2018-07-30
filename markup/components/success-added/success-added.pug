@@ -1,10 +1,10 @@
 mixin success-added(data)
 	.modal.fade#cart-list
 		div(role="document").modal-dialog.modal-dialog-centered
-			.success-added
-				.success-added__header
-					span.success-added__title Товар добавлен в корзину
-					button(type="button" data-dismiss="modal" aria-label="Close").success-added__close.btn.btn--close
+			.custom-modal.success-added
+				header.custom-modal__header
+					span.success-added__title.custom-modal__title Товар добавлен в корзину
+					button(type="button" data-dismiss="modal" aria-label="Close").custom-modal__close.btn.btn--close
 						+icon('close', 14, 14)
 						| закрыть
 				.row.justify-content-md-between.align-items-md-center.align-items-md-start
@@ -29,9 +29,9 @@ mixin success-added(data)
 								span.success-added__label-cost Сумма
 								span.success-added__cost.success-added__cost--right 6 390 &#8381;
 
-				.success-added__footer
+				.custom-modal__footer
 					.row
 						.col-md
-							button(type="button" data-dismiss="modal").success-added__btn.btn Продолжить покупки
+							button(type="button" data-dismiss="modal").success-added__btn.custom-modal__btn.btn Продолжить покупки
 						.col-md
-							a(href="#").success-added__btn.btn.btn--red Перейти в корзину
+							a(href="cart.html").success-added__btn.custom-modal__btn.btn.btn--red Перейти в корзину

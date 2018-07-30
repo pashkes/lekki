@@ -1,0 +1,44 @@
+mixin write-review(data)
+	.write-review
+		.modal.fade#write-review-modal
+			div(role="document").modal-dialog.modal-dialog-centered.order-fast
+				form.custom-modal#write-review
+					header.custom-modal__header
+						span.write-review__title.custom-modal__title Написать отзыв
+						button(type="button" data-dismiss="modal" aria-label="Close").custom-modal__close.btn.btn--close
+							+icon('close', 14, 14)
+							| закрыть
+					.custom-modal__content
+						p.custom-modal__desc
+							| Добавьте отзыв, заполнив личные данные, или сначала войдите
+							| на сайт, тогда информация будет автоматически взята из профиля.
+						.custom-modal__row
+							.row
+								.col-md-6
+									.write-review__inner-field
+										label(for="write-review-firs-name").label Ваше имя
+										input(type="text" placeholder="Иван Иванов" id="write-review-firs-name" required).custom-modal__field.field
+								.col-md-6
+									span.label.write-review__label Оцените товар
+									//reverse list star!!!
+									.write-review__list-star
+										input(type="radio" name="rating" value="5").write-review__radio-star#star-review-5
+										label(for="star-review-5").write-review__label-star 5
+											+icon('star', 30, 30)
+										input(type="radio" name="rating" value="4" checked).write-review__radio-star#star-review-4
+										label(for="star-review-4").write-review__label-star 4
+											+icon('star', 30, 30)
+										input(type="radio" name="rating" value="3" ).write-review__radio-star#star-review-3
+										label(for="star-review-3").write-review__label-star 3
+											+icon('star', 30, 30)
+										input(type="radio" name="rating" value="2").write-review__radio-star#star-review-2
+										label(for="star-review-2").write-review__label-star 2
+											+icon('star', 30, 30)
+										input(type="radio" name="rating" value="1" ).write-review__radio-star#star-review-1
+										label(for="star-review-1").write-review__label-star 1
+											+icon('star', 30, 30)
+						label(for="write-review-message").label Напишите отзыв
+						textarea(placeholder="Поделитесь своим мнением о приобритенном вами товаре.").custom-modal__field.field.field--textarea#write-review-message
+
+					footer.custom-modal__footer
+						button.custom-modal__btn.btn.btn--red.js-done-write-review Отправить отзыв

@@ -87,7 +87,8 @@
     }
     &--list {
       padding-left: 46px;
-      background: url(%=static=%general/burger-white.svg) 16px center no-repeat, $red;
+      background: url(%=static=%minified-svg/burger-white.svg) 16px center no-repeat, $red;
+      background-size: 15px auto;
       @include media-breakpoint-up(md) {
         background-position: center;
       }
@@ -95,7 +96,7 @@
         background-position: 16px center;
       }
       &.active {
-        background-image: url(%=static=%general/burger.svg);
+        background-image: url(%=static=%minified-svg/burger.svg);
       }
     }
   }

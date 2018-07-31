@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
 
     <!--[if (gt IE 9)|!(IE)]><!-->
-    <link href="static/css/mainr300lk.min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/maincohlbl.min.css" rel="stylesheet" type="text/css">
     <!--<![endif]-->
     <meta property="og:title" content="#{data.title}">
     <meta property="og:title" content="">
@@ -39,11 +39,15 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-auto">
-              <button class="header__location btn--location btn btn--icon" type="button">
+              <div class="header__location">
                 <svg class="icon" width="15" height="18" aria-hidden="true">
                   <use xlink:href="static/img/svg-symbols.svg#location"></use>
-                </svg><span>Москва и МO</span>
-              </button>
+                </svg>
+                <select class="js-custom-select-location">
+                  <option>Москва и МО</option>
+                  <option>Санкт-Петербург</option>
+                </select>
+              </div>
             </div>
             <div class="col-auto">
               <ul class="header__guide-menu">
@@ -66,11 +70,17 @@
                     <use xlink:href="static/img/svg-symbols.svg#star-stroke"></use>
                   </svg><span>1 200 бонусов</span>
                 </a>
-                <button class="header__guid-link header__guid-link--user btn btn--user btn--icon" type="button" data-toggle="modal" data-target="#registration-modal">
-                  <svg class="icon" width="15" height="17" aria-hidden="true">
-                    <use xlink:href="static/img/svg-symbols.svg#user"></use>
-                  </svg><span>Войти в личный кабинет</span>
-                </button>
+                <div class="header__user-item">
+                  <!--replace className .js-open-modal-sign-in on .js-open-tooltip for open tooltip-->
+                  <button class="header__guid-link header__guid-link--user btn btn--user btn--icon js-open-modal-sign-in" type="button">
+                    <svg class="icon" width="15" height="17" aria-hidden="true">
+                      <use xlink:href="static/img/svg-symbols.svg#user"></use>
+                    </svg><span>Войти в личный кабинет</span>
+                  </button>
+                  <form class="tooltip-custom js-custom-tooltip"><span class="tooltip-custom__title">Личный кабинет</span>
+                    <button class="tooltip-custom__btn btn">Выйти</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -173,11 +183,15 @@
                       <div class="mobile-menu__header">
                         <ul class="mobile-menu__btns">
                           <li>
-                            <button class="mobile-menu__user-buttons btn btn--location btn--icon" type="button">
+                            <div class="header__location">
                               <svg class="icon" width="15" height="18" aria-hidden="true">
                                 <use xlink:href="static/img/svg-symbols.svg#location"></use>
-                              </svg><span>Москва и МO</span>
-                            </button>
+                              </svg>
+                              <select class="js-custom-select-location-mobile">
+                                <option>Москва и МО</option>
+                                <option>Санкт-Петербург</option>
+                              </select>
+                            </div>
                           </li>
                           <li>
                             <a class="mobile-menu__user-buttons btn btn--star btn--icon" href="#">
@@ -187,11 +201,15 @@
                             </a>
                           </li>
                           <li>
-                            <button class="mobile-menu__user-buttons btn btn--user btn--icon" type="button" data-toggle="modal" data-target="#registration-modal">
+                            <!--replace className .js-open-modal-sign-in on .js-open-tooltip for open tooltip-->
+                            <button class="mobile-menu__user-buttons btn btn--user btn--icon js-open-modal-sign-in" type="button">
                               <svg class="icon" width="15" height="17" aria-hidden="true">
                                 <use xlink:href="static/img/svg-symbols.svg#user"></use>
                               </svg><span> Войти в личный кабинет</span>
                             </button>
+                            <form class="tooltip-custom js-custom-tooltip"><span class="tooltip-custom__title">Личный кабинет</span>
+                              <button class="tooltip-custom__btn btn">Выйти</button>
+                            </form>
                           </li>
                         </ul>
                         <button class="mobile-menu__menu-close js-close-mobile-menu" type="button">закрыть меню
@@ -1220,7 +1238,7 @@
     <script>
       svg4everybody();
     </script>
-    <script src="static/js/mainr300lk.min.js"></script>
+    <script src="static/js/maincohlbl.min.js"></script>
   </body>
 
 </html>

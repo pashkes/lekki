@@ -86,17 +86,23 @@ mixin mobile-menu(data)
 					.mobile-menu__header
 						ul.mobile-menu__btns
 							li
-								button(type="button").mobile-menu__user-buttons.btn.btn--location.btn--icon
+								.header__location
 									+icon('location', '15', '18')
-									span Москва и МO
+									select.js-custom-select-location-mobile
+										option Москва и МО
+										option Санкт-Петербург
 							li
 								a(href="#").mobile-menu__user-buttons.btn.btn--star.btn--icon
 									+icon('star-stroke', '17', '16')
 									span 1 200 бонусов
 							li
-								button(type="button" data-toggle="modal" data-target="#registration-modal").mobile-menu__user-buttons.btn.btn--user.btn--icon
+								//replace className .js-open-modal-sign-in on .js-open-tooltip for open tooltip
+								button(type="button").mobile-menu__user-buttons.btn.btn--user.btn--icon.js-open-modal-sign-in
 									+icon('user', '15', '17')
 									span  Войти в личный кабинет
+								form.tooltip-custom.js-custom-tooltip
+									span.tooltip-custom__title Личный кабинет
+									button.tooltip-custom__btn.btn Выйти
 						button(type="button").mobile-menu__menu-close.js-close-mobile-menu
 							| закрыть меню
 							+icon('cross', '14', '14')

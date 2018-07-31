@@ -14,12 +14,12 @@
     placeholder: 'Год',
     floatWidth: 144
   });
-  if ($('.optWrapper').length) {
-    new SimpleBar($('.options')[0],
+  if ($('.cabinet .options').length) {
+    new SimpleBar($('.cabinet .options')[0],
       {autoHide: false});
-    new SimpleBar($('.options')[1],
+    new SimpleBar($('.cabinet .options')[1],
       {autoHide: false});
-    new SimpleBar($('.options')[2],
+    new SimpleBar($('.cabinet .options')[2],
       {autoHide: false});
   }
   $('.js-show-hide-password').on('click', function () {

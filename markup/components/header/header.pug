@@ -9,9 +9,11 @@ mixin header(data)
 			.container
 				.row.align-items-center
 					.col-auto
-						button(type="button").header__location.btn--location.btn.btn--icon
+						.header__location
 							+icon('location', '15', '18')
-							span Москва и МO
+							select.js-custom-select-location
+								option Москва и МО
+								option Санкт-Петербург
 					.col-auto
 						ul.header__guide-menu
 							li.header__guide-item
@@ -29,9 +31,14 @@ mixin header(data)
 							a(href="#").header__guid-link.btn.btn.btn--star.btn--icon
 								+icon('star-stroke', '17', '16')
 								span 1 200 бонусов
-							button(type="button" data-toggle="modal" data-target="#registration-modal").header__guid-link.header__guid-link--user.btn.btn--user.btn--icon
-								+icon('user', '15', '17')
-								span Войти в личный кабинет
+							.header__user-item
+								//replace className .js-open-modal-sign-in on .js-open-tooltip for open tooltip
+								button(type="button").header__guid-link.header__guid-link--user.btn.btn--user.btn--icon.js-open-modal-sign-in
+									+icon('user', '15', '17')
+									span Войти в личный кабинет
+								form.tooltip-custom.js-custom-tooltip
+									span.tooltip-custom__title Личный кабинет
+									button.tooltip-custom__btn.btn Выйти
 
 		.header__inner
 			.container

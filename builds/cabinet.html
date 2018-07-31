@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
 
     <!--[if (gt IE 9)|!(IE)]><!-->
-    <link href="/static/css/main.css" rel="stylesheet" type="text/css">
+    <link href="static/css/maincohlbl.min.css" rel="stylesheet" type="text/css">
     <!--<![endif]-->
     <meta property="og:title" content="#{data.title}">
     <meta property="og:title" content="">
@@ -39,11 +39,15 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-auto">
-              <button class="header__location btn--location btn btn--icon" type="button">
+              <div class="header__location">
                 <svg class="icon" width="15" height="18" aria-hidden="true">
-                  <use xlink:href="../static/img/svg-symbols.svg#location"></use>
-                </svg><span>Москва и МO</span>
-              </button>
+                  <use xlink:href="static/img/svg-symbols.svg#location"></use>
+                </svg>
+                <select class="js-custom-select-location">
+                  <option>Москва и МО</option>
+                  <option>Санкт-Петербург</option>
+                </select>
+              </div>
             </div>
             <div class="col-auto">
               <ul class="header__guide-menu">
@@ -63,14 +67,20 @@
               <div class="header__user-bar">
                 <a class="header__guid-link btn btn btn--star btn--icon" href="#">
                   <svg class="icon" width="17" height="16" aria-hidden="true">
-                    <use xlink:href="../static/img/svg-symbols.svg#star-stroke"></use>
+                    <use xlink:href="static/img/svg-symbols.svg#star-stroke"></use>
                   </svg><span>1 200 бонусов</span>
                 </a>
-                <button class="header__guid-link header__guid-link--user btn btn--user btn--icon" type="button" data-toggle="modal" data-target="#registration-modal">
-                  <svg class="icon" width="15" height="17" aria-hidden="true">
-                    <use xlink:href="../static/img/svg-symbols.svg#user"></use>
-                  </svg><span>Войти в личный кабинет</span>
-                </button>
+                <div class="header__user-item">
+                  <!--replace className .js-open-modal-sign-in on .js-open-tooltip for open tooltip-->
+                  <button class="header__guid-link header__guid-link--user btn btn--user btn--icon js-open-modal-sign-in" type="button">
+                    <svg class="icon" width="15" height="17" aria-hidden="true">
+                      <use xlink:href="static/img/svg-symbols.svg#user"></use>
+                    </svg><span>Войти в личный кабинет</span>
+                  </button>
+                  <form class="tooltip-custom js-custom-tooltip"><span class="tooltip-custom__title">Личный кабинет</span>
+                    <button class="tooltip-custom__btn btn">Выйти</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -83,7 +93,7 @@
               <nav class="mobile-menu js-mobile-menu">
                 <button class="mobile-menu__btn mobile-menu__button--base js-menu-show-mobile" type="button">
                   <svg class="icon" width="16" height="14" aria-hidden="true">
-                    <use xlink:href="../static/img/svg-symbols.svg#menu-default"></use>
+                    <use xlink:href="static/img/svg-symbols.svg#menu-default"></use>
                   </svg>показать меню
                 </button>
                 <div class="mobile-menu__wrapper">
@@ -92,12 +102,12 @@
                       <div class="mobile-menu__sub-header">
                         <button class="mobile-menu__back btn btn--back js-back-home" type="button">
                           <svg class="icon" width="16" height="19" aria-hidden="true">
-                            <use xlink:href="../static/img/svg-symbols.svg#arrow-left"></use>
+                            <use xlink:href="static/img/svg-symbols.svg#arrow-left"></use>
                           </svg>вернутся назад
                         </button><span class="mobile-menu__name">лекарства и бады</span>
                         <button class="mobile-menu__menu-close js-close-mobile-menu" type="button">закрыть меню
                           <svg class="icon" width="14" height="14" aria-hidden="true">
-                            <use xlink:href="../static/img/svg-symbols.svg#cross"></use>
+                            <use xlink:href="static/img/svg-symbols.svg#cross"></use>
                           </svg>
                         </button>
                       </div>
@@ -166,37 +176,45 @@
                         </li>
                       </ul><a class="mobile-menu__show-all" href="#"><span>Показать все</span>
                               <svg class="icon" width="14" height="11" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#arrow-right"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#arrow-right"></use>
                               </svg></a>
                     </div>
                     <div class="mobile-menu__content">
                       <div class="mobile-menu__header">
                         <ul class="mobile-menu__btns">
                           <li>
-                            <button class="mobile-menu__user-buttons btn btn--location btn--icon" type="button">
+                            <div class="header__location">
                               <svg class="icon" width="15" height="18" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#location"></use>
-                              </svg><span>Москва и МO</span>
-                            </button>
+                                <use xlink:href="static/img/svg-symbols.svg#location"></use>
+                              </svg>
+                              <select class="js-custom-select-location-mobile">
+                                <option>Москва и МО</option>
+                                <option>Санкт-Петербург</option>
+                              </select>
+                            </div>
                           </li>
                           <li>
                             <a class="mobile-menu__user-buttons btn btn--star btn--icon" href="#">
                               <svg class="icon" width="17" height="16" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#star-stroke"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#star-stroke"></use>
                               </svg><span>1 200 бонусов</span>
                             </a>
                           </li>
                           <li>
-                            <button class="mobile-menu__user-buttons btn btn--user btn--icon" type="button" data-toggle="modal" data-target="#registration-modal">
+                            <!--replace className .js-open-modal-sign-in on .js-open-tooltip for open tooltip-->
+                            <button class="mobile-menu__user-buttons btn btn--user btn--icon js-open-modal-sign-in" type="button">
                               <svg class="icon" width="15" height="17" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#user"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#user"></use>
                               </svg><span> Войти в личный кабинет</span>
                             </button>
+                            <form class="tooltip-custom js-custom-tooltip"><span class="tooltip-custom__title">Личный кабинет</span>
+                              <button class="tooltip-custom__btn btn">Выйти</button>
+                            </form>
                           </li>
                         </ul>
                         <button class="mobile-menu__menu-close js-close-mobile-menu" type="button">закрыть меню
                           <svg class="icon" width="14" height="14" aria-hidden="true">
-                            <use xlink:href="../static/img/svg-symbols.svg#cross"></use>
+                            <use xlink:href="static/img/svg-symbols.svg#cross"></use>
                           </svg>
                         </button>
                       </div>
@@ -208,7 +226,7 @@
                             <div class="col-auto">
                               <a class="mobile-menu__heart btn btn--heart btn--icon btn--transparent" href="#">
                                 <svg class="icon" width="17" height="15" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#heart"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#heart"></use>
                                 </svg>
                               </a>
                             </div>
@@ -253,35 +271,35 @@
                           <li class="social__item">
                             <a class="social__link" href="#">
                               <svg class="icon" width="21" height="12" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#vk"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#vk"></use>
                               </svg>
                             </a>
                           </li>
                           <li class="social__item">
                             <a class="social__link" href="#">
                               <svg class="icon" width="10" height="20" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#fb"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#fb"></use>
                               </svg>
                             </a>
                           </li>
                           <li class="social__item">
                             <a class="social__link" href="#">
                               <svg class="icon" width="18" height="18" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#insta"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#insta"></use>
                               </svg>
                             </a>
                           </li>
                           <li class="social__item">
                             <a class="social__link" href="#">
                               <svg class="icon" width="18" height="12" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#youtube"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#youtube"></use>
                               </svg>
                             </a>
                           </li>
                           <li class="social__item">
                             <a class="social__link" href="#">
                               <svg class="icon" width="18" height="18" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#telegram"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#telegram"></use>
                               </svg>
                             </a>
                           </li>
@@ -294,18 +312,18 @@
             </div>
             <div class="col-auto">
               <a class="header__logo" href="index.html">
-                <img src="/static/img/general/logo.svg" width="120" alt="Lekki - интернет аптека">
+                <img src="static/img/general/logo.svg" width="120" alt="Lekki - интернет аптека">
               </a>
             </div>
             <div class="col-md-auto d-none d-md-block ml-md-auto">
               <div class="header__download-apps d-none d-xl-inline-block">
                 <a class="header__app-link" href="#">
                   <svg class="icon" width="13" height="16" aria-hidden="true">
-                    <use xlink:href="../static/img/svg-symbols.svg#apple-store"></use>
+                    <use xlink:href="static/img/svg-symbols.svg#apple-store"></use>
                   </svg>Apple Store</a>
                 <a class="header__app-link" href="#">
                   <svg class="icon" width="14" height="15" aria-hidden="true">
-                    <use xlink:href="../static/img/svg-symbols.svg#play-market"></use>
+                    <use xlink:href="static/img/svg-symbols.svg#play-market"></use>
                   </svg>Google Play</a><span class="header__additional-text">Загрузи приложение, получи CASHBACK 15%</span>
               </div>
               <div class="header__additional-info">
@@ -313,7 +331,7 @@
                 </div>
                 <a class="btn btn--heart" href="#">
                   <svg class="icon" width="17" height="15" aria-hidden="true">
-                    <use xlink:href="../static/img/svg-symbols.svg#heart"></use>
+                    <use xlink:href="static/img/svg-symbols.svg#heart"></use>
                   </svg>добавить в список желаний</a>
               </div>
             </div>
@@ -321,7 +339,7 @@
               <!-- add class .header__cart--has-products if were added products in the cart-->
               <button class="header__cart header__cart--has-products btn btn--icon js-cart-list" type="button">
                 <svg class="icon" width="19" height="16" aria-hidden="true">
-                  <use xlink:href="../static/img/svg-symbols.svg#cart"></use>
+                  <use xlink:href="static/img/svg-symbols.svg#cart"></use>
                 </svg><span class="header__cart-inner"><span>5 товаров</span><span class="header__cost">&nbsp;&#8211;&nbsp;4 560</span><span class="header__symbol">&nbsp;&#8381;</span></span>
               </button>
               <div class="header-cart js-cart">
@@ -332,7 +350,7 @@
                       <p class="header-cart__title">Корзина</p>
                       <button class="btn btn--close js-close-cart" type="button">
                         <svg class="icon" width="14" height="14" aria-hidden="true">
-                          <use xlink:href="../static/img/svg-symbols.svg#close"></use>
+                          <use xlink:href="static/img/svg-symbols.svg#close"></use>
                         </svg>закрыть
                       </button>
                     </div>
@@ -342,7 +360,7 @@
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
-                                <img src="/static/img/content/019.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос200мл">
+                                <img src="static/img/content/019.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос200мл">
                               </a>
                             </div>
                             <div class="col">
@@ -360,7 +378,7 @@
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
-                                <img src="/static/img/content/014.jpg" alt="Генеролон спрей для наружного применения 5% 60мл">
+                                <img src="static/img/content/014.jpg" alt="Генеролон спрей для наружного применения 5% 60мл">
                               </a>
                             </div>
                             <div class="col">
@@ -378,7 +396,7 @@
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
-                                <img src="/static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл">
                               </a>
                             </div>
                             <div class="col">
@@ -396,7 +414,7 @@
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
-                                <img src="/static/img/content/010.jpg" alt="Урьяж розельян крем для кожи склонной к куперозу 40мл">
+                                <img src="static/img/content/010.jpg" alt="Урьяж розельян крем для кожи склонной к куперозу 40мл">
                               </a>
                             </div>
                             <div class="col">
@@ -414,7 +432,7 @@
                           <div class="row align-items-center">
                             <div class="col-auto">
                               <a class="header-cart__img" href="#">
-                                <img src="/static/img/content/006.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос200мл">
+                                <img src="static/img/content/006.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос200мл">
                               </a>
                             </div>
                             <div class="col">
@@ -446,7 +464,7 @@
               <div class="col-auto d-none d-xl-block">
                 <button class="btn btn--icon btn--red header__show-menu js-show-menu" type="button">
                   <svg class="icon" width="16" height="14" aria-hidden="true">
-                    <use xlink:href="../static/img/svg-symbols.svg#menu-default"></use>
+                    <use xlink:href="static/img/svg-symbols.svg#menu-default"></use>
                   </svg><span>Каталог</span>
                 </button>
               </div>
@@ -454,7 +472,7 @@
                 <form class="header__search-inner">
                   <label class="header__label">
                     <svg class="icon header__search-icon" width="16" height="16" aria-hidden="true">
-                      <use xlink:href="../static/img/svg-symbols.svg#search"></use>
+                      <use xlink:href="static/img/svg-symbols.svg#search"></use>
                     </svg>
                     <input class="header__field field field--border-white" type="search" placeholder="Я ищу..." required>
                   </label>
@@ -544,7 +562,7 @@
                         </li>
                       </ul><a class="menu__show-all" href="#">Показать все
                               <svg class="icon" width="16" height="16" aria-hidden="true">
-                                <use xlink:href="../static/img/svg-symbols.svg#arrow-right"></use>
+                                <use xlink:href="static/img/svg-symbols.svg#arrow-right"></use>
                               </svg></a>
                     </div>
                     <div class="col">
@@ -561,13 +579,13 @@
                               </div>
                               <div class="menu__sticker sticker">
                                 <svg class="icon" width="40" height="40" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#sticker"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
                                 </svg><span>Хит!</span>
                               </div>
                             </li>
                             <li class="menu__product">
                               <a class="menu__img" href="#">
-                                <img src="/static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
+                                <img src="static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
                               </a>
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
@@ -577,13 +595,13 @@
                               </div>
                               <div class="menu__sticker sticker">
                                 <svg class="icon" width="40" height="40" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#sticker"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
                                 </svg><span>Хит!</span>
                               </div>
                             </li>
                             <li class="menu__product">
                               <a class="menu__img" href="#">
-                                <img src="/static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
                               </a>
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
@@ -593,7 +611,7 @@
                               </div>
                               <div class="menu__sticker sticker">
                                 <svg class="icon" width="40" height="40" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#sticker"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
                                 </svg><span>Хит!</span>
                               </div>
                             </li>
@@ -603,7 +621,7 @@
                           <ul class="menu__products">
                             <li class="menu__product">
                               <a class="menu__img" href="#">
-                                <img src="/static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
                               </a>
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
@@ -613,13 +631,13 @@
                               </div>
                               <div class="menu__sticker sticker">
                                 <svg class="icon" width="40" height="40" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#sticker"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
                                 </svg><span>Хит!</span>
                               </div>
                             </li>
                             <li class="menu__product">
                               <a class="menu__img" href="#">
-                                <img src="/static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
+                                <img src="static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
                               </a>
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
@@ -629,13 +647,13 @@
                               </div>
                               <div class="menu__sticker sticker">
                                 <svg class="icon" width="40" height="40" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#sticker"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
                                 </svg><span>Хит!</span>
                               </div>
                             </li>
                             <li class="menu__product">
                               <a class="menu__img" href="#">
-                                <img src="/static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
                               </a>
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
@@ -645,7 +663,7 @@
                               </div>
                               <div class="menu__sticker sticker">
                                 <svg class="icon" width="40" height="40" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#sticker"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
                                 </svg><span>Хит!</span>
                               </div>
                             </li>
@@ -691,7 +709,7 @@
                           <ul class="menu__products">
                             <li class="menu__product">
                               <a class="menu__img" href="#">
-                                <img src="/static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
                               </a>
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
@@ -701,13 +719,13 @@
                               </div>
                               <div class="menu__sticker sticker">
                                 <svg class="icon" width="40" height="40" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#sticker"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
                                 </svg><span>Хит!</span>
                               </div>
                             </li>
                             <li class="menu__product">
                               <a class="menu__img" href="#">
-                                <img src="/static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
+                                <img src="static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
                               </a>
                               <div class="menu__product-info">
                                 <h3 class="menu__title"><a href="#">
@@ -717,7 +735,7 @@
                               </div>
                               <div class="menu__sticker sticker">
                                 <svg class="icon" width="40" height="40" aria-hidden="true">
-                                  <use xlink:href="../static/img/svg-symbols.svg#sticker"></use>
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
                                 </svg><span>Хит!</span>
                               </div>
                             </li>
@@ -763,7 +781,7 @@
                   <div class="row">
                     <div class="col-12 order-md-1 order-xl-0">
                       <a class="personal-info__special" href="#">
-                        <img src="/static/img/general/megaphone.svg" alt="персональное спецпредложение">
+                        <img src="static/img/general/megaphone.svg" alt="персональное спецпредложение">
                         <h3 class="personal-info__title-spec">персональное спецпредложение</h3>
                       </a>
                     </div>
@@ -1113,7 +1131,7 @@
               <div class="pagination">
                 <a class="pagination__prev disabled" href="#">
                   <svg class="icon" width="10" height="9" aria-hidden="true">
-                    <use xlink:href="../static/img/svg-symbols.svg#page-prev"></use>
+                    <use xlink:href="static/img/svg-symbols.svg#page-prev"></use>
                   </svg>Назад</a>
                 <ul class="pagination__list">
                   <li class="pagination__item"><a class="pagination__page active" href="#">1</a>
@@ -1140,7 +1158,7 @@
                   </li>
                 </ul><a class="pagination__next" href="">Вперед
                         <svg class="icon" width="10" height="9" aria-hidden="true">
-                          <use xlink:href="../static/img/svg-symbols.svg#page-next"></use>
+                          <use xlink:href="static/img/svg-symbols.svg#page-next"></use>
                         </svg></a>
               </div>
             </footer>
@@ -1223,35 +1241,35 @@
                   <li class="social__item">
                     <a class="social__link" href="#">
                       <svg class="icon" width="21" height="12" aria-hidden="true">
-                        <use xlink:href="../static/img/svg-symbols.svg#vk"></use>
+                        <use xlink:href="static/img/svg-symbols.svg#vk"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
                     <a class="social__link" href="#">
                       <svg class="icon" width="10" height="20" aria-hidden="true">
-                        <use xlink:href="../static/img/svg-symbols.svg#fb"></use>
+                        <use xlink:href="static/img/svg-symbols.svg#fb"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
                     <a class="social__link" href="#">
                       <svg class="icon" width="18" height="18" aria-hidden="true">
-                        <use xlink:href="../static/img/svg-symbols.svg#insta"></use>
+                        <use xlink:href="static/img/svg-symbols.svg#insta"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
                     <a class="social__link" href="#">
                       <svg class="icon" width="18" height="12" aria-hidden="true">
-                        <use xlink:href="../static/img/svg-symbols.svg#youtube"></use>
+                        <use xlink:href="static/img/svg-symbols.svg#youtube"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
                     <a class="social__link" href="#">
                       <svg class="icon" width="18" height="18" aria-hidden="true">
-                        <use xlink:href="../static/img/svg-symbols.svg#telegram"></use>
+                        <use xlink:href="static/img/svg-symbols.svg#telegram"></use>
                       </svg>
                     </a>
                   </li>
@@ -1266,7 +1284,7 @@
           <div class="row align-items-xl-center">
             <div class="col-auto d-none d-md-block">
               <a class="footer__logo" href="#">
-                <img src="/static/img/general/logo.svg" alt="Lekki - интернет аптека">
+                <img src="static/img/general/logo.svg" alt="Lekki - интернет аптека">
               </a>
             </div>
             <div class="col">
@@ -1290,7 +1308,7 @@
             <header class="custom-modal__header"><span class="custom-modal__title">Вход на сайт</span>
               <button class="custom-modal__close btn btn--close" type="button" data-dismiss="modal" aria-label="Close">
                 <svg class="icon" width="14" height="14" aria-hidden="true">
-                  <use xlink:href="../static/img/svg-symbols.svg#close"></use>
+                  <use xlink:href="static/img/svg-symbols.svg#close"></use>
                 </svg>закрыть
               </button>
             </header>
@@ -1332,7 +1350,7 @@
             <header class="custom-modal__header"><span class="custom-modal__title">Вход на сайт</span>
               <button class="custom-modal__close btn btn--close" type="button" data-dismiss="modal" aria-label="Close">
                 <svg class="icon" width="14" height="14" aria-hidden="true">
-                  <use xlink:href="../static/img/svg-symbols.svg#close"></use>
+                  <use xlink:href="static/img/svg-symbols.svg#close"></use>
                 </svg>закрыть
               </button>
             </header>
@@ -1362,11 +1380,11 @@
         </div>
       </div>
     </div>
-    <script src="/static/js/separate-js/svg4everybody.min.js"></script>
+    <script src="static/js/separate-js/svg4everybody.min.js"></script>
     <script>
       svg4everybody();
     </script>
-    <script src="/static/js/main.js"></script>
+    <script src="static/js/maincohlbl.min.js"></script>
   </body>
 
 </html>

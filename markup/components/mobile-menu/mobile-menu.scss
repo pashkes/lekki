@@ -51,6 +51,10 @@
   }
   &__user-buttons {
     position: relative;
+    &:hover, &:focus span {
+      color: $red;
+      border-bottom-color: transparent;
+    }
     .icon {
       margin-right: 12px;
     }
@@ -60,6 +64,7 @@
     padding: 0;
     list-style-type: none;
     li {
+      position: relative;
       margin-bottom: 12px;
       &:last-child {
         .mobile-menu__user-buttons {

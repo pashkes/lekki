@@ -5,9 +5,79 @@
     color: #fff;
   }
   &__location {
-    margin-right: 24px;
+    display: flex;
+    align-items: center;
     span {
       line-height: 1.2;
+    }
+    .icon {
+      fill: $warm-grey;
+      margin-right: 12px;
+    }
+    div.SumoSelect > .CaptionCont {
+      min-height: initial;
+      border: none;
+      background-color: transparent;
+      color: #fff;
+    }
+    .SumoSelect {
+      width: 115px;
+    }
+    div.SumoSelect > .CaptionCont > label {
+      display: none;
+    }
+    div.SumoSelect > .CaptionCont {
+      padding-right: 0;
+      padding-left: 0;
+      text-align: left;
+    }
+    .SumoSelect > .CaptionCont > span {
+      letter-spacing: 0.2px;
+      color: $warm-grey;
+      border-bottom: 1px dashed $warm-grey;
+      font-size: 13px;
+      padding-right: 0;
+      font-weight: 500;
+      transition: $transition-base;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    div.SumoSelect > .optWrapper {
+      padding: 18px 16px 16px;
+      border-radius: 4px;
+      box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.12);
+      border: solid 1px $white-two;
+      width: auto;
+    }
+    div.SumoSelect.open > .optWrapper {
+      top: calc(100% + 3px);
+      left: -15px;
+    }
+    div.SumoSelect.open {
+      .CaptionCont > span {
+        color: $red;
+        border-bottom-color: transparent;
+      }
+    }
+    div.SumoSelect:hover > .CaptionCont {
+      > span {
+        border-bottom-color: transparent;
+        color: $red;
+      }
+    }
+    div.SumoSelect > .optWrapper > .options li.opt {
+      padding: 1px 0;
+      &.selected label {
+        color: $warm-grey-two;
+      }
+    }
+    .SumoSelect > .optWrapper > .options li label {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.38;
+    }
+    div.SumoSelect > .optWrapper > .options {
+      min-height: initial;
     }
   }
   &__guide-menu {
@@ -36,15 +106,18 @@
   }
   &__guid-link {
     color: #fff;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $red;
+      border-bottom-color: transparent;
     }
     &:first-child {
       margin-right: 25px;
     }
     &--user {
-      .icon {
-
+      &.active span {
+        border-bottom-color: transparent;
+        color: $red;
       }
     }
     span {
@@ -149,7 +222,7 @@
     padding-left: 11px;
     padding-right: 8px;
 
-    &:hover .header__cart-inner{
+    &:hover .header__cart-inner {
       border-bottom-color: transparent;
     }
     &:focus {
@@ -294,6 +367,12 @@
     }
     @include media-breakpoint-up(xl) {
       min-width: 150px;
+    }
+  }
+  &__user-item {
+    position: relative;
+    .header__guid-link {
+      margin-right: 0;
     }
   }
 }

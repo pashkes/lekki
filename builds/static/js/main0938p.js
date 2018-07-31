@@ -5918,8 +5918,6 @@ if ($('.header')) {
 
 
 
-
-
 (function () {
   var productSlider = $('.js-products-slider');
   var advantageSliderSettigs = {
@@ -5961,6 +5959,8 @@ if ($('.header')) {
   };
 
 })();
+
+
 
 
 

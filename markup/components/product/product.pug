@@ -43,6 +43,6 @@ mixin product(data)
 								| добавить товар в избранное
 								+icon('heart', '17', '15')
 						else
-							a(href="#").product__btn-icon.btn.btn--heart
+							button(type="button").product__btn-icon.btn.btn--heart.js-add-favorite
 								| добавить товар в избранное
 								+icon('heart', '17', '15')

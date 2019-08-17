@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>default title</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="HandheldFriendly" content="true">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;amp;subset=cyrillic" rel="stylesheet">
+
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <link href="static/css/mainxyrmep.min.css" rel="stylesheet" type="text/css">
+    <!--<![endif]-->
+    <meta property="og:title" content="#{data.title}">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="300">
+    <meta property="twitter:description" content="">
+    <link rel="image_src" href="">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+      (function (H) {
+        	H.className = H.className.replace(/\bno-js\b/, 'js')
+        })(document.documentElement)
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__user-panel d-none d-xl-block">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <div class="header__location">
+                <svg class="icon" width="15" height="18" aria-hidden="true">
+                  <use xlink:href="static/img/svg-symbols.svg#location"></use>
+                </svg>
+                <select class="js-custom-select-location">
+                  <option>Москва и МО</option>
+                  <option>Санкт-Петербург</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-auto">
+              <ul class="header__guide-menu">
+                <li class="header__guide-item"><a href="#">Самовывоз</a>
+                </li>
+                <li class="header__guide-item"><a href="#">Доставка лекарств</a>
+                </li>
+                <li class="header__guide-item"><a href="#">Оплата</a>
+                </li>
+                <li class="header__guide-item"><a href="#">Как сделать заказ</a>
+                </li>
+                <li class="header__guide-item"><a href="#">Бонусная программа</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto ml-auto">
+              <div class="header__user-bar">
+                <a class="header__guid-link btn btn btn--star btn--icon" href="#">
+                  <svg class="icon" width="17" height="16" aria-hidden="true">
+                    <use xlink:href="static/img/svg-symbols.svg#star-stroke"></use>
+                  </svg><span>1 200 бонусов</span>
+                </a>
+                <div class="header__user-item">
+                  <!--replace className .js-open-modal-sign-in on .js-open-tooltip for open tooltip-->
+                  <button class="header__guid-link header__guid-link--user btn btn--user btn--icon js-open-modal-sign-in" type="button">
+                    <svg class="icon" width="15" height="17" aria-hidden="true">
+                      <use xlink:href="static/img/svg-symbols.svg#user"></use>
+                    </svg><span>Войти в личный кабинет</span>
+                  </button>
+                  <form class="tooltip-custom js-custom-tooltip"><span class="tooltip-custom__title">Личный кабинет</span>
+                    <button class="tooltip-custom__btn btn">Выйти</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__inner">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-auto d-xl-none">
+              <nav class="mobile-menu js-mobile-menu">
+                <button class="mobile-menu__btn mobile-menu__button--base js-menu-show-mobile" type="button">
+                  <svg class="icon" width="16" height="14" aria-hidden="true">
+                    <use xlink:href="static/img/svg-symbols.svg#menu-default"></use>
+                  </svg>показать меню
+                </button>
+                <div class="mobile-menu__wrapper">
+                  <div class="mobile-menu__inner">
+                    <div class="mobile-menu__category">
+                      <div class="mobile-menu__sub-header">
+                        <button class="mobile-menu__back btn btn--back js-back-home" type="button">
+                          <svg class="icon" width="16" height="19" aria-hidden="true">
+                            <use xlink:href="static/img/svg-symbols.svg#arrow-left"></use>
+                          </svg>вернутся назад
+                        </button><span class="mobile-menu__name">лекарства и бады</span>
+                        <button class="mobile-menu__menu-close js-close-mobile-menu" type="button">закрыть меню
+                          <svg class="icon" width="14" height="14" aria-hidden="true">
+                            <use xlink:href="static/img/svg-symbols.svg#cross"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <ul class="mobile-menu__sub-list" id="sublist-1">
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Алкоголизм и курение</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Аллергия</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Верхние дыхательные пути</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Витамины и БАД</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Геморрой</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Гинекология и акушерство</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Глаза</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Гомеопатия</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Гормоны</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Грипп</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Дерматология (уход за кожей)</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Желудочно-кишечный тракт</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Иммуномодуляторы и противовирусные</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Мочеполовая система</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Нервная система</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Обезболивающие и спазмолитики</a>
+                        </li>
+                      </ul>
+                      <ul class="mobile-menu__sub-list" id="sublist-2">
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Алкоголизм и курение</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Аллергия</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Верхние дыхательные пути</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Витамины и БАД</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Геморрой</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Гинекология и акушерство</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Глаза</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Гомеопатия</a>
+                        </li>
+                      </ul>
+                      <ul class="mobile-menu__sub-list" id="sublist-3">
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Алкоголизм и курение</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Аллергия</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Верхние дыхательные пути</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Витамины и БАД</a>
+                        </li>
+                        <li class="mobile-menu__sub-item"><a class="mobile-menu__sub-link" href="#">Геморрой</a>
+                        </li>
+                      </ul><a class="mobile-menu__show-all" href="#"><span>Показать все</span>
+                              <svg class="icon" width="14" height="11" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#arrow-right"></use>
+                              </svg></a>
+                    </div>
+                    <div class="mobile-menu__content">
+                      <div class="mobile-menu__header">
+                        <ul class="mobile-menu__btns">
+                          <li>
+                            <div class="header__location">
+                              <svg class="icon" width="15" height="18" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#location"></use>
+                              </svg>
+                              <select class="js-custom-select-location-mobile">
+                                <option>Москва и МО</option>
+                                <option>Санкт-Петербург</option>
+                              </select>
+                            </div>
+                          </li>
+                          <li>
+                            <a class="mobile-menu__user-buttons btn btn--star btn--icon" href="#">
+                              <svg class="icon" width="17" height="16" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#star-stroke"></use>
+                              </svg><span>1 200 бонусов</span>
+                            </a>
+                          </li>
+                          <li>
+                            <!--replace className .js-open-modal-sign-in on .js-open-tooltip for open tooltip-->
+                            <button class="mobile-menu__user-buttons btn btn--user btn--icon js-open-modal-sign-in" type="button">
+                              <svg class="icon" width="15" height="17" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#user"></use>
+                              </svg><span> Войти в личный кабинет</span>
+                            </button>
+                            <form class="tooltip-custom js-custom-tooltip"><span class="tooltip-custom__title">Личный кабинет</span>
+                              <button class="tooltip-custom__btn btn">Выйти</button>
+                            </form>
+                          </li>
+                        </ul>
+                        <button class="mobile-menu__menu-close js-close-mobile-menu" type="button">закрыть меню
+                          <svg class="icon" width="14" height="14" aria-hidden="true">
+                            <use xlink:href="static/img/svg-symbols.svg#cross"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="mobile-menu__body">
+                        <div class="mobile-menu__top-panel">
+                          <div class="row justify-content-between align-items-center">
+                            <div class="col"><span class="mobile-menu__title">Каталог</span>
+                            </div>
+                            <div class="col-auto">
+                              <a class="mobile-menu__heart btn btn--heart btn--icon btn--transparent" href="#">
+                                <svg class="icon" width="17" height="15" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#heart"></use>
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="mobile-menu__main">
+                          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#sublist-1">Лекарства и бады</a>
+                          </li>
+                          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#sublist-2">Гигиена</a>
+                          </li>
+                          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#sublist-3">Красота и ухо</a>
+                          </li>
+                          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#sublist-">Мама и малыш</a>
+                          </li>
+                          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#sublist-">Диета и спорт</a>
+                          </li>
+                          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#sublist-">Оптика</a>
+                          </li>
+                          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#sublist-">Ортопедия</a>
+                          </li>
+                          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#sublist-">Все по 99 рублей</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile-menu__footer">
+                        <ul class="mobile-menu__guide">
+                          <li class="mobile-menu__guide-item"><a class="mobile-menu__guide-link" href="#">Самовывоз</a>
+                          </li>
+                          <li class="mobile-menu__guide-item"><a class="mobile-menu__guide-link" href="#">Доставка лекарств</a>
+                          </li>
+                          <li class="mobile-menu__guide-item"><a class="mobile-menu__guide-link" href="#">Оплата</a>
+                          </li>
+                          <li class="mobile-menu__guide-item"><a class="mobile-menu__guide-link" href="#">Как сделать заказ</a>
+                          </li>
+                          <li class="mobile-menu__guide-item"><a class="mobile-menu__guide-link" href="#">Бонусная программа</a>
+                          </li>
+                        </ul>
+                        <div class="mobile-menu__contacts"><a class="mobile-menu__tel" href="tel:+74950035555">+7 495 003-55-55</a><span class="mobile-menu__subtitle">Москва, круглосуточно</span>
+                        </div>
+                        <button class="mobile-menu__review btn btn--transparent" type="button" data-toggle="modal" data-target="#write-review-not-rating-modal">Оставить отзыв</button>
+                        <ul class="social">
+                          <li class="social__item">
+                            <a class="social__link" href="#">
+                              <svg class="icon" width="21" height="12" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#vk"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li class="social__item">
+                            <a class="social__link" href="#">
+                              <svg class="icon" width="10" height="20" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#fb"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li class="social__item">
+                            <a class="social__link" href="#">
+                              <svg class="icon" width="18" height="18" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#insta"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li class="social__item">
+                            <a class="social__link" href="#">
+                              <svg class="icon" width="18" height="12" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#youtube"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li class="social__item">
+                            <a class="social__link" href="#">
+                              <svg class="icon" width="18" height="18" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#telegram"></use>
+                              </svg>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="col-auto">
+              <a class="header__logo" href="index.html">
+                <img src="static/img/general/logo.svg" width="120" alt="Lekki - интернет аптека">
+              </a>
+            </div>
+            <div class="col-md-auto d-none d-md-block ml-md-auto">
+              <div class="header__download-apps d-none d-xl-inline-block">
+                <a class="header__app-link" href="#">
+                  <svg class="icon" width="13" height="16" aria-hidden="true">
+                    <use xlink:href="static/img/svg-symbols.svg#apple-store"></use>
+                  </svg>Apple Store</a>
+                <a class="header__app-link" href="#">
+                  <svg class="icon" width="14" height="15" aria-hidden="true">
+                    <use xlink:href="static/img/svg-symbols.svg#play-market"></use>
+                  </svg>Google Play</a><span class="header__additional-text">Загрузи приложение, получи CASHBACK 15%</span>
+              </div>
+              <div class="header__additional-info">
+                <div class="header__tel"><a href="tel:+74950035555">+7 495 003-55-55</a><span class="header__subtitle">Круглосуточно</span>
+                </div>
+                <a class="btn btn--heart" href="#">
+                  <svg class="icon" width="17" height="15" aria-hidden="true">
+                    <use xlink:href="static/img/svg-symbols.svg#heart"></use>
+                  </svg>добавить в список желаний</a>
+              </div>
+            </div>
+            <div class="col-auto ml-auto ml-md-0">
+              <!-- add class .header__cart--has-products if were added products in the cart-->
+              <button class="header__cart header__cart--has-products btn btn--icon js-cart-list" type="button">
+                <svg class="icon" width="19" height="16" aria-hidden="true">
+                  <use xlink:href="static/img/svg-symbols.svg#cart"></use>
+                </svg><span class="header__cart-inner"><span>5 товаров</span><span class="header__cost">&nbsp;&#8211;&nbsp;4 560</span><span class="header__symbol">&nbsp;&#8381;</span></span>
+              </button>
+              <div class="header-cart js-cart">
+                <div class="modal-backdrop fade"></div>
+                <div class="header-cart__wrapper">
+                  <div class="header-cart__inner">
+                    <div class="header-cart__top">
+                      <p class="header-cart__title">Корзина</p>
+                      <button class="btn btn--close js-close-cart" type="button">
+                        <svg class="icon" width="14" height="14" aria-hidden="true">
+                          <use xlink:href="static/img/svg-symbols.svg#close"></use>
+                        </svg>закрыть
+                      </button>
+                    </div>
+                    <div class="header-cart__body">
+                      <div class="header-cart__list custom-scroll-bar" data-simplebar data-simplebar-auto-hide="false">
+                        <div class="header-cart__item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <a class="header-cart__img" href="#">
+                                <img src="static/img/content/019.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос200мл">
+                              </a>
+                            </div>
+                            <div class="col">
+                              <h4 class="header-cart__name"><a href="#">Либридерм витамин F бальзам питательный для кожи головы и волос200мл</a></h4>
+                              <div class="row justify-content-between">
+                                <div class="col-auto"><span class="header-cart__amount">2 x 195 &#8381;</span>
+                                </div>
+                                <div class="col-auto"><span class="header-cart__cost">390 &#8381;</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="header-cart__item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <a class="header-cart__img" href="#">
+                                <img src="static/img/content/014.jpg" alt="Генеролон спрей для наружного применения 5% 60мл">
+                              </a>
+                            </div>
+                            <div class="col">
+                              <h4 class="header-cart__name"><a href="#">Генеролон спрей для наружного применения 5% 60мл</a></h4>
+                              <div class="row justify-content-between">
+                                <div class="col-auto"><span class="header-cart__amount">1 x 616 &#8381;</span>
+                                </div>
+                                <div class="col-auto"><span class="header-cart__cost">616 &#8381;</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="header-cart__item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <a class="header-cart__img" href="#">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл">
+                              </a>
+                            </div>
+                            <div class="col">
+                              <h4 class="header-cart__name"><a href="#">Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл+лосьон мицеллярный 200мл</a></h4>
+                              <div class="row justify-content-between">
+                                <div class="col-auto"><span class="header-cart__amount">1 x 616 &#8381;</span>
+                                </div>
+                                <div class="col-auto"><span class="header-cart__cost">616 &#8381;</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="header-cart__item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <a class="header-cart__img" href="#">
+                                <img src="static/img/content/010.jpg" alt="Урьяж розельян крем для кожи склонной к куперозу 40мл">
+                              </a>
+                            </div>
+                            <div class="col">
+                              <h4 class="header-cart__name"><a href="#">Урьяж розельян крем для кожи склонной к куперозу 40мл</a></h4>
+                              <div class="row justify-content-between">
+                                <div class="col-auto"><span class="header-cart__amount">2 x 616 &#8381;</span>
+                                </div>
+                                <div class="col-auto"><span class="header-cart__cost">616 &#8381;</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="header-cart__item">
+                          <div class="row align-items-center">
+                            <div class="col-auto">
+                              <a class="header-cart__img" href="#">
+                                <img src="static/img/content/006.jpg" alt="Либридерм витамин F бальзам питательный для кожи головы и волос200мл">
+                              </a>
+                            </div>
+                            <div class="col">
+                              <h4 class="header-cart__name"><a href="#">Либридерм витамин F бальзам питательный для кожи головы и волос200мл</a></h4>
+                              <div class="row justify-content-between">
+                                <div class="col-auto"><span class="header-cart__amount">1 x 616 &#8381;</span>
+                                </div>
+                                <div class="col-auto"><span class="header-cart__cost">616 &#8381;</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header-cart__bottom"><a class="header-cart__btn btn btn--red" href="cart.html">Перейти в корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom-panel">
+        <div class="container">
+          <div class="header__panel-inner">
+            <div class="row">
+              <div class="col-auto d-none d-xl-block">
+                <button class="btn btn--icon btn--red header__show-menu js-show-menu" type="button">
+                  <svg class="icon" width="16" height="14" aria-hidden="true">
+                    <use xlink:href="static/img/svg-symbols.svg#menu-default"></use>
+                  </svg><span>Каталог</span>
+                </button>
+              </div>
+              <div class="col">
+                <form class="header__search-inner">
+                  <label class="header__label">
+                    <svg class="icon header__search-icon" width="16" height="16" aria-hidden="true">
+                      <use xlink:href="static/img/svg-symbols.svg#search"></use>
+                    </svg>
+                    <input class="header__field field field--border-white" type="search" placeholder="Я ищу..." required>
+                  </label>
+                  <button class="header__search-btn btn btn--red">Найти</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu js-menu d-none d-xl-block">
+          <div class="container">
+            <div class="row">
+              <div class="col-auto">
+                <ul class="menu__nav">
+                  <li class="menu__item active" data-id="sub-list-1"><a class="menu__link" href="#">Лекарства и бады</a>
+                  </li>
+                  <li class="menu__item" data-id="sub-list-2"><a class="menu__link" href="#">Гигиена</a>
+                  </li>
+                  <li class="menu__item" data-id=""><a class="menu__link" href="#">Красота и уход</a>
+                  </li>
+                  <li class="menu__item" data-id=""><a class="menu__link" href="#">Мама и малыш</a>
+                  </li>
+                  <li class="menu__item" data-id=""><a class="menu__link" href="#">Диета и спорт</a>
+                  </li>
+                  <li class="menu__item" data-id=""><a class="menu__link" href="#">Оптика</a>
+                  </li>
+                  <li class="menu__item" data-id=""><a class="menu__link" href="#">Ортопедия</a>
+                  </li>
+                  <li class="menu__item" data-id=""><a class="menu__link" href="#">Все по 99 рублей</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col">
+                <div class="menu__sub-lists" id="sub-list-1">
+                  <div class="row">
+                    <div class="col-auto pr-4">
+                      <ul class="menu__sub-list">
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Алкоголизм и курение</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Аллергия</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Верхние дыхательные пути</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Витамины и БАД</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Геморрой</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Гинекология и акушерство</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Глаза</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Гомеопатия</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Онкология</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Опорно-двигательный аппарат</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Простуда</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Против паразитов</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-auto pr-3">
+                      <ul class="menu__sub-list">
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Гормоны</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Грипп</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Дерматология (уход за кожей)</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Желудочно-кишечный тракт</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Иммуномодуляторы и противовирусные</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Мочеполовая система</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Нервная система</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Обезболивающие и спазмолитики</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Против паразитов</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Сердечно-сосудистая система</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Сердечно-сосудистая система</a>
+                        </li>
+                      </ul><a class="menu__show-all" href="#">Показать все
+                              <svg class="icon" width="16" height="16" aria-hidden="true">
+                                <use xlink:href="static/img/svg-symbols.svg#arrow-right"></use>
+                              </svg></a>
+                    </div>
+                    <div class="col">
+                      <div class="row justify-content-end">
+                        <div class="col-auto">
+                          <ul class="menu__products">
+                            <li class="menu__product">
+                              <a class="menu__img" href="#"></a>
+                              <div class="menu__product-info">
+                                <h3 class="menu__title"><a href="#">
+                                        Граммидин с анестетиком неотаблетки для рассасывания №18</a></h3>
+                                <div class="menu__prices"><span class="menu__cost">254 &#8381;</span>
+                                </div>
+                              </div>
+                              <div class="menu__sticker sticker">
+                                <svg class="icon" width="40" height="40" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
+                                </svg><span>Хит!</span>
+                              </div>
+                            </li>
+                            <li class="menu__product">
+                              <a class="menu__img" href="#">
+                                <img src="static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
+                              </a>
+                              <div class="menu__product-info">
+                                <h3 class="menu__title"><a href="#">
+                                        Либридерм витамин F бальзам питательныйдля кожи головы и волос 200мл</a></h3>
+                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381;</span><span class="menu__cost">390 &#8381;</span>
+                                </div>
+                              </div>
+                              <div class="menu__sticker sticker">
+                                <svg class="icon" width="40" height="40" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
+                                </svg><span>Хит!</span>
+                              </div>
+                            </li>
+                            <li class="menu__product">
+                              <a class="menu__img" href="#">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
+                              </a>
+                              <div class="menu__product-info">
+                                <h3 class="menu__title"><a href="#">
+                                        Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий  30мллосьон мицеллярный 200мл</a></h3>
+                                <div class="menu__prices"><span class="menu__cost">800 &#8381;</span>
+                                </div>
+                              </div>
+                              <div class="menu__sticker sticker">
+                                <svg class="icon" width="40" height="40" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
+                                </svg><span>Хит!</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-auto d-none d-xxl-block">
+                          <ul class="menu__products">
+                            <li class="menu__product">
+                              <a class="menu__img" href="#">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
+                              </a>
+                              <div class="menu__product-info">
+                                <h3 class="menu__title"><a href="#">
+                                        Граммидин с анестетиком неотаблетки для рассасывания №18</a></h3>
+                                <div class="menu__prices"><span class="menu__cost">254 &#8381;</span>
+                                </div>
+                              </div>
+                              <div class="menu__sticker sticker">
+                                <svg class="icon" width="40" height="40" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
+                                </svg><span>Хит!</span>
+                              </div>
+                            </li>
+                            <li class="menu__product">
+                              <a class="menu__img" href="#">
+                                <img src="static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
+                              </a>
+                              <div class="menu__product-info">
+                                <h3 class="menu__title"><a href="#">
+                                        Либридерм витамин F бальзам питательныйдля кожи головы и волос 200мл</a></h3>
+                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381;</span><span class="menu__cost">390 &#8381;</span>
+                                </div>
+                              </div>
+                              <div class="menu__sticker sticker">
+                                <svg class="icon" width="40" height="40" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
+                                </svg><span>Хит!</span>
+                              </div>
+                            </li>
+                            <li class="menu__product">
+                              <a class="menu__img" href="#">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
+                              </a>
+                              <div class="menu__product-info">
+                                <h3 class="menu__title"><a href="#">
+                                        Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий  30мллосьон мицеллярный 200мл</a></h3>
+                                <div class="menu__prices"><span class="menu__cost">800 &#8381;</span>
+                                </div>
+                              </div>
+                              <div class="menu__sticker sticker">
+                                <svg class="icon" width="40" height="40" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
+                                </svg><span>Хит!</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu__sub-lists" id="sub-list-2">
+                  <div class="row">
+                    <div class="col-auto pr-4">
+                      <ul class="menu__sub-list">
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Алкоголизм и курение</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Аллергия</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Верхние дыхательные пути</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Витамины и БАД</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Геморрой</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Гинекология и акушерство</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Глаза</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Гомеопатия</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Онкология</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Опорно-двигательный аппарат</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Простуда</a>
+                        </li>
+                        <li class="menu__sub-item"><a class="menu__sub-link" href="#">Против паразитов</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col">
+                      <div class="row justify-content-end">
+                        <div class="col-auto">
+                          <ul class="menu__products">
+                            <li class="menu__product">
+                              <a class="menu__img" href="#">
+                                <img src="static/img/content/011.jpg" alt="Виши лифтактив эдвансд набор 8 марта 2016 флюид легкий 30мл лосьон мицеллярный 200мл">
+                              </a>
+                              <div class="menu__product-info">
+                                <h3 class="menu__title"><a href="#">
+                                        Граммидин с анестетиком неотаблетки для рассасывания №18</a></h3>
+                                <div class="menu__prices"><span class="menu__cost">254 &#8381;</span>
+                                </div>
+                              </div>
+                              <div class="menu__sticker sticker">
+                                <svg class="icon" width="40" height="40" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
+                                </svg><span>Хит!</span>
+                              </div>
+                            </li>
+                            <li class="menu__product">
+                              <a class="menu__img" href="#">
+                                <img src="static/img/content/018.jpg" alt="ибридерм витамин F бальзам питательный для кожи головы и волос 200мл">
+                              </a>
+                              <div class="menu__product-info">
+                                <h3 class="menu__title"><a href="#">
+                                        Либридерм витамин F бальзам питательныйдля кожи головы и волос 200мл</a></h3>
+                                <div class="menu__prices"><span class="menu__cost span menu__cost--old">445 &#8381;</span><span class="menu__cost">390 &#8381;</span>
+                                </div>
+                              </div>
+                              <div class="menu__sticker sticker">
+                                <svg class="icon" width="40" height="40" aria-hidden="true">
+                                  <use xlink:href="static/img/svg-symbols.svg#sticker"></use>
+                                </svg><span>Хит!</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a>
+        </li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a>
+        </li>
+        <li class="breadcrumbs__item active">Гигиена</li>
+      </ul>
+    </div>
+    <section class="cabinet">
+      <div class="container">
+        <h2 class="cabinet__title">Личный кабинет</h2>
+        <div class="row">
+          <div class="col-xl-auto">
+            <aside class="personal-info">
+              <div class="row">
+                <div class="col-md-6 col-xl-12">
+                  <div class="personal-info__box">
+                    <h3 class="personal-info__subject title title--md">Личная информация</h3>
+                    <div class="personal-info__inner">
+                      <cite class="personal-info__item personal-info__item--name">Константинопольский<br>Константин<br>Константинович</cite><span class="personal-info__item">07.03.1966</span><span class="personal-info__item personal-info__item--email">konstantin@mail.ru</span>
+                      <span
+                      class="personal-info__item personal-info__item--tel">+7 902 987-65-43</span>
+                    </div><a class="personal-info__edit btn btn--grey" href="personal-data.html">Редактировать информацию</a><a class="personal-info__change-pass" href="change-password.html">Изменить пароль</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-12">
+                  <div class="row">
+                    <div class="col-12 order-md-1 order-xl-0">
+                      <a class="personal-info__special" href="#">
+                        <img src="static/img/general/megaphone.svg" alt="персональное спецпредложение">
+                        <h3 class="personal-info__title-spec">персональное спецпредложение</h3>
+                      </a>
+                    </div>
+                    <div class="col-12 order-xl-1">
+                      <div class="personal-info__box personal-info__box--sm">
+                        <h3 class="personal-info__subject personal-info__subject--sm title title--md">бонусная карта</h3>
+                        <div class="personal-info__item personal-info__item--star"><b>1 186</b><span>&#160;бонусов на счету</span>
+                        </div>
+                        <p class="personal-info__card">Номер карты:&#160;<span>7867834099879204</span>
+                        </p><a class="personal-info__change-card btn btn--grey" href="change-bonus-card.html">Изменить бонусную карту</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+          <div class="col-xl d-flex flex-column flex-grow-1">
+            <h3 class="cabinet__title-list title title--md">История заказов</h3>
+            <div class="order-history">
+              <div class="order-history__list">
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status new">Новый</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+178 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status new">Новый</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-100 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+15 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-300 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+173 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+67 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-75 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+75 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-36 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+175 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+17 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+200 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-176 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+100 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status cancel">Отменен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+673 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status cancel">Отменен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus empty">—</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-138 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+345 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-history__item">
+                  <div class="row">
+                    <div class="col-6 col-md-auto order-md-0">
+                      <div class="order-history__number">Заказ № 123456</div>
+                    </div>
+                    <div class="col-6 col-md-auto order-md-6 ml-md-auto">
+                      <div class="order-history__status">Получен</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-4">
+                      <div class="order-history__bonus">-239 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-1">
+                      <div class="order-history__date">23.04.2018</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-5">
+                      <div class="order-history__bonus">+175 бонусов</div>
+                    </div>
+                    <div class="col-6 col-md-2 order-md-3">
+                      <div class="order-history__cost">3 500<span>&#160;&#8381;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <footer class="order-history__footer"><a class="order-history__show-more btn" href="#">Показать еще</a>
+              <div class="pagination">
+                <a class="pagination__prev disabled" href="#">
+                  <svg class="icon" width="10" height="9" aria-hidden="true">
+                    <use xlink:href="static/img/svg-symbols.svg#page-prev"></use>
+                  </svg>Назад</a>
+                <ul class="pagination__list">
+                  <li class="pagination__item"><a class="pagination__page active" href="#">1</a>
+                  </li>
+                  <li class="pagination__item"><a class="pagination__page" href="#">2</a>
+                  </li>
+                  <li class="pagination__item"><a class="pagination__page" href="#">3</a>
+                  </li>
+                  <li class="pagination__item d-none d-md-block"><a class="pagination__page" href="#">4</a>
+                  </li>
+                  <li class="pagination__item d-none d-sm-block"><a class="pagination__page" href="#">5</a>
+                  </li>
+                  <li class="pagination__item d-none d-sm-block"><a class="pagination__page" href="#">6</a>
+                  </li>
+                  <li class="pagination__item d-none d-sm-block"><a class="pagination__page" href="#">7</a>
+                  </li>
+                  <li class="pagination__item d-none d-sm-block"><a class="pagination__page" href="#">8</a>
+                  </li>
+                  <li class="pagination__item d-none d-xl-block"><a class="pagination__page" href="#">9</a>
+                  </li>
+                  <li class="pagination__item d-none d-xl-block"><a class="pagination__page" href="#">...</a>
+                  </li>
+                  <li class="pagination__item"><a class="pagination__page" href="#">10</a>
+                  </li>
+                </ul><a class="pagination__next" href="">Вперед
+                        <svg class="icon" width="10" height="9" aria-hidden="true">
+                          <use xlink:href="static/img/svg-symbols.svg#page-next"></use>
+                        </svg></a>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="row">
+            <div class="col-md col-xl-7">
+              <div class="row">
+                <div class="col-6 col-xl-4">
+                  <ul class="footer__nav">
+                    <li class="footer__item"><a class="footer__link" href="#">Лекарства и бады</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Гигиена</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Красота и уход</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Мама и малыш</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Диета и спорт</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Оптика</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Ортопедия</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Все по 99 рублей</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6 col-xl-4">
+                  <ul class="footer__nav">
+                    <li class="footer__item"><a class="footer__link" href="#">О компании</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Акции и скидки</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Бонусная программа</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Как слелать заказ</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Адреса аптек</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Доставка лекарств</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Личный кабинет</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-auto d-none d-xl-block pl-xl-5">
+                  <ul class="footer__nav">
+                    <li class="footer__item"><a class="footer__link" href="#">Оплaта</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Правила работы</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Блог</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Отзывы</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Обратная связь</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Франшиза</a>
+                    </li>
+                    <li class="footer__item"><a class="footer__link" href="#">Лицензия</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-auto ml-auto">
+              <div class="footer__wrap">
+                <div class="footer__apps"><a class="footer__app footer__app--app-store d-md-none d-xl-block" href="#">App Store</a><a class="footer__app footer__app--google-play d-none d-md-block" href="#">Google Play</a>
+                </div><span class="footer__desc-cashback">В мобильном приложении&#160;<b>cashback до 15%</b></span>
+              </div><a class="footer__tel" href="tel:+74950035555">+7 495 003-55-55</a><span class="footer__subtel">Москва, круглосуточно</span>
+              <div class="footer__bottom">
+                <button class="footer__feedback btn" type="button" data-toggle="modal" data-target="#write-review-not-rating-modal">Оставить отзыв</button>
+                <ul class="social footer__social">
+                  <li class="social__item">
+                    <a class="social__link" href="#">
+                      <svg class="icon" width="21" height="12" aria-hidden="true">
+                        <use xlink:href="static/img/svg-symbols.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="#">
+                      <svg class="icon" width="10" height="20" aria-hidden="true">
+                        <use xlink:href="static/img/svg-symbols.svg#fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="#">
+                      <svg class="icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="static/img/svg-symbols.svg#insta"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="#">
+                      <svg class="icon" width="18" height="12" aria-hidden="true">
+                        <use xlink:href="static/img/svg-symbols.svg#youtube"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link" href="#">
+                      <svg class="icon" width="18" height="18" aria-hidden="true">
+                        <use xlink:href="static/img/svg-symbols.svg#telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <div class="container">
+          <div class="row align-items-xl-center">
+            <div class="col-auto d-none d-md-block">
+              <a class="footer__logo" href="#">
+                <img src="static/img/general/logo.svg" alt="Lekki - интернет аптека">
+              </a>
+            </div>
+            <div class="col">
+              <div class="footer__copy-text">
+                <p>© aptekalekki.ru, 2018. ООО «АПТЕКА-ЛЕККИ», ИНН 7714844316, ОГРН 1117746529691, Юридический адрес: 123290, г. Москва, 1-ый Магистральный тупик, д. 10, корпус 1. Дистанционная продажа лекарственных средств (в том числе, с доставкой на дом)
+                  запрещена действующим законодательством Российской Федерации. Под «заказом» на сайте понимается должным образом оформленный запрос Клиента на бронирование в аптеках ЛЕККИ, а также ее партнеров по указанному на сайте адресу перечня Товаров,
+                  выбранных на сайте.<span class="footer__pre-block">Продажа товара осуществляется в организации.&#160;<a href="#"><span>Политика конфиденциальности.</span>
+                  </a><a href="#"><span>Пользовательское соглашение.</span></a>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="registration">
+      <div class="modal fade" id="registration-modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <form class="custom-modal" id="registration">
+            <header class="custom-modal__header"><span class="custom-modal__title">Вход на сайт</span>
+              <button class="custom-modal__close btn btn--close" type="button" data-dismiss="modal" aria-label="Close">
+                <svg class="icon" width="14" height="14" aria-hidden="true">
+                  <use xlink:href="static/img/svg-symbols.svg#close"></use>
+                </svg>закрыть
+              </button>
+            </header>
+            <div class="custom-modal__content">
+              <div class="custom-modal__row">
+                <label class="label" for="registration-first-name">Ваше имя</label>
+                <input class="custom-modal__field field" type="text" placeholder="Иван Иванов" required id="registration-first-name">
+                <p class="custom-modal__error error">Заполите поле!</p>
+              </div>
+              <div class="custom-modal__row">
+                <label class="label" for="registration-email">Электронная почта</label>
+                <input class="custom-modal__field field" type="email" placeholder="Ivanov@mail.ru" required id="registration-email">
+                <p class="custom-modal__error error">Заполите поле!</p>
+              </div>
+              <div class="custom-modal__row">
+                <label class="label" for="registration-password">Пароль</label>
+                <div class="registration__field-inner">
+                  <input class="registration__password custom-modal__field field" type="password" value="AptekaApteka123" required id="registration-password">
+                  <button class="show-pass js-show-hide-password" type="button">показать пароль/скрыть</button>
+                  <p class="custom-modal__error error">Неверный пароль!</p>
+                </div>
+              </div>
+              <p class="registration__desc">
+                Нажимая кнопку «Зарегестрироваться», я соглашаюсь с&#160;<a href="#">правилами сайта</a>
+              </p>
+              <button class="registration__submit custom-modal__btn btn btn--red">Зарегистрироваться</button>
+            </div>
+            <div class="registration__footer custom-modal__footer"><span class="registration__question">У вас уже есть аккаунт?</span>
+              <button class="custom-modal__btn btn btn--border-red js-sign-in" type="button" data-toggle="modal" data-target="#sign-in-modal" data-dismiss="modal" aria-label="Close">войти</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="sign-in registration">
+      <div class="modal fade" id="sign-in-modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <form class="custom-modal" id="sign-in">
+            <header class="custom-modal__header"><span class="custom-modal__title">Вход на сайт</span>
+              <button class="custom-modal__close btn btn--close" type="button" data-dismiss="modal" aria-label="Close">
+                <svg class="icon" width="14" height="14" aria-hidden="true">
+                  <use xlink:href="static/img/svg-symbols.svg#close"></use>
+                </svg>закрыть
+              </button>
+            </header>
+            <div class="custom-modal__content">
+              <div class="custom-modal__row">
+                <label class="label" for="sign-in-email">Электронная почта</label>
+                <input class="custom-modal__field field" type="email" placeholder="Ivanov@mail.ru" required id="sign-in-email">
+                <p class="custom-modal__error error">Заполите поле!</p>
+              </div>
+              <div class="custom-modal__row">
+                <label class="label" for="sign-in-password">Пароль</label>
+                <div class="registration__field-inner">
+                  <input class="registration__password custom-modal__field field" type="password" value="AptekaApteka123" required id="sign-in-password">
+                  <button class="show-pass js-show-hide-password" type="button">показать пароль/скрыть</button>
+                </div>
+                <p class="custom-modal__error error">Неверный пароль!</p>
+              </div>
+              <!-- Add attribute disabled for it status-->
+              <button class="registration__submit custom-modal__btn btn btn--red">Войти на сайт</button>
+              <div class="sign-in__wrap-text"><a class="sign-in__remember-password" href="#">Помогите вспомнить пароль</a>
+              </div>
+            </div>
+            <div class="registration__footer custom-modal__footer"><span class="registration__question">Я еще не зарегестрирован.</span>
+              <button class="custom-modal__btn btn btn--border-red js-registration" type="button" data-toggle="modal" data-target="#registration-modal" data-dismiss="modal" aria-label="Close">Пройти регистрацию</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="static/js/separate-js/svg4everybody.min.js"></script>
+    <script>
+      svg4everybody();
+    </script>
+    <script src="static/js/mainxyrmep.min.js"></script>
+  </body>
+
+</html>

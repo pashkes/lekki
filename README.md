@@ -19,13 +19,13 @@ The site online pharmacy where you can find medicine on the cheapest price.
  13. [Pharmacies](https://pashkes.github.io/lekki/pharmacies)
  14. [Single product card](https://pashkes.github.io/lekki/single-product)
  
-**How to start dev server:**
-`npm i`
-`npm i -g tars-cli`  
-`npm run start`
-
-**How to build the project:**
-`npm run build`
+**How to start dev server?**  
+ - you have to install TARS-CLI globally: `npm i -g tars-cli`
+ - then you should install npm dependencies `npm i`
+ - start dev server `npm run start`
+ 
+**How to build the project?**  
+Just enter  `npm run build`
 
 ![enter image description here](https://lh3.googleusercontent.com/oT7REzPG0Wm6_gFACnErQwLOSZI7ZKM8X0bCh1O45qB2-a5UEtKr8VOuDW6gcJLbo6ahk5RVOmP_=s964 "Preview photo")
 
